@@ -1,0 +1,101 @@
+
+// Base HTML Tags
+
+$blue-gray: #C7D1D6;
+$light-gray: #E2E2E2;
+$light-blue: #A6DBED;
+
+html {
+    background-color: $light-gray;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    color: #333;
+    font-size: .85em;
+}
+
+a {
+    outline: none;
+    padding-left: 3px;
+    padding-right: 3px;
+    text-decoration: underline;
+    color: #333;
+}
+a:link, a:visited,
+a:active, a:hover {
+    color: #333;
+}
+a:hover {
+    background-color: $blue-gray;
+}
+
+p {
+	margin: 0 0 10px 0;
+}
+
+pre {
+	font-size: 12px;
+	width: 100%;
+	overflow: auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+mark {
+    background-color: $light-blue;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+// Float
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.clear-fix:after {
+    content: ".";
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+// Headings
+h1, h2, h3,
+h4, h5, h6 {
+    color: #000;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+h1 {
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.75em;
+}
+h3 {
+    font-size: 1.2em;
+}
+h4 {
+    font-size: 1.1em;
+}
+h5, h6 {
+    font-size: 1em;
+    a:link, a:visited, a:active {
+        padding: 0;
+        text-decoration: none;
+    }
+}
