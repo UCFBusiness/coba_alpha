@@ -12,10 +12,17 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
         <link href="~/content/normalize.css" rel="stylesheet" type="text/css" />
-        <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
-		<link href="~/content/styles/mmenu.css" type="text/css" rel="stylesheet" />
 
-        @*<link href="~/content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />*@
+        <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
+
+        <link href="~/content/styles/mmenu.css" type="text/css" rel="stylesheet" />
+
+        <link href="~/content/styles/component.css" type="text/css" rel="stylesheet" />
+
+		@*
+            
+            <link href="~/content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
+        *@
 
         <script src="~/scripts/modernizr-2.6.2.js"></script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
@@ -28,20 +35,22 @@
 
         <div id="container">
 
-            <header>
-                <a href="#menu"></a>
+            <header class="clearfix">
+                
                 <div class="content-wrapper">
                     
                     <div class="float-left">
-                        <p class="site-title"><a href="~/">College of Business</a></p>
+                        <p class="site-title"><a href="/">College of Business</a></p>
                         -- nav --
-                        <nav id="menu" class="dl-menuwrapper">
-                            <button class="dl-trigger">.</button>
-                            <ul class="dl-menu">
+                        <a href="#menu"></a>
+                        <nav id="menu">
+                            <div id="dl-menu" class="dl-menuwrapper">
+                                <button class="dl-trigger">Open Menu</button>
+                                <ul class="dl-menu">
 
-                                @*<li><a href="/">Home</a></li>
+                                <li><a href="/">Home</a></li>
                                 <li><a href="/About">About</a></li>
-                                <li><a href="/Contact">Contact</a></li>*@
+                                <li><a href="/Contact">Contact</a></li>
 
 							    <li>
 								    <a href="#">Academics</a>
@@ -49,27 +58,26 @@
 									    <li>
 										    <a href="#">Undergraduate</a>
 										    <ul class="dl-submenu">
-											    <li><a href="#">BSBA</a></li>
-											    <li><a href="#">BABA</a></li>
-											    <li><a href="#">BA</a></li>
-											    <li><a href="#">Minors</a></li>
+											    <li><a href="#">Programs</a></li>
+											    <li><a href="#">Admissions</a></li>
+											    <li><a href="#">Item</a></li>
 										    </ul>
 									    </li>
 									    <li>
 										    <a href="#">Graduate</a>
 										    <ul class="dl-submenu">
-											    <li><a href="#">MBA</a></li>
-											    <li><a href="#">Masters</a></li>
-											    <li><a href="#">Specialized Masters</a></li>
-											    <li><a href="#">Doctorate</a></li>
+											    <li><a href="#">Programs</a></li>
+											    <li><a href="#">Admissions</a></li>
+											    <li><a href="#">Item</a></li>
 										    </ul>
 									    </li>
-									    <li>
+                                        <li>
 										    <a href="#">Executive Education</a>
 										    <ul class="dl-submenu">
-											    <li><a href="#">Open Enrollment Programs</a></li>
-											    <li><a href="#">Customized Programs</a></li>
-                                                <li><a href="#">International Residency Programs</a></li>
+											    <li><a href="#">Item 1</a></li>
+											    <li><a href="#">Item 2</a></li>
+											    <li><a href="#">Item 3</a></li>
+											    <li><a href="#">Item 4</a></li>
 										    </ul>
 									    </li>
 								    </ul>
@@ -83,60 +91,27 @@
 									    <li><a href="#">Social Media</a></li>
 								    </ul>
 							    </li>
-							    @*<li>
-								    <a href="#">Furniture</a>
+                                <li>
+								    <a href="#">Faculty Research</a>
 								    <ul class="dl-submenu">
-									    <li>
-										    <a href="#">Living Room</a>
-										    <ul class="dl-submenu">
-											    <li><a href="#">Sofas &amp; Loveseats</a></li>
-											    <li><a href="#">Coffee &amp; Accent Tables</a></li>
-											    <li><a href="#">Chairs &amp; Recliners</a></li>
-											    <li><a href="#">Bookshelves</a></li>
-										    </ul>
-									    </li>
-									    <li>
-										    <a href="#">Bedroom</a>
-										    <ul class="dl-submenu">
-											    <li>
-												    <a href="#">Beds</a>
-												    <ul class="dl-submenu">
-													    <li><a href="#">Upholstered Beds</a></li>
-													    <li><a href="#">Divans</a></li>
-													    <li><a href="#">Metal Beds</a></li>
-													    <li><a href="#">Storage Beds</a></li>
-													    <li><a href="#">Wooden Beds</a></li>
-													    <li><a href="#">Children's Beds</a></li>
-												    </ul>
-											    </li>
-											    <li><a href="#">Bedroom Sets</a></li>
-											    <li><a href="#">Chests &amp; Dressers</a></li>
-										    </ul>
-									    </li>
-									    <li><a href="#">Home Office</a></li>
-									    <li><a href="#">Dining &amp; Bar</a></li>
-									    <li><a href="#">Patio</a></li>
+									    <li><a href="#">History</a></li>
+									    <li><a href="#">Ambassadors</a></li>
+									    <li><a href="#">Facts &amp; Figures</a></li>
+									    <li><a href="#">Social Media</a></li>
 								    </ul>
 							    </li>
-							    <li>
-								    <a href="#">Jewelry &amp; Watches</a>
+                                <li>
+								    <a href="#">Careers &amp; Recruitment</a>
 								    <ul class="dl-submenu">
-									    <li><a href="#">Fine Jewelry</a></li>
-									    <li><a href="#">Fashion Jewelry</a></li>
-									    <li><a href="#">Watches</a></li>
-									    <li>
-										    <a href="#">Wedding Jewelry</a>
-										    <ul class="dl-submenu">
-											    <li><a href="#">Engagement Rings</a></li>
-											    <li><a href="#">Bridal Sets</a></li>
-											    <li><a href="#">Women's Wedding Bands</a></li>
-											    <li><a href="#">Men's Wedding Bands</a></li>
-										    </ul>
-									    </li>
+									    <li><a href="#">History</a></li>
+									    <li><a href="#">Ambassadors</a></li>
+									    <li><a href="#">Facts &amp; Figures</a></li>
+									    <li><a href="#">Social Media</a></li>
 								    </ul>
-							    </li>*@
-						    </ul>Discover
-                        </nav><div style="clear: both"></div>
+							    </li>
+						    </ul><span class="dl-title">Discover</span>
+                            </div><!-- /dl-menuwrapper -->
+                        </nav>
                         -- nav --
                     </div>
                     
@@ -157,7 +132,7 @@
                                 </ul>
                             }
                         </section>*@
-                    </div><div style="clear: both"></div>
+                    </div>
 
                 </div>
             </header>
@@ -166,111 +141,11 @@
             <div id="body">
 
                 <div class="column">
-					@*<div id="dl-menu" class="dl-menuwrapper">
-						<button class="dl-trigger">Discover</button>
-						<ul class="dl-menu">
-							<li>
-								<a href="#">Fashion</a>
-								<ul class="dl-submenu">
-									<li>
-										<a href="#">Men</a>
-										<ul class="dl-submenu">
-											<li><a href="#">Shirts</a></li>
-											<li><a href="#">Jackets</a></li>
-											<li><a href="#">Chinos &amp; Trousers</a></li>
-											<li><a href="#">Jeans</a></li>
-											<li><a href="#">T-Shirts</a></li>
-											<li><a href="#">Underwear</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">Women</a>
-										<ul class="dl-submenu">
-											<li><a href="#">Jackets</a></li>
-											<li><a href="#">Knits</a></li>
-											<li><a href="#">Jeans</a></li>
-											<li><a href="#">Dresses</a></li>
-											<li><a href="#">Blouses</a></li>
-											<li><a href="#">T-Shirts</a></li>
-											<li><a href="#">Underwear</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">Children</a>
-										<ul class="dl-submenu">
-											<li><a href="#">Boys</a></li>
-											<li><a href="#">Girls</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Electronics</a>
-								<ul class="dl-submenu">
-									<li><a href="#">Camera &amp; Photo</a></li>
-									<li><a href="#">TV &amp; Home Cinema</a></li>
-									<li><a href="#">Phones</a></li>
-									<li><a href="#">PC &amp; Video Games</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Furniture</a>
-								<ul class="dl-submenu">
-									<li>
-										<a href="#">Living Room</a>
-										<ul class="dl-submenu">
-											<li><a href="#">Sofas &amp; Loveseats</a></li>
-											<li><a href="#">Coffee &amp; Accent Tables</a></li>
-											<li><a href="#">Chairs &amp; Recliners</a></li>
-											<li><a href="#">Bookshelves</a></li>
-										</ul>
-									</li>
-									<li>
-										<a href="#">Bedroom</a>
-										<ul class="dl-submenu">
-											<li>
-												<a href="#">Beds</a>
-												<ul class="dl-submenu">
-													<li><a href="#">Upholstered Beds</a></li>
-													<li><a href="#">Divans</a></li>
-													<li><a href="#">Metal Beds</a></li>
-													<li><a href="#">Storage Beds</a></li>
-													<li><a href="#">Wooden Beds</a></li>
-													<li><a href="#">Children's Beds</a></li>
-												</ul>
-											</li>
-											<li><a href="#">Bedroom Sets</a></li>
-											<li><a href="#">Chests &amp; Dressers</a></li>
-										</ul>
-									</li>
-									<li><a href="#">Home Office</a></li>
-									<li><a href="#">Dining &amp; Bar</a></li>
-									<li><a href="#">Patio</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Jewelry &amp; Watches</a>
-								<ul class="dl-submenu">
-									<li><a href="#">Fine Jewelry</a></li>
-									<li><a href="#">Fashion Jewelry</a></li>
-									<li><a href="#">Watches</a></li>
-									<li>
-										<a href="#">Wedding Jewelry</a>
-										<ul class="dl-submenu">
-											<li><a href="#">Engagement Rings</a></li>
-											<li><a href="#">Bridal Sets</a></li>
-											<li><a href="#">Women's Wedding Bands</a></li>
-											<li><a href="#">Men's Wedding Bands</a></li>
-										</ul>
-									</li>
-								</ul>
-							</li>
-						</ul>
-					</div>*@<!-- /dl-menuwrapper -->
+
 				</div>
 
                 @RenderSection("featured", required: false)
-                <section class="content-wrapper main-content clear-fix">
+                <section class="content-wrapper main-content clearfix">
                     @RenderBody()
                 </section>
             </div>
@@ -290,10 +165,14 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="~/scripts/jquery-2.0.3.min.js"><\/script>')</script>
 
+        <!-- data-main attribute tells require.js to load scripts/main.js after require.js loads. -->
+        @*<script data-main="~/scripts/main" src="~/scripts/require.js"></script>*@
+
+        <!-- Mobile Menu -->
         <script type="text/javascript" src="~/scripts/jquery.mmenu.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
-				$('nav#ml-menu').mmenu({
+				$('#mmenu').mmenu({
 					configuration: {
 						// For some odd reason, the header won't stay "fixed" when using hardware acceleration
 						hardwareAcceleration: false
@@ -302,14 +181,16 @@
 			});
 		</script>
 
+        <!-- Desktop Menu -->
         <script type="text/javascript" src="~/scripts/jquery.dlmenu.js"></script>
 		<script>
 			$(function() {
-				$( 'nav#menu' ).dlmenu({
+				$( '#dl-menu' ).dlmenu({
 					animationClasses : { classin : 'dl-animate-in-3', classout : 'dl-animate-out-3' }
 				});
 			});
 		</script>
+
 
         @RenderSection("Scripts", required: false)
         

@@ -1,3 +1,6 @@
+
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 $white: #FFFFFF;
 $blue-gray: #C7D1D6;
 $light-gray: #E2E2E2;
@@ -11,7 +14,7 @@ html {
 body {
     background-color: $white;
     margin: 0; padding: 0;
-    font-family: "Segoe UI", Verdana, Helvetica, Sans-Serif;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: .85em;
 }
 
@@ -29,7 +32,7 @@ h5, h6 {
     }
 }
 
-a {outline: none; padding-left: 3px; padding-right: 3px; text-decoration: underline;}
+a {outline: none; padding-left: 3px; padding-right: 3px; text-decoration: none;}
 a:link, a:visited,
 a:active, a:hover { color: $blue-gray;}
 a:hover {background-color: $light-gray;}

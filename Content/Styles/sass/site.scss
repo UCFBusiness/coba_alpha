@@ -34,10 +34,8 @@ img, object, embed, video {
 
 // Partials
 /* Mobile Layout: 480px and below. */
-@media only screen and (min-width: 480px) {
-    @import "partials/mobile_nav";
-    @import "partials/mobile_layout";
-}
+@import "partials/mobile_nav";
+@import "partials/mobile_layout";
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 @media only screen and (min-width: 481px) {
