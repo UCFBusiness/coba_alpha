@@ -11,16 +11,12 @@
         <meta name="viewport" content="width=device-width">
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <link href="~/content/normalize.css" rel="stylesheet" type="text/css" />
-
         <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
 
-        <link href="~/content/styles/mmenu.css" type="text/css" rel="stylesheet" />
-
-        <link href="~/content/styles/component.css" type="text/css" rel="stylesheet" />
-
 		@*
-            
+            <link href="~/content/normalize.css" rel="stylesheet" type="text/css" />
+            <link href="~/content/styles/mmenu.css" type="text/css" rel="stylesheet" />
+            <link href="~/content/styles/component.css" type="text/css" rel="stylesheet" />
             <link href="~/content/themes/base/jquery.ui.all.css" rel="stylesheet" type="text/css" />
         *@
 
@@ -35,82 +31,117 @@
 
         <div id="container">
 
-            <header class="clearfix">
-                
-                <div class="content-wrapper">
+            <header>
+
+                <!--BEGIN: UCF Header-->
+                <div id="UCFHBHeader" class="content-wrapper">
+                    <div class="UCFHBWrapper clearfix">
+                        <div id="UCFtitle">
+                            <a href="http://www.ucf.edu" target="_blank"><span class="UCFHBText">University of Central Florida</span></a>
+                        </div>
+                    </div>
+
+                    <div class="alert-message" style="width:580px; margin:0 auto; display:none;"><p>Well done! You successfully read this alert message.</p></div><!--Alert Message-->
+
+                </div>
+                <!--FINIS: UCF Header-->
+
+                <div class="content-wrapper clearfix">
                     
                     <div class="float-left">
                         <p class="site-title"><a href="/">College of Business</a></p>
+
                         -- nav --
                         <a href="#menu"></a>
-                        <nav id="menu">
+                        <nav id="menu" class="clearfix">
+
                             <div id="dl-menu" class="dl-menuwrapper">
                                 <button class="dl-trigger">Open Menu</button>
                                 <ul class="dl-menu">
 
-                                <li><a href="/">Home</a></li>
+                                @*<li><a href="/">Home</a></li>
                                 <li><a href="/About">About</a></li>
-                                <li><a href="/Contact">Contact</a></li>
+                                <li><a href="/Contact">Contact</a></li>*@
 
 							    <li>
-								    <a href="#">Academics</a>
+								    <span>Academics</span>
 								    <ul class="dl-submenu">
 									    <li>
 										    <a href="#">Undergraduate</a>
 										    <ul class="dl-submenu">
-											    <li><a href="#">Programs</a></li>
 											    <li><a href="#">Admissions</a></li>
-											    <li><a href="#">Item</a></li>
+											    <li><a href="#">Degree Programs</a></li>
+											    <li><a href="#">International Programs</a></li>
 										    </ul>
 									    </li>
 									    <li>
 										    <a href="#">Graduate</a>
 										    <ul class="dl-submenu">
-											    <li><a href="#">Programs</a></li>
 											    <li><a href="#">Admissions</a></li>
-											    <li><a href="#">Item</a></li>
+											    <li><a href="#">Degree Programs</a></li>
+											    <li><a href="#">Certificates</a></li>
 										    </ul>
 									    </li>
                                         <li>
 										    <a href="#">Executive Education</a>
 										    <ul class="dl-submenu">
-											    <li><a href="#">Item 1</a></li>
-											    <li><a href="#">Item 2</a></li>
-											    <li><a href="#">Item 3</a></li>
-											    <li><a href="#">Item 4</a></li>
+											    <li><a href="#">Customized Programs</a></li>
+											    <li><a href="#">International Residency Programs</a></li>
+                                                <li><a href="#">Open-Enrollment Programs</a></li>
 										    </ul>
 									    </li>
 								    </ul>
 							    </li>
 							    <li>
-								    <a href="#">Our College</a>
+								    <span>Our College</span>
 								    <ul class="dl-submenu">
-									    <li><a href="#">History</a></li>
-									    <li><a href="#">Ambassadors</a></li>
-									    <li><a href="#">Facts &amp; Figures</a></li>
-									    <li><a href="#">Social Media</a></li>
+									    <li><a href="#">History</a></li> <!--include mission and vision-->
+                                        <li><a href="#">Accreditation</a></li>
+                                        <li><a href="#">Administration</a></li>
+                                        <li><a href="#">Facts &amp; Figures</a></li>
+									    <li><a href="#">Student Ambassadors</a></li>
+                                        <li><a href="#">Student Organizations</a></li>
+									    <li><a href="#">Social Media Directory</a></li>
+                                        <li><a href="#">Services &amp; Locations</a></li>
 								    </ul>
 							    </li>
                                 <li>
-								    <a href="#">Faculty Research</a>
+								    <span>Faculty Research</span>
 								    <ul class="dl-submenu">
-									    <li><a href="#">History</a></li>
-									    <li><a href="#">Ambassadors</a></li>
-									    <li><a href="#">Facts &amp; Figures</a></li>
-									    <li><a href="#">Social Media</a></li>
+									    <li><a href="#">Page Link</a></li>
+									    <li><a href="#">Page Link</a></li>
+									    <li><a href="#">Page Link</a></li>
+									    <li><a href="#">Page Link</a></li>
 								    </ul>
 							    </li>
                                 <li>
-								    <a href="#">Careers &amp; Recruitment</a>
+								    <span>Alumni &amp; Friends</span>
 								    <ul class="dl-submenu">
-									    <li><a href="#">History</a></li>
-									    <li><a href="#">Ambassadors</a></li>
-									    <li><a href="#">Facts &amp; Figures</a></li>
-									    <li><a href="#">Social Media</a></li>
+									    <li><a href="#">Development</a></li>
+									    <li><a href="#">Hall of Fame</a></li>
+                                        <li><a href="#">Spotlights</a></li>
+
+                                        <!--action links
+									    <li><a href="#">Volunteer</a></li>
+                                        <li><a href="#">Attend</a></li>
+									    <li><a href="#">Lead</a></li>
+                                        U -- UCF
+                                        E -- Experience
+                                        -->
+								    </ul>
+							    </li>
+                                <li>
+								    <span>Careers &amp; Recruitment</span>
+								    <ul class="dl-submenu">
+									    <li><a href="#">Page Link</a></li>
+									    <li><a href="#">Page Link</a></li>
+									    <li><a href="#">Page Link</a></li>
+									    <li><a href="#">Page Link</a></li>
 								    </ul>
 							    </li>
 						    </ul><span class="dl-title">Discover</span>
                             </div><!-- /dl-menuwrapper -->
+
                         </nav>
                         -- nav --
                     </div>
@@ -135,6 +166,7 @@
                     </div>
 
                 </div>
+
             </header>
 
             
@@ -172,7 +204,7 @@
         <script type="text/javascript" src="~/scripts/jquery.mmenu.min.js"></script>
 		<script type="text/javascript">
 			$(function() {
-				$('#mmenu').mmenu({
+				$('#dmenu').mmenu({
 					configuration: {
 						// For some odd reason, the header won't stay "fixed" when using hardware acceleration
 						hardwareAcceleration: false
@@ -190,6 +222,113 @@
 				});
 			});
 		</script>
+
+        <script type="text/javascript">
+            function detect_browser() {
+                var browser_name = navigator.userAgent;
+                // We have to check for Opera first because
+                // at the beginning of the userAgent variable
+                // Opera claims it is MSIE. 
+                if (browser_name.indexOf("Opera") != -1)
+                    browser_name = "Opera";
+                else if (browser_name.indexOf("Firefox") != -1)
+                    browser_name = "Firefox";
+                else if (browser_name.indexOf("MSIE") != -1)
+                    browser_name = "MSIE";
+                else if (browser_name.indexOf("Netscape") != -1)
+                    browser_name = "Netscape";
+                else if (browser_name.indexOf("Safari") != -1)
+                    browser_name = "WebKit";
+
+                return browser_name;
+            }
+        </script>
+
+        <script type="text/javascript">
+            //This function places menu at top while scrolling page
+            function check_menu() {
+                //global
+                var $nav2 = null;
+                var $nav2_ul = null;
+                var $inside = null;
+
+                if ($("#main").size() > 0) {
+                    //moves nav2 down to keep visible while scrolling
+                    $nav2 = $("#menu");
+                    $nav2_ul = $nav2.find("div").first();
+                    $inside = $nav2.closest(".wrapper");
+
+                    //get nav 2 top offset
+                    var $nav_top = $nav2.position().top;
+                    var $scroll_top = $(document).scrollTop();
+                    var $inside_height = $inside.height();
+                
+                    var $nav2_ul_height = $nav2_ul.height() + parseInt($nav2_ul.css("padding-top")) + parseInt($nav2_ul.css("padding-bottom")) + parseInt($nav2_ul.css("margin-top")) + parseInt($nav2_ul.css("margin-bottom")) + parseInt($nav2_ul.css("borderTopWidth")) + parseInt($nav2_ul.css("borderBottomWidth"));
+                    //window.alert(parseInt($nav2_ul.css("borderBottomWidth"))); //For dev use only
+                    //slide menu down
+                    // don't slide if menu is higher than window height
+                    if (($scroll_top >= $nav_top) && ($nav2_ul_height < $inside_height) && (($nav2_ul.height() + parseInt($nav2_ul.css('padding-top')) + parseInt($nav2_ul.css('padding-bottom'))) <= $(window).height())) {
+                        var $new_top = ($scroll_top - $nav_top);
+                        //would go off screen
+                        if (($new_top + $nav2_ul_height) > $inside_height)
+                            $nav2_ul.css({ 'position': 'relative', 'left': '0', 'top': ($inside_height - $nav2_ul_height) + 'px' });
+                        else
+                            $nav2_ul.css({ 'position': 'relative', 'left': '0', 'top': $new_top + 'px' });
+                    }
+                    else {
+                        //reset
+                        $nav2_ul.css({ 'position': 'static' });
+                    }
+                }
+            }
+        </script>
+
+
+        @*<script src="http://scripts.bus.ucf.edu/jq/libs/jquery.placeholdize.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            function updateHeaders() {
+                $(".persist-area").each(function () {
+
+                    var el = $(this),
+                    offset = el.offset(),
+                    scrollTop = $(window).scrollTop(),
+                    floatingHeader = $(".floatingHeader", this)
+
+                    if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
+                        floatingHeader.css({
+                            "visibility": "visible"
+                        });
+                    } else {
+                        floatingHeader.css({
+                            "visibility": "hidden"
+                        });
+                    };
+                });
+            }
+
+            function content_ResizeHeaders() {
+                $(".persist-area").each(function () {
+                    var clonedHeaderRow;
+                    clonedHeaderRow = $(".persist-header", this);
+                    clonedHeaderRow.css("width", clonedHeaderRow.width())
+                });
+            }
+
+            function content_BuildHeaders() {
+                $(".persist-area").each(function () {
+                    var clonedHeaderRow;
+                    clonedHeaderRow = $(".persist-header", this);
+                    clonedHeaderRow
+                        .before(clonedHeaderRow.clone())
+                        .css("width", clonedHeaderRow.width())
+                        .addClass("floatingHeader");
+                });
+            }
+        </script>*@
+
+
+
+
 
 
         @RenderSection("Scripts", required: false)
