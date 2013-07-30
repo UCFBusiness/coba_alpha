@@ -2,7 +2,7 @@
 
 // Modules and Variables
 @import "partials/base";
-
+@import "partials/nav_base";
 
 /* =============================================================================
    Simple fluid media
@@ -35,10 +35,11 @@ img, object, embed, video {
 // * http://goldengridsystem.com/
 
 
+
 // Partials
 /* Mobile Layout: 480px and below. */
-@import "partials/desktop_nav";
-@import "partials/desktop_layout";
+// {Mobile}
+// @import "partials/nav/mobile";
 
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
@@ -48,8 +49,9 @@ img, object, embed, video {
 }
 
 
-/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+/* Desktop Layout: 769px to max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 769px) {
     body{color: blue;}
-    
+    @import "partials/desktop/nav";
+    @import "partials/desktop/layout";
 }
