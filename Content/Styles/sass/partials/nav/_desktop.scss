@@ -9,7 +9,7 @@
 }
 
 #dl-home a {
-    border: 1px solid #ccc; /* for development only */
+    border: 1px solid #ddd; /* for development only */
     border-right: none;
     padding: 0 10px;
     line-height: 35px;
@@ -76,7 +76,7 @@
 
 .dl-menuwrapper button {
     border: currentColor;
-    border: 1px solid #ccc; /* for development only */ 
+    border: 1px solid #ddd; /* for development only */ 
     padding-left: 45px;
     position: relative;
     width: 130px;
@@ -157,7 +157,7 @@
 	background: rgb(248, 248, 248);
 }
 .dl-menuwrapper li.dl-back > a {
-	background: rgb(242, 242, 242); padding-left: 30px;
+	background: rgb(242, 242, 242); padding-left: 30px; font-size: 11px;
 }
 .dl-menuwrapper li.dl-back:after {
 	top: 0px; color: rgb(221, 221, 221); line-height: 33px; font-family: "icomoon"; position: absolute; content: "\e000"; speak: none; -webkit-font-smoothing: antialiased;
@@ -169,14 +169,28 @@
 	position: relative;
 }
 .dl-menuwrapper li a {
-	padding: 7px 10px; text-transform: uppercase; line-height: 20px; letter-spacing: 1px; font-size: 13px; font-weight: 700; display: block; position: relative;
+	padding: 7px 10px;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: block;
+    position: relative;
 	background: rgb(255, 255, 255); color: rgb(170, 170, 170);
 }
 .dl-menuwrapper li > a:not(:only-child):after {
-	top: 0px; color: rgb(221, 221, 221); line-height: 33px; font-family: "icomoon"; position: absolute; content: "\e000"; speak: none; -webkit-font-smoothing: antialiased;
+	top: 0px; 
+    color: rgb(221, 221, 221); 
+    line-height: 33px; 
+    font-family: "icomoon"; 
+    position: absolute; 
+    content: "\e000"; 
+    speak: none; 
+    -webkit-font-smoothing: antialiased;
 }
 .dl-menuwrapper li > a:after {
-	right: 10px; color: rgba(0, 0, 0, 0.15);
+	right: 10px; 
+    color: rgba(0, 0, 0, 0.15);
 }
 .dl-menuwrapper li .dl-submenu {
 	display: hidden;

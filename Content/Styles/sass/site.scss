@@ -1,8 +1,11 @@
 // * In this file you should write your main styles. (or centralize your imports)
 
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+
 // Modules and Variables
+// body{background: white;}
 @import "partials/base";
-@import "partials/nav_base";
+@import "partials/nav/base";
 
 /* =============================================================================
    Simple fluid media
@@ -38,7 +41,7 @@ img, object, embed, video {
 
 // Partials
 /* Mobile Layout: 480px and below. */
-// {Mobile}
+body{color: grey;}
 // @import "partials/nav/mobile";
 
 
@@ -52,6 +55,6 @@ img, object, embed, video {
 /* Desktop Layout: 769px to max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 769px) {
     body{color: blue;}
-    @import "partials/desktop/nav";
-    @import "partials/desktop/layout";
+    @import "partials/nav/desktop";
+    @import "partials/layout/desktop";
 }
