@@ -2,48 +2,44 @@
    Navigation Menu - Discovery
    ========================================================================== */
 
-/* */
+/* menu theme */
+.dl-menuwrapper button {
+	background: rgb(255, 255, 255); color: rgb(170, 170, 170);
+}
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active {
+    background: rgb(242, 242, 242);
+}
+
+/* 
 #discovery {
-    position: relative;
-    max-width: 400px;
-    top: 20px;
-    left: 20px;
-    font-size: 16px;
-	font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
 }
+*/
 
-#dl-menu a:hover {
-    background: black; color: red;
-}
-
-/* home */
+/*  home  */
 #dl-home a {
-    border: 1px solid #ddd;
+    border: 1px solid #ddd; /* for development only */
     border-right: none;
     padding: 0 10px;
-    font-size: 13px;
-    font-weight: 300;
     line-height: 35px;
-    background: rgba(255,255,255,1); color: rgba(170,170,170,1);
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
     float:left;
 }
 #dl-home a:hover {
-    background: rgba(242,242,242,1);
+    background: rgb(242, 242, 242);
 }
 
-/* wrapper */
+/*  wrapper  */
 .dl-menuwrapper {
-    width: 100%;
-	max-width: 300px;
-	float: left;
+    border: 1px dashed Red; /* for development only */
     position: relative;
-    perspective: 1000px;
 
+    perspective: 1000px;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
+
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
@@ -52,69 +48,59 @@
 	margin-right: 100px;
 }
 
-/* discover button */
+/*  discover button  */
 .dl-menuwrapper button {
-    border: 1px solid #ddd;
+    border: currentColor;
+    border: 1px solid #ddd; /* for development only */ 
     padding-left: 45px;
-    width: 130px;
-    height: 37px;
     position: relative;
-    overflow: hidden;
+    width: 130px;
+    height:100;
     display: block;
-    font-size: 13px;
-    font-weight: 300;
+    overflow: hidden;
     cursor: pointer;
-	outline: none;
-    background: rgba(255,255,255,1); color: rgba(170,170,170,1);
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    line-height: 33px;
 }
 
-/* discover icon = */
+/* discover icon */
 .dl-menuwrapper button:after {
 	content: '';
+    background: #aaa;
+	position: absolute;
 	width: 20%;
 	height: 5px;
-    position: absolute;
 	top: 20px;
 	left: 16%;
-	right: 15px;
-    line-height: 50px;
-    background: #aaa;
 	box-shadow: 
 		0 10px 0 #aaa, 
 		0 20px 0 #aaa;
+	right: 15px;
+    line-height: 50px;
 
     transform: rotate(90deg);
     -webkit-transform: rotate(90deg);
     -moz-transform: rotate(90deg);
 }
 
-/* submenus */
+/*  submenus  */
 
-/* menu titles 
-.dl-menuwrapper .dl-menu span {
-    padding: 7px 10px;
-    line-height: 35px;
-    cursor: pointer;
-}*/
-
-/* menu ul only */
+/*  menu ul only  */
 .dl-menuwrapper .dl-menu {
     visibility: hidden;
 }
 .dl-menuwrapper .dl-menu {
-	margin: 1px 0 0 0;
+	margin: 5px 0 0 0;
 	position: absolute;
 	width: 100%;
 	opacity: 0;
 	pointer-events: none;
+    /*box-shadow: 0px 3px 0px rgba(0,0,0,0.1);*/
     transform: translateY(10px);
 	-webkit-transform: translateY(10px);
 	-moz-transform: translateY(10px);
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1); /* shadow */
 }
 .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
@@ -129,74 +115,82 @@
 	-moz-transform: translateY(0px);
 }
 
-/* all uls */
+/*  all ul  */
 .dl-menuwrapper ul {
-    width: 300px;
+    width:300px;
 	list-style: none;
     overflow: hidden;
+
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
 }
 
-/* back li */
+/*  back li  */
 .dl-menuwrapper li.dl-back > a {
-    padding-left: 30px;
-    font-size: 11px;
-    background: rgba(0,0,0,0.1); color: rgba(255,255,255,1);
+	padding-left: 30px;
+	background: rgba(0,0,0,0.1);
 }
-.dl-menuwrapper li.dl-back:after {
-	left: 10px;
-    transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-}
-
-/* back li arrow */
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
-    color: rgba(170,170,170,0.3);
 	position: absolute;
-	top: 7px;
+	top: 0;
+	line-height: 50px;
 	font-family: 'icomoon';
 	speak: none;
 	-webkit-font-smoothing: antialiased;
 	content: "\e000";
 }
+.dl-menuwrapper li.dl-back:after {
+	left: 10px;
+	color: rgba(212,204,198,0.3);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
 
-/* menu li */
+/*  menu li  */
 .dl-menuwrapper li {
 	position: relative;
 }
-.dl-menuwrapper li a {
-    padding: 10px;
-    display: block;
+.dl-menuwrapper li a {/*original*/
+	display: block;
 	position: relative;
+	padding: 15px 20px;
+	font-size: 16px;
+	line-height: 20px;
+	font-weight: 300;
+	color: #fff;
 	outline: none;
-    color: rgba(170,170,170,1);
+}
+.dl-menuwrapper li a {/*new*/
+	padding: 7px 10px;
+    text-transform: uppercase;
+    line-height: 20px;
+    letter-spacing: 1px;
+    font-size: 13px;
+    display: block;
+    position: relative;
+	background: rgb(255, 255, 255); color: rgb(170, 170, 170);
+}
+.no-touch .dl-menuwrapper li a:hover {
+	background: rgba(255,248,213,0.1);
 }
 .dl-menuwrapper li > a:after {
 	right: 10px;
+	color: rgba(0,0,0,0.15);
 }
-
-/* menu li arrow */
+/*
 .dl-menuwrapper li > a:not(:only-child):after {
-	color: rgba(170,170,170,0.3);
-    position: absolute; 
-    top: 10px;
+	top: 0px; 
+    color: rgb(221, 221, 221); 
+    line-height: 33px; 
     font-family: "icomoon"; 
+    position: absolute; 
+    content: "\e000"; 
     speak: none; 
     -webkit-font-smoothing: antialiased;
-    content: "\e000"; 
 }
+*/
 
-/* menu theme */
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul {
-    background: rgba(242,242,242,0.8);
-}
 
-.no-touch .dl-menuwrapper li a:hover {
-	background: rgba(255,255,255,1); color: rgba(170,170,170,1);
-}

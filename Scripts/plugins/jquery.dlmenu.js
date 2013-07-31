@@ -175,8 +175,8 @@
 					self._resetMenu();
 				};
 
-			this.$menu.css('visibility','hidden');
-			this.$menu.removeClass( 'dl-menuopen' );
+			this.$menu.css('visibility','hidden'); // added code to prevent ie bug
+            this.$menu.removeClass( 'dl-menuopen' );
 			this.$menu.addClass( 'dl-menu-toggle' );
 			this.$trigger.removeClass( 'dl-active' );
 			
@@ -200,7 +200,7 @@
 			$body.off( 'click' ).on( 'click.dlmenu', function() {
 				self._closeMenu() ;
 			} );
-            this.$menu.css('visibility','visible');
+            this.$menu.css('visibility','visible'); // added code to prevent ie bug
 			this.$menu.addClass( 'dl-menuopen dl-menu-toggle' ).on( this.transEndEventName, function() {
 				$( this ).removeClass( 'dl-menu-toggle' );
 			} );
