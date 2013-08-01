@@ -42,7 +42,7 @@ img, object, embed, video {
 // Partials
 /* Mobile Layout: 480px and below. */
 body{color: grey;}
-// @import "partials/nav/mobile";
+@import "partials/nav/mobile";
 
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */

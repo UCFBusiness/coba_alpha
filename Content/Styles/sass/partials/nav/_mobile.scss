@@ -1,8 +1,22 @@
-/* Common styles of menus */
+/* home */
+#dl-home a {
+    border: 1px solid #ddd;
+    border-right: none;
+    padding: 0 10px;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 35px;
+    background: rgba(255,255,255,1); color: rgba(170,170,170,1);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    float:left;
+}
+#dl-home a:hover {
+    background: rgba(242,242,242,1);
+}
 
+/* wrapper */
 .dl-menuwrapper {
 	width: 100%;
-	max-width: 300px;
 	float: left;
 	position: relative;
 	-webkit-perspective: 1000px;
@@ -12,54 +26,87 @@
 	-moz-perspective-origin: 50% 200%;
 	perspective-origin: 50% 200%;
 }
-
 .dl-menuwrapper:first-child {
 	margin-right: 100px;
 }
 
+/* discover button */
 .dl-menuwrapper button {
 	background: #ccc;
-	border: none;
-	width: 48px;
-	height: 45px;
+	border: 1px solid #ddd;
+	width: 40px;
+	height: 37px;
 	text-indent: -900em;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
 	outline: none;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
 }
 
+/* menu theme */
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
-	background: #aaa;
+	background: rgba(242,242,242,1);
 }
 
+/* discover icon = */
 .dl-menuwrapper button:after {
 	content: '';
 	position: absolute;
 	width: 68%;
 	height: 5px;
 	background: #fff;
-	top: 10px;
+	top: 5px;
 	left: 16%;
 	box-shadow: 
 		0 10px 0 #fff, 
 		0 20px 0 #fff;
 }
 
+/* submenus */
+
+/* menu ul only */
+.dl-menuwrapper .dl-menu {
+	margin: 1px 0 0 0;
+	position: absolute;
+	width: 100%;
+	opacity: 0;
+	pointer-events: none;
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	transform: translateY(10px);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+.dl-menuwrapper .dl-menu.dl-menu-toggle {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+.dl-menuwrapper .dl-menu.dl-menuopen {
+	opacity: 1;
+	pointer-events: auto;
+	transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+}
+
+/* all uls */
 .dl-menuwrapper ul {
 	padding: 0;
 	list-style: none;
-	-webkit-transform-style: preserve-3d;
-	-moz-transform-style: preserve-3d;
 	transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
 }
 
+/* back li */
 .dl-menuwrapper li {
 	position: relative;
 }
-
 .dl-menuwrapper li a {
 	display: block;
 	position: relative;
@@ -104,30 +151,3 @@
 	color: rgba(0,0,0,0.15);
 }
 
-.dl-menuwrapper .dl-menu {
-	margin: 5px 0 0 0;
-	position: absolute;
-	width: 100%;
-	opacity: 0;
-	pointer-events: none;
-	-webkit-transform: translateY(10px);
-	-moz-transform: translateY(10px);
-	transform: translateY(10px);
-	-webkit-backface-visibility: hidden;
-	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
-}
-
-.dl-menuwrapper .dl-menu.dl-menu-toggle {
-	-webkit-transition: all 0.3s ease;
-	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
-}
-
-.dl-menuwrapper .dl-menu.dl-menuopen {
-	opacity: 1;
-	pointer-events: auto;
-	-webkit-transform: translateY(0px);
-	-moz-transform: translateY(0px);
-	transform: translateY(0px);
-}

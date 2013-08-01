@@ -14,10 +14,6 @@
     letter-spacing: 1px;
 }
 
-#dl-menu a:hover {
-    background: black; color: red;
-}
-
 /* home */
 #dl-home a {
     border: 1px solid #ddd;
@@ -40,8 +36,8 @@
 	max-width: 300px;
 	float: left;
     position: relative;
-    perspective: 1000px;
 
+    perspective: 1000px;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
     perspective-origin: 50% 200%;
@@ -58,6 +54,7 @@
     padding-left: 45px;
     width: 130px;
     height: 37px;
+    text-indent: 0em;
     position: relative;
     overflow: hidden;
     display: block;
@@ -90,13 +87,6 @@
 }
 
 /* submenus */
-
-/* menu titles 
-.dl-menuwrapper .dl-menu span {
-    padding: 7px 10px;
-    line-height: 35px;
-    cursor: pointer;
-}*/
 
 /* menu ul only */
 .dl-menuwrapper .dl-menu {
@@ -194,7 +184,7 @@
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
-    background: rgba(242,242,242,0.8);
+    background: rgba(242,242,242,1);
 }
 
 .no-touch .dl-menuwrapper li a:hover {
