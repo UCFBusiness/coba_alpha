@@ -1,56 +1,58 @@
-/* home */
-#dl-home a {
-    border: 1px solid #ddd;
-    border-right: none;
-    padding: 0 10px;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 35px;
-    background: rgba(255,255,255,1); color: rgba(170,170,170,1);
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
-    float:left;
-}
-#dl-home a:hover {
-    background: rgba(242,242,242,1);
+/* =============================================================================
+   Navigation Menu - Discovery
+   ========================================================================== */
+
+#menu {
+    font-size: 16px;
+	font-weight: 300;
+    letter-spacing: 1px; 
 }
 
 /* wrapper */
 .dl-menuwrapper {
-	width: 100%;
-	float: left;
-	position: relative;
-	-webkit-perspective: 1000px;
-	-moz-perspective: 1000px;
-	perspective: 1000px;
-	-webkit-perspective-origin: 50% 200%;
-	-moz-perspective-origin: 50% 200%;
-	perspective-origin: 50% 200%;
+    background: none;
+    background: #ffcc00;
+    position: relative;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective-origin: 50% 200%;
+    -webkit-perspective-origin: 50% 200%;
+    -moz-perspective-origin: 50% 200%;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
 }
 .dl-menuwrapper:first-child {
 	margin-right: 100px;
 }
 
+/* home button */
+#dl-home {
+    /* needs home icon as background */
+    border-right: none;
+    width: 45px;
+    height: 36px;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: -900em;
+    float: left;
+}
+#dl-home:hover {
+    background: rgba(242,242,242,1);
+}
+
 /* discover button */
 .dl-menuwrapper button {
-	background: #ccc;
-	border: 1px solid #ddd;
-	width: 40px;
-	height: 37px;
+	background: #cc9900; /* change color for menu here */
+	border: none;
+    width: 45px;
+    height: 36px;
 	text-indent: -900em;
 	overflow: hidden;
 	position: relative;
 	cursor: pointer;
 	outline: none;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    float: left;
 }
-
-/* menu theme */
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul {
-	background: rgba(242,242,242,1);
-}
-
 /* discover icon = */
 .dl-menuwrapper button:after {
 	content: '';
@@ -65,26 +67,35 @@
 		0 20px 0 #fff;
 }
 
+/* search */
+#dl-search {
+    border: none;
+    padding: 0px 15px;
+    height: 36px;
+    float: left;
+}
+
 /* submenus */
 
 /* menu ul only */
 .dl-menuwrapper .dl-menu {
-	margin: 1px 0 0 0;
+	margin: 36px 0 0 0;
 	position: absolute;
 	width: 100%;
 	opacity: 0;
 	pointer-events: none;
+	transform: translateY(10px);
 	-webkit-transform: translateY(10px);
 	-moz-transform: translateY(10px);
-	transform: translateY(10px);
+	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
-	backface-visibility: hidden;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
 }
 .dl-menuwrapper .dl-menu.dl-menu-toggle {
+	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
-	transition: all 0.3s ease;
 }
 .dl-menuwrapper .dl-menu.dl-menuopen {
 	opacity: 1;
@@ -96,14 +107,15 @@
 
 /* all uls */
 .dl-menuwrapper ul {
-	padding: 0;
+    width: 100%;
 	list-style: none;
+    overflow: hidden;
 	transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
 }
 
-/* back li */
+/* menu li */
 .dl-menuwrapper li {
 	position: relative;
 }
@@ -117,19 +129,28 @@
 	color: #fff;
 	outline: none;
 }
-
-.no-touch .dl-menuwrapper li a:hover {
-	background: rgba(255,248,213,0.1);
+.dl-menuwrapper li > a:after {
+	right: 10px;
+	color: rgba(170,170,170,1);
 }
-
+/* back li */
 .dl-menuwrapper li.dl-back > a {
 	padding-left: 30px;
-	background: rgba(0,0,0,0.1);
+    font-size: 11px;
+    text-transform: uppercase;
+	background: rgba(0,0,0,0.1); color: rgba(255,255,255,1);
 }
-
+.dl-menuwrapper li.dl-back:after {
+	left: 10px;
+	transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+/* li arrows */
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
-	position: absolute;
+	color: rgba(170,170,170,0.3);
+    position: absolute;
 	top: 0;
 	line-height: 50px;
 	font-family: 'icomoon';
@@ -138,16 +159,13 @@
 	content: "\e000";
 }
 
-.dl-menuwrapper li.dl-back:after {
-	left: 10px;
-	color: rgba(212,204,198,0.3);
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-	transform: rotate(180deg);
+/* menu theme */
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper ul {
+    background: rgba(170,170,170,1);
 }
 
-.dl-menuwrapper li > a:after {
-	right: 10px;
-	color: rgba(0,0,0,0.15);
+.no-touch .dl-menuwrapper li a:hover {
+	background: rgba(255,255,255,1); color: rgba(170,170,170,1);
 }
-

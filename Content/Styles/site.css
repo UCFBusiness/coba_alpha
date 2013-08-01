@@ -2143,72 +2143,73 @@ body {
   color: grey;
 }
 
-/* home */
-/* line 2, sass/partials/nav/_mobile.scss */
-#dl-home a {
-  border: 1px solid #ddd;
-  border-right: none;
-  padding: 0 10px;
-  font-size: 13px;
+/* =============================================================================
+   Navigation Menu - Discovery
+   ========================================================================== */
+/* line 5, sass/partials/nav/_mobile.scss */
+#menu {
+  font-size: 16px;
   font-weight: 300;
-  line-height: 35px;
-  background: white;
-  color: #aaaaaa;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  /* shadow */
-  float: left;
-}
-
-/* line 13, sass/partials/nav/_mobile.scss */
-#dl-home a:hover {
-  background: #f2f2f2;
+  letter-spacing: 1px;
 }
 
 /* wrapper */
-/* line 18, sass/partials/nav/_mobile.scss */
+/* line 12, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper {
-  width: 100%;
-  float: left;
+  background: none;
+  background: #ffcc00;
   position: relative;
+  perspective: 1000px;
   -webkit-perspective: 1000px;
   -moz-perspective: 1000px;
-  perspective: 1000px;
+  perspective-origin: 50% 200%;
   -webkit-perspective-origin: 50% 200%;
   -moz-perspective-origin: 50% 200%;
-  perspective-origin: 50% 200%;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  /* shadow */
 }
 
-/* line 29, sass/partials/nav/_mobile.scss */
+/* line 24, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper:first-child {
   margin-right: 100px;
 }
 
+/* home button */
+/* line 29, sass/partials/nav/_mobile.scss */
+#dl-home {
+  /* needs home icon as background */
+  border-right: none;
+  width: 45px;
+  height: 36px;
+  font-size: 13px;
+  font-weight: 300;
+  text-indent: -900em;
+  float: left;
+}
+
+/* line 39, sass/partials/nav/_mobile.scss */
+#dl-home:hover {
+  background: #f2f2f2;
+}
+
 /* discover button */
-/* line 34, sass/partials/nav/_mobile.scss */
+/* line 44, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper button {
-  background: #ccc;
-  border: 1px solid #ddd;
-  width: 40px;
-  height: 37px;
+  background: #cc9900;
+  /* change color for menu here */
+  border: none;
+  width: 45px;
+  height: 36px;
   text-indent: -900em;
   overflow: hidden;
   position: relative;
   cursor: pointer;
   outline: none;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-  /* shadow */
-}
-
-/* menu theme */
-/* line 50, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul {
-  background: #f2f2f2;
+  float: left;
 }
 
 /* discover icon = */
-/* line 55, sass/partials/nav/_mobile.scss */
+/* line 57, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper button:after {
   content: '';
   position: absolute;
@@ -2220,31 +2221,42 @@ body {
   box-shadow: 0 10px 0 white, 0 20px 0 white;
 }
 
+/* search */
+/* line 71, sass/partials/nav/_mobile.scss */
+#dl-search {
+  border: none;
+  padding: 0px 15px;
+  height: 36px;
+  float: left;
+}
+
 /* submenus */
 /* menu ul only */
-/* line 71, sass/partials/nav/_mobile.scss */
+/* line 81, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper .dl-menu {
-  margin: 1px 0 0 0;
+  margin: 36px 0 0 0;
   position: absolute;
   width: 100%;
   opacity: 0;
   pointer-events: none;
+  transform: translateY(10px);
   -webkit-transform: translateY(10px);
   -moz-transform: translateY(10px);
-  transform: translateY(10px);
+  backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  backface-visibility: hidden;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  /* shadow */
 }
 
-/* line 84, sass/partials/nav/_mobile.scss */
+/* line 95, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper .dl-menu.dl-menu-toggle {
+  transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
-  transition: all 0.3s ease;
 }
 
-/* line 89, sass/partials/nav/_mobile.scss */
+/* line 100, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper .dl-menu.dl-menuopen {
   opacity: 1;
   pointer-events: auto;
@@ -2254,22 +2266,23 @@ body {
 }
 
 /* all uls */
-/* line 98, sass/partials/nav/_mobile.scss */
+/* line 109, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper ul {
-  padding: 0;
+  width: 100%;
   list-style: none;
+  overflow: hidden;
   transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
 }
 
-/* back li */
-/* line 107, sass/partials/nav/_mobile.scss */
+/* menu li */
+/* line 119, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li {
   position: relative;
 }
 
-/* line 110, sass/partials/nav/_mobile.scss */
+/* line 122, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li a {
   display: block;
   position: relative;
@@ -2281,20 +2294,35 @@ body {
   outline: none;
 }
 
-/* line 121, sass/partials/nav/_mobile.scss */
-.no-touch .dl-menuwrapper li a:hover {
-  background: rgba(255, 248, 213, 0.1);
+/* line 132, sass/partials/nav/_mobile.scss */
+.dl-menuwrapper li > a:after {
+  right: 10px;
+  color: #aaaaaa;
 }
 
-/* line 125, sass/partials/nav/_mobile.scss */
+/* back li */
+/* line 137, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li.dl-back > a {
   padding-left: 30px;
+  font-size: 11px;
+  text-transform: uppercase;
   background: rgba(0, 0, 0, 0.1);
+  color: white;
 }
 
-/* line 131, sass/partials/nav/_mobile.scss */
+/* line 143, sass/partials/nav/_mobile.scss */
+.dl-menuwrapper li.dl-back:after {
+  left: 10px;
+  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  -moz-transform: rotate(180deg);
+}
+
+/* li arrows */
+/* line 151, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
+  color: rgba(170, 170, 170, 0.3);
   position: absolute;
   top: 0;
   line-height: 50px;
@@ -2304,19 +2332,18 @@ body {
   content: "\e000";
 }
 
-/* line 141, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li.dl-back:after {
-  left: 10px;
-  color: rgba(212, 204, 198, 0.3);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-  transform: rotate(180deg);
+/* menu theme */
+/* line 165, sass/partials/nav/_mobile.scss */
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper ul {
+  background: #aaaaaa;
 }
 
-/* line 149, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li > a:after {
-  right: 10px;
-  color: rgba(0, 0, 0, 0.15);
+/* line 169, sass/partials/nav/_mobile.scss */
+.no-touch .dl-menuwrapper li a:hover {
+  background: white;
+  color: #aaaaaa;
 }
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
@@ -2336,46 +2363,18 @@ body {
   /* =============================================================================
      Navigation Menu - Discovery
      ========================================================================== */
-  /* */
-  /* line 6, sass/partials/nav/_desktop.scss */
-  #discovery {
-    position: relative;
-    max-width: 400px;
-    top: 20px;
+  /* line 5, sass/partials/nav/_desktop.scss */
+  #menu {
+    position: absolute;
+    top: 70px;
     left: 20px;
-    font-size: 16px;
-    font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-
-  /* home */
-  /* line 18, sass/partials/nav/_desktop.scss */
-  #dl-home a {
-    border: 1px solid #ddd;
-    border-right: none;
-    padding: 0 10px;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 35px;
-    background: white;
-    color: #aaaaaa;
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-    /* shadow */
-    float: left;
-  }
-
-  /* line 29, sass/partials/nav/_desktop.scss */
-  #dl-home a:hover {
-    background: #f2f2f2;
   }
 
   /* wrapper */
-  /* line 34, sass/partials/nav/_desktop.scss */
+  /* line 12, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper {
-    width: 100%;
-    max-width: 300px;
-    float: left;
+    background: none;
+    width: 60%;
     position: relative;
     perspective: 1000px;
     -webkit-perspective: 1000px;
@@ -2383,36 +2382,64 @@ body {
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
+    box-shadow: none;
+    /* no shadow */
+    /*-border: 1px dashed red; for development only-*/
   }
 
-  /* line 47, sass/partials/nav/_desktop.scss */
+  /* line 25, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
   }
 
+  /* home button */
+  /* line 30, sass/partials/nav/_desktop.scss */
+  #dl-home {
+    border: 1px solid #ddd;
+    border-right: none;
+    padding: 9px;
+    width: 45px;
+    height: 16px;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: 0;
+    background: white;
+    color: #aaaaaa;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
+    float: left;
+  }
+
+  /* line 43, sass/partials/nav/_desktop.scss */
+  #dl-home:hover {
+    background: #f2f2f2;
+  }
+
   /* discover button */
-  /* line 52, sass/partials/nav/_desktop.scss */
+  /* line 48, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
+    border-right: none;
     padding-left: 45px;
     width: 130px;
-    height: 37px;
-    text-indent: 0em;
+    height: 36px;
     position: relative;
     overflow: hidden;
     display: block;
     font-size: 13px;
     font-weight: 300;
+    text-indent: 0em;
     cursor: pointer;
     outline: none;
     background: white;
     color: #aaaaaa;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     /* shadow */
+    float: left;
   }
 
   /* discover icon = */
-  /* line 70, sass/partials/nav/_desktop.scss */
+  /* line 67, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button:after {
     content: '';
     width: 20%;
@@ -2429,18 +2456,28 @@ body {
     -moz-transform: rotate(90deg);
   }
 
+  /* search */
+  /* line 87, sass/partials/nav/_desktop.scss */
+  #dl-search {
+    border: 1px solid #eee;
+    padding: 1px 15px;
+    height: 32px;
+    float: left;
+  }
+
   /* submenus */
   /* menu ul only */
-  /* line 92, sass/partials/nav/_desktop.scss */
+  /* line 97, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu {
+    /* ie fix */
     visibility: hidden;
   }
 
-  /* line 95, sass/partials/nav/_desktop.scss */
+  /* line 100, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu {
-    margin: 1px 0 0 0;
+    margin: 36px 0 0 63px;
     position: absolute;
-    width: 100%;
+    max-width: 300px;
     opacity: 0;
     pointer-events: none;
     transform: translateY(10px);
@@ -2449,18 +2486,17 @@ body {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
-    box-shadow: 0px 3px 8px 0px rgba(0, 0, 0, 0.1);
-    /* shadow */
+    /*box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);  shadow */
   }
 
-  /* line 109, sass/partials/nav/_desktop.scss */
+  /* line 114, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 114, sass/partials/nav/_desktop.scss */
+  /* line 119, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -2470,9 +2506,9 @@ body {
   }
 
   /* all uls */
-  /* line 123, sass/partials/nav/_desktop.scss */
+  /* line 128, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper ul {
-    width: 300px;
+    max-width: 300px;
     list-style: none;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -2480,43 +2516,13 @@ body {
     -moz-transform-style: preserve-3d;
   }
 
-  /* back li */
-  /* line 133, sass/partials/nav/_desktop.scss */
-  .dl-menuwrapper li.dl-back > a {
-    padding-left: 30px;
-    font-size: 11px;
-    background: rgba(0, 0, 0, 0.1);
-    color: white;
-  }
-
-  /* line 138, sass/partials/nav/_desktop.scss */
-  .dl-menuwrapper li.dl-back:after {
-    left: 10px;
-    transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-  }
-
-  /* back li arrow */
-  /* line 147, sass/partials/nav/_desktop.scss */
-  .dl-menuwrapper li.dl-back:after,
-  .dl-menuwrapper li > a:not(:only-child):after {
-    color: rgba(170, 170, 170, 0.3);
-    position: absolute;
-    top: 7px;
-    font-family: 'icomoon';
-    speak: none;
-    -webkit-font-smoothing: antialiased;
-    content: "\e000";
-  }
-
   /* menu li */
-  /* line 158, sass/partials/nav/_desktop.scss */
+  /* line 138, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 161, sass/partials/nav/_desktop.scss */
+  /* line 141, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li a {
     padding: 10px;
     display: block;
@@ -2525,39 +2531,72 @@ body {
     color: #aaaaaa;
   }
 
-  /* line 168, sass/partials/nav/_desktop.scss */
+  /* line 148, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
-  /* menu li arrow */
-  /* line 173, sass/partials/nav/_desktop.scss */
+  /* back li */
+  /* line 152, sass/partials/nav/_desktop.scss */
+  .dl-menuwrapper li.dl-back > a {
+    padding-left: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.1);
+    color: white;
+  }
+
+  /* line 158, sass/partials/nav/_desktop.scss */
+  .dl-menuwrapper li.dl-back:after {
+    left: 10px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+  }
+
+  /* li arrows */
+  /* line 166, sass/partials/nav/_desktop.scss */
+  .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     color: rgba(170, 170, 170, 0.3);
     position: absolute;
     top: 10px;
-    font-family: "icomoon";
+    line-height: 20px;
+    font-family: 'icomoon';
     speak: none;
     -webkit-font-smoothing: antialiased;
     content: "\e000";
   }
 
   /* menu theme */
-  /* line 186, sass/partials/nav/_desktop.scss */
+  /* line 180, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul {
     background: #f2f2f2;
   }
 
-  /* line 190, sass/partials/nav/_desktop.scss */
+  /* line 184, sass/partials/nav/_desktop.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: white;
     color: #aaaaaa;
   }
 
   /* line 1, sass/partials/layout/_desktop.scss */
+  .container {
+    padding: 0 20px;
+    background: #fff;
+    /*- this will contain any background images or videos -*/
+  }
+
+  /* line 6, sass/partials/layout/_desktop.scss */
   header {
-    height: 100px;
+    min-height: 100px;
+    /*background: rgba(242,242,242,1);*/
+  }
+
+  /* line 11, sass/partials/layout/_desktop.scss */
+  #body {
+    /*background: rgba(242,242,242,1);*/
   }
 }

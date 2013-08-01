@@ -1,3 +1,13 @@
+.container {
+    padding: 0 20px;
+    background: #fff; /*- this will contain any background images or videos -*/
+}
+
 header {
-    height: 100px;
+    min-height: 100px;
+    /*background: rgba(242,242,242,1);*/
+}
+
+#body {
+    /*background: rgba(242,242,242,1);*/
 }

@@ -2,70 +2,67 @@
    Navigation Menu - Discovery
    ========================================================================== */
 
-/* */
-#discovery {
-    position: relative;
-    max-width: 400px;
-    top: 20px;
+#menu {
+    position: absolute;
+    top: 70px;
     left: 20px;
-    font-size: 16px;
-	font-weight: 300;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-/* home */
-#dl-home a {
-    border: 1px solid #ddd;
-    border-right: none;
-    padding: 0 10px;
-    font-size: 13px;
-    font-weight: 300;
-    line-height: 35px;
-    background: rgba(255,255,255,1); color: rgba(170,170,170,1);
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
-    float:left;
-}
-#dl-home a:hover {
-    background: rgba(242,242,242,1);
 }
 
 /* wrapper */
 .dl-menuwrapper {
-    width: 100%;
-	max-width: 300px;
-	float: left;
+    background: none;
+    width: 60%;
     position: relative;
-
     perspective: 1000px;
     -webkit-perspective: 1000px;
     -moz-perspective: 1000px;
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
+    box-shadow: none; /* no shadow */
+    /*-border: 1px dashed red; for development only-*/
 }
 .dl-menuwrapper:first-child {
 	margin-right: 100px;
 }
 
+/* home button */
+#dl-home {
+    border: 1px solid #ddd;
+    border-right: none;
+    padding: 9px;
+    width: 45px;
+    height: 16px;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: 0;
+    background: rgba(255,255,255,1); color: rgba(170,170,170,1);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    float: left;
+}
+#dl-home:hover {
+    background: rgba(242,242,242,1);
+}
+
 /* discover button */
 .dl-menuwrapper button {
     border: 1px solid #ddd;
+    border-right: none;
     padding-left: 45px;
     width: 130px;
-    height: 37px;
-    text-indent: 0em;
+    height: 36px;
     position: relative;
     overflow: hidden;
     display: block;
     font-size: 13px;
     font-weight: 300;
+    text-indent: 0em;
     cursor: pointer;
 	outline: none;
     background: rgba(255,255,255,1); color: rgba(170,170,170,1);
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    float: left;
 }
-
 /* discover icon = */
 .dl-menuwrapper button:after {
 	content: '';
@@ -86,16 +83,24 @@
     -moz-transform: rotate(90deg);
 }
 
+/* search */
+#dl-search {
+    border: 1px solid #eee;
+    padding: 1px 15px;
+    height: 32px;
+    float: left;
+}
+
 /* submenus */
 
 /* menu ul only */
-.dl-menuwrapper .dl-menu {
+.dl-menuwrapper .dl-menu { /* ie fix */
     visibility: hidden;
 }
 .dl-menuwrapper .dl-menu {
-	margin: 1px 0 0 0;
+	margin: 36px 0 0 63px;
 	position: absolute;
-	width: 100%;
+	max-width: 300px;
 	opacity: 0;
 	pointer-events: none;
     transform: translateY(10px);
@@ -104,7 +109,7 @@
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
-    box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    /*box-shadow: 0px 3px 8px 0px rgba(0,0,0,0.1);  shadow */
 }
 .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
@@ -121,37 +126,12 @@
 
 /* all uls */
 .dl-menuwrapper ul {
-    width: 300px;
-	list-style: none;
+	max-width: 300px;
+    list-style: none;
     overflow: hidden;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
-}
-
-/* back li */
-.dl-menuwrapper li.dl-back > a {
-    padding-left: 30px;
-    font-size: 11px;
-    background: rgba(0,0,0,0.1); color: rgba(255,255,255,1);
-}
-.dl-menuwrapper li.dl-back:after {
-	left: 10px;
-    transform: rotate(180deg);
-	-webkit-transform: rotate(180deg);
-	-moz-transform: rotate(180deg);
-}
-
-/* back li arrow */
-.dl-menuwrapper li.dl-back:after,
-.dl-menuwrapper li > a:not(:only-child):after {
-    color: rgba(170,170,170,0.3);
-	position: absolute;
-	top: 7px;
-	font-family: 'icomoon';
-	speak: none;
-	-webkit-font-smoothing: antialiased;
-	content: "\e000";
 }
 
 /* menu li */
@@ -168,16 +148,30 @@
 .dl-menuwrapper li > a:after {
 	right: 10px;
 }
-
-/* menu li arrow */
+/* back li */
+.dl-menuwrapper li.dl-back > a {
+    padding-left: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.1); color: rgba(255,255,255,1);
+}
+.dl-menuwrapper li.dl-back:after {
+	left: 10px;
+    transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+/* li arrows */
+.dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
-	color: rgba(170,170,170,0.3);
-    position: absolute; 
-    top: 10px;
-    font-family: "icomoon"; 
-    speak: none; 
-    -webkit-font-smoothing: antialiased;
-    content: "\e000"; 
+    color: rgba(170,170,170,0.3);
+	position: absolute;
+	top: 10px;
+    line-height: 20px;
+	font-family: 'icomoon';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	content: "\e000";
 }
 
 /* menu theme */
