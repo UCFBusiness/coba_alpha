@@ -3,15 +3,19 @@
    ========================================================================== */
 
 #menu {
-    font-size: 16px;
+    font-size: 18px;
 	font-weight: 300;
-    letter-spacing: 1px; 
+    line-height: 20px;
+    letter-spacing: 1px;
+}
+
+#menu a {
+    color: rgba(255,255,255,1); 
 }
 
 /* wrapper */
 .dl-menuwrapper {
-    background: none;
-    background: #ffcc00;
+    background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555), color-stop(1, #222));
     position: relative;
     perspective: 1000px;
     -webkit-perspective: 1000px;
@@ -37,12 +41,12 @@
     float: left;
 }
 #dl-home:hover {
-    background: rgba(242,242,242,1);
+    background: rgba(0,0,0,1);
 }
 
 /* discover button */
 .dl-menuwrapper button {
-	background: #cc9900; /* change color for menu here */
+	background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555), color-stop(1, #222));
 	border: none;
     width: 45px;
     height: 36px;
@@ -58,9 +62,9 @@
 	content: '';
 	position: absolute;
 	width: 68%;
-	height: 5px;
+	height: 3px;
 	background: #fff;
-	top: 5px;
+	top: 6px;
 	left: 16%;
 	box-shadow: 
 		0 10px 0 #fff, 
@@ -69,10 +73,10 @@
 
 /* search */
 #dl-search {
-    border: none;
-    padding: 0px 15px;
-    height: 36px;
-    float: left;
+    border: 1px solid #000;
+    padding: 0;
+    height: 33px;
+    float: right;
 }
 
 /* submenus */
@@ -90,7 +94,6 @@
 	backface-visibility: hidden;
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
 }
 .dl-menuwrapper .dl-menu.dl-menu-toggle {
 	transition: all 0.3s ease;
@@ -120,18 +123,13 @@
 	position: relative;
 }
 .dl-menuwrapper li a {
+    padding: 15px 20px;
 	display: block;
 	position: relative;
-	padding: 15px 20px;
-	font-size: 16px;
-	line-height: 20px;
-	font-weight: 300;
-	color: #fff;
 	outline: none;
 }
 .dl-menuwrapper li > a:after {
 	right: 10px;
-	color: rgba(170,170,170,1);
 }
 /* back li */
 .dl-menuwrapper li.dl-back > a {
@@ -163,9 +161,11 @@
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
-    background: rgba(170,170,170,1);
+    background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555), color-stop(1, #222)); 
+    color: rgba(0,0,0,1);
 }
 
 .no-touch .dl-menuwrapper li a:hover {
-	background: rgba(255,255,255,1); color: rgba(170,170,170,1);
+	background: rgba(0,0,0,1); 
+    color: rgba(170,170,170,1);
 }
