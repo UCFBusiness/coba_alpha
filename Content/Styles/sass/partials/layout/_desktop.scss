@@ -1,6 +1,13 @@
-.container {
+body .container {
     padding: 0 20px;
+    width: 100%;
+    height: 100%;
     background: #fff; /*- this will contain any background images or videos -*/
+    background: #fff url(../../images/millican.jpg) no-repeat center center fixed;
+    background-size: cover;
+
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
 }
 
 header {
