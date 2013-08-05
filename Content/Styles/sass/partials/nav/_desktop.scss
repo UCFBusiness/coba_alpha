@@ -11,6 +11,8 @@
     line-height: 20px;
     letter-spacing: 1px; 
     color: #ccc;
+
+    font-family: 'Lato', Calibri, Arial, sans-serif;
 }
 
 /* wrapper */
@@ -159,7 +161,7 @@
 	position: relative;
 }
 .dl-menuwrapper li a {
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
     display: block;
 	position: relative;
 	outline: none;

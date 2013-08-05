@@ -327,14 +327,14 @@ td {
 /* ========================================================================== */
 /* line 7, sass/partials/boilerplate/_primary_styles.scss */
 html {
-  background-color: #e2e2e2;
+  background: #191919;
 }
 
 /* line 11, sass/partials/boilerplate/_primary_styles.scss */
 body {
   background-color: white;
-  font-family: 'Lato', Calibri, Arial, sans-serif;
   font-size: .85em;
+  line-height: 1.4em;
 }
 
 /* line 19, sass/partials/boilerplate/_primary_styles.scss */
@@ -385,6 +385,80 @@ mark {
   background-color: #a6dbed;
   padding-left: 5px;
   padding-right: 5px;
+}
+
+/* line 44, sass/partials/boilerplate/_primary_styles.scss */
+blockquote {
+  background: white url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
+  background-position: 0px 5px;
+  border-left: 4px solid #DDD;
+  padding: 10px 15px 10px;
+  font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
+  color: #666;
+}
+
+/* line 53, sass/partials/boilerplate/_primary_styles.scss */
+blockquote small {
+  font: italic .9em "Georgia", "Times New Roman", "Times", serif;
+  color: #666;
+}
+
+/*---------------------*/
+/*-- Special Classes --*/
+/*---------------------*/
+/* line 62, sass/partials/boilerplate/_primary_styles.scss */
+.noshow {
+  display: none;
+}
+
+/* line 66, sass/partials/boilerplate/_primary_styles.scss */
+.shadow {
+  box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
+  /*-CSS3 Box Shadow-*/
+  -moz-box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
+  /*-CSS3 Box Shadow-*/
+}
+
+/* line 71, sass/partials/boilerplate/_primary_styles.scss */
+.highlight {
+  background-color: #fff34d;
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  /* FF3.5+ */
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  /* Saf3.0+, Chrome */
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
+  /* Opera 10.5+, IE 9.0 */
+}
+
+/* line 79, sass/partials/boilerplate/_primary_styles.scss */
+.highlight {
+  padding: 1px 4px;
+  margin: 0 -4px;
+}
+
+/* line 84, sass/partials/boilerplate/_primary_styles.scss */
+.left {
+  float: left;
+}
+
+/* line 88, sass/partials/boilerplate/_primary_styles.scss */
+.right {
+  float: right;
+}
+
+/* line 92, sass/partials/boilerplate/_primary_styles.scss */
+.note {
+  border: 1px solid orange;
+  padding: 1em;
+  background: #ffffe0;
+}
+
+/*----------------------*/
+/*-- FOOTER  Section --*/
+/*----------------------*/
+/* line 102, sass/partials/boilerplate/_primary_styles.scss */
+footer {
+  background: #e2e2e2;
 }
 
 /* ==|== non-semantic helper classes ======================================== */
@@ -2360,10 +2434,11 @@ body {
     line-height: 20px;
     letter-spacing: 1px;
     color: #ccc;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
   }
 
   /* wrapper */
-  /* line 17, sass/partials/nav/_desktop.scss */
+  /* line 19, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper {
     background: none;
     width: 60%;
@@ -2378,13 +2453,13 @@ body {
     /* no shadow */
   }
 
-  /* line 29, sass/partials/nav/_desktop.scss */
+  /* line 31, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
   }
 
   /* home button */
-  /* line 34, sass/partials/nav/_desktop.scss */
+  /* line 36, sass/partials/nav/_desktop.scss */
   #dl-home {
     border: 1px solid #ddd;
     border-right: none;
@@ -2401,13 +2476,13 @@ body {
     float: left;
   }
 
-  /* line 47, sass/partials/nav/_desktop.scss */
+  /* line 49, sass/partials/nav/_desktop.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 52, sass/partials/nav/_desktop.scss */
+  /* line 54, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
@@ -2430,7 +2505,7 @@ body {
   }
 
   /* discover icon = */
-  /* line 71, sass/partials/nav/_desktop.scss */
+  /* line 73, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button:after {
     	/*content: '';
     	width: 20%;
@@ -2462,7 +2537,7 @@ body {
   }
 
   /* search */
-  /* line 105, sass/partials/nav/_desktop.scss */
+  /* line 107, sass/partials/nav/_desktop.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -2477,13 +2552,13 @@ body {
 
   /* submenus */
   /* menu ul only */
-  /* line 118, sass/partials/nav/_desktop.scss */
+  /* line 120, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 121, sass/partials/nav/_desktop.scss */
+  /* line 123, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -2498,14 +2573,14 @@ body {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 134, sass/partials/nav/_desktop.scss */
+  /* line 136, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 139, sass/partials/nav/_desktop.scss */
+  /* line 141, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -2515,7 +2590,7 @@ body {
   }
 
   /* all uls */
-  /* line 148, sass/partials/nav/_desktop.scss */
+  /* line 150, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -2526,26 +2601,26 @@ body {
   }
 
   /* menu li */
-  /* line 158, sass/partials/nav/_desktop.scss */
+  /* line 160, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 161, sass/partials/nav/_desktop.scss */
+  /* line 163, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li a {
-    padding: 10px;
+    padding: 10px 10px 10px 15px;
     display: block;
     position: relative;
     outline: none;
   }
 
-  /* line 167, sass/partials/nav/_desktop.scss */
+  /* line 169, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 171, sass/partials/nav/_desktop.scss */
+  /* line 173, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -2554,7 +2629,7 @@ body {
     color: white;
   }
 
-  /* line 177, sass/partials/nav/_desktop.scss */
+  /* line 179, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -2563,7 +2638,7 @@ body {
   }
 
   /* li arrows */
-  /* line 185, sass/partials/nav/_desktop.scss */
+  /* line 187, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -2577,7 +2652,7 @@ body {
   }
 
   /* desktop - menu theme */
-  /* line 199, sass/partials/nav/_desktop.scss */
+  /* line 201, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -2586,7 +2661,7 @@ body {
     /* li:hover color*/
   }
 
-  /* line 204, sass/partials/nav/_desktop.scss */
+  /* line 206, sass/partials/nav/_desktop.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -2596,23 +2671,22 @@ body {
   /* line 1, sass/partials/layout/_desktop.scss */
   body .container {
     padding: 0 20px;
-    width: 100%;
     height: 100%;
-    background: #fff;
-    /*- this will contain any background images or videos -*/
-    background: white url(../../images/millican.jpg) no-repeat center center fixed;
+    /*
+    background: #fff url(../../images/millican.jpg) no-repeat center center fixed;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='.myBackground.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='myBackground.jpg', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+    */
   }
 
-  /* line 13, sass/partials/layout/_desktop.scss */
+  /* line 12, sass/partials/layout/_desktop.scss */
   header {
     min-height: 100px;
     /*background: rgba(242,242,242,1);*/
   }
 
-  /* line 18, sass/partials/layout/_desktop.scss */
+  /* line 17, sass/partials/layout/_desktop.scss */
   #body {
     /*background: rgba(242,242,242,1);*/
   }
