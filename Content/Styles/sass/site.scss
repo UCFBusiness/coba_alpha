@@ -5,7 +5,6 @@
 // Modules and Variables
 // body{background: white;}
 @import "partials/base";
-@import "partials/nav/base";
 
 /* =============================================================================
    Simple fluid media
@@ -43,7 +42,7 @@ img, object, embed, video {
 /* Mobile Layout: 480px and below. */
 body{color: grey;}
 @import "partials/nav/mobile";
-
+@import "partials/layout/mobile";
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
 @media only screen and (min-width: 481px) {
