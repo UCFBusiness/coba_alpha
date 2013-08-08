@@ -15,10 +15,12 @@
         <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
 
         <style type="text/css">
+            
+            /*---------------Layout-all---------------*/
     
             .persist-header { /*-settings for both-*/
-                background:#FFF;
-                border:1px solid #ddd;
+                /*background:#FFF;*/
+                border:1px dashed #fff;
                 padding-top: 10px;
                 min-height:10px;
                 max-width:100%;
@@ -54,13 +56,13 @@
         <script src="~/scripts/modernizr-2.6.2.js"></script>
         <!-- Google Analytics Code -->
     </head>
-    <body><a id="top"></a>
+    <body class="page"><a id="top"></a>
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
         <!--BEGIN: UCF Header-->
-        <div id="UCFHBHeader" class="content-wrapper">
+        <div id="UCFHBHeader">
             <div class="UCFHBWrapper">
                 <div id="UCFtitle">
                     <a href="http://www.ucf.edu" target="_blank"><span class="UCFHBText">University of Central Florida</span></a>
@@ -74,117 +76,123 @@
 
         <div class="container">
 
-            <header>
+            <header class="clearfix">
                 <div class="content-wrapper">
-                    <!--BEGIN: Login-->
-                    @*<section id="login">
-                        @if (WebSecurity.IsAuthenticated) {
-                            <text>
-                                Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
-                                <form id="logoutForm" action="~/Account/Logout" method="post">
-                                    @AntiForgery.GetHtml()
-                                    <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
-                                </form>
-                            </text>
-                        } else {
-                            <ul>
-                                <li><a href="~/Account/Register">Register</a></li>
-                                <li><a href="~/Account/Login">Log in</a></li>
-                            </ul>
-                        }
-                    </section>*@
-                    <!--FINIS: Login-->
+
+                <!-- BEGIN:Nav -->
+                <nav id="main-menu" class="dl-menuwrapper clearfix">
+                    <a href="~/" class="dl-home">HOME</a>
+                    <button class="dl-trigger">DISCOVER</button>
+                    <ul class="dl-menu">
+					    <li>
+						    <a href="#">Academics</a>
+						    <ul class="dl-submenu">
+							    <li>
+								    <a href="#">Undergraduate</a>
+								    <ul class="dl-submenu">
+									    <li><a href="~/undergraduate/admissions">Admissions</a></li>
+									    <li><a href="~/undergraduate/degree-programs">Degree Programs</a></li>
+									    <li><a href="~/undergraduate/international-programs">International Programs</a></li>
+								    </ul>
+							    </li>
+							    <li>
+								    <a href="#">Graduate</a>
+								    <ul class="dl-submenu">
+									    <li><a href="~/graduate/admissions">Admissions</a></li>
+									    <li><a href="~/graduate/degree-programs">Degree Programs</a></li>
+									    <li><a href="~/graduate/certificates">Certificates</a></li>
+								    </ul>
+							    </li>
+                                <li>
+								    <a href="#">Executive Education</a>
+								    <ul class="dl-submenu">
+									    <li><a href="~/execed/custom-programs">Customized Programs</a></li>
+									    <li><a href="~/execed/international-residency">International Residency</a></li>
+                                        <li><a href="~/execed/open-enrollment">Open-Enrollment Programs</a></li>
+								    </ul>
+							    </li>
+						    </ul>
+					    </li>
+					    <li>
+						    <a href="#">Our College</a>
+						    <ul class="dl-submenu">
+							    <li><a href="#">History</a></li> <!--include mission and vision-->
+                                <li><a href="#">Accreditation</a></li>
+                                <li><a href="#">Administration</a></li>
+                                <li><a href="#">Facts &amp; Figures</a></li>
+                                <li><a href="#">Services &amp; Locations</a></li>
+                                <li><a href="#">Social Media Directory</a></li>
+							    <li><a href="#">Student Ambassadors</a></li>
+                                <li><a href="#">Student Organizations</a></li>
+						    </ul>
+					    </li>
+                        <li>
+						    <a href="#">Faculty Research</a>
+						    <ul class="dl-submenu">
+							    <li><a href="#">Page Link</a></li>
+							    <li><a href="#">Page Link</a></li>
+							    <li><a href="#">Page Link</a></li>
+						    </ul>
+					    </li>
+                        <li>
+						    <a href="#">Alumni &amp; Friends</a>
+						    <ul class="dl-submenu">
+							    <li><a href="#">Development</a></li>
+							    <li><a href="#">Hall of Fame</a></li>
+                                <li><a href="#">Spotlights</a></li>
+
+                                <!--action links
+							    <li><a href="#">V-volunteer</a></li>
+                                <li><a href="#">A-attend</a></li>
+							    <li><a href="#">L-lead</a></li>
+                                <li><a href="#">U-update</a></li>
+                                <li><a href="#">E-experience</a></li>
+                                -->
+						    </ul>
+					    </li>
+                        <li>
+						    <a href="#">Careers &amp; Recruitment</a>
+						    <ul class="dl-submenu">
+							    <li><a href="#">Page Link</a></li>
+							    <li><a href="#">Page Link</a></li>
+							    <li><a href="#">Page Link</a></li>
+							    <li><a href="#">Page Link</a></li>
+						    </ul>
+					    </li>
+				    </ul>
+                    <form>
+                        <div><input type="search" placeholder="SEARCH" class="dl-searchfield" /></div>
+                        <input type="button" class="dl-searchbutton" />
+                    </form>
+                </nav><!-- /dl-menuwrapper -->
+                <!-- FINIS:Nav -->
+
+                <!--BEGIN: Login-->
+                @*<section id="login">
+                    @if (WebSecurity.IsAuthenticated) {
+                        <text>
+                            Hello, <a class="email" href="~/Account/Manage" title="Manage">@WebSecurity.CurrentUserName</a>!
+                            <form id="logoutForm" action="~/Account/Logout" method="post">
+                                @AntiForgery.GetHtml()
+                                <a href="javascript:document.getElementById('logoutForm').submit()">Log out</a>
+                            </form>
+                        </text>
+                    } else {
+                        <ul>
+                            <li><a href="~/Account/Register">Register</a></li>
+                            <li><a href="~/Account/Login">Log in</a></li>
+                        </ul>
+                    }
+                </section>*@
+                <!--FINIS: Login-->
+
                 </div>
             </header>
 
-            <!-- BEGIN:Nav -->
-            <nav id="menu" class="dl-menuwrapper clearfix">
-                <a id="dl-home" href="~/">HOME</a>
-                <button class="dl-trigger">DISCOVER</button>
-                <ul class="dl-menu">
-					<li>
-						<a href="#">Academics</a>
-						<ul class="dl-submenu">
-							<li>
-								<a href="#">Undergraduate</a>
-								<ul class="dl-submenu">
-									<li><a href="~/undergraduate/admissions">Admissions</a></li>
-									<li><a href="~/undergraduate/degree-programs">Degree Programs</a></li>
-									<li><a href="~/undergraduate/international-programs">International Programs</a></li>
-								</ul>
-							</li>
-							<li>
-								<a href="#">Graduate</a>
-								<ul class="dl-submenu">
-									<li><a href="~/graduate/admissions">Admissions</a></li>
-									<li><a href="~/graduate/degree-programs">Degree Programs</a></li>
-									<li><a href="~/graduate/certificates">Certificates</a></li>
-								</ul>
-							</li>
-                            <li>
-								<a href="#">Executive Education</a>
-								<ul class="dl-submenu">
-									<li><a href="~/execed/custom-programs">Customized Programs</a></li>
-									<li><a href="~/execed/international-residency">International Residency</a></li>
-                                    <li><a href="~/execed/open-enrollment">Open-Enrollment Programs</a></li>
-								</ul>
-							</li>
-						</ul>
-					</li>
-					<li>
-						<a href="#">Our College</a>
-						<ul class="dl-submenu">
-							<li><a href="#">History</a></li> <!--include mission and vision-->
-                            <li><a href="#">Accreditation</a></li>
-                            <li><a href="#">Administration</a></li>
-                            <li><a href="#">Facts &amp; Figures</a></li>
-                            <li><a href="#">Services &amp; Locations</a></li>
-                            <li><a href="#">Social Media Directory</a></li>
-							<li><a href="#">Student Ambassadors</a></li>
-                            <li><a href="#">Student Organizations</a></li>
-						</ul>
-					</li>
-                    <li>
-						<a href="#">Faculty Research</a>
-						<ul class="dl-submenu">
-							<li><a href="#">Page Link</a></li>
-							<li><a href="#">Page Link</a></li>
-							<li><a href="#">Page Link</a></li>
-						</ul>
-					</li>
-                    <li>
-						<a href="#">Alumni &amp; Friends</a>
-						<ul class="dl-submenu">
-							<li><a href="#">Development</a></li>
-							<li><a href="#">Hall of Fame</a></li>
-                            <li><a href="#">Spotlights</a></li>
 
-                            <!--action links
-							<li><a href="#">V-volunteer</a></li>
-                            <li><a href="#">A-attend</a></li>
-							<li><a href="#">L-lead</a></li>
-                            <li><a href="#">U-update</a></li>
-                            <li><a href="#">E-experience</a></li>
-                            -->
-						</ul>
-					</li>
-                    <li>
-						<a href="#">Careers &amp; Recruitment</a>
-						<ul class="dl-submenu">
-							<li><a href="#">Page Link</a></li>
-							<li><a href="#">Page Link</a></li>
-							<li><a href="#">Page Link</a></li>
-							<li><a href="#">Page Link</a></li>
-						</ul>
-					</li>
-				</ul>
-                <input id="dl-search" type="text" placeholder="SEARCH" />
-            </nav><!-- /dl-menuwrapper -->
-            <!-- FINIS:Nav -->
-
-            <div id="body">
+            <div id="body" class="content-wrapper clearfix">
                 @RenderSection("featured", required: false)
-                <section class="content-wrapper main-content">
+                <section class="main-content">
                     @RenderBody()
                 </section>
             </div>
@@ -192,7 +200,7 @@
         </div>
 
         <footer>
-            <div class="content-wrapper clearfix">
+            <div class="clearfix">
                 <div class="float-left">
                     <p>&copy; @DateTime.Now.Year - University of Central Florida, College of Business Administration</p>
                 </div>
@@ -219,7 +227,7 @@
         <script>
             $(function () { //load on document.ready
                 //-- 1 -----------------------
-                $('#menu').dlmenu({animationClasses:{ classin : 'dl-animate-in-1', classout : 'dl-animate-out-1' }});
+                $('.dl-menuwrapper').dlmenu({animationClasses:{ classin : 'dl-animate-in-1', classout : 'dl-animate-out-1' }});
                 //-- 2 -- make sure it gets checked right off the bat
                 content_buildHeaders();
                 //-- 3 -----------------------

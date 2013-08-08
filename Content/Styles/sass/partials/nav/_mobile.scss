@@ -2,88 +2,87 @@
    Navigation Menu - Discovery
    ========================================================================== */
 
-#menu {
-    font-size: 18px;
-	font-weight: 300;
-    line-height: 20px;
-    letter-spacing: 1px;
-}
-
-#menu a {
-    color: rgba(255,255,255,1); 
-}
-
 /* wrapper */
-.dl-menuwrapper {
-    background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555), color-stop(1, #222));
+nav.dl-menuwrapper {
+    background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.21, rgb(39,46,45)),
+	    color-stop(0.73, rgb(78,77,79)),
+	    color-stop(1, rgb(71,71,71))
+    );
+    width: 100%;
+    letter-spacing: 1px;
     position: relative;
-    perspective: 1000px;
-    -webkit-perspective: 1000px;
-    -moz-perspective: 1000px;
-    perspective-origin: 50% 200%;
-    -webkit-perspective-origin: 50% 200%;
-    -moz-perspective-origin: 50% 200%;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
-}
-.dl-menuwrapper:first-child {
-	margin-right: 100px;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
 }
 
-/* home button */
-#dl-home {
-    /* needs home icon as background */
-    border-right: none;
-    width: 45px;
-    height: 36px;
-    font-size: 13px;
-    font-weight: 300;
+/* buttons */
+.dl-home, 
+.dl-trigger,
+.dl-searchbutton {
+    background: none;
+    border: none;
+    width: 16%;
+    height: 45px;
     text-indent: -900em;
-    float: left;
-}
-#dl-home:hover {
-    background: rgba(0,0,0,1);
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    float:left;
 }
 
-/* discover button */
-.dl-menuwrapper button {
-	background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555), color-stop(1, #222));
-	border: none;
-    width: 45px;
-    height: 36px;
-	text-indent: -900em;
-	overflow: hidden;
-	position: relative;
-	cursor: pointer;
-	outline: none;
-    float: left;
-}
-/* discover icon = */
-.dl-menuwrapper button:after {
-	content: '';
+/* discover icon */
+.dl-trigger:after {
+  	content: '';
 	position: absolute;
-	width: 68%;
+	width: 50%;
 	height: 3px;
-	background: #fff;
-	top: 6px;
-	left: 16%;
+	background: #fff;  /* - */
+	top: 11px;
+	left: 25%;
 	box-shadow: 
-		0 10px 0 #fff, 
-		0 20px 0 #fff;
+		0 10px 0 #fff, /* - */
+		0 20px 0 #fff; /* - */
 }
 
-/* search */
-#dl-search {
-    border: 1px solid #000;
-    padding: 0;
-    height: 33px;
+.dl-home {
+    background: url(../../images/icon-home-m.png) no-repeat;
+    background-position: 5px 2px;
+}
+
+.dl-home, 
+.dl-trigger {
+    width:50px;
+    border-right: 2px solid #333;
+}
+
+/* hide search button - not used on mobile */
+.dl-searchbutton {
+    visibility: hidden;
+    display: none;
+}
+
+.dl-searchfield {
+    background: #fff;
+    border: 2px solid #333;
+    margin-top: 5px;
+    margin-right: 15px;
+    padding: 0 10px;
+    min-width: 38%;
+    max-width: 80%;
+    height: 30px;
     float: right;
 }
 
-/* submenus */
 
-/* menu ul only */
-.dl-menuwrapper .dl-menu {
-	margin: 36px 0 0 0;
+/* =============================================================================
+   Main Menu
+   ========================================================================== */
+
+.dl-menu {
+	margin: 45px 0 0 0;
 	position: absolute;
 	width: 100%;
 	opacity: 0;
@@ -95,12 +94,14 @@
 	-webkit-backface-visibility: hidden;
 	-moz-backface-visibility: hidden;
 }
-.dl-menuwrapper .dl-menu.dl-menu-toggle {
+
+.dl-menu.dl-menu-toggle {
 	transition: all 0.3s ease;
 	-webkit-transition: all 0.3s ease;
 	-moz-transition: all 0.3s ease;
 }
-.dl-menuwrapper .dl-menu.dl-menuopen {
+
+.dl-menu.dl-menuopen {
 	opacity: 1;
 	pointer-events: auto;
 	transform: translateY(0px);
@@ -108,8 +109,14 @@
 	-moz-transform: translateY(0px);
 }
 
-/* all uls */
+
+/* =============================================================================
+   Submenus
+   ========================================================================== */
+
+/* ul */
 .dl-menuwrapper ul {
+    border-bottom: 1px solid #333;
     width: 100%;
 	list-style: none;
     overflow: hidden;
@@ -118,25 +125,35 @@
     -moz-transform-style: preserve-3d;
 }
 
-/* menu li */
+/* li */
 .dl-menuwrapper li {
 	position: relative;
+    border-top: 1px solid #222;
 }
+
+/* a */
 .dl-menuwrapper li a {
     padding: 15px 20px;
-	display: block;
 	position: relative;
+    display: block;
 	outline: none;
+    font-size: 16px;
+	font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: rgba(255,255,255,1);
 }
 .dl-menuwrapper li > a:after {
 	right: 10px;
 }
-/* back li */
+
+/* li back action */
 .dl-menuwrapper li.dl-back > a {
 	padding-left: 30px;
     font-size: 11px;
     text-transform: uppercase;
-	background: rgba(0,0,0,0.1); color: rgba(255,255,255,1);
+	background: rgba(0,0,0,0.15); color: rgba(255,255,255,1);
 }
 .dl-menuwrapper li.dl-back:after {
 	left: 10px;
@@ -144,6 +161,7 @@
 	-webkit-transform: rotate(180deg);
 	-moz-transform: rotate(180deg);
 }
+
 /* li arrows */
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
@@ -157,15 +175,18 @@
 	content: "\e000";
 }
 
-/* menu theme */
-.dl-menuwrapper button:hover,
+/* =============================================================================
+   Menu Color Theme
+   ========================================================================== */
+
+.dl-menuwrapper button:hover, 
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
     background:-webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555), color-stop(1, #222)); 
     color: rgba(0,0,0,1);
 }
 
-.no-touch .dl-menuwrapper li a:hover {
+.no-touch .dl-menuwrapper li a:after {
 	background: rgba(0,0,0,1); 
     color: rgba(170,170,170,1);
 }

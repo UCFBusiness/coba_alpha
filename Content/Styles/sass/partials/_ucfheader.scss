@@ -1,37 +1,30 @@
-/*Header style*/
+/* =============================================================================
+   Header style
+   ========================================================================== */
+
 #UCFHBHeader {
-	background-image: url("../../images/ucfbar/header_border.png");
-	background-repeat: repeat-x;
+	background: #000 url("../../images/ucfbar/header_border.png") repeat-x;
 	background-position: bottom left;
-	background-color: black;
+    padding: 4px 0 2px 0; /* to treat the bg as a border +2px to bottom padding*/
 	height: 32px;
-	padding-top: 4px;
-	padding-bottom: 2px;	/* to treat the bg as a border +2px*/
 }
 
 #UCFHBHeader label {
-		color: #FFF;
-		text-indent: -900px;
-		display:block;
-		float:left;
-	}
+	text-indent: -900px;
+    color: #FFF;
+	float:left;
+}
 
 #UCFHBHeader #UCFtitle {
 	float:left;
-	margin: 0;
-	padding: 0;
 }
 
 #UCFHBHeader #UCFtitle a {
-	margin: 0;
-	padding: 0;
-	background-image: url("../../images/ucfbar/ucflogo.png");
-	background-repeat: no-repeat;
+	background: url("../../images/ucfbar/ucflogo.png") no-repeat;
 	background-position: top left;
-	/*background-color: black;*/
+    width: 318px;
+    height: 29px;
 	display: block;
-	height: 29px;
-	width: 318px;
 }
 
 #UCFHBHeader #UCFtitle a span.UCFHBText {
@@ -43,10 +36,12 @@
 	float: left;
 }
 
+/*-----------------------------------------------------------------------
+
 #UCFHBHeader #UCFHBUni_links select {
-	width: 130px;
 	border: 1px solid #c0c0c0;
 	background-color: #FFF;
+    width: 130px;
 }
 
 #UCFHBHeader #UCFHBMy_ucf {
@@ -79,3 +74,5 @@
 #UCFHBHeader div.UCFHBWrapper {
 	margin: 0 auto;
 }
+
+*/

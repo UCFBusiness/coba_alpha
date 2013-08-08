@@ -2,22 +2,18 @@
    Navigation Menu - Discovery
    ========================================================================== */
 
-#menu {
+/* wrapper */
+nav.dl-menuwrapper {
     position: absolute;
-    top: 70px;
+    top: 20px;
     left: 20px;
     font-size: 16px;
 	font-weight: 300;
     line-height: 20px;
     letter-spacing: 1px; 
     color: #ccc;
-
+    background-image: none;
     font-family: 'Lato', Calibri, Arial, sans-serif;
-}
-
-/* wrapper */
-.dl-menuwrapper {
-    background: none;
     width: 60%;
     position: relative;
     perspective: 1000px;

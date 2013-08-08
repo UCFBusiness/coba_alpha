@@ -332,9 +332,14 @@ html {
 
 /* line 11, sass/partials/boilerplate/_primary_styles.scss */
 body {
-  background-color: white;
   font-size: .85em;
   line-height: 1.4em;
+  background: white;
+}
+
+/* line 17, sass/partials/boilerplate/_primary_styles.scss */
+h1, h2 {
+  line-height: 1.1em;
 }
 
 /* line 19, sass/partials/boilerplate/_primary_styles.scss */
@@ -363,16 +368,11 @@ h5, h6 {
 }
 
 /* line 25, sass/partials/boilerplate/_primary_styles.scss */
-a {
-  text-decoration: none;
-}
-
-/* line 29, sass/partials/boilerplate/_primary_styles.scss */
 p {
   margin: 0 0 10px 0;
 }
 
-/* line 31, sass/partials/boilerplate/_primary_styles.scss */
+/* line 27, sass/partials/boilerplate/_primary_styles.scss */
 pre {
   font-size: 12px;
   width: 100%;
@@ -380,16 +380,16 @@ pre {
   -webkit-overflow-scrolling: touch;
 }
 
-/* line 38, sass/partials/boilerplate/_primary_styles.scss */
+/* line 34, sass/partials/boilerplate/_primary_styles.scss */
 mark {
   background-color: #a6dbed;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* line 44, sass/partials/boilerplate/_primary_styles.scss */
+/* line 40, sass/partials/boilerplate/_primary_styles.scss */
 blockquote {
-  background: white url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
+  background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
   background-position: 0px 5px;
   border-left: 4px solid #DDD;
   padding: 10px 15px 10px;
@@ -397,7 +397,7 @@ blockquote {
   color: #666;
 }
 
-/* line 53, sass/partials/boilerplate/_primary_styles.scss */
+/* line 49, sass/partials/boilerplate/_primary_styles.scss */
 blockquote small {
   font: italic .9em "Georgia", "Times New Roman", "Times", serif;
   color: #666;
@@ -406,12 +406,12 @@ blockquote small {
 /*---------------------*/
 /*-- Special Classes --*/
 /*---------------------*/
-/* line 62, sass/partials/boilerplate/_primary_styles.scss */
+/* line 58, sass/partials/boilerplate/_primary_styles.scss */
 .noshow {
   display: none;
 }
 
-/* line 66, sass/partials/boilerplate/_primary_styles.scss */
+/* line 62, sass/partials/boilerplate/_primary_styles.scss */
 .shadow {
   box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
   /*-CSS3 Box Shadow-*/
@@ -419,7 +419,7 @@ blockquote small {
   /*-CSS3 Box Shadow-*/
 }
 
-/* line 71, sass/partials/boilerplate/_primary_styles.scss */
+/* line 67, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   background-color: #fff34d;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -430,35 +430,27 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 79, sass/partials/boilerplate/_primary_styles.scss */
+/* line 75, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 84, sass/partials/boilerplate/_primary_styles.scss */
+/* line 80, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 88, sass/partials/boilerplate/_primary_styles.scss */
+/* line 84, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 92, sass/partials/boilerplate/_primary_styles.scss */
+/* line 88, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
   background: #ffffe0;
-}
-
-/*----------------------*/
-/*-- FOOTER  Section --*/
-/*----------------------*/
-/* line 102, sass/partials/boilerplate/_primary_styles.scss */
-footer {
-  background: #e2e2e2;
 }
 
 /* ==|== non-semantic helper classes ======================================== */
@@ -1006,102 +998,90 @@ table {
   border-spacing: 0;
 }
 
-/*Header style*/
-/* line 2, sass/partials/_ucfheader.scss */
+/* =============================================================================
+   Header style
+   ========================================================================== */
+/* line 5, sass/partials/_ucfheader.scss */
 #UCFHBHeader {
-  background-image: url("../../images/ucfbar/header_border.png");
-  background-repeat: repeat-x;
+  background: black url("../../images/ucfbar/header_border.png") repeat-x;
   background-position: bottom left;
-  background-color: black;
+  padding: 4px 0 2px 0;
+  /* to treat the bg as a border +2px to bottom padding*/
   height: 32px;
-  padding-top: 4px;
-  padding-bottom: 2px;
-  /* to treat the bg as a border +2px*/
 }
 
 /* line 12, sass/partials/_ucfheader.scss */
 #UCFHBHeader label {
-  color: #FFF;
   text-indent: -900px;
-  display: block;
+  color: #FFF;
   float: left;
 }
 
-/* line 19, sass/partials/_ucfheader.scss */
+/* line 18, sass/partials/_ucfheader.scss */
 #UCFHBHeader #UCFtitle {
   float: left;
-  margin: 0;
-  padding: 0;
 }
 
-/* line 25, sass/partials/_ucfheader.scss */
+/* line 22, sass/partials/_ucfheader.scss */
 #UCFHBHeader #UCFtitle a {
-  margin: 0;
-  padding: 0;
-  background-image: url("../../images/ucfbar/ucflogo.png");
-  background-repeat: no-repeat;
+  background: url("../../images/ucfbar/ucflogo.png") no-repeat;
   background-position: top left;
-  /*background-color: black;*/
-  display: block;
-  height: 29px;
   width: 318px;
+  height: 29px;
+  display: block;
 }
 
-/* line 37, sass/partials/_ucfheader.scss */
+/* line 30, sass/partials/_ucfheader.scss */
 #UCFHBHeader #UCFtitle a span.UCFHBText {
   display: none;
 }
 
-/* line 41, sass/partials/_ucfheader.scss */
+/* line 34, sass/partials/_ucfheader.scss */
 #UCFHBHeader #UCFHBUni_links {
   margin-left: 75px;
   float: left;
 }
 
-/* line 46, sass/partials/_ucfheader.scss */
+/*-----------------------------------------------------------------------
+
 #UCFHBHeader #UCFHBUni_links select {
-  width: 130px;
-  border: 1px solid #c0c0c0;
-  background-color: #FFF;
+	border: 1px solid #c0c0c0;
+	background-color: #FFF;
+    width: 130px;
 }
 
-/* line 52, sass/partials/_ucfheader.scss */
 #UCFHBHeader #UCFHBMy_ucf {
-  display: block;
-  background-image: url("../../images/ucfbar/images/myucf.png");
-  background-repeat: no-repeat;
-  background-position: top left;
-  margin-left: 25px;
-  margin-top: 3px;
-  height: 15px;
-  width: 58px;
-  float: left;
+	display: block;
+	background-image: url("../../images/ucfbar/images/myucf.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	margin-left: 25px;
+	margin-top: 3px;
+	height: 15px;
+	width: 58px;
+	float: left;
 }
 
-/* line 64, sass/partials/_ucfheader.scss */
 #UCFHBHeader #UCFHBMy_ucf span.text {
-  display: none;
+	display: none;
 }
 
-/* line 68, sass/partials/_ucfheader.scss */
 #UCFHBsubmit {
-  width: 16px;
-  height: 17px;
-  overflow: hidden;
-  background-image: url("../../images/ucfbar/images/arrow.png");
-  border: 0;
-  margin: 0;
-  padding: 0;
-  text-indent: -500px;
-  color: black;
-  baseline: top;
+	width:16px;
+	height:17px;
+	overflow:hidden;
+	background-image: url("../../images/ucfbar/images/arrow.png");
+	border:0; margin:0; padding:0;
+	text-indent:-500px;
+	color:black;
+	baseline:top;
 }
 
-/* line 79, sass/partials/_ucfheader.scss */
 #UCFHBHeader div.UCFHBWrapper {
-  margin: 0 auto;
+	margin: 0 auto;
 }
 
+*/
 /* Hide the inner submenus */
 /* line 3, sass/partials/_nav.scss */
 .dl-menuwrapper li .dl-submenu {
@@ -2209,99 +2189,87 @@ body {
 /* =============================================================================
    Navigation Menu - Discovery
    ========================================================================== */
-/* line 5, sass/partials/nav/_mobile.scss */
-#menu {
-  font-size: 18px;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: 1px;
-}
-
-/* line 12, sass/partials/nav/_mobile.scss */
-#menu a {
-  color: white;
-}
-
 /* wrapper */
-/* line 17, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper {
-  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555555), color-stop(1, #222222));
+/* line 6, sass/partials/nav/_mobile.scss */
+nav.dl-menuwrapper {
+  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, #272e2d), color-stop(0.73, #4e4d4f), color-stop(1, #474747));
+  width: 100%;
+  letter-spacing: 1px;
   position: relative;
-  perspective: 1000px;
-  -webkit-perspective: 1000px;
-  -moz-perspective: 1000px;
-  perspective-origin: 50% 200%;
-  -webkit-perspective-origin: 50% 200%;
-  -moz-perspective-origin: 50% 200%;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
   /* shadow */
 }
 
-/* line 28, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper:first-child {
-  margin-right: 100px;
-}
-
-/* home button */
-/* line 33, sass/partials/nav/_mobile.scss */
-#dl-home {
-  /* needs home icon as background */
-  border-right: none;
-  width: 45px;
-  height: 36px;
-  font-size: 13px;
-  font-weight: 300;
-  text-indent: -900em;
-  float: left;
-}
-
-/* line 43, sass/partials/nav/_mobile.scss */
-#dl-home:hover {
-  background: black;
-}
-
-/* discover button */
-/* line 48, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper button {
-  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555555), color-stop(1, #222222));
+/* buttons */
+/* line 24, sass/partials/nav/_mobile.scss */
+.dl-home,
+.dl-trigger,
+.dl-searchbutton {
+  background: none;
   border: none;
-  width: 45px;
-  height: 36px;
+  width: 16%;
+  height: 45px;
   text-indent: -900em;
   overflow: hidden;
   position: relative;
-  cursor: pointer;
-  outline: none;
+  display: inline-block;
   float: left;
 }
 
-/* discover icon = */
-/* line 61, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper button:after {
+/* discover icon */
+/* line 37, sass/partials/nav/_mobile.scss */
+.dl-trigger:after {
   content: '';
   position: absolute;
-  width: 68%;
+  width: 50%;
   height: 3px;
   background: #fff;
-  top: 6px;
-  left: 16%;
+  /* - */
+  top: 11px;
+  left: 25%;
   box-shadow: 0 10px 0 white, 0 20px 0 white;
+  /* - */
 }
 
-/* search */
-/* line 75, sass/partials/nav/_mobile.scss */
-#dl-search {
-  border: 1px solid #000;
-  padding: 0;
-  height: 33px;
+/* line 50, sass/partials/nav/_mobile.scss */
+.dl-home {
+  background: url(../../images/icon-home-m.png) no-repeat;
+  background-position: 5px 2px;
+}
+
+/* line 56, sass/partials/nav/_mobile.scss */
+.dl-home,
+.dl-trigger {
+  width: 50px;
+  border-right: 2px solid #333;
+}
+
+/* hide search button - not used on mobile */
+/* line 62, sass/partials/nav/_mobile.scss */
+.dl-searchbutton {
+  visibility: hidden;
+  display: none;
+}
+
+/* line 67, sass/partials/nav/_mobile.scss */
+.dl-searchfield {
+  background: #fff;
+  border: 2px solid #333;
+  margin-top: 5px;
+  margin-right: 15px;
+  padding: 0 10px;
+  min-width: 38%;
+  max-width: 80%;
+  height: 30px;
   float: right;
 }
 
-/* submenus */
-/* menu ul only */
-/* line 85, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper .dl-menu {
-  margin: 36px 0 0 0;
+/* =============================================================================
+   Main Menu
+   ========================================================================== */
+/* line 84, sass/partials/nav/_mobile.scss */
+.dl-menu {
+  margin: 45px 0 0 0;
   position: absolute;
   width: 100%;
   opacity: 0;
@@ -2315,14 +2283,14 @@ body {
 }
 
 /* line 98, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper .dl-menu.dl-menu-toggle {
+.dl-menu.dl-menu-toggle {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
 }
 
-/* line 103, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper .dl-menu.dl-menuopen {
+/* line 104, sass/partials/nav/_mobile.scss */
+.dl-menu.dl-menuopen {
   opacity: 1;
   pointer-events: auto;
   transform: translateY(0px);
@@ -2330,9 +2298,13 @@ body {
   -moz-transform: translateY(0px);
 }
 
-/* all uls */
-/* line 112, sass/partials/nav/_mobile.scss */
+/* =============================================================================
+   Submenus
+   ========================================================================== */
+/* ul */
+/* line 118, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper ul {
+  border-bottom: 1px solid #333;
   width: 100%;
   list-style: none;
   overflow: hidden;
@@ -2341,36 +2313,44 @@ body {
   -moz-transform-style: preserve-3d;
 }
 
-/* menu li */
-/* line 122, sass/partials/nav/_mobile.scss */
+/* li */
+/* line 129, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li {
   position: relative;
+  border-top: 1px solid #222;
 }
 
-/* line 125, sass/partials/nav/_mobile.scss */
+/* a */
+/* line 135, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li a {
   padding: 15px 20px;
-  display: block;
   position: relative;
+  display: block;
   outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 20px;
+  letter-spacing: 1px;
+  text-decoration: none;
+  color: white;
 }
 
-/* line 131, sass/partials/nav/_mobile.scss */
+/* line 147, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li > a:after {
   right: 10px;
 }
 
-/* back li */
-/* line 135, sass/partials/nav/_mobile.scss */
+/* li back action */
+/* line 152, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li.dl-back > a {
   padding-left: 30px;
   font-size: 11px;
   text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.15);
   color: white;
 }
 
-/* line 141, sass/partials/nav/_mobile.scss */
+/* line 158, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li.dl-back:after {
   left: 10px;
   transform: rotate(180deg);
@@ -2379,7 +2359,7 @@ body {
 }
 
 /* li arrows */
-/* line 149, sass/partials/nav/_mobile.scss */
+/* line 167, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
   color: rgba(170, 170, 170, 0.3);
@@ -2392,8 +2372,10 @@ body {
   content: "\e000";
 }
 
-/* menu theme */
-/* line 163, sass/partials/nav/_mobile.scss */
+/* =============================================================================
+   Menu Color Theme
+   ========================================================================== */
+/* line 184, sass/partials/nav/_mobile.scss */
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
@@ -2401,8 +2383,8 @@ body {
   color: black;
 }
 
-/* line 168, sass/partials/nav/_mobile.scss */
-.no-touch .dl-menuwrapper li a:hover {
+/* line 189, sass/partials/nav/_mobile.scss */
+.no-touch .dl-menuwrapper li a:after {
   background: black;
   color: #aaaaaa;
 }
@@ -2411,6 +2393,27 @@ body {
 #body {
   padding: 0 10px;
   height: 100%;
+}
+
+/*---------------Layout-mobile---------------*/
+/* line 10, sass/partials/layout/_mobile.scss */
+.featured nav {
+  list-style: none;
+  margin: 11px 0;
+  width: 100%;
+}
+
+/* line 16, sass/partials/layout/_mobile.scss */
+.featured nav li {
+  line-height: 30px;
+}
+
+/* line 20, sass/partials/layout/_mobile.scss */
+.featured nav li a {
+  border: 1px solid #333;
+  padding: 15px 20px;
+  background: #ddd;
+  display: block;
 }
 
 /* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
@@ -2430,23 +2433,19 @@ body {
   /* =============================================================================
      Navigation Menu - Discovery
      ========================================================================== */
-  /* line 5, sass/partials/nav/_desktop.scss */
-  #menu {
+  /* wrapper */
+  /* line 6, sass/partials/nav/_desktop.scss */
+  nav.dl-menuwrapper {
     position: absolute;
-    top: 70px;
+    top: 20px;
     left: 20px;
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 1px;
     color: #ccc;
+    background-image: none;
     font-family: 'Lato', Calibri, Arial, sans-serif;
-  }
-
-  /* wrapper */
-  /* line 19, sass/partials/nav/_desktop.scss */
-  .dl-menuwrapper {
-    background: none;
     width: 60%;
     position: relative;
     perspective: 1000px;
@@ -2459,13 +2458,13 @@ body {
     /* no shadow */
   }
 
-  /* line 31, sass/partials/nav/_desktop.scss */
+  /* line 27, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
   }
 
   /* home button */
-  /* line 36, sass/partials/nav/_desktop.scss */
+  /* line 32, sass/partials/nav/_desktop.scss */
   #dl-home {
     border: 1px solid #ddd;
     border-right: none;
@@ -2482,13 +2481,13 @@ body {
     float: left;
   }
 
-  /* line 49, sass/partials/nav/_desktop.scss */
+  /* line 45, sass/partials/nav/_desktop.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 54, sass/partials/nav/_desktop.scss */
+  /* line 50, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
@@ -2511,7 +2510,7 @@ body {
   }
 
   /* discover icon = */
-  /* line 73, sass/partials/nav/_desktop.scss */
+  /* line 69, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button:after {
     	/*content: '';
     	width: 20%;
@@ -2543,7 +2542,7 @@ body {
   }
 
   /* search */
-  /* line 107, sass/partials/nav/_desktop.scss */
+  /* line 103, sass/partials/nav/_desktop.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -2558,13 +2557,13 @@ body {
 
   /* submenus */
   /* menu ul only */
-  /* line 120, sass/partials/nav/_desktop.scss */
+  /* line 116, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 123, sass/partials/nav/_desktop.scss */
+  /* line 119, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -2579,14 +2578,14 @@ body {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 136, sass/partials/nav/_desktop.scss */
+  /* line 132, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 141, sass/partials/nav/_desktop.scss */
+  /* line 137, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -2596,7 +2595,7 @@ body {
   }
 
   /* all uls */
-  /* line 150, sass/partials/nav/_desktop.scss */
+  /* line 146, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -2607,12 +2606,12 @@ body {
   }
 
   /* menu li */
-  /* line 160, sass/partials/nav/_desktop.scss */
+  /* line 156, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 163, sass/partials/nav/_desktop.scss */
+  /* line 159, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -2620,13 +2619,13 @@ body {
     outline: none;
   }
 
-  /* line 169, sass/partials/nav/_desktop.scss */
+  /* line 165, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 173, sass/partials/nav/_desktop.scss */
+  /* line 169, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -2635,7 +2634,7 @@ body {
     color: white;
   }
 
-  /* line 179, sass/partials/nav/_desktop.scss */
+  /* line 175, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -2644,7 +2643,7 @@ body {
   }
 
   /* li arrows */
-  /* line 187, sass/partials/nav/_desktop.scss */
+  /* line 183, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -2658,7 +2657,7 @@ body {
   }
 
   /* desktop - menu theme */
-  /* line 201, sass/partials/nav/_desktop.scss */
+  /* line 197, sass/partials/nav/_desktop.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -2667,33 +2666,160 @@ body {
     /* li:hover color*/
   }
 
-  /* line 206, sass/partials/nav/_desktop.scss */
+  /* line 202, sass/partials/nav/_desktop.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
     /* a:hover color*/
   }
 
-  /* line 1, sass/partials/layout/_desktop.scss */
+  /* =============================================================================
+     Page/Section Layout
+     ========================================================================== */
+  /* line 5, sass/partials/layout/_desktop.scss */
   body .container {
     padding: 0 20px;
     height: 100%;
-    /*
-    background: #fff url(../../images/millican.jpg) no-repeat center center fixed;
+    /* -- Big Background Image --*/
+    background: url(../../images/millican.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    */
   }
 
-  /* line 12, sass/partials/layout/_desktop.scss */
-  header {
-    min-height: 100px;
-    /*background: rgba(242,242,242,1);*/
+  /* main layout
+  ----------------------------------------------------------*/
+  /* line 18, sass/partials/layout/_desktop.scss */
+  .content-wrapper {
+    margin: 0 auto;
+    max-width: 1600px;
   }
 
-  /* line 17, sass/partials/layout/_desktop.scss */
+  /* line 23, sass/partials/layout/_desktop.scss */
   #body {
-    /*background: rgba(242,242,242,1);*/
+    border: 1px dashed blue;
+    /*development line*/
+    padding-bottom: 35px;
+  }
+
+  /* line 28, sass/partials/layout/_desktop.scss */
+  .main-content {
+    background: #cc9900 url("../../Images/accent.png") no-repeat;
+    padding: 0 10px;
+    padding-top: 30px;
+    max-width: 70%;
+    float: right;
+  }
+
+  /* line 36, sass/partials/layout/_desktop.scss */
+  .featured + .main-content {
+    background: #dddddd url("../../Images/heroAccent.png") no-repeat;
+  }
+
+  /* line 40, sass/partials/layout/_desktop.scss */
+  .section {
+    background: #cc9900;
+  }
+
+  /* line 44, sass/partials/layout/_desktop.scss */
+  header .content-wrapper {
+    padding-top: 20px;
+  }
+
+  /* page elements
+  ----------------------------------------------------------*/
+  /* featured */
+  /* line 51, sass/partials/layout/_desktop.scss */
+  .featured {
+    border: 1px dashed red;
+    /*development line*/
+    background-color: #ffcc00;
+    float: left;
+    width: 25%;
+  }
+
+  /* line 58, sass/partials/layout/_desktop.scss */
+  .featured .content-wrapper {
+    border: 1px dashed blue;
+    /*development line*/
+    background-color: #7ac0da;
+    background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+    background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
+    background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+    background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+    padding: 20px 40px 30px 40px;
+  }
+
+  /* line 69, sass/partials/layout/_desktop.scss */
+  .featured hgroup.title h1, .featured hgroup.title h2 {
+    color: #fff;
+  }
+
+  /* line 73, sass/partials/layout/_desktop.scss */
+  .featured p {
+    font-size: 1.2em;
+  }
+
+  /*---------------Layout---------------*/
+  /* line 80, sass/partials/layout/_desktop.scss */
+  .featured nav {
+    list-style: none;
+    margin: 11px 0;
+    width: 250px;
+  }
+
+  /* line 86, sass/partials/layout/_desktop.scss */
+  .featured nav li {
+    line-height: 30px;
+  }
+
+  /* line 90, sass/partials/layout/_desktop.scss */
+  .featured nav li a {
+    border: 1px solid #333;
+    padding: 15px 20px;
+    background: #ddd;
+    display: block;
+  }
+
+  /* features */
+  /* line 100, sass/partials/layout/_desktop.scss */
+  section.feature {
+    float: left;
+    padding: 10px;
+  }
+
+  /* homepage content 
+  ----------------------------------------------------------*/
+  /* line 109, sass/partials/layout/_desktop.scss */
+  article {
+    float: left;
+    width: 70%;
+  }
+
+  /* line 114, sass/partials/layout/_desktop.scss */
+  aside {
+    float: right;
+    width: 25%;
+  }
+
+  /* line 119, sass/partials/layout/_desktop.scss */
+  aside ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  /* line 124, sass/partials/layout/_desktop.scss */
+  aside ul li {
+    background: url("../../Images/bullet.png") no-repeat 0 50%;
+    padding: 2px 0 2px 20px;
+  }
+
+  /*----------------------*/
+  /*-- FOOTER  Section --*/
+  /*----------------------*/
+  /* line 135, sass/partials/layout/_desktop.scss */
+  footer {
+    padding-bottom: 35px;
   }
 }

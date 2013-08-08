@@ -1,19 +1,140 @@
+/* =============================================================================
+   Page/Section Layout
+   ========================================================================== */
+
 body .container {
     padding: 0 20px;
     height: 100%;
-    /*
-    background: #fff url(../../images/millican.jpg) no-repeat center center fixed;
+    /* -- Big Background Image --*/
+    background: url(../../images/millican.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    */
+    
 }
 
-header {
-    min-height: 100px;
-    /*background: rgba(242,242,242,1);*/
+/* main layout
+----------------------------------------------------------*/
+.content-wrapper {
+    margin:0 auto;
+    max-width:1600px;
 }
 
 #body {
-    /*background: rgba(242,242,242,1);*/
+    border:1px dashed blue;/*development line*/
+    padding-bottom: 35px;
+}
+
+    .main-content {
+        background: #cc9900 url("../../Images/accent.png") no-repeat;
+        padding: 0 10px;
+        padding-top: 30px;
+        max-width: 70%;
+    float: right;
+    }
+
+    .featured + .main-content {
+        background: #ddd url("../../Images/heroAccent.png") no-repeat;
+    }
+
+    .section {
+        background: #cc9900;
+    }
+
+header .content-wrapper {
+    padding-top: 20px; 
+}
+
+/* page elements
+----------------------------------------------------------*/
+/* featured */
+.featured {
+    border:1px dashed red;/*development line*/
+    background-color: #ffcc00;
+    float: left;
+    width: 25%;
+}
+
+    .featured .content-wrapper {
+        border:1px dashed blue;/*development line*/
+        background-color: #7ac0da;
+        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
+        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
+        padding: 20px 40px 30px 40px;
+    }
+
+        .featured hgroup.title h1, .featured hgroup.title h2 {
+            color: #fff;
+        }
+
+        .featured p {
+            font-size: 1.2em;
+        }
+
+
+/*---------------Layout---------------*/
+
+.featured nav {
+    list-style: none;
+    margin: 11px 0;
+width: 250px;
+}
+            
+.featured nav li {
+    line-height: 30px;
+}
+
+.featured nav li a {
+    border:  1px solid #333;
+    padding: 15px 20px;
+    background: #ddd;
+    display: block;
+    
+}
+
+
+/* features */
+section.feature {
+    float: left;
+    padding: 10px;
+}
+
+
+
+/* homepage content 
+----------------------------------------------------------*/
+article {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+}
+
+    aside ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        aside ul li {
+            background: url("../../Images/bullet.png") no-repeat 0 50%;
+            padding: 2px 0 2px 20px;
+        }
+
+
+
+/*----------------------*/
+/*-- FOOTER  Section --*/
+/*----------------------*/
+
+footer {
+padding-bottom: 35px;
+}
+
+footer > div {
 }
