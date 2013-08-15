@@ -398,6 +398,14 @@ blockquote {
 }
 
 /* line 49, sass/partials/boilerplate/_primary_styles.scss */
+blockquote:before {
+  content: '"';
+  padding-right: 10px;
+  font-size: 2em;
+  float: left;
+}
+
+/* line 56, sass/partials/boilerplate/_primary_styles.scss */
 blockquote small {
   font: italic .9em "Georgia", "Times New Roman", "Times", serif;
   color: #666;
@@ -406,12 +414,12 @@ blockquote small {
 /*---------------------*/
 /*-- Special Classes --*/
 /*---------------------*/
-/* line 58, sass/partials/boilerplate/_primary_styles.scss */
+/* line 65, sass/partials/boilerplate/_primary_styles.scss */
 .noshow {
   display: none;
 }
 
-/* line 62, sass/partials/boilerplate/_primary_styles.scss */
+/* line 69, sass/partials/boilerplate/_primary_styles.scss */
 .shadow {
   box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
   /*-CSS3 Box Shadow-*/
@@ -419,7 +427,7 @@ blockquote small {
   /*-CSS3 Box Shadow-*/
 }
 
-/* line 67, sass/partials/boilerplate/_primary_styles.scss */
+/* line 74, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   background-color: #fff34d;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -430,23 +438,23 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 75, sass/partials/boilerplate/_primary_styles.scss */
+/* line 82, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 80, sass/partials/boilerplate/_primary_styles.scss */
+/* line 87, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 84, sass/partials/boilerplate/_primary_styles.scss */
+/* line 91, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 88, sass/partials/boilerplate/_primary_styles.scss */
+/* line 95, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
@@ -998,90 +1006,6 @@ table {
   border-spacing: 0;
 }
 
-/* =============================================================================
-   Header style
-   ========================================================================== */
-/* line 5, sass/partials/_ucfheader.scss */
-#UCFHBHeader {
-  background: black url("../../images/ucfbar/header_border.png") repeat-x;
-  background-position: bottom left;
-  padding: 4px 0 2px 0;
-  /* to treat the bg as a border +2px to bottom padding*/
-  height: 32px;
-}
-
-/* line 12, sass/partials/_ucfheader.scss */
-#UCFHBHeader label {
-  text-indent: -900px;
-  color: #FFF;
-  float: left;
-}
-
-/* line 18, sass/partials/_ucfheader.scss */
-#UCFHBHeader #UCFtitle {
-  float: left;
-}
-
-/* line 22, sass/partials/_ucfheader.scss */
-#UCFHBHeader #UCFtitle a {
-  background: url("../../images/ucfbar/ucflogo.png") no-repeat;
-  background-position: top left;
-  width: 318px;
-  height: 29px;
-  display: block;
-}
-
-/* line 30, sass/partials/_ucfheader.scss */
-#UCFHBHeader #UCFtitle a span.UCFHBText {
-  display: none;
-}
-
-/* line 34, sass/partials/_ucfheader.scss */
-#UCFHBHeader #UCFHBUni_links {
-  margin-left: 75px;
-  float: left;
-}
-
-/*-----------------------------------------------------------------------
-
-#UCFHBHeader #UCFHBUni_links select {
-	border: 1px solid #c0c0c0;
-	background-color: #FFF;
-    width: 130px;
-}
-
-#UCFHBHeader #UCFHBMy_ucf {
-	display: block;
-	background-image: url("../../images/ucfbar/images/myucf.png");
-	background-repeat: no-repeat;
-	background-position: top left;
-	margin-left: 25px;
-	margin-top: 3px;
-	height: 15px;
-	width: 58px;
-	float: left;
-}
-
-#UCFHBHeader #UCFHBMy_ucf span.text {
-	display: none;
-}
-
-#UCFHBsubmit {
-	width:16px;
-	height:17px;
-	overflow:hidden;
-	background-image: url("../../images/ucfbar/images/arrow.png");
-	border:0; margin:0; padding:0;
-	text-indent:-500px;
-	color:black;
-	baseline:top;
-}
-
-#UCFHBHeader div.UCFHBWrapper {
-	margin: 0 auto;
-}
-
-*/
 /* Hide the inner submenus */
 /* line 3, sass/partials/_nav.scss */
 .dl-menuwrapper li .dl-submenu {
@@ -2187,228 +2111,784 @@ body {
 }
 
 /* =============================================================================
-   Navigation Menu - Discovery
+   UCF Header
    ========================================================================== */
-/* wrapper */
-/* line 6, sass/partials/nav/_mobile.scss */
-nav.dl-menuwrapper {
-  background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, #272e2d), color-stop(0.73, #4e4d4f), color-stop(1, #474747));
-  width: 100%;
-  letter-spacing: 1px;
-  position: relative;
-  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
-  /* shadow */
+/* line 5, sass/partials/mobile/_header.scss */
+#UCFHBHeader {
+  background: black url("../../images/ucfbar/header_border.png") repeat-x;
+  background-position: bottom left;
+  padding: 4px 0 2px 0;
+  /* to treat the bg as a border +2px to bottom padding*/
+  height: 32px;
 }
 
-/* buttons */
-/* line 24, sass/partials/nav/_mobile.scss */
-.dl-home,
-.dl-trigger,
-.dl-searchbutton {
-  background: none;
-  border: none;
-  width: 16%;
-  height: 45px;
-  text-indent: -900em;
-  overflow: hidden;
-  position: relative;
-  display: inline-block;
+/* line 12, sass/partials/mobile/_header.scss */
+#UCFHBHeader #UCFtitle {
   float: left;
 }
 
-/* discover icon */
-/* line 37, sass/partials/nav/_mobile.scss */
-.dl-trigger:after {
-  content: '';
-  position: absolute;
-  width: 50%;
-  height: 3px;
-  background: #fff;
-  /* - */
-  top: 11px;
-  left: 25%;
-  box-shadow: 0 10px 0 white, 0 20px 0 white;
-  /* - */
+/* line 16, sass/partials/mobile/_header.scss */
+#UCFHBHeader #UCFtitle a {
+  background: url("../../images/ucfbar/ucflogo.png") no-repeat;
+  background-position: top left;
+  width: 318px;
+  height: 29px;
+  display: block;
 }
 
-/* line 50, sass/partials/nav/_mobile.scss */
-.dl-home {
-  background: url(../../images/icon-home-m.png) no-repeat;
-  background-position: 5px 2px;
-}
-
-/* line 56, sass/partials/nav/_mobile.scss */
-.dl-home,
-.dl-trigger {
-  width: 50px;
-  border-right: 2px solid #333;
-}
-
-/* hide search button - not used on mobile */
-/* line 62, sass/partials/nav/_mobile.scss */
-.dl-searchbutton {
-  visibility: hidden;
+/* line 24, sass/partials/mobile/_header.scss */
+#UCFHBHeader #UCFtitle a span.UCFHBText {
   display: none;
 }
 
-/* line 67, sass/partials/nav/_mobile.scss */
-.dl-searchfield {
-  background: #fff;
-  border: 2px solid #333;
-  margin-top: 5px;
-  margin-right: 15px;
-  padding: 0 10px;
-  min-width: 38%;
-  max-width: 80%;
-  height: 30px;
-  float: right;
+/* line 28, sass/partials/mobile/_header.scss */
+#UCFHBHeader label {
+  text-indent: -900px;
+  color: #FFF;
+  float: left;
+}
+
+/* line 34, sass/partials/mobile/_header.scss */
+#UCFHBHeader #UCFHBUni_links {
+  margin-left: 75px;
+  float: left;
+}
+
+/* line 39, sass/partials/mobile/_header.scss */
+#UCFHBHeader .alert-message {
+  width: 580px;
+  margin: 0 auto;
+  display: none;
 }
 
 /* =============================================================================
-   Main Menu
+   Header
+   ========================================================================== 
+
+pre{	font-size: 12px;	width: 100%;	overflow: auto;	-webkit-overflow-scrolling: touch;}#page nav{	display: none;}#header{	background: #999;	font-size: 16px;	font-weight: bold;	color: #fff;	text-align: center;	line-height: 40px;	height: 40px;	padding: 0 50px;}#header a{	background: center center no-repeat transparent;	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAE1JREFUeNpi/P//PwOtARMDHQBdLGFBYt+nkR2KjEhxQqvIYaR7cD2glSWMo0mY3DiJo5Edi4ZPEqZ7nMSP5pPRon60qB9NwpQDgAADAMIxHUJvWs/TAAAAAElFTkSuQmCC);	display: block;	width: 40px;	height: 40px;	position: absolute;	top: 36;	left: 10px;}#header a.friends{	background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABkAAAAZCAYAAADE6YVjAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAVNJREFUeNq01jFLAzEYxvH2UBCxiIiDUhzcdXCyIk5ufgUXLR37JdxcXBxcuwmOOtml0EKpo04iWIpIQREVEVFLjf9AhoC9e3O5uxd+lMLdPU1yedO8UiqXdQWO122ghi4+8IwGqiiId+uRCHbxqsLrFHNRz5ACSnhTch1EPScQpnIH0w7TWcGiz5rouS45rtkMVnxCJrAQ4yUq+oT8YhAjZOAT8oWHGCE9nxC9H64cA15w4xOiW0HbfErVNhvUa8c3cecQcoZv3xA9z+fCNbe4SNq7jvEUMaUnuE/au7SjkHbSR1G637ULh73Kn+gn7cIBttELGckQh9Jo8iMOrSksYx2b2MKk8FuvUUcHl/9GbiWuooYu3pVf/eARLZQxbp8na2YR0659e+HLmM/geN+z98lSRv8hZu2QQkYh+kzKjZkvHdPahymH6DNp5Cucev0JMAAkKj0NEoYBJwAAAABJRU5ErkJggg==);}#header a.right{	left: auto;	right: 10px;}*/
+/* =============================================================================
+   Animations
    ========================================================================== */
-/* line 84, sass/partials/nav/_mobile.scss */
-.dl-menu {
-  margin: 45px 0 0 0;
-  position: absolute;
-  width: 100%;
-  opacity: 0;
-  pointer-events: none;
-  transform: translateY(10px);
-  -webkit-transform: translateY(10px);
-  -moz-transform: translateY(10px);
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
+/* line 8, sass/partials/mobile/_nav.scss */
+html.mmenu-opened .mmenu-page,
+html.mmenu-opened #mmenu-blocker,
+.mmenu.mmenu-horizontal ul {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+  transition-duration: 0.5s;
+  -webkit-transition-timing-function: ease;
+  -moz-transition-timing-function: ease;
+  -o-transition-timing-function: ease;
+  transition-timing-function: ease;
 }
 
-/* line 98, sass/partials/nav/_mobile.scss */
-.dl-menu.dl-menu-toggle {
-  transition: all 0.3s ease;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
+/* line 21, sass/partials/mobile/_nav.scss */
+html.mmenu-opened .mmenu-page,
+html.mmenu-opened #mmenu-blocker {
+  -webkit-transition-property: top, right, bottom, left, margin;
+  -moz-transition-property: top, right, bottom, left, margin;
+  -o-transition-property: top, right, bottom, left, margin;
+  transition-property: top, right, bottom, left, margin;
 }
 
-/* line 104, sass/partials/nav/_mobile.scss */
-.dl-menu.dl-menuopen {
-  opacity: 1;
-  pointer-events: auto;
-  transform: translateY(0px);
-  -webkit-transform: translateY(0px);
-  -moz-transform: translateY(0px);
+/* line 28, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-horizontal ul {
+  -webkit-transition-property: margin-left;
+  -moz-transition-property: margin-left;
+  -o-transition-property: margin-left;
+  transition-property: margin-left;
+}
+
+/* line 37, sass/partials/mobile/_nav.scss */
+html.mmenu-accelerated.mmenu-opening .mmenu-page,
+html.mmenu-accelerated.mmenu-opening #mmenu-blocker,
+html.mmenu-accelerated.mmenu-opening .mmenu.mmenu-horizontal ul {
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  -o-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+
+/* top */
+/* line 47, sass/partials/mobile/_nav.scss */
+html.mmenu-top.mmenu-opened .mmenu-page,
+html.mmenu-top.mmenu-opened #mmenu-blocker {
+  margin-top: 0px;
+  top: 0%;
+  left: 0;
+}
+
+/* line 54, sass/partials/mobile/_nav.scss */
+html.mmenu-top.mmenu-opening .mmenu-page,
+html.mmenu-top.mmenu-opening #mmenu-blocker {
+  margin-top: -65px;
+  top: 100%;
+}
+
+/* right */
+/* line 62, sass/partials/mobile/_nav.scss */
+html.mmenu-right.mmenu-opened .mmenu-page,
+html.mmenu-right.mmenu-opened #mmenu-blocker {
+  margin-right: 0px;
+  right: 0%;
+  top: 0;
+}
+
+/* line 69, sass/partials/mobile/_nav.scss */
+html.mmenu-right.mmenu-opening .mmenu-page,
+html.mmenu-right.mmenu-opening #mmenu-blocker {
+  margin-right: -65px;
+  right: 100%;
+}
+
+/* bottom */
+/* line 77, sass/partials/mobile/_nav.scss */
+html.mmenu-bottom.mmenu-opened .mmenu-page,
+html.mmenu-bottom.mmenu-opened #mmenu-blocker {
+  margin-bottom: 0px;
+  bottom: 0%;
+  left: 0;
+}
+
+/* line 84, sass/partials/mobile/_nav.scss */
+html.mmenu-bottom.mmenu-opening .mmenu-page,
+html.mmenu-bottom.mmenu-opening #mmenu-blocker {
+  margin-bottom: -65px;
+  bottom: 100%;
+}
+
+/* left */
+/* line 92, sass/partials/mobile/_nav.scss */
+html.mmenu-left.mmenu-opened .mmenu-page,
+html.mmenu-left.mmenu-opened #mmenu-blocker {
+  margin-left: 0px;
+  left: 0%;
+  top: 0;
+}
+
+/* line 99, sass/partials/mobile/_nav.scss */
+html.mmenu-left.mmenu-opening .mmenu-page,
+html.mmenu-left.mmenu-opening #mmenu-blocker {
+  margin-left: -65px;
+  left: 100%;
 }
 
 /* =============================================================================
-   Submenus
+   Menu, submenus, items - Sizing and positioning
    ========================================================================== */
-/* ul */
-/* line 118, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper ul {
-  border-bottom: 1px solid #333;
+/* line 113, sass/partials/mobile/_nav.scss */
+html.mmenu-opened .mmenu-page,
+.mmenu.mmenu-horizontal ul,
+.mmenu div.mmenu-search,
+.mmenu div.mmenu-search input {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* html/body */
+/* line 123, sass/partials/mobile/_nav.scss */
+html.mmenu-opened,
+html.mmenu-opened body {
+  height: 100%;
   width: 100%;
-  list-style: none;
   overflow: hidden;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
 }
 
-/* li */
-/* line 129, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li {
+/* line 129, sass/partials/mobile/_nav.scss */
+html.mmenu-opened body {
   position: relative;
-  border-top: 1px solid #222;
 }
 
-/* a */
-/* line 135, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li a {
-  padding: 15px 20px;
-  position: relative;
-  display: block;
-  outline: none;
-  font-size: 16px;
-  font-weight: 300;
-  line-height: 20px;
-  letter-spacing: 1px;
-  text-decoration: none;
-  color: white;
-}
-
-/* line 147, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li > a:after {
-  right: 10px;
-}
-
-/* li back action */
-/* line 152, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li.dl-back > a {
-  padding-left: 30px;
-  font-size: 11px;
-  text-transform: uppercase;
-  background: rgba(0, 0, 0, 0.15);
-  color: white;
-}
-
-/* line 158, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li.dl-back:after {
-  left: 10px;
-  transform: rotate(180deg);
-  -webkit-transform: rotate(180deg);
-  -moz-transform: rotate(180deg);
-}
-
-/* li arrows */
-/* line 167, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper li.dl-back:after,
-.dl-menuwrapper li > a:not(:only-child):after {
-  color: rgba(170, 170, 170, 0.3);
+/* menu */
+/* line 135, sass/partials/mobile/_nav.scss */
+.mmenu {
+  display: none;
+  width: 100%;
+  height: 100%;
   position: absolute;
   top: 0;
-  line-height: 50px;
-  font-family: 'icomoon';
-  speak: none;
-  -webkit-font-smoothing: antialiased;
-  content: "\e000";
+  left: 0;
+  z-index: 0;
+  overflow: scroll;
+  overflow-x: hidden;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 148, sass/partials/mobile/_nav.scss */
+.mmenu:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* line 154, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-opened {
+  display: block;
+}
+
+/* line 158, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-opened ~ .mmenu.mmenu-opened {
+  display: none;
+}
+
+/* ul/li */
+/* line 165, sass/partials/mobile/_nav.scss */
+.mmenu ul,
+.mmenu li {
+  list-style: none;
+}
+
+/* line 169, sass/partials/mobile/_nav.scss */
+.mmenu li {
+  position: relative;
+}
+
+/* line 173, sass/partials/mobile/_nav.scss */
+.mmenu li:after {
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+/* line 182, sass/partials/mobile/_nav.scss */
+.mmenu ul,
+.mmenu li,
+.mmenu li > a,
+.mmenu li > span {
+  display: block;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 188, sass/partials/mobile/_nav.scss */
+.mmenu a {
+  background: transparent;
+}
+
+/* line 192, sass/partials/mobile/_nav.scss */
+.mmenu > ul {
+  background: inherit;
+  padding: 20px 0 40px 0;
+}
+
+/* line 197, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-top > ul {
+  padding-bottom: 85px;
+}
+
+/* line 201, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-right > ul {
+  padding-left: 65px;
+}
+
+/* line 205, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-bottom > ul {
+  padding-top: 85px;
+}
+
+/* line 209, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-left > ul {
+  padding-right: 65px;
+}
+
+/* items */
+/* line 216, sass/partials/mobile/_nav.scss */
+.mmenu li > a,
+.mmenu li > span {
+  text-indent: 20px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  line-height: 40px;
+  overflow: hidden;
+  padding-right: 5px;
+}
+
+/* line 225, sass/partials/mobile/_nav.scss */
+.mmenu a:active {
+  background: none;
+}
+
+/* subopen/close */
+/* line 231, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen {
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+
+/* line 241, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen.mmenu-fullsubopen {
+  border-left: none;
+  width: 100%;
+}
+
+/* line 246, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subclose {
+  text-indent: 40px;
+  padding-top: 20px;
+  margin-top: -20px;
+}
+
+/* line 253, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen + a,
+.mmenu a.mmenu-subopen + span {
+  padding-right: 45px;
+}
+
+/* page + blocker */
+/* line 259, sass/partials/mobile/_nav.scss */
+html.mmenu-opened .mmenu-page {
+  background: inherit;
+  height: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* line 266, sass/partials/mobile/_nav.scss */
+#mmenu-blocker {
+  background: #fff;
+  opacity: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 9999;
+}
+
+/* line 277, sass/partials/mobile/_nav.scss */
+html.mmenu-opened #mmenu-blocker,
+html.mmenu-blocking #mmenu-blocker {
+  display: block;
+}
+
+/* vertical submenu */
+/* line 283, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical ul ul {
+  display: none;
+  padding: 10px 0 10px 10px;
+}
+
+/* line 288, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical li.mmenu-opened > ul {
+  display: block;
+}
+
+/* line 293, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical ul ul li:last-child,
+.mmenu.mmenu-vertical ul ul li:last-child:after {
+  border-bottom-width: 0;
+}
+
+/* line 298, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical li.mmenu-opened.mmenu-selected > a.mmenu-subopen + a,
+.mmenu.mmenu-vertical li.mmenu-opened.mmenu-selected > a.mmenu-subopen + span {
+  padding-right: 5px;
+  margin-right: 40px;
+}
+
+/* line 304, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical li.mmenu-opened.mmenu-selected > em.mmenu-counter + a.mmenu-subopen + a,
+.mmenu.mmenu-vertical li.mmenu-opened.mmenu-selected > em.mmenu-counter + a.mmenu-subopen + span {
+  margin-right: 75px;
+}
+
+/* horizontal submenu */
+/* line 310, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-horizontal {
+  width: 500%;
+}
+
+/* line 314, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-horizontal ul {
+  width: 20%;
+  margin-left: 0%;
+  float: left;
+}
+
+/* line 320, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-horizontal ul.mmenu-submenu {
+  display: none;
+}
+
+/* line 324, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-horizontal ul.mmenu-submenu.mmenu-opened {
+  display: block;
+}
+
+/* line 328, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-horizontal ul.mmenu-subopening {
+  margin-left: -20%;
+  height: 100%;
+  overflow: hidden;
 }
 
 /* =============================================================================
-   Menu Color Theme
+   Menu, submenus, items - Styling (default: dark background)
    ========================================================================== */
-/* line 184, sass/partials/nav/_mobile.scss */
-.dl-menuwrapper button:hover,
-.dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul {
-  background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555555), color-stop(1, #222222));
-  color: black;
+/* line 340, sass/partials/mobile/_nav.scss */
+.mmenu {
+  background: #333;
 }
 
-/* line 189, sass/partials/nav/_mobile.scss */
-.no-touch .dl-menuwrapper li a:after {
-  background: black;
-  color: #aaaaaa;
+/* line 344, sass/partials/mobile/_nav.scss */
+.mmenu * {
+  -webkit-text-size-adjust: none;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
 }
 
-/* line 1, sass/partials/layout/_mobile.scss */
-#body {
+/* line 351, sass/partials/mobile/_nav.scss */
+.mmenu li {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 355, sass/partials/mobile/_nav.scss */
+.mmenu li:after {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* line 362, sass/partials/mobile/_nav.scss */
+.mmenu li,
+.mmenu li > a,
+.mmenu li > span {
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+/* line 368, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-selected > a,
+.mmenu li.mmenu-selected > span {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 372, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-selected > a.mmenu-subopen {
+  background: transparent;
+}
+
+/* subopen/close */
+/* line 378, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen {
+  border-left: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+/* line 382, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subclose {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* vertical submenu */
+/* line 389, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical li.mmenu-opened > a.mmenu-subopen,
+.mmenu.mmenu-vertical li.mmenu-opened > ul {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+/* page + blocker */
+/* line 395, sass/partials/mobile/_nav.scss */
+html.mmenu-opened .mmenu-page {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+}
+
+/* =============================================================================
+   Labels - Sizing and positioning
+   ========================================================================== */
+/* line 405, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-label {
+  text-transform: uppercase;
+  text-indent: 20px;
+  line-height: 20px;
+}
+
+/* =============================================================================
+   Labels - Styling
+   ========================================================================== */
+/* line 417, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-label {
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+/* =============================================================================
+   Counters - Sizing and positioning
+   ========================================================================== */
+/* line 429, sass/partials/mobile/_nav.scss */
+.mmenu em.mmenu-counter {
+  text-indent: 0;
+  text-align: center;
+  text-shadow: none;
+  line-height: 20px;
+  display: block;
+  min-width: 20px;
+  height: 20px;
+  padding: 0;
+  position: absolute;
+  right: 40px;
+  top: 10px;
+}
+
+/* line 443, sass/partials/mobile/_nav.scss */
+.mmenu em.mmenu-counter + a.mmenu-subopen {
+  padding-left: 35px;
+}
+
+/* line 448, sass/partials/mobile/_nav.scss */
+.mmenu em.mmenu-counter + a.mmenu-subopen + a,
+.mmenu em.mmenu-counter + a.mmenu-subopen + span {
+  padding-right: 80px;
+}
+
+/* line 453, sass/partials/mobile/_nav.scss */
+.mmenu em.mmenu-counter + a.mmenu-fullsubopen + a,
+.mmenu em.mmenu-counter + a.mmenu-fullsubopen + span {
+  padding-right: 70px;
+}
+
+/* =============================================================================
+   Counters - Styling
+   ========================================================================== */
+/* line 463, sass/partials/mobile/_nav.scss */
+.mmenu em.mmenu-counter {
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+  font-size: 11px;
+  font-weight: bold;
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* =============================================================================
+   Arrows - Sizing and positioning
+   ========================================================================== */
+/* line 480, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen:after,
+.mmenu a.mmenu-subclose:before {
+  content: '';
+  border-width: 4px;
+  border-style: solid;
+  display: block;
+  width: 6px;
+  height: 6px;
+  position: absolute;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  -o-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+
+/* line 495, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen:after {
+  border-top: none;
+  border-left: none;
+  right: 16px;
+  top: 16px;
+}
+
+/* line 502, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subclose:before {
+  border-right: none;
+  border-bottom: none;
+  left: 20px;
+  top: 35px;
+}
+
+/* line 509, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical li.mmenu-opened > a.mmenu-subopen:after {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+/* =============================================================================
+   Arrows - Styling
+   ========================================================================== */
+/* line 523, sass/partials/mobile/_nav.scss */
+.mmenu a.mmenu-subopen:after,
+.mmenu a.mmenu-subclose:before {
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* =============================================================================
+   Search - Sizing and positioning
+   ========================================================================== */
+/* line 533, sass/partials/mobile/_nav.scss */
+.mmenu div.mmenu-search {
+  width: 20%;
+  height: 50px;
+  padding: 10px;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+
+/* line 542, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-vertical div.mmenu-search {
+  width: 100%;
+}
+
+/* line 546, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-right div.mmenu-search {
+  padding-left: 75px;
+}
+
+/* line 550, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-bottom div.mmenu-search {
+  top: 65px;
+}
+
+/* line 554, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-left div.mmenu-search {
+  padding-right: 75px;
+}
+
+/* line 558, sass/partials/mobile/_nav.scss */
+.mmenu div.mmenu-search input {
+  border: none;
+  border-radius: 15px;
+  line-height: 30px;
+  outline: none;
+  display: block;
+  width: 100%;
+  height: 30px;
+  margin: 0;
+  padding: 0 0 0 10px;
+}
+
+/* line 570, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-noresults {
+  border: none;
+  display: none;
+  padding-top: 30px;
+}
+
+/* line 576, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-noresults:after {
+  border: none;
+}
+
+/* line 580, sass/partials/mobile/_nav.scss */
+.mmenu.mmenu-noresults li.mmenu-noresults {
+  display: block;
+}
+
+/* line 584, sass/partials/mobile/_nav.scss */
+.mmenu div.mmenu-search ~ ul {
+  padding-top: 60px;
+}
+
+/* line 591, sass/partials/mobile/_nav.scss */
+.mmenu .mmenu-noresult,
+.mmenu .mmenu-nosubresult > a.mmenu-subopen,
+.mmenu .mmenu-nosubresult > em.mmenu-counter {
+  display: none;
+}
+
+/* line 596, sass/partials/mobile/_nav.scss */
+.mmenu .mmenu-nosubresult > a.mmenu-subopen + a,
+.mmenu .mmenu-nosubresult > a.mmenu-subopen + span {
+  padding-right: 5px;
+}
+
+/* =============================================================================
+   Search - Styling
+   ========================================================================== */
+/* line 606, sass/partials/mobile/_nav.scss */
+.mmenu div.mmenu-search {
+  background: rgba(0, 0, 0, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* line 611, sass/partials/mobile/_nav.scss */
+.mmenu div.mmenu-search input {
+  background: rgba(255, 255, 255, 0.3);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* line 616, sass/partials/mobile/_nav.scss */
+.mmenu li.mmenu-noresults {
+  color: rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+/*
+	Bugfix for browsers without support for overflowscrolling
+		- Android < 3
+*/
+/* line 628, sass/partials/mobile/_nav.scss */
+html.mmenu-no-overflowscrolling.mmenu-opened,
+html.mmenu-no-overflowscrolling.mmenu-opened body {
+  overflow: visible;
+}
+
+/* line 632, sass/partials/mobile/_nav.scss */
+html.mmenu-no-overflowscrolling.mmenu-opened body {
+  overflow-x: hidden;
+}
+
+/* line 636, sass/partials/mobile/_nav.scss */
+html.mmenu-no-overflowscrolling.mmenu-opened .mmenu-page {
+  min-height: 200%;
+  position: fixed;
+  top: 0;
+  z-index: 3;
+}
+
+/* line 643, sass/partials/mobile/_nav.scss */
+html.mmenu-no-overflowscrolling .mmenu {
+  height: auto;
+  min-height: 100%;
+  overflow: default;
+  overflow-x: default;
+  overflow-y: default;
+  position: relative;
+  left: auto;
+  top: auto;
+}
+
+/* line 654, sass/partials/mobile/_nav.scss */
+html.mmenu-no-overflowscrolling.mmenu-right .mmenu {
+  position: absolute;
+}
+
+/* =============================================================================
+   Main Containers
+   ========================================================================== */
+/* line 5, sass/partials/mobile/_content.scss */
+.content {
   padding: 0 10px;
   height: 100%;
 }
 
-/*---------------Layout-mobile---------------*/
-/* line 10, sass/partials/layout/_mobile.scss */
+/* =============================================================================
+   Featured Section
+   ========================================================================== */
+/* Page Title */
+/* Page Navigation */
+/* line 20, sass/partials/mobile/_content.scss */
 .featured nav {
   list-style: none;
   margin: 11px 0;
   width: 100%;
 }
 
-/* line 16, sass/partials/layout/_mobile.scss */
+/* line 26, sass/partials/mobile/_content.scss */
 .featured nav li {
   line-height: 30px;
 }
 
-/* line 20, sass/partials/layout/_mobile.scss */
+/* line 30, sass/partials/mobile/_content.scss */
 .featured nav li a {
   border: 1px solid #333;
   padding: 15px 20px;
@@ -2416,25 +2896,70 @@ nav.dl-menuwrapper {
   display: block;
 }
 
-/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+/* =============================================================================
+   Main-Content Section
+   ========================================================================== */
+/* =============================================================================
+   Persistent Content Headers
+   ========================================================================== */
+/* line 47, sass/partials/mobile/_content.scss */
+.persist-header {
+  /*-settings for both-*/
+  border: 1px dashed #fff;
+  padding-top: 10px;
+  min-height: 10px;
+  max-width: 100%;
+}
+
+/* line 54, sass/partials/mobile/_content.scss */
+.floatingHeader {
+  background: #eee;
+  /*-using different settings-*/
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+}
+
+/* line 61, sass/partials/mobile/_content.scss */
+.persist-header ul.nav {
+  float: right;
+  padding: 0 10px;
+}
+
+/* line 66, sass/partials/mobile/_content.scss */
+.persist-header ul.nav li, ul.nav li {
+  display: inline;
+}
+
+/* line 70, sass/partials/mobile/_content.scss */
+.persist-header ul.nav li:last-child {
+  padding-left: 20px;
+}
+
+/* Tablet Layout: 481px past 768px(portrait mode) to 1024px(landscape mode). Inherits styles from: Mobile Layout. */
 @media only screen and (min-width: 481px) {
-  /* line 49, sass/site.scss */
+  /* line 52, sass/site.scss */
   body {
     color: red;
   }
 }
-/* Desktop Layout: 769px to max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
-@media only screen and (min-width: 769px) {
-  /* line 56, sass/site.scss */
+/* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+@media only screen and (min-width: 1025px) {
+  /* line 60, sass/site.scss */
   body {
     color: blue;
+  }
+
+  /* line 1, sass/partials/desktop/_header.scss */
+  header .content-wrapper {
+    padding-top: 20px;
   }
 
   /* =============================================================================
      Navigation Menu - Discovery
      ========================================================================== */
   /* wrapper */
-  /* line 6, sass/partials/nav/_desktop.scss */
+  /* line 6, sass/partials/desktop/_nav.scss */
   nav.dl-menuwrapper {
     position: absolute;
     top: 20px;
@@ -2458,13 +2983,13 @@ nav.dl-menuwrapper {
     /* no shadow */
   }
 
-  /* line 27, sass/partials/nav/_desktop.scss */
+  /* line 27, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
   }
 
   /* home button */
-  /* line 32, sass/partials/nav/_desktop.scss */
+  /* line 32, sass/partials/desktop/_nav.scss */
   #dl-home {
     border: 1px solid #ddd;
     border-right: none;
@@ -2481,13 +3006,13 @@ nav.dl-menuwrapper {
     float: left;
   }
 
-  /* line 45, sass/partials/nav/_desktop.scss */
+  /* line 45, sass/partials/desktop/_nav.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 50, sass/partials/nav/_desktop.scss */
+  /* line 50, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
@@ -2510,7 +3035,7 @@ nav.dl-menuwrapper {
   }
 
   /* discover icon = */
-  /* line 69, sass/partials/nav/_desktop.scss */
+  /* line 69, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:after {
     	/*content: '';
     	width: 20%;
@@ -2542,7 +3067,7 @@ nav.dl-menuwrapper {
   }
 
   /* search */
-  /* line 103, sass/partials/nav/_desktop.scss */
+  /* line 103, sass/partials/desktop/_nav.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -2557,13 +3082,13 @@ nav.dl-menuwrapper {
 
   /* submenus */
   /* menu ul only */
-  /* line 116, sass/partials/nav/_desktop.scss */
+  /* line 116, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 119, sass/partials/nav/_desktop.scss */
+  /* line 119, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -2578,14 +3103,14 @@ nav.dl-menuwrapper {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 132, sass/partials/nav/_desktop.scss */
+  /* line 132, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 137, sass/partials/nav/_desktop.scss */
+  /* line 137, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -2595,7 +3120,7 @@ nav.dl-menuwrapper {
   }
 
   /* all uls */
-  /* line 146, sass/partials/nav/_desktop.scss */
+  /* line 146, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -2606,12 +3131,12 @@ nav.dl-menuwrapper {
   }
 
   /* menu li */
-  /* line 156, sass/partials/nav/_desktop.scss */
+  /* line 156, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 159, sass/partials/nav/_desktop.scss */
+  /* line 159, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -2619,13 +3144,13 @@ nav.dl-menuwrapper {
     outline: none;
   }
 
-  /* line 165, sass/partials/nav/_desktop.scss */
+  /* line 165, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 169, sass/partials/nav/_desktop.scss */
+  /* line 169, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -2634,7 +3159,7 @@ nav.dl-menuwrapper {
     color: white;
   }
 
-  /* line 175, sass/partials/nav/_desktop.scss */
+  /* line 175, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -2643,7 +3168,7 @@ nav.dl-menuwrapper {
   }
 
   /* li arrows */
-  /* line 183, sass/partials/nav/_desktop.scss */
+  /* line 183, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -2657,7 +3182,7 @@ nav.dl-menuwrapper {
   }
 
   /* desktop - menu theme */
-  /* line 197, sass/partials/nav/_desktop.scss */
+  /* line 197, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -2666,7 +3191,7 @@ nav.dl-menuwrapper {
     /* li:hover color*/
   }
 
-  /* line 202, sass/partials/nav/_desktop.scss */
+  /* line 202, sass/partials/desktop/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -2676,105 +3201,107 @@ nav.dl-menuwrapper {
   /* =============================================================================
      Page/Section Layout
      ========================================================================== */
-  /* line 5, sass/partials/layout/_desktop.scss */
-  body .container {
-    padding: 0 20px;
+  /* line 5, sass/partials/desktop/_content.scss */
+  .page #container {
     height: 100%;
-    /* -- Big Background Image --*/
+    /* -- Big Background Image --
     background: url(../../images/millican.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+*/
   }
 
   /* main layout
   ----------------------------------------------------------*/
-  /* line 18, sass/partials/layout/_desktop.scss */
+  /* line 19, sass/partials/desktop/_content.scss */
   .content-wrapper {
     margin: 0 auto;
     max-width: 1600px;
-  }
-
-  /* line 23, sass/partials/layout/_desktop.scss */
-  #body {
-    border: 1px dashed blue;
-    /*development line*/
     padding-bottom: 35px;
   }
 
-  /* line 28, sass/partials/layout/_desktop.scss */
+  /* line 25, sass/partials/desktop/_content.scss */
   .main-content {
-    background: #cc9900 url("../../Images/accent.png") no-repeat;
+    background: white url("../../Images/accent.png") no-repeat;
     padding: 0 10px;
     padding-top: 30px;
     max-width: 70%;
+    position: relative;
     float: right;
+    z-index: 3;
   }
 
-  /* line 36, sass/partials/layout/_desktop.scss */
+  /* line 35, sass/partials/desktop/_content.scss */
   .featured + .main-content {
-    background: #dddddd url("../../Images/heroAccent.png") no-repeat;
+    /*display background if both classes are present on page*/
+    background: #ffcc00 url("../../Images/heroAccent.png") no-repeat;
   }
 
-  /* line 40, sass/partials/layout/_desktop.scss */
-  .section {
-    background: #cc9900;
+  /* line 39, sass/partials/desktop/_content.scss */
+  .main-content .index {
+    z-index: 4;
   }
 
-  /* line 44, sass/partials/layout/_desktop.scss */
-  header .content-wrapper {
-    padding-top: 20px;
+  /* line 43, sass/partials/desktop/_content.scss */
+  .main-content .section {
+    background: #fff;
+    z-index: 10;
   }
 
   /* page elements
   ----------------------------------------------------------*/
   /* featured */
-  /* line 51, sass/partials/layout/_desktop.scss */
+  /* line 52, sass/partials/desktop/_content.scss */
   .featured {
     border: 1px dashed red;
     /*development line*/
     background-color: #ffcc00;
+    position: relative;
     float: left;
     width: 25%;
+    z-index: 5;
   }
 
-  /* line 58, sass/partials/layout/_desktop.scss */
-  .featured .content-wrapper {
+  /* line 61, sass/partials/desktop/_content.scss */
+  .featured .wrapper {
     border: 1px dashed blue;
     /*development line*/
-    background-color: #7ac0da;
     background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
     background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
     background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
     background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
     background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-    padding: 20px 40px 30px 40px;
+    position: relative;
+    height: 100%;
   }
 
-  /* line 69, sass/partials/layout/_desktop.scss */
+  /* line 72, sass/partials/desktop/_content.scss */
   .featured hgroup.title h1, .featured hgroup.title h2 {
     color: #fff;
   }
 
-  /* line 73, sass/partials/layout/_desktop.scss */
+  /* line 76, sass/partials/desktop/_content.scss */
   .featured p {
     font-size: 1.2em;
   }
 
   /*---------------Layout---------------*/
-  /* line 80, sass/partials/layout/_desktop.scss */
+  /* line 83, sass/partials/desktop/_content.scss */
   .featured nav {
     list-style: none;
     margin: 11px 0;
-    width: 250px;
+    position: absolute;
+    top: 100%;
+    left: 0;
   }
 
-  /* line 86, sass/partials/layout/_desktop.scss */
+  /* line 91, sass/partials/desktop/_content.scss */
   .featured nav li {
     line-height: 30px;
   }
 
-  /* line 90, sass/partials/layout/_desktop.scss */
+  /* line 95, sass/partials/desktop/_content.scss */
   .featured nav li a {
     border: 1px solid #333;
     padding: 15px 20px;
@@ -2783,42 +3310,38 @@ nav.dl-menuwrapper {
   }
 
   /* features */
-  /* line 100, sass/partials/layout/_desktop.scss */
+  /* line 105, sass/partials/desktop/_content.scss */
   section.feature {
     float: left;
     padding: 10px;
   }
 
   /* homepage content 
-  ----------------------------------------------------------*/
-  /* line 109, sass/partials/layout/_desktop.scss */
+  ----------------------------------------------------------
   article {
-    float: left;
-    width: 70%;
+      float: left;
+      width: 70%;
   }
-
-  /* line 114, sass/partials/layout/_desktop.scss */
+  
   aside {
-    float: right;
-    width: 25%;
+      float: right;
+      width: 25%;
   }
-
-  /* line 119, sass/partials/layout/_desktop.scss */
-  aside ul {
-    list-style: none;
-    padding: 0;
-  }
-
-  /* line 124, sass/partials/layout/_desktop.scss */
-  aside ul li {
-    background: url("../../Images/bullet.png") no-repeat 0 50%;
-    padding: 2px 0 2px 20px;
-  }
-
+  
+      aside ul {
+          list-style: none;
+          padding: 0;
+      }
+  
+          aside ul li {
+              background: url("../../Images/bullet.png") no-repeat 0 50%;
+              padding: 2px 0 2px 20px;
+          }
+  */
   /*----------------------*/
   /*-- FOOTER  Section --*/
   /*----------------------*/
-  /* line 135, sass/partials/layout/_desktop.scss */
+  /* line 140, sass/partials/desktop/_content.scss */
   footer {
     padding-bottom: 35px;
   }

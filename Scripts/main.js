@@ -1,20 +1,41 @@
 require.config({
-    //By default load any module IDs from scripts
-    baseUrl: 'scripts',
-    //except, if the module ID starts with "app",
-    //load it from the js/app directory. paths
-    //config is relative to the baseUrl, and
-    //never includes a ".js" extension since
-    //the paths config could be for a directory.
+    baseUrl: './scripts',
+    waitSeconds: 10,
     paths: {
-        app: '../main'
+        'easing': 'plugins/jquery.easing.1.3',
+        'sticky': 'plugins/jquery.sticky-kit.min',
+        'dmenu': 'plugins/jquery.dlmenu',
+        'mmenu': 'plugins/jquery.mmenu.min'
     }
 });
 
-// Start the main app logic.
-require(["jquery.plugins/jquery.dlmenu"], function(util) {
-    //This function is called when scripts/helper/util.js is loaded.
-    //If util.js calls define(), then this function is not fired until
-    //util's dependencies have loaded, and the util argument will hold
-    //the module value for "helper/util".
+require([], function () {
+    
+    var width = parseInt($(this).width());
+
+    if (width < 481) // load mobile scripts
+        require(['dmenu','easing'], function () {
+            //alert(width + ' - mobile');
+
+            //-- 1 -----------------------
+            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
+        });
+
+    if ((width > 480) && (width < 1025)) // load tablet scripts
+        require(['dmenu','libs/loadMobileCss'], function () {
+            //alert(width + " - tablet");
+
+            //-- 1 -----------------------
+            //$('nav#main_menu').mmenu();
+            //-- 1 -----------------------
+            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+        });
+
+    if (width > 1024) // load desktop scripts
+        require(['dmenu','easing','sticky'], function () {
+            //alert(width + " - desktop");
+            
+            //-- 1 -----------------------
+            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+        });
 });

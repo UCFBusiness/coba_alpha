@@ -46,6 +46,13 @@ blockquote {
     color: #666;
 }
 
+blockquote:before {
+    content: '"';
+    padding-right:10px;
+    font-size: 2em;
+    float:left;
+}
+
 blockquote small {
     font:italic .9em "Georgia", "Times New Roman", "Times", serif;
     color:#666;

@@ -26,14 +26,14 @@ body .container {
 }
 
     .main-content {
-        background: #cc9900 url("../../Images/accent.png") no-repeat;
+        background: #ffcc00 url("../../Images/accent.png") no-repeat;
         padding: 0 10px;
         padding-top: 30px;
         max-width: 70%;
-    float: right;
+        float: right;
     }
 
-    .featured + .main-content {
+    .featured + .main-content { /*display background if both classes are present on page*/
         background: #ddd url("../../Images/heroAccent.png") no-repeat;
     }
 
@@ -57,13 +57,12 @@ header .content-wrapper {
 
     .featured .content-wrapper {
         border:1px dashed blue;/*development line*/
-        background-color: #7ac0da;
         background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
         background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
         background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        padding: 20px 40px 30px 40px;
+
     }
 
         .featured hgroup.title h1, .featured hgroup.title h2 {
@@ -80,7 +79,6 @@ header .content-wrapper {
 .featured nav {
     list-style: none;
     margin: 11px 0;
-width: 250px;
 }
             
 .featured nav li {
