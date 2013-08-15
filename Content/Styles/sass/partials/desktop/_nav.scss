@@ -4,9 +4,7 @@
 
 /* wrapper */
 nav.dl-menuwrapper {
-    position: absolute;
-    top: 20px;
-    left: 20px;
+    margin-top: 20px;
     font-size: 16px;
 	font-weight: 300;
     line-height: 20px;
@@ -23,6 +21,7 @@ nav.dl-menuwrapper {
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
     box-shadow: none; /* no shadow */
+    z-index: 99;
 }
 .dl-menuwrapper:first-child {
 	margin-right: 100px;
@@ -52,7 +51,7 @@ nav.dl-menuwrapper {
     border-right: none;
     padding-left: 30px;
     width: 150px;
-    height: 36px;
+    height: 40px;
     position: relative;
     overflow: hidden;
     display: block;
@@ -67,24 +66,6 @@ nav.dl-menuwrapper {
 }
 /* discover icon = */
 .dl-menuwrapper button:after {
-	/*content: '';
-	width: 20%;
-	height: 5px;
-    position: absolute;
-	top: 20px;
-	left: 16%;
-	right: 15px;
-    line-height: 50px;
-    background: #aaa;
-	box-shadow: 
-		0 10px 0 #aaa, 
-		0 20px 0 #aaa;
-    
-    transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    */
-
     content: '';
 	width: 20%;
 	height: 4px;
@@ -99,6 +80,17 @@ nav.dl-menuwrapper {
 		0 20px 0 #555;
 }
 
+.dl-home {
+    background: url(../../images/icon-home-m.png) no-repeat;
+    background-position: 5px 0px;
+}
+
+.dl-home, 
+.dl-trigger {
+    width:50px;
+    border-right: none;
+}
+
 /* search */
 #dl-search {
     border: 1px solid #eee;
@@ -107,6 +99,21 @@ nav.dl-menuwrapper {
     font-size: 13px;
     font-weight: 300;
     background: rgba(255,255,255,1); color: rgba(170,170,170,1);/**/
+    float: left;
+}
+
+.dl-searchbutton {
+    visibility: visible;
+}
+
+.dl-searchfield {
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 0;
+    padding: 0 10px;
+    min-width: 170px;
+    max-width: 170px;
+    height: 38px;
     float: left;
 }
 

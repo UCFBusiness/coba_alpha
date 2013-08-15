@@ -164,9 +164,7 @@
             <!-- BEGIN:Footer -->
             <footer>
                 <div class="content-wrapper">
-                    <div>
-                        <p>&copy; @DateTime.Now.Year - University of Central Florida, College of Business Administration</p>
-                    </div>
+                    <p>&copy; @DateTime.Now.Year - University of Central Florida, College of Business Administration</p>
                 </div>
             </footer>
             <!-- FINIS:Footer -->
@@ -180,17 +178,14 @@
         @*data-main attribute tells require.js to load scripts/main.js after require.js loads.*@
         <script data-main="scripts/main" src="~/scripts/require.js"></script>
 
-        <!-- Sticky -->
-        <script type="text/javascript" src="~/scripts/plugins/jquery.sticky-kit.min.js"></script>
-
         <script>
             $(function () { //load on document.ready
 
-                //----- Responsive Script Loader ------
-                //-- check browser width on page load
+                //----- Responsive Script Loader ----------------------
+                //-- 1 -- check browser width on page load
                 responsiveScriptLoader($(this).width());
 
-                //-- 1 -- check on window resize
+                //-- 2 -- check on window resize
                 $(window).resize(function () {
                     responsiveScriptLoader($(this).width());
 
@@ -198,8 +193,9 @@
                     //$("#section").css("height", h); //OR
                     //$('#section').css('margin-top', (h - 620));
                 })
+                //------------------------------------------------------
 
-                //----- Easing Navigation ------
+                //----- Easing Navigation ------------------------------
                 //-- 1 -- check when page is first loaded
                 content_buildHeaders();
                 //-- 2 -- check header size when window is resized
@@ -216,14 +212,13 @@
                     }, 1500,'easeInOutExpo');
                     event.preventDefault();
                 });
-
-                //-- Sticky -----------------------
-                $(".featured").stick_in_parent();
+                //------------------------------------------------------
             });
         </script>
 
         <script>
-            //----- Responsive Script Loader -----
+            //----- Responsive Script Loader ---------------------------
+
             function responsiveScriptLoader(width) {
                 width = parseInt(width);
 
@@ -239,6 +234,8 @@
         </script>
 
         <script>
+            //----- Easing Functions ------------------------------------
+
             function content_buildHeaders() {
                 $(".persist-area").each(function () {
                     var clonedHeaderRow;

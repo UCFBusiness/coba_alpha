@@ -1,20 +1,24 @@
 /* =============================================================================
-   Main Containers
+   Page/Section Layout
    ========================================================================== */
 
-.content {
-    padding: 0 10px;
+.page #container {
     height: 100%;
 }
 
-#container {}
+.page #content {}
+
+.content-wrapper {}
+
 
 /* =============================================================================
    Featured Section
    ========================================================================== */
 
-/* Page Title */
 
+.featured {
+    -webkit-overflow-scrolling: touch;
+}
 
 /* Page Navigation */
 .featured nav {
@@ -45,7 +49,7 @@
    ========================================================================== */
 
 .persist-header { /*-settings for both-*/
-    border:1px dashed #fff;
+    border:1px dashed blue; /*for development only - borderline*/
     padding-top: 10px;
     min-height:10px;
     max-width:100%;

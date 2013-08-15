@@ -9,12 +9,12 @@ require.config({
     }
 });
 
-require([], function () {
+require(['dmenu','easing'], function () {
     
     var width = parseInt($(this).width());
 
     if (width < 481) // load mobile scripts
-        require(['dmenu','easing'], function () {
+        require([], function () {
             //alert(width + ' - mobile');
 
             //-- 1 -----------------------
@@ -22,20 +22,22 @@ require([], function () {
         });
 
     if ((width > 480) && (width < 1025)) // load tablet scripts
-        require(['dmenu','libs/loadMobileCss'], function () {
+        require(['libs/loadMobileCss'], function () {
             //alert(width + " - tablet");
-
-            //-- 1 -----------------------
-            //$('nav#main_menu').mmenu();
+            
             //-- 1 -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+            //-- 1 -----------------------
+            //$('nav#main_menu').mmenu();
         });
 
     if (width > 1024) // load desktop scripts
-        require(['dmenu','easing','sticky'], function () {
+        require(['sticky'], function () {
             //alert(width + " - desktop");
             
             //-- 1 -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+            //-- Sticky -----------------------
+            $(".featured").stick_in_parent();
         });
 });
