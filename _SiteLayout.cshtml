@@ -66,7 +66,7 @@
             <nav id="main_menu" class="dl-menuwrapper clearfix">
                 <a href="~/" class="dl-home">HOME</a>
                 <button class="dl-trigger">DISCOVER</button>
-                <ul class="dl-menu">
+                <ul class="dl-menu" data-scrollspy="scrollspy">
 					<li>
 						<a href="#">Academics</a>
 						<ul class="dl-submenu">
@@ -170,13 +170,15 @@
             <!-- FINIS:Footer -->
         </div>
 
-
+        The very bottom. view of body tag.
         <!-- JQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="~/scripts/jquery-2.0.3.min.js"><\/script>')</script>
 
         @*data-main attribute tells require.js to load scripts/main.js after require.js loads.*@
         <script data-main="scripts/main" src="~/scripts/require.js"></script>
+
+        <script src="http://scripts.bus.ucf.edu/js/libs/bootstrap-scrollspy.js" type="text/javascript"></script>
 
         <script>
             $(function () { //load on document.ready

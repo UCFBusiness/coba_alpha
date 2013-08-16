@@ -17,27 +17,29 @@ require(['dmenu','easing'], function () {
         require([], function () {
             //alert(width + ' - mobile');
 
-            //-- 1 -----------------------
+            //-- Menu1 -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
         });
 
     if ((width > 480) && (width < 1025)) // load tablet scripts
-        require(['libs/loadMobileCss'], function () {
+        require(['stycky','libs/loadMobileCss'], function () {
             //alert(width + " - tablet");
             
-            //-- 1 -----------------------
+            //-- Menu -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
             //-- 1 -----------------------
             //$('nav#main_menu').mmenu();
+            //-- Sticky ---------------------
+            $(".featured").stick_in_parent();
         });
 
     if (width > 1024) // load desktop scripts
         require(['sticky'], function () {
             //alert(width + " - desktop");
             
-            //-- 1 -----------------------
+            //-- Menu -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
-            //-- Sticky -----------------------
+            //-- Sticky ---------------------
             $(".featured").stick_in_parent();
         });
 });
