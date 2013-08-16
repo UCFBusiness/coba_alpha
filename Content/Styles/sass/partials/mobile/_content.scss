@@ -6,7 +6,7 @@
     height: 100%;
 }
 
-.page #content {}
+.page #content {padding: 0 5px;}
 
 .content-wrapper {}
 
@@ -15,17 +15,10 @@
    Featured Section
    ========================================================================== */
 
-    .featured + .main-content { /*display background if both classes are present on page*/
-        /*background: url("../../Images/heroAccent.png") repeat-y; blue*/
-        background: url("../../Images/mcarrows.png") repeat-y;
-    }
-
     .main-content {
-        /*background: url("../../Images/accent.png") no-repeat; */
         border:1px dashed red; /*for development only - borderline*/
+        background: url("../../Images/mcarrows.png") repeat-y;
         position: relative;
-        background: white;
-        float: right;
     }
 
     .main-content .index {}
@@ -35,15 +28,9 @@
 
     .featured {
         border:1px dashed red; /*for development only - borderline*/
-
-        float: left;
-        -webkit-overflow-scrolling: touch;
-        overflow: hidden;
     }
     
         .featured .wrapper {
-        
-            /*background: url("../../Images/mcarrows.png") repeat-y;*/
             position: relative;
             height: 100%;
         }
@@ -52,35 +39,29 @@
 
             /*.featured p {}*/
 
-/* features */
+/* features 
 section.feature {
     float: left;
     border: 1px solid #ccc;
     padding: 10px;
     display: block;
-    width: 100%;
     height: 40px;
-}
+}*/
 
 /* =============================================================================
    Section Navigation
    ========================================================================== */
 
 .featured nav {
-    list-style: none;
     margin: 11px 0;
-    width: 100%;
-}
-            
-.featured nav li {
-    line-height: 20px;
 }
 
-.featured nav li a {
-    border:  1px solid #333;
-    padding: 15px 10px;
-    background: #ddd;
-    display: block;
+.featured nav a {
+    background: #ffcc00;
+    margin: 0 3px;
+    padding: 2px 5px;
+    line-height: 1.9em;
+    font-size: 1.1em;
 }
 
 
@@ -89,31 +70,55 @@ section.feature {
    ========================================================================== */
 
 .persist-header { /*-settings for both-*/
-    border:1px dashed blue; /*for development only - borderline*/
-    padding-top: 10px;
-    min-height:10px;
     max-width:100%;
 }
 
 .floatingHeader {
     background: rgba(0,0,0,0.6); /*-using different settings-*/
+
+    color: #ffcc00;
     visibility: hidden;
     position: fixed;
     top:0;
 }
+
+.persist-header h1 {
+    margin:0;
+    width: 99.4%; 
+    
+    border:1px dashed red; /*for development only - borderline*/
+}
             
-.persist-header ul.nav {
-    float: right;
-    padding: 0 10px;
+.persist-header ul.nav { 
+    margin:0;padding:0;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: right;
+
+    border:1px dashed red; /*for development only - borderline*/
 }
             
 .persist-header ul.nav li, ul.nav li {
     display: inline;
 }
+
+.persist-header ul.nav li:first-child {
+    float:left;
+}
             
 .persist-header ul.nav li:last-child {
-    padding-left: 20px;
+    padding-left: 15px;
 }
+
+.persist-header ul.nav li a {
+    color: #cc9900;
+    margin: 0 5px;
+}
+
+
+
+
+
 
 
 /* =============================================================================

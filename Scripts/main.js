@@ -11,35 +11,64 @@ require.config({
 
 require(['dmenu','easing'], function () {
     
+    //-- 4 -- go to linked header when link is clicked
+    $('.featured nav a').bind('click',function(event){
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500,'easeInOutExpo');
+        event.preventDefault();
+    });
+
     var width = parseInt($(this).width());
 
     if (width < 481) // load mobile scripts
         require([], function () {
             //alert(width + ' - mobile');
 
-            //-- Menu1 -----------------------
+            //-- Menu3 -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
+
+            //-- 4 -- go to linked header when link is clicked
+            $('ul.nav a').bind('click',function(event){
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500,'easeInOutExpo');
+                event.preventDefault();
+            });
+
         });
 
     if ((width > 480) && (width < 1025)) // load tablet scripts
-        require(['stycky','libs/loadMobileCss'], function () {
+        require(['libs/loadMobileCss'], function () {
             //alert(width + " - tablet");
             
-            //-- Menu -----------------------
-            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+            //-- Menu3 -----------------------
+            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
             //-- 1 -----------------------
             //$('nav#main_menu').mmenu();
-            //-- Sticky ---------------------
-            $(".featured").stick_in_parent();
+
+            //-- 4 -- go to linked header when link is clicked
+            $('ul.nav a').bind('click',function(event){
+                var $anchor = $(this);
+                $('html, body').stop().animate({
+                    scrollTop: $($anchor.attr('href')).offset().top
+                }, 1500,'easeInOutExpo');
+                event.preventDefault();
+            });
+
         });
 
     if (width > 1024) // load desktop scripts
         require(['sticky'], function () {
             //alert(width + " - desktop");
             
-            //-- Menu -----------------------
+            //-- Menu1 -----------------------
             $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
-            //-- Sticky ---------------------
+            
+            //-- Sticky ---------------------  
             $(".featured").stick_in_parent();
+
         });
 });

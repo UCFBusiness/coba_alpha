@@ -9,7 +9,7 @@ html {
 }
 
 body {
-    font-size: .85em;
+    font-size: 1em;
     line-height:1.4em;
     background: $white;
 }
@@ -23,19 +23,6 @@ h4 {font-size: 1.1em;}
 h5, h6 {font-size: 1em;}
 
 p {margin: 0 0 10px 0;}
-
-pre {
-	font-size: 12px;
-	width: 100%;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
-}
-
-mark {
-    background-color: $light-blue;
-    padding-left: 5px;
-    padding-right: 5px;
-}
 
 blockquote { 
     background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;

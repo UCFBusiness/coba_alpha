@@ -332,7 +332,7 @@ html {
 
 /* line 11, sass/partials/boilerplate/_primary_styles.scss */
 body {
-  font-size: .85em;
+  font-size: 1em;
   line-height: 1.4em;
   background: white;
 }
@@ -373,21 +373,6 @@ p {
 }
 
 /* line 27, sass/partials/boilerplate/_primary_styles.scss */
-pre {
-  font-size: 12px;
-  width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
-}
-
-/* line 34, sass/partials/boilerplate/_primary_styles.scss */
-mark {
-  background-color: #a6dbed;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-/* line 40, sass/partials/boilerplate/_primary_styles.scss */
 blockquote {
   background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
   background-position: 0px 5px;
@@ -397,7 +382,7 @@ blockquote {
   color: #666;
 }
 
-/* line 49, sass/partials/boilerplate/_primary_styles.scss */
+/* line 36, sass/partials/boilerplate/_primary_styles.scss */
 blockquote:before {
   content: '"';
   padding-right: 10px;
@@ -405,7 +390,7 @@ blockquote:before {
   float: left;
 }
 
-/* line 56, sass/partials/boilerplate/_primary_styles.scss */
+/* line 43, sass/partials/boilerplate/_primary_styles.scss */
 blockquote small {
   font: italic .9em "Georgia", "Times New Roman", "Times", serif;
   color: #666;
@@ -414,12 +399,12 @@ blockquote small {
 /*---------------------*/
 /*-- Special Classes --*/
 /*---------------------*/
-/* line 65, sass/partials/boilerplate/_primary_styles.scss */
+/* line 52, sass/partials/boilerplate/_primary_styles.scss */
 .noshow {
   display: none;
 }
 
-/* line 69, sass/partials/boilerplate/_primary_styles.scss */
+/* line 56, sass/partials/boilerplate/_primary_styles.scss */
 .shadow {
   box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
   /*-CSS3 Box Shadow-*/
@@ -427,7 +412,7 @@ blockquote small {
   /*-CSS3 Box Shadow-*/
 }
 
-/* line 74, sass/partials/boilerplate/_primary_styles.scss */
+/* line 61, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   background-color: #fff34d;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -438,23 +423,23 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 82, sass/partials/boilerplate/_primary_styles.scss */
+/* line 69, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 87, sass/partials/boilerplate/_primary_styles.scss */
+/* line 74, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 91, sass/partials/boilerplate/_primary_styles.scss */
+/* line 78, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 95, sass/partials/boilerplate/_primary_styles.scss */
+/* line 82, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
@@ -2239,16 +2224,17 @@ nav.dl-menuwrapper {
   margin-top: 5px;
   margin-right: 15px;
   padding: 0 10px;
-  min-width: 38%;
-  max-width: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  max-width: 53%;
   height: 30px;
-  float: right;
 }
 
 /* =============================================================================
    Main Menu
    ========================================================================== */
-/* line 85, sass/partials/mobile/_nav.scss */
+/* line 86, sass/partials/mobile/_nav.scss */
 .dl-menu {
   margin: 45px 0 0 0;
   position: absolute;
@@ -2263,14 +2249,14 @@ nav.dl-menuwrapper {
   -moz-backface-visibility: hidden;
 }
 
-/* line 99, sass/partials/mobile/_nav.scss */
+/* line 100, sass/partials/mobile/_nav.scss */
 .dl-menu.dl-menu-toggle {
   transition: all 0.3s ease;
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
 }
 
-/* line 105, sass/partials/mobile/_nav.scss */
+/* line 106, sass/partials/mobile/_nav.scss */
 .dl-menu.dl-menuopen {
   opacity: 1;
   pointer-events: auto;
@@ -2283,7 +2269,7 @@ nav.dl-menuwrapper {
    Submenus
    ========================================================================== */
 /* ul */
-/* line 119, sass/partials/mobile/_nav.scss */
+/* line 120, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper ul {
   border-bottom: 1px solid #333;
   width: 100%;
@@ -2295,16 +2281,23 @@ nav.dl-menuwrapper {
 }
 
 /* li */
-/* line 130, sass/partials/mobile/_nav.scss */
+/* line 131, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper li {
   position: relative;
   border-top: 1px solid #222;
 }
 
-/* a */
 /* line 136, sass/partials/mobile/_nav.scss */
+.dl-menuwrapper li.breadcrumb {
+  padding: 0 20px;
+  font-size: 11px;
+  color: #ffcc00;
+}
+
+/* a */
+/* line 143, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper li a {
-  padding: 15px 20px;
+  padding: 13px 20px;
   position: relative;
   display: block;
   outline: none;
@@ -2316,13 +2309,13 @@ nav.dl-menuwrapper {
   color: white;
 }
 
-/* line 148, sass/partials/mobile/_nav.scss */
+/* line 155, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper li > a:after {
   right: 10px;
 }
 
 /* li back action */
-/* line 153, sass/partials/mobile/_nav.scss */
+/* line 160, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper li.dl-back > a {
   padding-left: 30px;
   font-size: 11px;
@@ -2331,7 +2324,7 @@ nav.dl-menuwrapper {
   color: white;
 }
 
-/* line 159, sass/partials/mobile/_nav.scss */
+/* line 166, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper li.dl-back:after {
   left: 10px;
   transform: rotate(180deg);
@@ -2340,7 +2333,7 @@ nav.dl-menuwrapper {
 }
 
 /* li arrows */
-/* line 168, sass/partials/mobile/_nav.scss */
+/* line 175, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper li.dl-back:after,
 .dl-menuwrapper li > a:not(:only-child):after {
   color: rgba(170, 170, 170, 0.3);
@@ -2356,7 +2349,7 @@ nav.dl-menuwrapper {
 /* =============================================================================
    Menu Color Theme
    ========================================================================== */
-/* line 185, sass/partials/mobile/_nav.scss */
+/* line 192, sass/partials/mobile/_nav.scss */
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
 .dl-menuwrapper ul {
@@ -2364,7 +2357,7 @@ nav.dl-menuwrapper {
   color: black;
 }
 
-/* line 190, sass/partials/mobile/_nav.scss */
+/* line 197, sass/partials/mobile/_nav.scss */
 .no-touch .dl-menuwrapper li a:after {
   background: black;
   color: #aaaaaa;
@@ -2378,113 +2371,117 @@ nav.dl-menuwrapper {
   height: 100%;
 }
 
+/* line 9, sass/partials/mobile/_content.scss */
+.page #content {
+  padding: 0 5px;
+}
+
 /* =============================================================================
    Featured Section
    ========================================================================== */
 /* line 18, sass/partials/mobile/_content.scss */
-.featured + .main-content {
-  /*display background if both classes are present on page*/
-  /*background: url("../../Images/heroAccent.png") repeat-y; blue*/
-  background: url("../../Images/mcarrows.png") repeat-y;
-}
-
-/* line 23, sass/partials/mobile/_content.scss */
 .main-content {
-  /*background: url("../../Images/accent.png") no-repeat; */
   border: 1px dashed red;
   /*for development only - borderline*/
+  background: url("../../Images/mcarrows.png") repeat-y;
   position: relative;
-  background: white;
-  float: right;
 }
 
-/* line 36, sass/partials/mobile/_content.scss */
+/* line 29, sass/partials/mobile/_content.scss */
 .featured {
   border: 1px dashed red;
   /*for development only - borderline*/
-  float: left;
-  -webkit-overflow-scrolling: touch;
-  overflow: hidden;
 }
 
-/* line 44, sass/partials/mobile/_content.scss */
+/* line 33, sass/partials/mobile/_content.scss */
 .featured .wrapper {
-  /*background: url("../../Images/mcarrows.png") repeat-y;*/
   position: relative;
   height: 100%;
 }
 
 /*.featured p {}*/
-/* features */
-/* line 56, sass/partials/mobile/_content.scss */
+/* features 
 section.feature {
-  float: left;
-  border: 1px solid #ccc;
-  padding: 10px;
-  display: block;
-  width: 100%;
-  height: 40px;
-}
-
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    height: 40px;
+}*/
 /* =============================================================================
    Section Navigation
    ========================================================================== */
-/* line 69, sass/partials/mobile/_content.scss */
+/* line 55, sass/partials/mobile/_content.scss */
 .featured nav {
-  list-style: none;
   margin: 11px 0;
-  width: 100%;
 }
 
-/* line 75, sass/partials/mobile/_content.scss */
-.featured nav li {
-  line-height: 20px;
-}
-
-/* line 79, sass/partials/mobile/_content.scss */
-.featured nav li a {
-  border: 1px solid #333;
-  padding: 15px 10px;
-  background: #ddd;
-  display: block;
+/* line 59, sass/partials/mobile/_content.scss */
+.featured nav a {
+  background: #ffcc00;
+  margin: 0 3px;
+  padding: 2px 5px;
+  line-height: 1.9em;
+  font-size: 1.1em;
 }
 
 /* =============================================================================
    Persistent Content Headers
    ========================================================================== */
-/* line 91, sass/partials/mobile/_content.scss */
+/* line 72, sass/partials/mobile/_content.scss */
 .persist-header {
   /*-settings for both-*/
-  border: 1px dashed blue;
-  /*for development only - borderline*/
-  padding-top: 10px;
-  min-height: 10px;
   max-width: 100%;
 }
 
-/* line 98, sass/partials/mobile/_content.scss */
+/* line 76, sass/partials/mobile/_content.scss */
 .floatingHeader {
   background: rgba(0, 0, 0, 0.6);
   /*-using different settings-*/
+  color: #ffcc00;
   visibility: hidden;
   position: fixed;
   top: 0;
 }
 
-/* line 105, sass/partials/mobile/_content.scss */
-.persist-header ul.nav {
-  float: right;
-  padding: 0 10px;
+/* line 85, sass/partials/mobile/_content.scss */
+.persist-header h1 {
+  margin: 0;
+  width: 99.4%;
+  border: 1px dashed red;
+  /*for development only - borderline*/
 }
 
-/* line 110, sass/partials/mobile/_content.scss */
+/* line 92, sass/partials/mobile/_content.scss */
+.persist-header ul.nav {
+  margin: 0;
+  padding: 0;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  text-align: right;
+  border: 1px dashed red;
+  /*for development only - borderline*/
+}
+
+/* line 101, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li, ul.nav li {
   display: inline;
 }
 
-/* line 114, sass/partials/mobile/_content.scss */
+/* line 105, sass/partials/mobile/_content.scss */
+.persist-header ul.nav li:first-child {
+  float: left;
+}
+
+/* line 109, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li:last-child {
-  padding-left: 20px;
+  padding-left: 15px;
+}
+
+/* line 113, sass/partials/mobile/_content.scss */
+.persist-header ul.nav li a {
+  color: #cc9900;
+  margin: 0 5px;
 }
 
 /* =============================================================================
@@ -2496,10 +2493,336 @@ section.feature {
   body {
     color: red;
   }
+
+  /* =============================================================================
+     Navigation Menu - Discovery
+     ========================================================================== */
+  /* wrapper */
+  /* line 6, sass/partials/tablet/_nav.scss */
+  nav.dl-menuwrapper {
+    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, #272e2d), color-stop(0.73, #4e4d4f), color-stop(1, #474747));
+    width: 100%;
+    letter-spacing: 1px;
+    position: relative;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+    /* shadow */
+    z-index: 99;
+  }
+
+  /* buttons */
+  /* line 25, sass/partials/tablet/_nav.scss */
+  .dl-home,
+  .dl-trigger,
+  .dl-searchbutton {
+    background: none;
+    border: none;
+    width: 16%;
+    height: 45px;
+    text-indent: -900em;
+    overflow: hidden;
+    position: relative;
+    display: inline-block;
+    float: left;
+  }
+
+  /* discover icon */
+  /* line 38, sass/partials/tablet/_nav.scss */
+  .dl-trigger:after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    background: #fff;
+    /* - */
+    top: 11px;
+    left: 25%;
+    box-shadow: 0 10px 0 white, 0 20px 0 white;
+    /* - */
+  }
+
+  /* line 51, sass/partials/tablet/_nav.scss */
+  .dl-home {
+    background: url(../../images/icon-home-m.png) no-repeat;
+    background-position: 5px 2px;
+  }
+
+  /* line 57, sass/partials/tablet/_nav.scss */
+  .dl-home,
+  .dl-trigger {
+    width: 50px;
+    border-right: 2px solid #333;
+  }
+
+  /* hide search button - not used on mobile */
+  /* line 63, sass/partials/tablet/_nav.scss */
+  .dl-searchbutton {
+    visibility: hidden;
+    display: none;
+  }
+
+  /* line 68, sass/partials/tablet/_nav.scss */
+  .dl-searchfield {
+    background: #fff;
+    border: 2px solid #333;
+    margin-top: 5px;
+    margin-right: 15px;
+    padding: 0 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 85%;
+    height: 30px;
+  }
+
+  /* =============================================================================
+     Main Menu
+     ========================================================================== */
+  /* line 86, sass/partials/tablet/_nav.scss */
+  .dl-menu {
+    margin: 45px 0 0 0;
+    position: absolute;
+    width: 100%;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(10px);
+    -webkit-transform: translateY(10px);
+    -moz-transform: translateY(10px);
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+  }
+
+  /* line 100, sass/partials/tablet/_nav.scss */
+  .dl-menu.dl-menu-toggle {
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+  }
+
+  /* line 106, sass/partials/tablet/_nav.scss */
+  .dl-menu.dl-menuopen {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0px);
+    -webkit-transform: translateY(0px);
+    -moz-transform: translateY(0px);
+  }
+
+  /* =============================================================================
+     Submenus
+     ========================================================================== */
+  /* ul */
+  /* line 120, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper ul {
+    border-bottom: 1px solid #333;
+    width: 100%;
+    list-style: none;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+  }
+
+  /* li */
+  /* line 131, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li {
+    position: relative;
+    border-top: 1px solid #222;
+  }
+
+  /* line 136, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li.label {
+    padding: 0 20px;
+  }
+
+  /* a */
+  /* line 141, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li a {
+    padding: 15px 20px;
+    position: relative;
+    display: block;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: white;
+  }
+
+  /* line 153, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li > a:after {
+    right: 10px;
+  }
+
+  /* li back action */
+  /* line 158, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li.dl-back > a {
+    padding-left: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.15);
+    color: white;
+  }
+
+  /* line 164, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li.dl-back:after {
+    left: 10px;
+    transform: rotate(180deg);
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+  }
+
+  /* li arrows */
+  /* line 173, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper li.dl-back:after,
+  .dl-menuwrapper li > a:not(:only-child):after {
+    color: rgba(170, 170, 170, 0.3);
+    position: absolute;
+    top: 0;
+    line-height: 50px;
+    font-family: 'icomoon';
+    speak: none;
+    -webkit-font-smoothing: antialiased;
+    content: "\e000";
+  }
+
+  /* =============================================================================
+     Menu Color Theme
+     ========================================================================== */
+  /* line 190, sass/partials/tablet/_nav.scss */
+  .dl-menuwrapper button:hover,
+  .dl-menuwrapper button.dl-active,
+  .dl-menuwrapper ul {
+    background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555555), color-stop(1, #222222));
+    color: black;
+  }
+
+  /* line 195, sass/partials/tablet/_nav.scss */
+  .no-touch .dl-menuwrapper li a:after {
+    background: black;
+    color: #aaaaaa;
+  }
+
+  /* =============================================================================
+     Page/Section Layout
+     ========================================================================== */
+  /* line 5, sass/partials/tablet/_content.scss */
+  .page #container {
+    height: 100%;
+  }
+
+  /* =============================================================================
+     Featured Section
+     ========================================================================== */
+  /* line 18, sass/partials/tablet/_content.scss */
+  .main-content {
+    border: 1px dashed red;
+    /*for development only - borderline*/
+    background: url("../../Images/mcarrows.png") repeat-y right;
+    position: relative;
+  }
+
+  /* line 30, sass/partials/tablet/_content.scss */
+  .featured {
+    border: 1px dashed red;
+    /*for development only - borderline*/
+    float: left;
+    overflow: hidden;
+  }
+
+  /* line 37, sass/partials/tablet/_content.scss */
+  .featured .wrapper {
+    position: relative;
+    height: 100%;
+    padding-right: 55%;
+  }
+
+  /* line 43, sass/partials/tablet/_content.scss */
+  .featured hgroup.title h1, .featured hgroup.title h2 {
+    border: 1px dashed red;
+    /*for development only - borderline*/
+  }
+
+  /*.featured p {}*/
+  /* features 
+  section.feature {
+      float: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      height: 40px;
+  }*/
+  /* =============================================================================
+     Section Navigation
+     ========================================================================== */
+  /* line 63, sass/partials/tablet/_content.scss */
+  .featured nav {
+    border: 1px dashed red;
+    /*for development only - borderline*/
+    line-height: 20px;
+    width: 50%;
+    overflow: scroll;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  /* line 73, sass/partials/tablet/_content.scss */
+  .featured nav a {
+    border: 1px solid #999;
+    padding: 10px;
+    background: #ddd;
+    display: inline-block;
+    max-width: 200px;
+  }
+
+  /* =============================================================================
+     Persistent Content Headers
+     ========================================================================== */
+  /* line 86, sass/partials/tablet/_content.scss */
+  .persist-header {
+    /*-settings for both-*/
+    border: 1px dashed blue;
+    /*for development only - borderline*/
+    padding-top: 10px;
+    min-height: 10px;
+    max-width: 100%;
+  }
+
+  /* line 93, sass/partials/tablet/_content.scss */
+  .floatingHeader {
+    background: rgba(0, 0, 0, 0.6);
+    /*-using different settings-*/
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+  }
+
+  /* line 100, sass/partials/tablet/_content.scss */
+  .persist-header ul.nav {
+    float: right;
+    padding: 0 10px;
+  }
+
+  /* line 105, sass/partials/tablet/_content.scss */
+  .persist-header ul.nav li, ul.nav li {
+    display: inline;
+  }
+
+  /* line 109, sass/partials/tablet/_content.scss */
+  .persist-header ul.nav li:last-child {
+    padding-left: 20px;
+  }
+
+  /* =============================================================================
+     Main-Content Section
+     ========================================================================== */
 }
 /* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 1025px) {
-  /* line 60, sass/site.scss */
+  /* line 62, sass/site.scss */
   body {
     color: blue;
   }
@@ -2782,24 +3105,38 @@ section.feature {
   /* line 18, sass/partials/desktop/_content.scss */
   .content-wrapper {
     /* -- Big Background Image --*/
-    background: rgba(0, 0, 0, 0.1) url(../../images/millican.jpg) no-repeat top center fixed;
+    background: rgba(0, 0, 0, 0.1) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
     height: 100%;
+  }
+
+  /* line 29, sass/partials/desktop/_content.scss */
+  mark {
+    background-color: #a6dbed;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  /* line 35, sass/partials/desktop/_content.scss */
+  pre {
+    font-size: 12px;
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
   }
 
   /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 33, sass/partials/desktop/_content.scss */
+  /* line 46, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
-    /*background: url("../../Images/heroAccent.png") repeat-y; blue*/
-    background: url("../../Images/mcarrows.png") repeat-y;
+    background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 38, sass/partials/desktop/_content.scss */
+  /* line 50, sass/partials/desktop/_content.scss */
   .main-content {
     /*background: url("../../Images/accent.png") no-repeat; */
     border: 1px dashed red;
@@ -2810,7 +3147,7 @@ section.feature {
     float: right;
   }
 
-  /* line 52, sass/partials/desktop/_content.scss */
+  /* line 64, sass/partials/desktop/_content.scss */
   .featured {
     border: 1px dashed red;
     /*for development only - borderline*/
@@ -2819,47 +3156,36 @@ section.feature {
     overflow: hidden;
   }
 
-  /* line 60, sass/partials/desktop/_content.scss */
+  /* line 72, sass/partials/desktop/_content.scss */
   .featured .wrapper {
-    /*background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-    background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-    background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
-    background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-    background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);*/
     /*background: url("../../Images/mcarrows.png") repeat-y;*/
     position: relative;
     height: 100%;
+    padding: 0;
   }
 
   /*.featured p {}*/
-  /* features */
-  /* line 78, sass/partials/desktop/_content.scss */
+  /* features 
   section.feature {
-    float: left;
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: block;
-    width: 100%;
-    height: 40px;
-  }
-
+      float: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      height: 40px;
+  }*/
   /* =============================================================================
      Section Navigation
      ========================================================================== */
-  /* line 92, sass/partials/desktop/_content.scss */
+  /* line 99, sass/partials/desktop/_content.scss */
   .featured nav {
-    list-style: none;
-    margin: 0;
-    width: inherit;
+    width: 100%;
+    overflow: hidden;
+    position: static;
   }
 
-  /* line 98, sass/partials/desktop/_content.scss */
-  .featured nav li {
-    line-height: inherit;
-  }
-
-  /* line 102, sass/partials/desktop/_content.scss */
-  .featured nav li a {
+  /* line 106, sass/partials/desktop/_content.scss */
+  .featured nav a {
     border: none;
     background: none;
     padding: 0;
@@ -2872,7 +3198,7 @@ section.feature {
   /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 116, sass/partials/desktop/_content.scss */
+  /* line 121, sass/partials/desktop/_content.scss */
   .persist-header {
     /*-settings for both-*/
     border: 1px dashed blue;
@@ -2882,7 +3208,7 @@ section.feature {
     max-width: 100%;
   }
 
-  /* line 123, sass/partials/desktop/_content.scss */
+  /* line 128, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -2891,18 +3217,18 @@ section.feature {
     top: 0;
   }
 
-  /* line 130, sass/partials/desktop/_content.scss */
+  /* line 135, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 135, sass/partials/desktop/_content.scss */
+  /* line 140, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 139, sass/partials/desktop/_content.scss */
+  /* line 144, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }

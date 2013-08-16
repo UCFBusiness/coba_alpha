@@ -70,11 +70,11 @@
 					<li>
 						<a href="#">Academics</a>
 						<ul class="dl-submenu">
-                            <li class="Label">Academics</li>
+                            <li class="Label breadcrumb">Academics</li>
 							<li>
 								<a href="#">Undergraduate</a>
 								<ul class="dl-submenu">
-                                    <li class="Label">Undergraduate</li>
+                                    <li class="Label breadcrumb">Academics > Undergraduate</li>
 									<li><a href="~/undergraduate/admissions">Admissions</a></li>
 									<li><a href="~/undergraduate/programs">Degree Programs</a></li>
 									<li><a href="~/undergraduate/international-programs">International Programs</a></li>
@@ -83,6 +83,7 @@
 							<li>
 								<a href="#">Graduate</a>
 								<ul class="dl-submenu">
+                                    <li class="Label breadcrumb">Academics > Graduate</li>
 									<li><a href="~/graduate/admissions">Admissions</a></li>
 									<li><a href="~/graduate/programs">Degree Programs</a></li>
 									<li><a href="~/graduate/certificates">Certificates</a></li>
@@ -91,6 +92,7 @@
                             <li>
 								<a href="#">Executive Education</a>
 								<ul class="dl-submenu">
+                                    <li class="Label breadcrumb">Academics > Executive Education</li>
 									<li><a href="~/execed/custom-programs">Customized Programs</a></li>
 									<li><a href="~/execed/international-residency">International Residency</a></li>
                                     <li><a href="~/execed/open-enrollment">Open-Enrollment Programs</a></li>
@@ -101,6 +103,7 @@
 					<li>
 						<a href="#">Our College</a>
 						<ul class="dl-submenu">
+                            <li class="Label breadcrumb">Our College</li>
 							<li><a href="#">History</a></li> <!--include mission and vision-->
                             <li><a href="#">Accreditation</a></li>
                             <li><a href="#">Administration</a></li>
@@ -114,6 +117,7 @@
                     <li>
 						<a href="#">Faculty Research</a>
 						<ul class="dl-submenu">
+                            <li class="Label breadcrumb">Faculty Research</li>
 							<li><a href="#">Page Link</a></li>
 							<li><a href="#">Page Link</a></li>
 							<li><a href="#">Page Link</a></li>
@@ -122,6 +126,7 @@
                     <li>
 						<a href="#">Alumni &amp; Friends</a>
 						<ul class="dl-submenu">
+                            <li class="Label breadcrumb">Alumni &amp; Friends</li>
 							<li><a href="#">Development</a></li>
 							<li><a href="#">Hall of Fame</a></li>
                             <li><a href="#">Spotlights</a></li>
@@ -138,6 +143,7 @@
                     <li>
 						<a href="#">Careers &amp; Recruitment</a>
 						<ul class="dl-submenu">
+                            <li class="Label breadcrumb">Careers &amp; Recruitment</li>
 							<li><a href="#">Page Link</a></li>
 							<li><a href="#">Page Link</a></li>
 							<li><a href="#">Page Link</a></li>
@@ -192,7 +198,7 @@
                     responsiveScriptLoader($(this).width());
 
                     //var h = parseInt($(this).height());
-                    //$("#section").css("height", h); //OR
+                    //$("section").css("height", h); //OR
                     //$('#section').css('margin-top', (h - 620));
                 })
                 //------------------------------------------------------
@@ -206,14 +212,7 @@
                 });
                 //-- 3 -- update header when window is scrolled
                 $(window).scroll(content_updateHeaders).trigger("scroll");
-                //-- 4 -- go to linked header when link is clicked
-                $('ul.nav a').bind('click',function(event){
-                    var $anchor = $(this);
-                    $('html, body').stop().animate({
-                        scrollTop: $($anchor.attr('href')).offset().top
-                    }, 1500,'easeInOutExpo');
-                    event.preventDefault();
-                });
+                //-- 4 in requireJS
                 //------------------------------------------------------
             });
         </script>
@@ -266,13 +265,9 @@
                     floatingHeader = $(".floatingHeader", this)
 
                     if ((scrollTop > offset.top) && (scrollTop < offset.top + el.height())) {
-                        floatingHeader.css({
-                            "visibility": "visible"
-                        });
+                        floatingHeader.css({"visibility": "visible"});
                     } else {
-                        floatingHeader.css({
-                            "visibility": "hidden"
-                        });
+                        floatingHeader.css({"visibility": "hidden"});
                     };
                 });
             }

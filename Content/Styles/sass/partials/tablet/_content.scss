@@ -1,0 +1,117 @@
+/* =============================================================================
+   Page/Section Layout
+   ========================================================================== */
+
+.page #container {
+    height: 100%;
+}
+
+.page #content {}
+
+.content-wrapper {}
+
+
+/* =============================================================================
+   Featured Section
+   ========================================================================== */
+   
+    .main-content {
+        border:1px dashed red; /*for development only - borderline*/
+
+        background: url("../../Images/mcarrows.png") repeat-y right;
+        position: relative;
+    }
+
+    .main-content .index {}
+
+    .main-content .section {}
+
+
+    .featured {
+        border:1px dashed red; /*for development only - borderline*/
+
+        float: left;
+        overflow: hidden;
+    }
+    
+        .featured .wrapper {
+            position: relative;
+            height: 100%;
+            padding-right: 55%;
+        }
+
+            .featured hgroup.title h1, .featured hgroup.title h2 {
+                border:1px dashed red; /*for development only - borderline*/
+            }
+
+            /*.featured p {}*/
+
+/* features 
+section.feature {
+    float: left;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    height: 40px;
+}*/
+
+/* =============================================================================
+   Section Navigation
+   ========================================================================== */
+
+.featured nav {
+border:1px dashed red; /*for development only - borderline*/
+    line-height: 20px;
+    width:50%;
+    overflow: scroll;
+    position: absolute;
+    top:0;
+    right:0;
+}
+            
+.featured nav a {
+    border:  1px solid #999;
+    padding: 10px;
+    background: #ddd;
+    display: inline-block;
+    max-width: 200px;
+}
+
+
+/* =============================================================================
+   Persistent Content Headers
+   ========================================================================== */
+
+.persist-header { /*-settings for both-*/
+    border:1px dashed blue; /*for development only - borderline*/
+    padding-top: 10px;
+    min-height:10px;
+    max-width:100%;
+}
+
+.floatingHeader {
+    background: rgba(0,0,0,0.6); /*-using different settings-*/
+    visibility: hidden;
+    position: fixed;
+    top:0;
+}
+            
+.persist-header ul.nav {
+    float: right;
+    padding: 0 10px;
+}
+            
+.persist-header ul.nav li, ul.nav li {
+    display: inline;
+}
+            
+.persist-header ul.nav li:last-child {
+    padding-left: 20px;
+}
+
+
+/* =============================================================================
+   Main-Content Section
+   ========================================================================== */
+    

@@ -71,10 +71,11 @@ nav.dl-menuwrapper {
     margin-top: 5px;
     margin-right: 15px;
     padding: 0 10px;
-    min-width: 38%;
-    max-width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    max-width: 53%;
     height: 30px;
-    float: right;
 }
 
 
@@ -132,9 +133,15 @@ nav.dl-menuwrapper {
     border-top: 1px solid #222;
 }
 
+.dl-menuwrapper li.breadcrumb {
+    padding: 0 20px;
+    font-size: 11px;
+    color: #ffcc00;
+}
+
 /* a */
 .dl-menuwrapper li a {
-    padding: 15px 20px;
+    padding: 13px 20px;
 	position: relative;
     display: block;
 	outline: none;
