@@ -40,11 +40,12 @@ img, object, embed, video {
 
 // Partials
 /* Mobile Layout: 480px and below. */
-body{color: grey;}
+body{color: blue;}
 
 @import "partials/mobile/header";
 @import "partials/mobile/nav";
 @import "partials/mobile/content";
+@import "partials/mobile/footer";
 
 
 /* Tablet Layout: 481px past 768px(portrait mode) to 1024px(landscape mode). Inherits styles from: Mobile Layout. */
@@ -54,14 +55,16 @@ body{color: grey;}
     @import "partials/tablet/header";
     @import "partials/tablet/nav";
     @import "partials/tablet/content";
+    @import "partials/tablet/footer";
 }
 
 
 /* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 1025px) {
-    body{color: blue;}
+    body{color: grey;}
 
     @import "partials/desktop/header";
     @import "partials/desktop/nav";
     @import "partials/desktop/content";
+    @import "partials/desktop/footer";
 }

@@ -1,43 +1,42 @@
 /* =============================================================================
-   Page/Section Layout
+   Page
    ========================================================================== */
 
-.page #container {
-    height: 100%;
+body {
+    position: relative;
+    z-index: 0;
 }
 
-.page #content {padding: 0 5px;}
-
-.content-wrapper {}
+.page .content-wrapper {padding: 0 5px;}
 
 
 /* =============================================================================
-   Featured Section
+   Featured Sections
    ========================================================================== */
 
-    .main-content {
-        border:1px dashed red; /*for development only - borderline*/
-        background: url("../../Images/mcarrows.png") repeat-y;
-        position: relative;
-    }
+.main-content {
+    border:1px dashed red; /*for development only - borderline*/
+    background: url("../../Images/mcarrows.png") repeat-y;
+    position: relative;
+}
 
-    .main-content .index {}
+.main-content .index {}
 
-    .main-content .section {}
+.main-content .section {}
 
 
-    .featured {
-        border:1px dashed red; /*for development only - borderline*/
-    }
+.featured {
+    border:1px dashed red; /*for development only - borderline*/
+}
     
-        .featured .wrapper {
-            position: relative;
-            height: 100%;
-        }
+.featured .wrapper {
+    position: relative;
+    height: 100%;
+}
 
-            .featured hgroup.title h1, .featured hgroup.title h2 {}
+.featured hgroup.title h1, .featured hgroup.title h2 {}
 
-            /*.featured p {}*/
+/*.featured p {}*/
 
 /* features 
 section.feature {
@@ -49,7 +48,7 @@ section.feature {
 }*/
 
 /* =============================================================================
-   Section Navigation
+   Featured Sections - Navigation
    ========================================================================== */
 
 .featured nav {
@@ -66,7 +65,7 @@ section.feature {
 
 
 /* =============================================================================
-   Persistent Content Headers
+   Main-Content - Persistent Content Headers
    ========================================================================== */
 
 .persist-header { /*-settings for both-*/

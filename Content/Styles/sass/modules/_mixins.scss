@@ -1,0 +1,28 @@
+
+// Vendor Prefixing
+@mixin vendorize ($property, $value) {
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -ms-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+
+// Offscreen Text
+@mixin linkTextOffscreen() {
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    display: none;
+    font-size: 0;
+    text-align: start;
+}
+
+
+// :hover, :active, :focus styles
+@mixin hoverActiveFocus ($property, $value) {
+    &:hover, &:active, &:focus {
+        #{$property}: $value;
+    }
+}

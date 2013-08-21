@@ -1,0 +1,88 @@
+body {
+    /* Create a page-wide stacking context 
+    (so that negative margins work as you expect) */
+    position: relative;
+    z-index: 0;
+}
+
+.page #container {
+    position:relative;
+    z-index:1;
+
+
+}
+
+.page footer {
+    height: 400px; /* <----- */
+    color:#ccc;
+    font-size:12px;
+    position:relative;
+    z-index:-2;
+
+    border:1px dashed red; /*for development only - borderline*/
+}
+
+
+/*-------------------------------*/
+/* The columns */
+
+footer .wrapper > ul {
+    padding-bottom: 150px; /* <----- */
+    margin-left: 8%;
+    z-index:-1;
+}
+
+/* The four columns of links */
+
+footer .wrapper > ul > li {
+    width: 25%;
+    float: left;
+}
+
+footer .wrapper ul {
+    list-style: none;
+}
+
+/* The links */
+
+footer .wrapper > ul > li ul li {
+    text-transform: uppercase;
+    font-weight:bold;
+    line-height:1.8;
+    width: 125%;
+}
+
+
+/*-------------------------------*/
+/* The headers */
+
+footer .wrapper p {
+
+    width: 90%;
+    margin-right: 10%;
+    padding: 9px 0;
+    line-height: 18px;
+    background-color: #058cc7;
+    font-weight: bold;
+    font-size: 14px;
+    color:#fff;
+    text-transform: uppercase;
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    margin-bottom: 20px;
+    opacity:0.9;
+    cursor:default;
+
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+
+/*-------------------------------*/
+/* The links */
+
+footer .wrapper > ul > li ul li a {
+    text-decoration: none !important;
+    color:#7d8691 !important;
+}

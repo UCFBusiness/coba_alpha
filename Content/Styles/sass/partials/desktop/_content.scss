@@ -8,22 +8,22 @@
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    height: 100%;
     */
+
+    background: #fff;
+
+    height: 100%;
 }
 
-.page #content {padding: 0 20px;}
-
-
-.content-wrapper {
+.page .content-wrapper {
     
-    /* -- Big Background Image --*/
+    /* -- Big Background Image 
     background: rgba(0,0,0,0.1) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+--*/
     height: 100%;
-    
 }
 
 mark {
@@ -50,10 +50,9 @@ pre {
     .main-content {
         /*background: url("../../Images/accent.png") no-repeat; */
         border:1px dashed red; /*for development only - borderline*/
-        max-width: 70%;
-        position: relative;
         background: none;
-        float: right;
+
+        margin-left: 33%;
     }
 
     .main-content .index {}
@@ -63,16 +62,16 @@ pre {
 
     .featured {
         border:1px dashed red; /*for development only - borderline*/
-
+        background: none;
         float: left;
-        width: 23%;
-        overflow: hidden;
     }
     
+
         .featured .wrapper {
 
             /*background: url("../../Images/mcarrows.png") repeat-y;*/
             position: relative;
+            width: 30%;
             height: 100%;
             padding:0;
         }
@@ -97,10 +96,9 @@ section.feature {
    ========================================================================== */
 
 .featured nav {
-    width: 100%;
     overflow: hidden;
     position: static;
-
+    text-align: left;
 }
 
 .featured nav a {
@@ -109,8 +107,7 @@ section.feature {
     padding: 0;
     display: inline;
     line-height: 1.3em;
-    font-size: 2em;
-    float:left;
+    font-size: 1.35em;
 }
 
 

@@ -6,7 +6,7 @@
     height: 100%;
 }
 
-.page #content {}
+.page #content {padding: 0 5px;}
 
 .content-wrapper {}
 
@@ -17,7 +17,6 @@
    
     .main-content {
         border:1px dashed red; /*for development only - borderline*/
-
         background: url("../../Images/mcarrows.png") repeat-y right;
         position: relative;
     }
@@ -29,19 +28,23 @@
 
     .featured {
         border:1px dashed red; /*for development only - borderline*/
-
-        float: left;
-        overflow: hidden;
     }
     
         .featured .wrapper {
             position: relative;
             height: 100%;
-            padding-right: 55%;
+            background: none;
+
         }
 
+            .featured hgroup {
+                
+            }
+            
             .featured hgroup.title h1, .featured hgroup.title h2 {
                 border:1px dashed red; /*for development only - borderline*/
+
+                
             }
 
             /*.featured p {}*/
@@ -62,20 +65,18 @@ section.feature {
 
 .featured nav {
 border:1px dashed red; /*for development only - borderline*/
-    line-height: 20px;
-    width:50%;
-    overflow: scroll;
-    position: absolute;
-    top:0;
-    right:0;
+    
 }
             
 .featured nav a {
-    border:  1px solid #999;
-    padding: 10px;
-    background: #ddd;
+    background: #ffcc00;
+    margin: 3px 3px;
+    padding: 2px 5px;
+    line-height: 1.9em;
+    font-size: 1.1em;
+    
     display: inline-block;
-    max-width: 200px;
+    min-width: 100px;
 }
 
 
