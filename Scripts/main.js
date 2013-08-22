@@ -1,100 +1,146 @@
+// Logs the start of the file.
+console.log( "START: main.js" );
+
 require.config({
     baseUrl: './scripts',
     waitSeconds: 10,
     paths: {
-        'easing': 'plugins/jquery.easing.1.3',
-        'sticky': 'plugins/jquery.sticky-kit.min',
         'dmenu': 'plugins/jquery.dlmenu',
-        'mmenu': 'plugins/jquery.mmenu.min'
+        'mmenu': 'plugins/jquery.mmenu.min',
+        'easing': 'plugins/jquery.easing.1.3',
+        'sticky': 'plugins/jquery.sticky-kit.min'
     }
 });
 
-require(['dmenu','easing'], function () {
-    
+require(['dmenu', 'easing'], function () {
+
     // On PageLoad...
 
-    screenSizeLabel($(this).width());
-
-    //-- 4 -- go to linked header when link is clicked
-    $('.featured nav a').bind('click',function(event){
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500,'easeInOutExpo');
-        event.preventDefault();
-    });
-
-    $('ul.nav a').bind('click',function(event){
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500,'easeInOutExpo');
-        event.preventDefault();
-    });
-
     var width = parseInt($(this).width());
+    var height = parseInt($(this).height());
+
+
+    //------------------------------------------------
+
+
+    //-- navigation menu -----------------------
+    $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
+    //$('nav#main_menu').mmenu();
+
+    //-- easing -----------------------
+    $('.featured nav a').bind('click', function (event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+    $('ul.nav a').bind('click', function (event) {
+        var $anchor = $(this);
+        $('html, body').stop().animate({
+            scrollTop: $($anchor.attr('href')).offset().top
+        }, 1500, 'easeInOutExpo');
+        event.preventDefault();
+    });
+
+    //------------------------------------------------
 
     if (width < 481) // load mobile scripts
         require([], function () {
-            //alert(width + ' - mobile');
-            //-- Menu3 -----------------------
-            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
+
+            //-- screensize ---------------------
+            var msg = width + " x " + height + " - mobile";
+            $("#message").html(msg);
+            console.log(msg);
+
         });
 
     if ((width > 480) && (width < 1025)) // load tablet scripts
-        require(['libs/loadMobileCss'], function () {
-            //alert(width + " - tablet");
-            //-- Menu3 -----------------------
-            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
-            
-            //-- 1 -----------------------
-            //$('nav#main_menu').mmenu();
+        require(['sticky'], function () {
 
-            var height = parseInt($(this).height());
-            $(".main-content .section").css("min-height", height);
+            //-- screensize ---------------------
+            var msg = width + " x " + height + " - tablet";
+            $("#message").html(msg);
+            console.log(msg);
+
+            //-- sticky --------------------- 
+            $("#aside").stick_in_parent()
+                .on("sticky_kit:stick", function (e) {
+                    //console.log("has stuck!", e.target);
+                })
+                .on("sticky_kit:unstick", function (e) {
+                    //console.log("has unstuck!", e.target);
+                });
+
+            //-- match content sections height to viewport ----
+            $(".main-content section").css("min-height", height);
+
         });
 
     if (width > 1024) // load desktop scripts
         require(['sticky'], function () {
-            //alert(width + " - desktop");
-            //-- Menu1 -----------------------
-            $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
-            
-            //-- Sticky ---------------------  
-            //$(".featured").stick_in_parent();
 
+            //-- screensize ---------------------
+            var msg = width + " x " + height + " - desktop";
+            $("#message").html(msg);
+            console.log(msg);
+
+            //-- sticky ---------------------  
             $("#aside").stick_in_parent()
-                .on("sticky_kit:stick", function(e) {
+                .on("sticky_kit:stick", function (e) {
                     //console.log("has stuck!", e.target);
                 })
-                .on("sticky_kit:unstick", function(e) {
+                .on("sticky_kit:unstick", function (e) {
                     //console.log("has unstuck!", e.target);
                 });
 
         });
 
-    //-----------------------
+
+    //------------------------------------------------
 
 
     // On PageResize...
 
-
     $(window).resize(function () {
-        screenSizeLabel($(this).width());
+
+        var width = parseInt($(this).width());
+        var height = parseInt($(this).height());
+
+        //------------------------
+
+        if (width < 481) // load mobile scripts
+            require([], function () {
+                //alert(width + ' - mobile');
+
+                //-- screensize ---------------------
+                $("#message").html(width + " x " + height + " - mobile");
+            });
+
+        if ((width > 480) && (width < 1025)) // load tablet scripts
+            require(['sticky'], function () {
+                //alert(width + " - tablet");
+
+                //-- screensize ---------------------
+                $("#message").html(width + " x " + height + " - tablet");
+            });
+
+        if (width > 1024) // load desktop scripts
+            require(['sticky'], function () {
+                //alert(width + " - desktop");
+
+                //-- screensize ---------------------
+                $("#message").html(width + " x " + height + " - desktop");
+            });
     });
 
-    function screenSizeLabel(width) {
-        width = parseInt(width);
+    //------------------------------------------------
 
-        if (width < 481) // apply mobile scripts
-        $("#message").html(width + " - mobile");
+    // Log that jquery was loaded into the global name-space.
+    console.log("jQuery", $.fn.jquery, "loaded!");
 
-        if ((width > 480) && (width < 1025)) // apply tablet scripts
-        $("#message").html(width + " - tablet");
-
-        if (width > 1024) // apply desktop scripts
-        $("#message").html(width + " - desktop");
-    }
-
-    //-----------------------
 });
+
+// Logs the end of the file.
+console.log( "END: main.js" );

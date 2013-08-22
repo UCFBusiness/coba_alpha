@@ -8,13 +8,13 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <title>@Page.Title - UCF College of Business Administration</title>
         <meta name="description" content="" />
-        <meta name="viewport" content="width=device-width">
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
         <link href="~/images/app-icon-57.png" rel="apple-touch-icon-precomposed" />
 
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <link href="~/content/normalize.css" type="text/css" rel="stylesheet" />
+        @*<link href="~/content/normalize.css" type="text/css" rel="stylesheet" />*@
         <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
         @RenderSection("styles", required: false)
 
@@ -67,7 +67,6 @@
 
             <!-- BEGIN:Nav -->
             <nav id="main_menu" class="dl-menuwrapper clearfix">
-<label id="message" style="float: right;"></label>
                 <a href="~/" class="dl-home">HOME</a>
                 <button class="dl-trigger">DISCOVER</button>
                 <ul class="dl-menu" data-scrollspy="scrollspy">
@@ -231,15 +230,13 @@
         <script>
             $(function () { //load on document.ready
 
-
-
                 //----- Responsive Script Loader ----------------------
-                //-- 1 -- check browser width on page load
-                //screenSizeLabel($(this).width());
+                //-- 1 -- check browser width on window load
+                //ScreenSizeLabel($(this).width());
 
-                //-- 2 -- check on window resize
+                //-- 2 -- check browser width on window resize
                 //$(window).resize(function () {
-                //screenSizeLabel($(this).width());
+                //ScreenSizeLabel($(this).width());
 
                 //var h = parseInt($(this).height());
                 //$("section").css("height", h); //OR
@@ -247,6 +244,55 @@
                 //})
                 //------------------------------------------------------
 
+                @*$(window).stellar();
+
+                var links = $('.navigation').find('li');
+                slide = $('.slide');
+                button = $('.button');
+                mywindow = $(window);
+                htmlbody = $('html,body');
+
+
+                slide.waypoint(function (event, direction) {
+
+                    dataslide = $(this).attr('data-slide');
+
+                    if (direction === 'down') {
+                        $('.navigation li[data-slide="' + dataslide + '"]').addClass('active').prev().removeClass('active');
+                    }
+                    else {
+                        $('.navigation li[data-slide="' + dataslide + '"]').addClass('active').next().removeClass('active');
+                    }
+
+                });
+ 
+                mywindow.scroll(function () {
+                    if (mywindow.scrollTop() == 0) {
+                        $('.navigation li[data-slide="1"]').addClass('active');
+                        $('.navigation li[data-slide="2"]').removeClass('active');
+                    }
+                });
+
+                function goToByScroll(dataslide) {
+                    htmlbody.animate({
+                        scrollTop: $('.slide[data-slide="' + dataslide + '"]').offset().top
+                    }, 2000, 'easeInOutQuint');
+                }
+
+
+
+                links.click(function (e) {
+                    e.preventDefault();
+                    dataslide = $(this).attr('data-slide');
+                    goToByScroll(dataslide);
+                });
+
+                button.click(function (e) {
+                    e.preventDefault();
+                    dataslide = $(this).attr('data-slide');
+                    goToByScroll(dataslide);
+
+                });*@
 
 
                 //----- Easing Navigation ------------------------------
@@ -260,24 +306,6 @@
                 //------------------------------------------------------
             });
         </script>
-
-
-        @*<script>
-            //----- Responsive Script Loader ---------------------------
-
-            function screenSizeLabel(width) {
-                width = parseInt(width);
-
-                if (width < 481) // load mobile scripts
-                $("#message").html(width + " - mobile");
-
-                if ((width > 480) && (width < 1025)) // load tablet scripts
-                $("#message").html(width + " - tablet");
-
-                if (width > 1024) // load desktop scripts
-                $("#message").html(width + " - desktop");
-            }
-        </script>*@
 
         <script>
             //----- Easing Functions ------------------------------------
@@ -317,6 +345,24 @@
                 });
             }
         </script>
+
+
+        @*<script>
+            //----- Responsive Script Loader ---------------------------
+
+            function screenSizeLabel(width) {
+                width = parseInt(width);
+
+                if (width < 481) // load mobile scripts
+                $("#message").html(width + " - mobile");
+
+                if ((width > 480) && (width < 1025)) // load tablet scripts
+                $("#message").html(width + " - tablet");
+
+                if (width > 1024) // load desktop scripts
+                $("#message").html(width + " - desktop");
+            }
+        </script>*@
         
     </body>
 </html>

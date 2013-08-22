@@ -1,4 +1,410 @@
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/* normalize.css v2.1.2 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+/* line 22, sass/partials/_normalize.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+/* line 32, sass/partials/_normalize.scss */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 41, sass/partials/_normalize.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 50, sass/partials/_normalize.scss */
+[hidden] {
+  display: none;
+}
+
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 64, sass/partials/_normalize.scss */
+html {
+  font-family: sans-serif;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+/* line 74, sass/partials/_normalize.scss */
+body {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 86, sass/partials/_normalize.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 95, sass/partials/_normalize.scss */
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 108, sass/partials/_normalize.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+/* line 117, sass/partials/_normalize.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 126, sass/partials/_normalize.scss */
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 134, sass/partials/_normalize.scss */
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+/* line 142, sass/partials/_normalize.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+/* line 152, sass/partials/_normalize.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+/* line 164, sass/partials/_normalize.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 173, sass/partials/_normalize.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/**
+ * Set consistent quote types.
+ */
+/* line 181, sass/partials/_normalize.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 189, sass/partials/_normalize.scss */
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 198, sass/partials/_normalize.scss */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 205, sass/partials/_normalize.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 209, sass/partials/_normalize.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+/* line 221, sass/partials/_normalize.scss */
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 229, sass/partials/_normalize.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+/* line 241, sass/partials/_normalize.scss */
+figure {
+  margin: 0;
+}
+
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 253, sass/partials/_normalize.scss */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+/* line 264, sass/partials/_normalize.scss */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+/* line 278, sass/partials/_normalize.scss */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 290, sass/partials/_normalize.scss */
+button,
+input {
+  line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 302, sass/partials/_normalize.scss */
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+/* line 317, sass/partials/_normalize.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 327, sass/partials/_normalize.scss */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ */
+/* line 337, sass/partials/_normalize.scss */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 348, sass/partials/_normalize.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 361, sass/partials/_normalize.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+/* line 370, sass/partials/_normalize.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 380, sass/partials/_normalize.scss */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 393, sass/partials/_normalize.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* =============================================================================
    HTML5 display definitions
    ========================================================================== */
@@ -421,23 +827,23 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 67, sass/partials/boilerplate/_primary_styles.scss */
+/* line 66, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 72, sass/partials/boilerplate/_primary_styles.scss */
+/* line 71, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 76, sass/partials/boilerplate/_primary_styles.scss */
+/* line 75, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 80, sass/partials/boilerplate/_primary_styles.scss */
+/* line 79, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
@@ -2074,21 +2480,49 @@ All this is done for any sub-level being entered.
   font-style: normal;
 }
 
+@font-face {
+  font-family: Lato;
+  src: local("Lato Light"), local("Lato-Light"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/zLhfkPOm_5ykmdm-wXaiuw.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local("Lato Regular"), local("Lato-Regular"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/nQhiC-wSiJx0pvEuJl8d8A.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local("Lato Bold"), local("Lato-Bold"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/sBtfDPlEIwvKKU53nAG7AQ.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Satisfy;
+  src: local("Satisfy"), url(http://themes.googleusercontent.com/static/fonts/satisfy/v3/swgYNTW5Q6X61bBH6SDBsg.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/satisfy/v3/ch7X2unYkww0EzsjlC3m8w.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* =============================================================================
    Simple fluid media
    ========================================================================== */
-/* line 16, sass/site.scss */
+/* line 19, sass/site.scss */
 img, object, embed, video {
   max-width: 100%;
 }
 
-/* line 22, sass/site.scss */
+/* line 25, sass/site.scss */
 .ie6 img {
   width: 100%;
 }
 
 /* Mobile Layout: 480px and below. */
-/* line 43, sass/site.scss */
+/* line 46, sass/site.scss */
 body {
   color: blue;
 }
@@ -2362,7 +2796,7 @@ nav.dl-menuwrapper {
 }
 
 /* =============================================================================
-   Page
+   Page/Section Layout
    ========================================================================== */
 /* line 5, sass/partials/mobile/_content.scss */
 body {
@@ -2371,34 +2805,26 @@ body {
 }
 
 /* line 10, sass/partials/mobile/_content.scss */
+.page #container {
+  height: 100%;
+}
+
+/* line 14, sass/partials/mobile/_content.scss */
 .page .content-wrapper {
+  /*border:1px dashed red; for development only - borderline*/
   padding: 0 5px;
+  height: 100%;
 }
 
 /* =============================================================================
    Featured Sections
    ========================================================================== */
-/* line 17, sass/partials/mobile/_content.scss */
-.main-content {
-  border: 1px dashed red;
-  /*for development only - borderline*/
-  background: url("../../Images/mcarrows.png") repeat-y;
-  position: relative;
-}
-
 /* line 28, sass/partials/mobile/_content.scss */
-.featured {
-  border: 1px dashed red;
-  /*for development only - borderline*/
-}
-
-/* line 32, sass/partials/mobile/_content.scss */
 .featured .wrapper {
   position: relative;
   height: 100%;
 }
 
-/*.featured p {}*/
 /* features 
 section.feature {
     float: left;
@@ -2408,14 +2834,23 @@ section.feature {
     height: 40px;
 }*/
 /* =============================================================================
-   Featured Sections - Navigation
+   Main-Content Section
    ========================================================================== */
-/* line 54, sass/partials/mobile/_content.scss */
+/* line 53, sass/partials/mobile/_content.scss */
+.main-content {
+  background: url("../../Images/mcarrows.png") repeat-y;
+  position: relative;
+}
+
+/* =============================================================================
+   Section Navigation
+   ========================================================================== */
+/* line 66, sass/partials/mobile/_content.scss */
 .featured nav {
   margin: 11px 0;
 }
 
-/* line 58, sass/partials/mobile/_content.scss */
+/* line 70, sass/partials/mobile/_content.scss */
 .featured nav a {
   background: #ffcc00;
   margin: 0 3px;
@@ -2425,15 +2860,15 @@ section.feature {
 }
 
 /* =============================================================================
-   Main-Content - Persistent Content Headers
+   Persistent Content Headers
    ========================================================================== */
-/* line 71, sass/partials/mobile/_content.scss */
+/* line 83, sass/partials/mobile/_content.scss */
 .persist-header {
   /*-settings for both-*/
   max-width: 100%;
 }
 
-/* line 75, sass/partials/mobile/_content.scss */
+/* line 87, sass/partials/mobile/_content.scss */
 .floatingHeader {
   background: rgba(0, 0, 0, 0.6);
   /*-using different settings-*/
@@ -2443,49 +2878,42 @@ section.feature {
   top: 0;
 }
 
-/* line 84, sass/partials/mobile/_content.scss */
+/* line 95, sass/partials/mobile/_content.scss */
 .persist-header h1 {
   margin: 0;
   width: 99.4%;
-  border: 1px dashed red;
-  /*for development only - borderline*/
 }
 
-/* line 91, sass/partials/mobile/_content.scss */
+/* line 100, sass/partials/mobile/_content.scss */
 .persist-header ul.nav {
   margin: 0;
   padding: 0;
   padding-top: 15px;
   padding-bottom: 10px;
   text-align: right;
-  border: 1px dashed red;
-  /*for development only - borderline*/
 }
 
-/* line 100, sass/partials/mobile/_content.scss */
+/* line 107, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li, ul.nav li {
   display: inline;
 }
 
-/* line 104, sass/partials/mobile/_content.scss */
+/* line 111, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li:first-child {
   float: left;
 }
 
-/* line 108, sass/partials/mobile/_content.scss */
+/* line 115, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li:last-child {
   padding-left: 15px;
 }
 
-/* line 112, sass/partials/mobile/_content.scss */
+/* line 119, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li a {
   color: #cc9900;
   margin: 0 5px;
 }
 
-/* =============================================================================
-   Main-Content Section
-   ========================================================================== */
 /* line 1, sass/partials/mobile/_footer.scss */
 body {
   /* Create a page-wide stacking context 
@@ -2566,7 +2994,7 @@ footer .wrapper > ul > li ul li a {
 
 /* Tablet Layout: 481px past 768px(portrait mode) to 1024px(landscape mode). Inherits styles from: Mobile Layout. */
 @media only screen and (min-width: 481px) {
-  /* line 53, sass/site.scss */
+  /* line 56, sass/site.scss */
   body {
     color: red;
   }
@@ -2575,90 +3003,162 @@ footer .wrapper > ul > li ul li a {
      Navigation Menu - Discovery
      ========================================================================== */
   /* wrapper */
-  /* line 6, sass/partials/tablet/_nav.scss */
+  /* line 6, sass/partials/tablet/new/_nav.scss */
   nav.dl-menuwrapper {
-    background-image: -webkit-gradient(linear, left bottom, left top, color-stop(0.21, #272e2d), color-stop(0.73, #4e4d4f), color-stop(1, #474747));
-    width: 100%;
+    border: 1px dashed red;
+    /*for development only - borderline*/
+    margin: 9px 0 9px;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 20px;
     letter-spacing: 1px;
+    color: #ccc;
+    background-image: none;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    width: 60%;
     position: relative;
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
-    /* shadow */
-    z-index: 99;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective-origin: 50% 200%;
+    -webkit-perspective-origin: 50% 200%;
+    -moz-perspective-origin: 50% 200%;
+    box-shadow: none;
+    /* no shadow */
   }
 
-  /* buttons */
-  /* line 25, sass/partials/tablet/_nav.scss */
-  .dl-home,
-  .dl-trigger,
-  .dl-searchbutton {
-    background: none;
-    border: none;
-    width: 16%;
-    height: 45px;
-    text-indent: -900em;
-    overflow: hidden;
-    position: relative;
-    display: inline-block;
+  /* line 27, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper:first-child {
+    margin-right: 100px;
+  }
+
+  /* home button */
+  /* line 32, sass/partials/tablet/new/_nav.scss */
+  #dl-home {
+    border: 1px solid #ddd;
+    border-right: none;
+    padding: 7px 9px 11px 6px;
+    width: 40px;
+    height: 16px;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: 0;
+    background: white;
+    color: #555;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
     float: left;
   }
 
-  /* discover icon */
-  /* line 38, sass/partials/tablet/_nav.scss */
-  .dl-trigger:after {
-    content: '';
-    position: absolute;
-    width: 50%;
-    height: 3px;
-    background: #fff;
-    /* - */
-    top: 11px;
-    left: 25%;
-    box-shadow: 0 10px 0 white, 0 20px 0 white;
-    /* - */
+  /* line 46, sass/partials/tablet/new/_nav.scss */
+  #dl-home:hover {
+    background: #f2f2f2;
   }
 
-  /* line 51, sass/partials/tablet/_nav.scss */
+  /* discover button */
+  /* line 51, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper button {
+    border: 1px solid #ddd;
+    border-right: none;
+    padding-left: 30px;
+    width: 150px;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: 0em;
+    cursor: pointer;
+    outline: none;
+    background: white;
+    color: #555;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
+    float: left;
+  }
+
+  /* discover icon = */
+  /* line 70, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper button:after {
+    content: '';
+    width: 20%;
+    height: 4px;
+    position: absolute;
+    top: 10px;
+    left: 6%;
+    right: 15px;
+    line-height: 50px;
+    background: #555;
+    box-shadow: 0 10px 0 #555555, 0 20px 0 #555555;
+  }
+
+  /* line 85, sass/partials/tablet/new/_nav.scss */
   .dl-home {
     background: url(../../images/icon-home-m.png) no-repeat;
-    background-position: 5px 2px;
+    background-position: 5px 0px;
   }
 
-  /* line 57, sass/partials/tablet/_nav.scss */
+  /* line 91, sass/partials/tablet/new/_nav.scss */
   .dl-home,
   .dl-trigger {
     width: 50px;
-    border-right: 2px solid #333;
+    border-right: none;
   }
 
-  /* hide search button - not used on mobile */
-  /* line 63, sass/partials/tablet/_nav.scss */
+  /* search */
+  /* line 97, sass/partials/tablet/new/_nav.scss */
+  #dl-search {
+    border: 1px solid #eee;
+    padding: 1px 15px;
+    height: 32px;
+    font-size: 11px;
+    font-weight: 300;
+    background: white;
+    color: #aaaaaa;
+    /**/
+    float: left;
+  }
+
+  /* line 107, sass/partials/tablet/new/_nav.scss */
   .dl-searchbutton {
-    visibility: hidden;
-    display: none;
+    border: 1px solid #eee;
+    border-left: none;
+    visibility: visible;
+    display: block;
+    background: #fff;
+    width: 50px;
   }
 
-  /* line 68, sass/partials/tablet/_nav.scss */
+  /* line 116, sass/partials/tablet/new/_nav.scss */
   .dl-searchfield {
     background: #fff;
-    border: 2px solid #333;
-    margin-top: 5px;
-    margin-right: 15px;
+    border: 1px solid #eee;
+    border-right: none;
+    position: static;
+    margin: 0;
     padding: 0 10px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    max-width: 85%;
-    height: 30px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: .8em;
+    height: 43px;
+    color: #999;
+    float: left;
   }
 
-  /* =============================================================================
-     Main Menu
-     ========================================================================== */
-  /* line 86, sass/partials/tablet/_nav.scss */
-  .dl-menu {
-    margin: 45px 0 0 0;
+  /* submenus */
+  /* menu ul only */
+  /* line 134, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper .dl-menu {
+    /* ie fix */
+    visibility: hidden;
+  }
+
+  /* line 137, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper .dl-menu {
+    margin: 35px 0 0 57px;
     position: absolute;
-    width: 100%;
+    max-width: 330px;
     opacity: 0;
     pointer-events: none;
     transform: translateY(10px);
@@ -2669,15 +3169,15 @@ footer .wrapper > ul > li ul li a {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 100, sass/partials/tablet/_nav.scss */
-  .dl-menu.dl-menu-toggle {
+  /* line 150, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 106, sass/partials/tablet/_nav.scss */
-  .dl-menu.dl-menuopen {
+  /* line 155, sass/partials/tablet/new/_nav.scss */
+  .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
     transform: translateY(0px);
@@ -2685,14 +3185,10 @@ footer .wrapper > ul > li ul li a {
     -moz-transform: translateY(0px);
   }
 
-  /* =============================================================================
-     Submenus
-     ========================================================================== */
-  /* ul */
-  /* line 120, sass/partials/tablet/_nav.scss */
+  /* all uls */
+  /* line 164, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper ul {
-    border-bottom: 1px solid #333;
-    width: 100%;
+    max-width: 330px;
     list-style: none;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -2700,49 +3196,36 @@ footer .wrapper > ul > li ul li a {
     -moz-transform-style: preserve-3d;
   }
 
-  /* li */
-  /* line 131, sass/partials/tablet/_nav.scss */
+  /* menu li */
+  /* line 174, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
-    border-top: 1px solid #222;
   }
 
-  /* line 136, sass/partials/tablet/_nav.scss */
-  .dl-menuwrapper li.label {
-    padding: 0 20px;
-  }
-
-  /* a */
-  /* line 141, sass/partials/tablet/_nav.scss */
+  /* line 177, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li a {
-    padding: 15px 20px;
-    position: relative;
+    padding: 10px 10px 10px 15px;
     display: block;
+    position: relative;
     outline: none;
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 20px;
-    letter-spacing: 1px;
-    text-decoration: none;
-    color: white;
   }
 
-  /* line 153, sass/partials/tablet/_nav.scss */
+  /* line 183, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
-  /* li back action */
-  /* line 158, sass/partials/tablet/_nav.scss */
+  /* back li */
+  /* line 187, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.15);
+    background: rgba(0, 0, 0, 0.1);
     color: white;
   }
 
-  /* line 164, sass/partials/tablet/_nav.scss */
+  /* line 193, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -2751,80 +3234,111 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* li arrows */
-  /* line 173, sass/partials/tablet/_nav.scss */
+  /* line 201, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
-    color: rgba(170, 170, 170, 0.3);
     position: absolute;
-    top: 0;
-    line-height: 50px;
+    top: 10px;
+    line-height: 20px;
     font-family: 'icomoon';
     speak: none;
     -webkit-font-smoothing: antialiased;
     content: "\e000";
+    color: rgba(170, 170, 170, 0.3);
   }
 
-  /* =============================================================================
-     Menu Color Theme
-     ========================================================================== */
-  /* line 190, sass/partials/tablet/_nav.scss */
+  /* desktop - menu theme */
+  /* line 215, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
-  .dl-menuwrapper ul {
-    background: -webkit-gradient(linear, 0 0, 0 100%, color-stop(0.02, #555555), color-stop(1, #222222));
-    color: black;
+  .dl-menuwrapper ul, .dl-menuwrapper li a {
+    background: #ffcc00;
+    color: #555;
+    /* li:hover color*/
   }
 
-  /* line 195, sass/partials/tablet/_nav.scss */
-  .no-touch .dl-menuwrapper li a:after {
-    background: black;
-    color: #aaaaaa;
+  /* line 220, sass/partials/tablet/new/_nav.scss */
+  .no-touch .dl-menuwrapper li a:hover {
+    background: #FFE599;
+    color: #333;
+    /* a:hover color*/
   }
 
   /* =============================================================================
      Page/Section Layout
      ========================================================================== */
-  /* line 5, sass/partials/tablet/_content.scss */
+  /* line 5, sass/partials/tablet/new/_content.scss */
   .page #container {
+    background: #FFF;
+    /* -- Big Background Image 
+    background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+    --*/
+    /* -- Big Background Image 
+    background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+    --*/
     height: 100%;
   }
 
-  /* line 9, sass/partials/tablet/_content.scss */
-  .page #content {
-    padding: 0 5px;
+  /* line 23, sass/partials/tablet/new/_content.scss */
+  .page .content-wrapper {
+    height: 100%;
   }
 
   /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 18, sass/partials/tablet/_content.scss */
-  .main-content {
-    border: 1px dashed red;
-    /*for development only - borderline*/
-    background: url("../../Images/mcarrows.png") repeat-y right;
-    position: relative;
-  }
-
-  /* line 29, sass/partials/tablet/_content.scss */
+  /* line 31, sass/partials/tablet/new/_content.scss */
   .featured {
-    border: 1px dashed red;
-    /*for development only - borderline*/
-  }
-
-  /* line 33, sass/partials/tablet/_content.scss */
-  .featured .wrapper {
-    position: relative;
-    height: 100%;
     background: none;
+    width: 340px;
+    display: block;
+    float: left;
+    overflow: hidden;
   }
 
-  /* line 44, sass/partials/tablet/_content.scss */
-  .featured hgroup.title h1, .featured hgroup.title h2 {
-    border: 1px dashed red;
-    /*for development only - borderline*/
+  /* line 39, sass/partials/tablet/new/_content.scss */
+  .featured .wrapper {
+    height: 100%;
   }
 
-  /*.featured p {}*/
+  /* features 
+  section.feature {
+      float: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      height: 40px;
+  }*/
+  /* =============================================================================
+     Main-Content Section
+     ========================================================================== */
+  /* line 64, sass/partials/tablet/new/_content.scss */
+  .featured + .main-content {
+    /*display background if both classes are present on page*/
+    background: url("../../Images/mcarrows.png") repeat-y right;
+  }
+
+  /* line 68, sass/partials/tablet/new/_content.scss */
+  .main-content {
+    /*background: url("../../Images/accent.png") no-repeat; */
+    background: none;
+    overflow: hidden;
+  }
+
+  /* line 78, sass/partials/tablet/new/_content.scss */
+  .main-content section {
+    display: block;
+    float: left;
+    margin-left: 2%;
+  }
+
   /* features 
   section.feature {
       float: left;
@@ -2837,37 +3351,35 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Section Navigation
      ========================================================================== */
-  /* line 66, sass/partials/tablet/_content.scss */
+  /* line 102, sass/partials/tablet/new/_content.scss */
   .featured nav {
-    border: 1px dashed red;
-    /*for development only - borderline*/
+    overflow: hidden;
+    position: static;
+    text-align: left;
   }
 
-  /* line 71, sass/partials/tablet/_content.scss */
+  /* line 108, sass/partials/tablet/new/_content.scss */
   .featured nav a {
-    background: #ffcc00;
-    margin: 3px 3px;
-    padding: 2px 5px;
-    line-height: 1.9em;
-    font-size: 1.1em;
-    display: inline-block;
-    min-width: 100px;
+    border: none;
+    background: none;
+    padding: 0;
+    display: inline;
+    line-height: 1.3em;
+    font-size: 1.4em;
   }
 
   /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 87, sass/partials/tablet/_content.scss */
+  /* line 122, sass/partials/tablet/new/_content.scss */
   .persist-header {
     /*-settings for both-*/
-    border: 1px dashed blue;
-    /*for development only - borderline*/
     padding-top: 10px;
     min-height: 10px;
     max-width: 100%;
   }
 
-  /* line 94, sass/partials/tablet/_content.scss */
+  /* line 128, sass/partials/tablet/new/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -2876,26 +3388,45 @@ footer .wrapper > ul > li ul li a {
     top: 0;
   }
 
-  /* line 101, sass/partials/tablet/_content.scss */
+  /* line 135, sass/partials/tablet/new/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 106, sass/partials/tablet/_content.scss */
+  /* line 140, sass/partials/tablet/new/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 110, sass/partials/tablet/_content.scss */
+  /* line 144, sass/partials/tablet/new/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
 
-  /* =============================================================================
-     Main-Content Section
-     ========================================================================== */
-  /* line 1, sass/partials/tablet/_footer.scss */
+  /* homepage content 
+  ----------------------------------------------------------
+  article {
+      float: left;
+      width: 70%;
+  }
+  
+  aside {
+      float: right;
+      width: 25%;
+  }
+  
+      aside ul {
+          list-style: none;
+          padding: 0;
+      }
+  
+          aside ul li {
+              background: url("../../Images/bullet.png") no-repeat 0 50%;
+              padding: 2px 0 2px 20px;
+          }
+  */
+  /* line 1, sass/partials/tablet/new/_footer.scss */
   body {
     /* Create a page-wide stacking context 
     (so that negative margins work as you expect) */
@@ -2903,13 +3434,13 @@ footer .wrapper > ul > li ul li a {
     z-index: 0;
   }
 
-  /* line 8, sass/partials/tablet/_footer.scss */
+  /* line 8, sass/partials/tablet/new/_footer.scss */
   .page #container {
     position: relative;
     z-index: 1;
   }
 
-  /* line 15, sass/partials/tablet/_footer.scss */
+  /* line 15, sass/partials/tablet/new/_footer.scss */
   .page footer {
     height: 400px;
     /* <----- */
@@ -2917,44 +3448,52 @@ footer .wrapper > ul > li ul li a {
     font-size: 12px;
     position: relative;
     z-index: -2;
+    background-color: #31353a;
+    background-image: -webkit-linear-gradient(top, #31353a, #2f3337);
+    background-image: -moz-linear-gradient(top, #31353a, #2f3337);
+    background-image: linear-gradient(top, #31353a, #2f3337);
     border: 1px dashed red;
     /*for development only - borderline*/
   }
 
   /*-------------------------------*/
   /* The columns */
-  /* line 29, sass/partials/tablet/_footer.scss */
+  /* line 35, sass/partials/tablet/new/_footer.scss */
   footer .wrapper > ul {
     padding-bottom: 150px;
     /* <----- */
-    margin-left: 8%;
+    width: 800px;
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    margin-left: -270px;
     z-index: -1;
   }
 
   /* The four columns of links */
-  /* line 37, sass/partials/tablet/_footer.scss */
+  /* line 48, sass/partials/tablet/new/_footer.scss */
   footer .wrapper > ul > li {
     width: 25%;
     float: left;
   }
 
-  /* line 42, sass/partials/tablet/_footer.scss */
+  /* line 53, sass/partials/tablet/new/_footer.scss */
   footer .wrapper ul {
     list-style: none;
   }
 
   /* The links */
-  /* line 48, sass/partials/tablet/_footer.scss */
+  /* line 59, sass/partials/tablet/new/_footer.scss */
   footer .wrapper > ul > li ul li {
     text-transform: uppercase;
     font-weight: bold;
     line-height: 1.8;
-    width: 125%;
+    width: 100%;
   }
 
   /*-------------------------------*/
   /* The headers */
-  /* line 59, sass/partials/tablet/_footer.scss */
+  /* line 72, sass/partials/tablet/new/_footer.scss */
   footer .wrapper p {
     width: 90%;
     margin-right: 10%;
@@ -2975,17 +3514,78 @@ footer .wrapper > ul > li ul li a {
     transition: opacity 0.4s;
   }
 
+  /* line 94, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul > li:hover p {
+    opacity: 1;
+  }
+
   /*-------------------------------*/
   /* The links */
-  /* line 85, sass/partials/tablet/_footer.scss */
+  /* line 102, sass/partials/tablet/new/_footer.scss */
   footer .wrapper > ul > li ul li a {
+    border: none;
     text-decoration: none !important;
     color: #7d8691 !important;
   }
+
+  /* line 108, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul > li ul li a:hover {
+    color: #ddd !important;
+  }
+
+  /*------------color themes (optional)-------------------
+  footer p.home{
+      background-color: #0096d6;
+  
+      background-image:-webkit-linear-gradient(top, #0096d6, #008ac6);
+      background-image:-moz-linear-gradient(top, #0096d6, #008ac6);
+      background-image:linear-gradient(top, #0096d6, #008ac6);
+  }
+  
+  footer p.home:before{
+      background-position: 0 -110px;
+  }
+  
+  footer p.services{
+      background-color: #00b274;
+  
+      background-image:-webkit-linear-gradient(top, #00b274, #00a46b);
+      background-image:-moz-linear-gradient(top, #00b274, #00a46b);
+      background-image:linear-gradient(top, #00b274, #00a46b);
+  }
+  
+  footer p.services:before{
+      background-position: 0 -129px;
+  }
+  
+  footer p.reachus{
+      background-color: #d75ba2;
+  
+      background-image:-webkit-linear-gradient(top, #d75ba2, #c75496);
+      background-image:-moz-linear-gradient(top, #d75ba2, #c75496);
+      background-image:linear-gradient(top, #d75ba2, #c75496);
+  }
+  
+  footer p.reachus:before{
+      background-position: 0 -89px;
+  }
+  
+  footer p.clients{
+      background-color: #e9ac40;
+  
+      background-image:-webkit-linear-gradient(top, #e9ac40, #d89f3b);
+      background-image:-moz-linear-gradient(top, #e9ac40, #d89f3b);
+      background-image:linear-gradient(top, #e9ac40, #d89f3b);
+  }
+  
+  footer p.clients:before{
+      background-position: 0 -69px;
+  }
+  ---*/
 }
 /* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 1025px) {
-  /* line 64, sass/site.scss */
+  /* line 73, sass/site.scss */
   body {
     color: grey;
   }
@@ -3279,15 +3879,15 @@ footer .wrapper > ul > li ul li a {
   /* line 23, sass/partials/desktop/_content.scss */
   .page .content-wrapper {
     height: 100%;
+    min-width: 1000px;
+    max-width: 1280px;
   }
 
   /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 31, sass/partials/desktop/_content.scss */
+  /* line 33, sass/partials/desktop/_content.scss */
   .featured {
-    border: 1px dashed red;
-    /*for development only - borderline*/
     background: none;
     width: 340px;
     display: block;
@@ -3297,33 +3897,41 @@ footer .wrapper > ul > li ul li a {
 
   /* line 41, sass/partials/desktop/_content.scss */
   .featured .wrapper {
-    /*background: url("../../Images/mcarrows.png") repeat-y;*/
     height: 100%;
   }
 
-  /*.featured p {}*/
-  /* line 51, sass/partials/desktop/_content.scss */
+  /* features 
+  section.feature {
+      float: left;
+      border: 1px solid #ccc;
+      padding: 10px;
+      display: block;
+      width: 100%;
+      height: 40px;
+  }*/
+  /* =============================================================================
+     Main-Content Section
+     ========================================================================== */
+  /* line 66, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
     background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 55, sass/partials/desktop/_content.scss */
+  /* line 70, sass/partials/desktop/_content.scss */
   .main-content {
     /*background: url("../../Images/accent.png") no-repeat; */
-    border: 1px dashed red;
-    /*for development only - borderline*/
     background: none;
     overflow: hidden;
   }
 
-  /* line 62, sass/partials/desktop/_content.scss */
+  /* line 80, sass/partials/desktop/_content.scss */
   .main-content section {
-    border: 1px dashed red;
-    /*for development only - borderline*/
+    /**/
     width: 80%;
     display: block;
     float: left;
+    /**/
     margin-left: 15%;
   }
 
@@ -3339,37 +3947,35 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Section Navigation
      ========================================================================== */
-  /* line 88, sass/partials/desktop/_content.scss */
+  /* line 105, sass/partials/desktop/_content.scss */
   .featured nav {
     overflow: hidden;
     position: static;
     text-align: left;
   }
 
-  /* line 94, sass/partials/desktop/_content.scss */
+  /* line 111, sass/partials/desktop/_content.scss */
   .featured nav a {
     border: none;
     background: none;
     padding: 0;
     display: inline;
     line-height: 1.3em;
-    font-size: 1.35em;
+    font-size: 1.4em;
   }
 
   /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 108, sass/partials/desktop/_content.scss */
+  /* line 125, sass/partials/desktop/_content.scss */
   .persist-header {
     /*-settings for both-*/
-    border: 1px dashed blue;
-    /*for development only - borderline*/
     padding-top: 10px;
     min-height: 10px;
     max-width: 100%;
   }
 
-  /* line 115, sass/partials/desktop/_content.scss */
+  /* line 131, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3378,25 +3984,22 @@ footer .wrapper > ul > li ul li a {
     top: 0;
   }
 
-  /* line 122, sass/partials/desktop/_content.scss */
+  /* line 138, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 127, sass/partials/desktop/_content.scss */
+  /* line 143, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 131, sass/partials/desktop/_content.scss */
+  /* line 147, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
 
-  /* =============================================================================
-     Main-Content Section
-     ========================================================================== */
   /* homepage content 
   ----------------------------------------------------------
   article {
