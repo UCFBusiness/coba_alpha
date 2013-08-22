@@ -6,48 +6,30 @@
     height: 100%;
 }
 
-.page #content {padding: 0 5px;}
-
-.content-wrapper {}
+.page .content-wrapper {
+    padding: 0 5px;
+    height: 100%;
+}
 
 
 /* =============================================================================
    Featured Section
    ========================================================================== */
    
-    .main-content {
-        border:1px dashed red; /*for development only - borderline*/
-        background: url("../../Images/mcarrows.png") repeat-y right;
-        position: relative;
-    }
-
-    .main-content .index {}
-
-    .main-content .section {}
-
-
-    .featured {
-        border:1px dashed red; /*for development only - borderline*/
-    }
+.featured {
+    background: none;
+}
     
-        .featured .wrapper {
-            position: relative;
-            height: 100%;
-            background: none;
+.featured .wrapper {
+    position: relative;
+    height: 100%;
+}
 
-        }
-
-            .featured hgroup {
-                
-            }
+.featured hgroup {}
             
-            .featured hgroup.title h1, .featured hgroup.title h2 {
-                border:1px dashed red; /*for development only - borderline*/
+.featured hgroup.title h1, .featured hgroup.title h2 {}
 
-                
-            }
-
-            /*.featured p {}*/
+.featured p {}
 
 /* features 
 section.feature {
@@ -59,14 +41,32 @@ section.feature {
     height: 40px;
 }*/
 
+
+/* =============================================================================
+   Main-Content Section
+   ========================================================================== */
+
+.index .wrapper {}
+
+.main-content {
+    background: url("../../Images/mcarrows.png") repeat-y right;
+    position: relative;
+}
+
+.main-content .index {}
+
+.main-content .index .wrapper {}
+
+.main-content section {}
+
+.main-content section .wrapper {}
+
+
 /* =============================================================================
    Section Navigation
    ========================================================================== */
 
-.featured nav {
-border:1px dashed red; /*for development only - borderline*/
-    
-}
+.featured nav {}
             
 .featured nav a {
     background: #ffcc00;
@@ -85,7 +85,6 @@ border:1px dashed red; /*for development only - borderline*/
    ========================================================================== */
 
 .persist-header { /*-settings for both-*/
-    border:1px dashed blue; /*for development only - borderline*/
     padding-top: 10px;
     min-height:10px;
     max-width:100%;
@@ -110,9 +109,3 @@ border:1px dashed red; /*for development only - borderline*/
 .persist-header ul.nav li:last-child {
     padding-left: 20px;
 }
-
-
-/* =============================================================================
-   Main-Content Section
-   ========================================================================== */
-    

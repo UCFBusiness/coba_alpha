@@ -30,6 +30,7 @@ blockquote {
     border-left: 4px solid #DDD;
     padding: 10px 15px 10px;
     font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
+    .clearfix;
 }
 
 blockquote:before {
@@ -58,7 +59,6 @@ blockquote small {
 
 .highlight {
     background-color: #fff34d;
-
     -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
     -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */

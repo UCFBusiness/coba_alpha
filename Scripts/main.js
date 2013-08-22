@@ -13,7 +13,6 @@ require(['dmenu','easing'], function () {
     
     // On PageLoad...
 
-
     screenSizeLabel($(this).width());
 
     //-- 4 -- go to linked header when link is clicked
@@ -50,6 +49,9 @@ require(['dmenu','easing'], function () {
             
             //-- 1 -----------------------
             //$('nav#main_menu').mmenu();
+
+            var height = parseInt($(this).height());
+            $(".main-content .section").css("min-height", height);
         });
 
     if (width > 1024) // load desktop scripts
