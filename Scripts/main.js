@@ -67,8 +67,7 @@ require(['dmenu','easing'], function () {
                 })
                 .on("sticky_kit:unstick", function(e) {
                     //console.log("has unstuck!", e.target);
-            });
-
+                });
 
         });
 

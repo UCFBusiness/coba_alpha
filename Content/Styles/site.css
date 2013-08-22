@@ -3113,30 +3113,39 @@ footer .wrapper > ul > li ul li a {
 
   /* line 107, sass/partials/desktop/_nav.scss */
   .dl-searchbutton {
+    border: 1px solid #eee;
+    border-left: none;
     visibility: visible;
+    display: block;
+    background: #fff;
+    width: 50px;
   }
 
-  /* line 111, sass/partials/desktop/_nav.scss */
+  /* line 116, sass/partials/desktop/_nav.scss */
   .dl-searchfield {
     background: #fff;
     border: 1px solid #eee;
+    border-right: none;
+    position: static;
     margin: 0;
     padding: 0 10px;
     min-width: 170px;
     max-width: 170px;
+    font-size: .8em;
     height: 43px;
+    color: #999;
     float: left;
   }
 
   /* submenus */
   /* menu ul only */
-  /* line 125, sass/partials/desktop/_nav.scss */
+  /* line 134, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 128, sass/partials/desktop/_nav.scss */
+  /* line 137, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -3151,14 +3160,14 @@ footer .wrapper > ul > li ul li a {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 141, sass/partials/desktop/_nav.scss */
+  /* line 150, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 146, sass/partials/desktop/_nav.scss */
+  /* line 155, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -3168,7 +3177,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* all uls */
-  /* line 155, sass/partials/desktop/_nav.scss */
+  /* line 164, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -3179,12 +3188,12 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* menu li */
-  /* line 165, sass/partials/desktop/_nav.scss */
+  /* line 174, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 168, sass/partials/desktop/_nav.scss */
+  /* line 177, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -3192,13 +3201,13 @@ footer .wrapper > ul > li ul li a {
     outline: none;
   }
 
-  /* line 174, sass/partials/desktop/_nav.scss */
+  /* line 183, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 178, sass/partials/desktop/_nav.scss */
+  /* line 187, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -3207,7 +3216,7 @@ footer .wrapper > ul > li ul li a {
     color: white;
   }
 
-  /* line 184, sass/partials/desktop/_nav.scss */
+  /* line 193, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -3216,7 +3225,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* li arrows */
-  /* line 192, sass/partials/desktop/_nav.scss */
+  /* line 201, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -3230,7 +3239,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* desktop - menu theme */
-  /* line 206, sass/partials/desktop/_nav.scss */
+  /* line 215, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -3239,7 +3248,7 @@ footer .wrapper > ul > li ul li a {
     /* li:hover color*/
   }
 
-  /* line 211, sass/partials/desktop/_nav.scss */
+  /* line 220, sass/partials/desktop/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -3251,78 +3260,73 @@ footer .wrapper > ul > li ul li a {
      ========================================================================== */
   /* line 5, sass/partials/desktop/_content.scss */
   .page #container {
-    /* -- Big Background Image --
-    background: url(../../images/millican.jpg) no-repeat top center fixed;
+    background: #FFF;
+    /* -- Big Background Image 
+    background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    */
-    background: #fff;
-    height: 100%;
-  }
-
-  /* line 18, sass/partials/desktop/_content.scss */
-  .page .content-wrapper {
+    --*/
     /* -- Big Background Image 
-    background: rgba(0,0,0,0.1) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+    background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
---*/
+    --*/
     height: 100%;
   }
 
-  /* line 29, sass/partials/desktop/_content.scss */
-  mark {
-    background-color: #a6dbed;
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-
-  /* line 35, sass/partials/desktop/_content.scss */
-  pre {
-    font-size: 12px;
-    width: 100%;
-    overflow: auto;
-    -webkit-overflow-scrolling: touch;
+  /* line 23, sass/partials/desktop/_content.scss */
+  .page .content-wrapper {
+    height: 100%;
   }
 
   /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 46, sass/partials/desktop/_content.scss */
+  /* line 31, sass/partials/desktop/_content.scss */
+  .featured {
+    border: 1px dashed red;
+    /*for development only - borderline*/
+    background: none;
+    width: 340px;
+    display: block;
+    float: left;
+    overflow: hidden;
+  }
+
+  /* line 41, sass/partials/desktop/_content.scss */
+  .featured .wrapper {
+    /*background: url("../../Images/mcarrows.png") repeat-y;*/
+    height: 100%;
+  }
+
+  /*.featured p {}*/
+  /* line 51, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
     background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 50, sass/partials/desktop/_content.scss */
+  /* line 55, sass/partials/desktop/_content.scss */
   .main-content {
     /*background: url("../../Images/accent.png") no-repeat; */
     border: 1px dashed red;
     /*for development only - borderline*/
     background: none;
-    margin-left: 33%;
+    overflow: hidden;
   }
 
-  /* line 63, sass/partials/desktop/_content.scss */
-  .featured {
+  /* line 62, sass/partials/desktop/_content.scss */
+  .main-content section {
     border: 1px dashed red;
     /*for development only - borderline*/
-    background: none;
+    width: 80%;
+    display: block;
     float: left;
+    margin-left: 15%;
   }
 
-  /* line 70, sass/partials/desktop/_content.scss */
-  .featured .wrapper {
-    /*background: url("../../Images/mcarrows.png") repeat-y;*/
-    position: relative;
-    width: 30%;
-    height: 100%;
-    padding: 0;
-  }
-
-  /*.featured p {}*/
   /* features 
   section.feature {
       float: left;
@@ -3335,14 +3339,14 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Section Navigation
      ========================================================================== */
-  /* line 98, sass/partials/desktop/_content.scss */
+  /* line 88, sass/partials/desktop/_content.scss */
   .featured nav {
     overflow: hidden;
     position: static;
     text-align: left;
   }
 
-  /* line 104, sass/partials/desktop/_content.scss */
+  /* line 94, sass/partials/desktop/_content.scss */
   .featured nav a {
     border: none;
     background: none;
@@ -3355,7 +3359,7 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 118, sass/partials/desktop/_content.scss */
+  /* line 108, sass/partials/desktop/_content.scss */
   .persist-header {
     /*-settings for both-*/
     border: 1px dashed blue;
@@ -3365,7 +3369,7 @@ footer .wrapper > ul > li ul li a {
     max-width: 100%;
   }
 
-  /* line 125, sass/partials/desktop/_content.scss */
+  /* line 115, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3374,18 +3378,18 @@ footer .wrapper > ul > li ul li a {
     top: 0;
   }
 
-  /* line 132, sass/partials/desktop/_content.scss */
+  /* line 122, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 137, sass/partials/desktop/_content.scss */
+  /* line 127, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 141, sass/partials/desktop/_content.scss */
+  /* line 131, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }

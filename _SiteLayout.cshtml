@@ -64,7 +64,7 @@
 			    </div>*@
             </header>
             <!-- FINIS:UCF Header -->
-
+<label id="message" style="float: right;"></label>
             <!-- BEGIN:Nav -->
             <nav id="main_menu" class="dl-menuwrapper clearfix">
                 <a href="~/" class="dl-home">HOME</a>
@@ -162,8 +162,7 @@
             <!-- FINIS:Nav -->
 
             <!-- BEGIN:Content -->
-            <div id="content" class="content-wrapper clearfix">
-
+            <div id="content" class="content-wrapper clearfix" data-sticky_parent>
                 @RenderSection("featured", required: false)
                 <article class="main-content">
                     @RenderBody()
@@ -231,19 +230,23 @@
         <script>
             $(function () { //load on document.ready
 
+
+
                 //----- Responsive Script Loader ----------------------
                 //-- 1 -- check browser width on page load
                 //screenSizeLabel($(this).width());
 
                 //-- 2 -- check on window resize
                 //$(window).resize(function () {
-                    //screenSizeLabel($(this).width());
+                //screenSizeLabel($(this).width());
 
-                    //var h = parseInt($(this).height());
-                    //$("section").css("height", h); //OR
-                    //$('#section').css('margin-top', (h - 620));
+                //var h = parseInt($(this).height());
+                //$("section").css("height", h); //OR
+                //$('#section').css('margin-top', (h - 620));
                 //})
                 //------------------------------------------------------
+
+
 
                 //----- Easing Navigation ------------------------------
                 //-- 1 -- build header when page is first loaded
@@ -256,6 +259,7 @@
                 //------------------------------------------------------
             });
         </script>
+
 
         @*<script>
             //----- Responsive Script Loader ---------------------------

@@ -2,83 +2,73 @@
    Page/Section Layout
    ========================================================================== */
 
-.page #container {
-    /* -- Big Background Image --
-    background: url(../../images/millican.jpg) no-repeat top center fixed;
+.page #container {background: #FFF;
+    /* -- Big Background Image 
+    background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    */
-
-    background: #fff;
+    --*/
+    
+    /* -- Big Background Image 
+    background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+    --*/
 
     height: 100%;
 }
 
 .page .content-wrapper {
-    
-    /* -- Big Background Image 
-    background: rgba(0,0,0,0.1) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
---*/
     height: 100%;
-}
-
-mark {
-    background-color: $light-blue;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-
-pre {
-	font-size: 12px;
-	width: 100%;
-	overflow: auto;
-	-webkit-overflow-scrolling: touch;
 }
 
 /* =============================================================================
    Featured Section
    ========================================================================== */
 
-    .featured + .main-content { /*display background if both classes are present on page*/
-        background: url("../../Images/mcarrows.png") repeat-y right;
-    }
-
-    .main-content {
-        /*background: url("../../Images/accent.png") no-repeat; */
-        border:1px dashed red; /*for development only - borderline*/
-        background: none;
-
-        margin-left: 33%;
-    }
-
-    .main-content .index {}
-
-    .main-content .section {}
-
-
-    .featured {
-        border:1px dashed red; /*for development only - borderline*/
-        background: none;
-        float: left;
-    }
+.featured {
+    border:1px dashed red; /*for development only - borderline*/
+    background: none;
+    width: 340px;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
     
 
-        .featured .wrapper {
+.featured .wrapper {
 
-            /*background: url("../../Images/mcarrows.png") repeat-y;*/
-            position: relative;
-            width: 30%;
-            height: 100%;
-            padding:0;
-        }
+    /*background: url("../../Images/mcarrows.png") repeat-y;*/
+    height: 100%;
+}
 
-            .featured hgroup.title h1, .featured hgroup.title h2 {}
+.featured hgroup.title h1, .featured hgroup.title h2 {}
 
-            /*.featured p {}*/
+/*.featured p {}*/
+
+.featured + .main-content { /*display background if both classes are present on page*/
+    background: url("../../Images/mcarrows.png") repeat-y right;
+}
+
+.main-content {
+    /*background: url("../../Images/accent.png") no-repeat; */
+    border:1px dashed red; /*for development only - borderline*/
+    background: none;
+    overflow: hidden; 
+}
+
+.main-content section {
+border:1px dashed red; /*for development only - borderline*/
+    width: 80%;
+    display: block;
+    float:left;
+    margin-left:15%;
+}
+
+.main-content section .wrapper {}
+
 
 /* features 
 section.feature {

@@ -105,17 +105,26 @@ nav.dl-menuwrapper {
 }
 
 .dl-searchbutton {
+    border: 1px solid #eee;
+    border-left: none;
     visibility: visible;
+    display: block;
+    background: #fff;
+    width: 50px;
 }
 
 .dl-searchfield {
     background: #fff;
     border: 1px solid #eee;
+    border-right: none;
+    position: static;
     margin: 0;
     padding: 0 10px;
     min-width: 170px;
     max-width: 170px;
+    font-size: .8em;
     height: 43px;
+    color: #999;
     float: left;
 }
 
