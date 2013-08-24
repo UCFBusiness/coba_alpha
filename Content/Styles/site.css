@@ -733,14 +733,14 @@ td {
 /* ========================================================================== */
 /* line 7, sass/partials/boilerplate/_primary_styles.scss */
 html {
-  background: #191919;
+  background: white;
 }
 
 /* line 11, sass/partials/boilerplate/_primary_styles.scss */
 body {
+  background: white;
   font-size: 1em;
   line-height: 1.4em;
-  background: white;
 }
 
 /* line 17, sass/partials/boilerplate/_primary_styles.scss */
@@ -780,8 +780,8 @@ p {
 
 /* line 27, sass/partials/boilerplate/_primary_styles.scss */
 blockquote {
-  background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
-  background-position: 0px 5px;
+  /*background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
+  background-position: 0px 5px;*/
   border-left: 4px solid #DDD;
   padding: 10px 15px 10px;
   font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
@@ -1396,7 +1396,7 @@ table {
 }
 
 /* Hide the inner submenus */
-/* line 3, sass/partials/_nav.scss */
+/* line 3, sass/partials/_menu.animation.scss */
 .dl-menuwrapper li .dl-submenu {
   display: none;
 }
@@ -1408,14 +1408,14 @@ We also hide the submenu link.
 The opened submenu will get the class "dl-subviewopen".
 All this is done for any sub-level being entered.
 */
-/* line 17, sass/partials/_nav.scss */
+/* line 17, sass/partials/_menu.animation.scss */
 .dl-menu.dl-subview li,
 .dl-menu.dl-subview li.dl-subviewopen > a,
 .dl-menu.dl-subview li.dl-subview > a {
   display: none;
 }
 
-/* line 25, sass/partials/_nav.scss */
+/* line 25, sass/partials/_menu.animation.scss */
 .dl-menu.dl-subview li.dl-subview,
 .dl-menu.dl-subview li.dl-subview .dl-submenu,
 .dl-menu.dl-subview li.dl-subviewopen,
@@ -1425,7 +1425,7 @@ All this is done for any sub-level being entered.
 }
 
 /* Dynamically added submenu outside of the menu context */
-/* line 30, sass/partials/_nav.scss */
+/* line 30, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu {
   position: absolute;
   width: 100%;
@@ -1435,35 +1435,35 @@ All this is done for any sub-level being entered.
 }
 
 /* Animation classes for moving out and in */
-/* line 41, sass/partials/_nav.scss */
+/* line 41, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-out-1 {
   -webkit-animation: MenuAnimOut1 0.4s;
   -moz-animation: MenuAnimOut1 0.4s;
   animation: MenuAnimOut1 0.4s;
 }
 
-/* line 47, sass/partials/_nav.scss */
+/* line 47, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-out-2 {
   -webkit-animation: MenuAnimOut2 0.3s ease-in-out;
   -moz-animation: MenuAnimOut2 0.3s ease-in-out;
   animation: MenuAnimOut2 0.3s ease-in-out;
 }
 
-/* line 53, sass/partials/_nav.scss */
+/* line 53, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-out-3 {
   -webkit-animation: MenuAnimOut3 0.4s ease;
   -moz-animation: MenuAnimOut3 0.4s ease;
   animation: MenuAnimOut3 0.4s ease;
 }
 
-/* line 59, sass/partials/_nav.scss */
+/* line 59, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-out-4 {
   -webkit-animation: MenuAnimOut4 0.4s ease;
   -moz-animation: MenuAnimOut4 0.4s ease;
   animation: MenuAnimOut4 0.4s ease;
 }
 
-/* line 65, sass/partials/_nav.scss */
+/* line 65, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-out-5 {
   -webkit-animation: MenuAnimOut5 0.4s ease;
   -moz-animation: MenuAnimOut5 0.4s ease;
@@ -1471,18 +1471,18 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimOut1 {
-  /* line 72, sass/partials/_nav.scss */
+  /* line 72, sass/partials/_menu.animation.scss */
   50% {
     -webkit-transform: translateZ(-250px) rotateY(30deg);
   }
 
-  /* line 75, sass/partials/_nav.scss */
+  /* line 75, sass/partials/_menu.animation.scss */
   75% {
     -webkit-transform: translateZ(-372.5px) rotateY(15deg);
     opacity: .5;
   }
 
-  /* line 79, sass/partials/_nav.scss */
+  /* line 79, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(-500px) rotateY(0deg);
     opacity: 0;
@@ -1490,7 +1490,7 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimOut2 {
-  /* line 86, sass/partials/_nav.scss */
+  /* line 86, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateX(-100%);
     opacity: 0;
@@ -1498,7 +1498,7 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimOut3 {
-  /* line 93, sass/partials/_nav.scss */
+  /* line 93, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(300px);
     opacity: 0;
@@ -1506,7 +1506,7 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimOut4 {
-  /* line 100, sass/partials/_nav.scss */
+  /* line 100, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(-300px);
     opacity: 0;
@@ -1514,7 +1514,7 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimOut5 {
-  /* line 107, sass/partials/_nav.scss */
+  /* line 107, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateY(40%);
     opacity: 0;
@@ -1522,18 +1522,18 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimOut1 {
-  /* line 114, sass/partials/_nav.scss */
+  /* line 114, sass/partials/_menu.animation.scss */
   50% {
     -moz-transform: translateZ(-250px) rotateY(30deg);
   }
 
-  /* line 117, sass/partials/_nav.scss */
+  /* line 117, sass/partials/_menu.animation.scss */
   75% {
     -moz-transform: translateZ(-372.5px) rotateY(15deg);
     opacity: .5;
   }
 
-  /* line 121, sass/partials/_nav.scss */
+  /* line 121, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(-500px) rotateY(0deg);
     opacity: 0;
@@ -1541,7 +1541,7 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimOut2 {
-  /* line 128, sass/partials/_nav.scss */
+  /* line 128, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateX(-100%);
     opacity: 0;
@@ -1549,7 +1549,7 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimOut3 {
-  /* line 135, sass/partials/_nav.scss */
+  /* line 135, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(300px);
     opacity: 0;
@@ -1557,7 +1557,7 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimOut4 {
-  /* line 142, sass/partials/_nav.scss */
+  /* line 142, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(-300px);
     opacity: 0;
@@ -1565,7 +1565,7 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimOut5 {
-  /* line 149, sass/partials/_nav.scss */
+  /* line 149, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateY(40%);
     opacity: 0;
@@ -1573,18 +1573,18 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimOut1 {
-  /* line 156, sass/partials/_nav.scss */
+  /* line 156, sass/partials/_menu.animation.scss */
   50% {
     transform: translateZ(-250px) rotateY(30deg);
   }
 
-  /* line 159, sass/partials/_nav.scss */
+  /* line 159, sass/partials/_menu.animation.scss */
   75% {
     transform: translateZ(-372.5px) rotateY(15deg);
     opacity: .5;
   }
 
-  /* line 163, sass/partials/_nav.scss */
+  /* line 163, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(-500px) rotateY(0deg);
     opacity: 0;
@@ -1592,7 +1592,7 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimOut2 {
-  /* line 170, sass/partials/_nav.scss */
+  /* line 170, sass/partials/_menu.animation.scss */
   100% {
     transform: translateX(-100%);
     opacity: 0;
@@ -1600,7 +1600,7 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimOut3 {
-  /* line 177, sass/partials/_nav.scss */
+  /* line 177, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(300px);
     opacity: 0;
@@ -1608,7 +1608,7 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimOut4 {
-  /* line 184, sass/partials/_nav.scss */
+  /* line 184, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(-300px);
     opacity: 0;
@@ -1616,42 +1616,42 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimOut5 {
-  /* line 191, sass/partials/_nav.scss */
+  /* line 191, sass/partials/_menu.animation.scss */
   100% {
     transform: translateY(40%);
     opacity: 0;
   }
 }
 
-/* line 197, sass/partials/_nav.scss */
+/* line 197, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-in-1 {
   -webkit-animation: MenuAnimIn1 0.3s;
   -moz-animation: MenuAnimIn1 0.3s;
   animation: MenuAnimIn1 0.3s;
 }
 
-/* line 203, sass/partials/_nav.scss */
+/* line 203, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-in-2 {
   -webkit-animation: MenuAnimIn2 0.3s ease-in-out;
   -moz-animation: MenuAnimIn2 0.3s ease-in-out;
   animation: MenuAnimIn2 0.3s ease-in-out;
 }
 
-/* line 209, sass/partials/_nav.scss */
+/* line 209, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-in-3 {
   -webkit-animation: MenuAnimIn3 0.4s ease;
   -moz-animation: MenuAnimIn3 0.4s ease;
   animation: MenuAnimIn3 0.4s ease;
 }
 
-/* line 215, sass/partials/_nav.scss */
+/* line 215, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-in-4 {
   -webkit-animation: MenuAnimIn4 0.4s ease;
   -moz-animation: MenuAnimIn4 0.4s ease;
   animation: MenuAnimIn4 0.4s ease;
 }
 
-/* line 221, sass/partials/_nav.scss */
+/* line 221, sass/partials/_menu.animation.scss */
 .dl-menu.dl-animate-in-5 {
   -webkit-animation: MenuAnimIn5 0.4s ease;
   -moz-animation: MenuAnimIn5 0.4s ease;
@@ -1659,19 +1659,19 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimIn1 {
-  /* line 228, sass/partials/_nav.scss */
+  /* line 228, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(-500px) rotateY(0deg);
     opacity: 0;
   }
 
-  /* line 232, sass/partials/_nav.scss */
+  /* line 232, sass/partials/_menu.animation.scss */
   20% {
     -webkit-transform: translateZ(-250px) rotateY(30deg);
     opacity: 0.5;
   }
 
-  /* line 236, sass/partials/_nav.scss */
+  /* line 236, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(0px) rotateY(0deg);
     opacity: 1;
@@ -1679,13 +1679,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimIn2 {
-  /* line 243, sass/partials/_nav.scss */
+  /* line 243, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateX(-100%);
     opacity: 0;
   }
 
-  /* line 247, sass/partials/_nav.scss */
+  /* line 247, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateX(0px);
     opacity: 1;
@@ -1693,13 +1693,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimIn3 {
-  /* line 254, sass/partials/_nav.scss */
+  /* line 254, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(300px);
     opacity: 0;
   }
 
-  /* line 258, sass/partials/_nav.scss */
+  /* line 258, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(0px);
     opacity: 1;
@@ -1707,13 +1707,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimIn4 {
-  /* line 265, sass/partials/_nav.scss */
+  /* line 265, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(-300px);
     opacity: 0;
   }
 
-  /* line 269, sass/partials/_nav.scss */
+  /* line 269, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(0px);
     opacity: 1;
@@ -1721,13 +1721,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes MenuAnimIn5 {
-  /* line 276, sass/partials/_nav.scss */
+  /* line 276, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateY(40%);
     opacity: 0;
   }
 
-  /* line 280, sass/partials/_nav.scss */
+  /* line 280, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateY(0);
     opacity: 1;
@@ -1735,19 +1735,19 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimIn1 {
-  /* line 287, sass/partials/_nav.scss */
+  /* line 287, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(-500px) rotateY(0deg);
     opacity: 0;
   }
 
-  /* line 291, sass/partials/_nav.scss */
+  /* line 291, sass/partials/_menu.animation.scss */
   20% {
     -moz-transform: translateZ(-250px) rotateY(30deg);
     opacity: 0.5;
   }
 
-  /* line 295, sass/partials/_nav.scss */
+  /* line 295, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(0px) rotateY(0deg);
     opacity: 1;
@@ -1755,13 +1755,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimIn2 {
-  /* line 302, sass/partials/_nav.scss */
+  /* line 302, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateX(-100%);
     opacity: 0;
   }
 
-  /* line 306, sass/partials/_nav.scss */
+  /* line 306, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateX(0px);
     opacity: 1;
@@ -1769,13 +1769,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimIn3 {
-  /* line 313, sass/partials/_nav.scss */
+  /* line 313, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(300px);
     opacity: 0;
   }
 
-  /* line 317, sass/partials/_nav.scss */
+  /* line 317, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(0px);
     opacity: 1;
@@ -1783,13 +1783,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimIn4 {
-  /* line 324, sass/partials/_nav.scss */
+  /* line 324, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(-300px);
     opacity: 0;
   }
 
-  /* line 328, sass/partials/_nav.scss */
+  /* line 328, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(0px);
     opacity: 1;
@@ -1797,13 +1797,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes MenuAnimIn5 {
-  /* line 335, sass/partials/_nav.scss */
+  /* line 335, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateY(40%);
     opacity: 0;
   }
 
-  /* line 339, sass/partials/_nav.scss */
+  /* line 339, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateY(0);
     opacity: 1;
@@ -1811,19 +1811,19 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimIn1 {
-  /* line 346, sass/partials/_nav.scss */
+  /* line 346, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(-500px) rotateY(0deg);
     opacity: 0;
   }
 
-  /* line 350, sass/partials/_nav.scss */
+  /* line 350, sass/partials/_menu.animation.scss */
   20% {
     transform: translateZ(-250px) rotateY(30deg);
     opacity: 0.5;
   }
 
-  /* line 354, sass/partials/_nav.scss */
+  /* line 354, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(0px) rotateY(0deg);
     opacity: 1;
@@ -1831,13 +1831,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimIn2 {
-  /* line 361, sass/partials/_nav.scss */
+  /* line 361, sass/partials/_menu.animation.scss */
   0% {
     transform: translateX(-100%);
     opacity: 0;
   }
 
-  /* line 365, sass/partials/_nav.scss */
+  /* line 365, sass/partials/_menu.animation.scss */
   100% {
     transform: translateX(0px);
     opacity: 1;
@@ -1845,13 +1845,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimIn3 {
-  /* line 372, sass/partials/_nav.scss */
+  /* line 372, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(300px);
     opacity: 0;
   }
 
-  /* line 376, sass/partials/_nav.scss */
+  /* line 376, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(0px);
     opacity: 1;
@@ -1859,13 +1859,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimIn4 {
-  /* line 383, sass/partials/_nav.scss */
+  /* line 383, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(-300px);
     opacity: 0;
   }
 
-  /* line 387, sass/partials/_nav.scss */
+  /* line 387, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(0px);
     opacity: 1;
@@ -1873,48 +1873,48 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes MenuAnimIn5 {
-  /* line 394, sass/partials/_nav.scss */
+  /* line 394, sass/partials/_menu.animation.scss */
   0% {
     transform: translateY(40%);
     opacity: 0;
   }
 
-  /* line 398, sass/partials/_nav.scss */
+  /* line 398, sass/partials/_menu.animation.scss */
   100% {
     transform: translateY(0);
     opacity: 1;
   }
 }
 
-/* line 404, sass/partials/_nav.scss */
+/* line 404, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-in-1 {
   -webkit-animation: SubMenuAnimIn1 0.4s ease;
   -moz-animation: SubMenuAnimIn1 0.4s ease;
   animation: SubMenuAnimIn1 0.4s ease;
 }
 
-/* line 410, sass/partials/_nav.scss */
+/* line 410, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-in-2 {
   -webkit-animation: SubMenuAnimIn2 0.3s ease-in-out;
   -moz-animation: SubMenuAnimIn2 0.3s ease-in-out;
   animation: SubMenuAnimIn2 0.3s ease-in-out;
 }
 
-/* line 416, sass/partials/_nav.scss */
+/* line 416, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-in-3 {
   -webkit-animation: SubMenuAnimIn3 0.4s ease;
   -moz-animation: SubMenuAnimIn3 0.4s ease;
   animation: SubMenuAnimIn3 0.4s ease;
 }
 
-/* line 422, sass/partials/_nav.scss */
+/* line 422, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-in-4 {
   -webkit-animation: SubMenuAnimIn4 0.4s ease;
   -moz-animation: SubMenuAnimIn4 0.4s ease;
   animation: SubMenuAnimIn4 0.4s ease;
 }
 
-/* line 428, sass/partials/_nav.scss */
+/* line 428, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-in-5 {
   -webkit-animation: SubMenuAnimIn5 0.4s ease;
   -moz-animation: SubMenuAnimIn5 0.4s ease;
@@ -1922,13 +1922,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimIn1 {
-  /* line 435, sass/partials/_nav.scss */
+  /* line 435, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateX(50%);
     opacity: 0;
   }
 
-  /* line 439, sass/partials/_nav.scss */
+  /* line 439, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateX(0px);
     opacity: 1;
@@ -1936,13 +1936,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimIn2 {
-  /* line 446, sass/partials/_nav.scss */
+  /* line 446, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateX(100%);
     opacity: 0;
   }
 
-  /* line 450, sass/partials/_nav.scss */
+  /* line 450, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateX(0px);
     opacity: 1;
@@ -1950,13 +1950,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimIn3 {
-  /* line 457, sass/partials/_nav.scss */
+  /* line 457, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(-300px);
     opacity: 0;
   }
 
-  /* line 461, sass/partials/_nav.scss */
+  /* line 461, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(0px);
     opacity: 1;
@@ -1964,13 +1964,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimIn4 {
-  /* line 468, sass/partials/_nav.scss */
+  /* line 468, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(300px);
     opacity: 0;
   }
 
-  /* line 472, sass/partials/_nav.scss */
+  /* line 472, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(0px);
     opacity: 1;
@@ -1978,13 +1978,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimIn5 {
-  /* line 479, sass/partials/_nav.scss */
+  /* line 479, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(-200px);
     opacity: 0;
   }
 
-  /* line 483, sass/partials/_nav.scss */
+  /* line 483, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(0);
     opacity: 1;
@@ -1992,13 +1992,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimIn1 {
-  /* line 490, sass/partials/_nav.scss */
+  /* line 490, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateX(50%);
     opacity: 0;
   }
 
-  /* line 494, sass/partials/_nav.scss */
+  /* line 494, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateX(0px);
     opacity: 1;
@@ -2006,13 +2006,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimIn2 {
-  /* line 501, sass/partials/_nav.scss */
+  /* line 501, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateX(100%);
     opacity: 0;
   }
 
-  /* line 505, sass/partials/_nav.scss */
+  /* line 505, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateX(0px);
     opacity: 1;
@@ -2020,13 +2020,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimIn3 {
-  /* line 512, sass/partials/_nav.scss */
+  /* line 512, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(-300px);
     opacity: 0;
   }
 
-  /* line 516, sass/partials/_nav.scss */
+  /* line 516, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(0px);
     opacity: 1;
@@ -2034,13 +2034,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimIn4 {
-  /* line 523, sass/partials/_nav.scss */
+  /* line 523, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(300px);
     opacity: 0;
   }
 
-  /* line 527, sass/partials/_nav.scss */
+  /* line 527, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(0px);
     opacity: 1;
@@ -2048,13 +2048,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimIn5 {
-  /* line 534, sass/partials/_nav.scss */
+  /* line 534, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(-200px);
     opacity: 0;
   }
 
-  /* line 538, sass/partials/_nav.scss */
+  /* line 538, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(0);
     opacity: 1;
@@ -2062,13 +2062,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimIn1 {
-  /* line 545, sass/partials/_nav.scss */
+  /* line 545, sass/partials/_menu.animation.scss */
   0% {
     transform: translateX(50%);
     opacity: 0;
   }
 
-  /* line 549, sass/partials/_nav.scss */
+  /* line 549, sass/partials/_menu.animation.scss */
   100% {
     transform: translateX(0px);
     opacity: 1;
@@ -2076,13 +2076,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimIn2 {
-  /* line 556, sass/partials/_nav.scss */
+  /* line 556, sass/partials/_menu.animation.scss */
   0% {
     transform: translateX(100%);
     opacity: 0;
   }
 
-  /* line 560, sass/partials/_nav.scss */
+  /* line 560, sass/partials/_menu.animation.scss */
   100% {
     transform: translateX(0px);
     opacity: 1;
@@ -2090,13 +2090,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimIn3 {
-  /* line 567, sass/partials/_nav.scss */
+  /* line 567, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(-300px);
     opacity: 0;
   }
 
-  /* line 571, sass/partials/_nav.scss */
+  /* line 571, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(0px);
     opacity: 1;
@@ -2104,13 +2104,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimIn4 {
-  /* line 578, sass/partials/_nav.scss */
+  /* line 578, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(300px);
     opacity: 0;
   }
 
-  /* line 582, sass/partials/_nav.scss */
+  /* line 582, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(0px);
     opacity: 1;
@@ -2118,48 +2118,48 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimIn5 {
-  /* line 589, sass/partials/_nav.scss */
+  /* line 589, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(-200px);
     opacity: 0;
   }
 
-  /* line 593, sass/partials/_nav.scss */
+  /* line 593, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(0);
     opacity: 1;
   }
 }
 
-/* line 599, sass/partials/_nav.scss */
+/* line 599, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-out-1 {
   -webkit-animation: SubMenuAnimOut1 0.4s ease;
   -moz-animation: SubMenuAnimOut1 0.4s ease;
   animation: SubMenuAnimOut1 0.4s ease;
 }
 
-/* line 605, sass/partials/_nav.scss */
+/* line 605, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-out-2 {
   -webkit-animation: SubMenuAnimOut2 0.3s ease-in-out;
   -moz-animation: SubMenuAnimOut2 0.3s ease-in-out;
   animation: SubMenuAnimOut2 0.3s ease-in-out;
 }
 
-/* line 611, sass/partials/_nav.scss */
+/* line 611, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-out-3 {
   -webkit-animation: SubMenuAnimOut3 0.4s ease;
   -moz-animation: SubMenuAnimOut3 0.4s ease;
   animation: SubMenuAnimOut3 0.4s ease;
 }
 
-/* line 617, sass/partials/_nav.scss */
+/* line 617, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-out-4 {
   -webkit-animation: SubMenuAnimOut4 0.4s ease;
   -moz-animation: SubMenuAnimOut4 0.4s ease;
   animation: SubMenuAnimOut4 0.4s ease;
 }
 
-/* line 623, sass/partials/_nav.scss */
+/* line 623, sass/partials/_menu.animation.scss */
 .dl-menuwrapper > .dl-submenu.dl-animate-out-5 {
   -webkit-animation: SubMenuAnimOut5 0.4s ease;
   -moz-animation: SubMenuAnimOut5 0.4s ease;
@@ -2167,13 +2167,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimOut1 {
-  /* line 630, sass/partials/_nav.scss */
+  /* line 630, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateX(0%);
     opacity: 1;
   }
 
-  /* line 634, sass/partials/_nav.scss */
+  /* line 634, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateX(50%);
     opacity: 0;
@@ -2181,13 +2181,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimOut2 {
-  /* line 641, sass/partials/_nav.scss */
+  /* line 641, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateX(0%);
     opacity: 1;
   }
 
-  /* line 645, sass/partials/_nav.scss */
+  /* line 645, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateX(100%);
     opacity: 0;
@@ -2195,13 +2195,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimOut3 {
-  /* line 652, sass/partials/_nav.scss */
+  /* line 652, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(0px);
     opacity: 1;
   }
 
-  /* line 656, sass/partials/_nav.scss */
+  /* line 656, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(-300px);
     opacity: 0;
@@ -2209,13 +2209,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimOut4 {
-  /* line 663, sass/partials/_nav.scss */
+  /* line 663, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(0px);
     opacity: 1;
   }
 
-  /* line 667, sass/partials/_nav.scss */
+  /* line 667, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(300px);
     opacity: 0;
@@ -2223,13 +2223,13 @@ All this is done for any sub-level being entered.
 }
 
 @-webkit-keyframes SubMenuAnimOut5 {
-  /* line 674, sass/partials/_nav.scss */
+  /* line 674, sass/partials/_menu.animation.scss */
   0% {
     -webkit-transform: translateZ(0);
     opacity: 1;
   }
 
-  /* line 678, sass/partials/_nav.scss */
+  /* line 678, sass/partials/_menu.animation.scss */
   100% {
     -webkit-transform: translateZ(-200px);
     opacity: 0;
@@ -2237,13 +2237,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimOut1 {
-  /* line 685, sass/partials/_nav.scss */
+  /* line 685, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateX(0%);
     opacity: 1;
   }
 
-  /* line 689, sass/partials/_nav.scss */
+  /* line 689, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateX(50%);
     opacity: 0;
@@ -2251,13 +2251,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimOut2 {
-  /* line 696, sass/partials/_nav.scss */
+  /* line 696, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateX(0%);
     opacity: 1;
   }
 
-  /* line 700, sass/partials/_nav.scss */
+  /* line 700, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateX(100%);
     opacity: 0;
@@ -2265,13 +2265,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimOut3 {
-  /* line 707, sass/partials/_nav.scss */
+  /* line 707, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(0px);
     opacity: 1;
   }
 
-  /* line 711, sass/partials/_nav.scss */
+  /* line 711, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(-300px);
     opacity: 0;
@@ -2279,13 +2279,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimOut4 {
-  /* line 718, sass/partials/_nav.scss */
+  /* line 718, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(0px);
     opacity: 1;
   }
 
-  /* line 722, sass/partials/_nav.scss */
+  /* line 722, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(300px);
     opacity: 0;
@@ -2293,13 +2293,13 @@ All this is done for any sub-level being entered.
 }
 
 @-moz-keyframes SubMenuAnimOut5 {
-  /* line 729, sass/partials/_nav.scss */
+  /* line 729, sass/partials/_menu.animation.scss */
   0% {
     -moz-transform: translateZ(0);
     opacity: 1;
   }
 
-  /* line 733, sass/partials/_nav.scss */
+  /* line 733, sass/partials/_menu.animation.scss */
   100% {
     -moz-transform: translateZ(-200px);
     opacity: 0;
@@ -2307,13 +2307,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimOut1 {
-  /* line 740, sass/partials/_nav.scss */
+  /* line 740, sass/partials/_menu.animation.scss */
   0% {
     transform: translateX(0%);
     opacity: 1;
   }
 
-  /* line 744, sass/partials/_nav.scss */
+  /* line 744, sass/partials/_menu.animation.scss */
   100% {
     transform: translateX(50%);
     opacity: 0;
@@ -2321,13 +2321,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimOut2 {
-  /* line 751, sass/partials/_nav.scss */
+  /* line 751, sass/partials/_menu.animation.scss */
   0% {
     transform: translateX(0%);
     opacity: 1;
   }
 
-  /* line 755, sass/partials/_nav.scss */
+  /* line 755, sass/partials/_menu.animation.scss */
   100% {
     transform: translateX(100%);
     opacity: 0;
@@ -2335,13 +2335,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimOut3 {
-  /* line 762, sass/partials/_nav.scss */
+  /* line 762, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(0px);
     opacity: 1;
   }
 
-  /* line 766, sass/partials/_nav.scss */
+  /* line 766, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(-300px);
     opacity: 0;
@@ -2349,13 +2349,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimOut4 {
-  /* line 773, sass/partials/_nav.scss */
+  /* line 773, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(0px);
     opacity: 1;
   }
 
-  /* line 777, sass/partials/_nav.scss */
+  /* line 777, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(300px);
     opacity: 0;
@@ -2363,13 +2363,13 @@ All this is done for any sub-level being entered.
 }
 
 @keyframes SubMenuAnimOut5 {
-  /* line 784, sass/partials/_nav.scss */
+  /* line 784, sass/partials/_menu.animation.scss */
   0% {
     transform: translateZ(0);
     opacity: 1;
   }
 
-  /* line 788, sass/partials/_nav.scss */
+  /* line 788, sass/partials/_menu.animation.scss */
   100% {
     transform: translateZ(-200px);
     opacity: 0;
@@ -2377,7 +2377,7 @@ All this is done for any sub-level being entered.
 }
 
 /* No JS Fallback */
-/* line 795, sass/partials/_nav.scss */
+/* line 795, sass/partials/_menu.animation.scss */
 .no-js .dl-menuwrapper .dl-menu {
   position: relative;
   opacity: 1;
@@ -2386,34 +2386,34 @@ All this is done for any sub-level being entered.
   transform: none;
 }
 
-/* line 803, sass/partials/_nav.scss */
+/* line 803, sass/partials/_menu.animation.scss */
 .no-js .dl-menuwrapper li .dl-submenu {
   display: block;
 }
 
-/* line 807, sass/partials/_nav.scss */
+/* line 807, sass/partials/_menu.animation.scss */
 .no-js .dl-menuwrapper li.dl-back {
   display: none;
 }
 
-/* line 811, sass/partials/_nav.scss */
+/* line 811, sass/partials/_menu.animation.scss */
 .no-js .dl-menuwrapper li > a:not(:only-child) {
   background: rgba(0, 0, 0, 0.1);
 }
 
-/* line 815, sass/partials/_nav.scss */
+/* line 815, sass/partials/_menu.animation.scss */
 .no-js .dl-menuwrapper li > a:not(:only-child):after {
   content: '';
 }
 
 /* Colors for demos */
 /* Demo 1 */
-/* line 822, sass/partials/_nav.scss */
+/* line 822, sass/partials/_menu.animation.scss */
 .demo-1 .dl-menuwrapper button {
   background: #c62860;
 }
 
-/* line 828, sass/partials/_nav.scss */
+/* line 828, sass/partials/_menu.animation.scss */
 .demo-1 .dl-menuwrapper button:hover,
 .demo-1 .dl-menuwrapper button.dl-active,
 .demo-1 .dl-menuwrapper ul {
@@ -2421,12 +2421,12 @@ All this is done for any sub-level being entered.
 }
 
 /* Demo 2 */
-/* line 833, sass/partials/_nav.scss */
+/* line 833, sass/partials/_menu.animation.scss */
 .demo-2 .dl-menuwrapper button {
   background: #e86814;
 }
 
-/* line 839, sass/partials/_nav.scss */
+/* line 839, sass/partials/_menu.animation.scss */
 .demo-2 .dl-menuwrapper button:hover,
 .demo-2 .dl-menuwrapper button.dl-active,
 .demo-2 .dl-menuwrapper ul {
@@ -2434,12 +2434,12 @@ All this is done for any sub-level being entered.
 }
 
 /* Demo 3 */
-/* line 844, sass/partials/_nav.scss */
+/* line 844, sass/partials/_menu.animation.scss */
 .demo-3 .dl-menuwrapper button {
   background: #08cbc4;
 }
 
-/* line 850, sass/partials/_nav.scss */
+/* line 850, sass/partials/_menu.animation.scss */
 .demo-3 .dl-menuwrapper button:hover,
 .demo-3 .dl-menuwrapper button.dl-active,
 .demo-3 .dl-menuwrapper ul {
@@ -2447,12 +2447,12 @@ All this is done for any sub-level being entered.
 }
 
 /* Demo 4 */
-/* line 855, sass/partials/_nav.scss */
+/* line 855, sass/partials/_menu.animation.scss */
 .demo-4 .dl-menuwrapper button {
   background: #90b912;
 }
 
-/* line 861, sass/partials/_nav.scss */
+/* line 861, sass/partials/_menu.animation.scss */
 .demo-4 .dl-menuwrapper button:hover,
 .demo-4 .dl-menuwrapper button.dl-active,
 .demo-4 .dl-menuwrapper ul {
@@ -2460,24 +2460,16 @@ All this is done for any sub-level being entered.
 }
 
 /* Demo 5 */
-/* line 866, sass/partials/_nav.scss */
+/* line 866, sass/partials/_menu.animation.scss */
 .demo-5 .dl-menuwrapper button {
   background: #744783;
 }
 
-/* line 872, sass/partials/_nav.scss */
+/* line 872, sass/partials/_menu.animation.scss */
 .demo-5 .dl-menuwrapper button:hover,
 .demo-5 .dl-menuwrapper button.dl-active,
 .demo-5 .dl-menuwrapper ul {
   background: #643771;
-}
-
-@font-face {
-  font-family: 'icomoon';
-  src: url("../fonts/icomoon.eot");
-  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
-  font-weight: normal;
-  font-style: normal;
 }
 
 @font-face {
@@ -2505,6 +2497,14 @@ All this is done for any sub-level being entered.
   font-family: Satisfy;
   src: local("Satisfy"), url(http://themes.googleusercontent.com/static/fonts/satisfy/v3/swgYNTW5Q6X61bBH6SDBsg.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/satisfy/v3/ch7X2unYkww0EzsjlC3m8w.woff) format("woff");
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot");
+  src: url("../fonts/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon.woff") format("woff"), url("../fonts/icomoon.ttf") format("truetype"), url("../fonts/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
   font-style: normal;
 }
 
@@ -2799,30 +2799,35 @@ nav.dl-menuwrapper {
    Page/Section Layout
    ========================================================================== */
 /* line 5, sass/partials/mobile/_content.scss */
-body {
-  position: relative;
-  z-index: 0;
-}
-
-/* line 10, sass/partials/mobile/_content.scss */
-.page #container {
-  height: 100%;
-}
-
-/* line 14, sass/partials/mobile/_content.scss */
-.page .content-wrapper {
-  /*border:1px dashed red; for development only - borderline*/
-  padding: 0 5px;
+.page #container, .page .content-wrapper {
+  /* -- Big Background Image --*/
+  background: rgba(0, 0, 0, 0.3) url(../../images/cover-sample.jpg) no-repeat top left fixed;
+  background-size: 120%;
   height: 100%;
 }
 
 /* =============================================================================
    Featured Sections
    ========================================================================== */
-/* line 28, sass/partials/mobile/_content.scss */
+/* line 18, sass/partials/mobile/_content.scss */
+.featured {
+  min-height: 330px;
+  overflow: hidden;
+  font-weight: 400;
+  color: white;
+  text-shadow: 0px 1px 2px #000;
+}
+
+/* line 27, sass/partials/mobile/_content.scss */
 .featured .wrapper {
+  padding: 0 15px;
   position: relative;
   height: 100%;
+}
+
+/* line 37, sass/partials/mobile/_content.scss */
+.featured nav {
+  margin: 20px 0;
 }
 
 /* features 
@@ -2831,44 +2836,74 @@ section.feature {
     border: 1px solid #ccc;
     padding: 10px;
     display: block;
+    width: 100%;
     height: 40px;
 }*/
 /* =============================================================================
    Main-Content Section
    ========================================================================== */
-/* line 53, sass/partials/mobile/_content.scss */
+/* line 56, sass/partials/mobile/_content.scss */
 .main-content {
   background: url("../../Images/mcarrows.png") repeat-y;
-  position: relative;
+  position: relative !important;
+}
+
+/* line 61, sass/partials/mobile/_content.scss */
+.main-content section {
+  border: 2px dashed red;
+  /*--for development only--*/
+}
+
+/* line 63, sass/partials/mobile/_content.scss */
+.main-content .index {
+  background: white;
+}
+
+/* line 65, sass/partials/mobile/_content.scss */
+.main-content .index .wrapper {
+  padding: 0 5px;
+}
+
+/* line 67, sass/partials/mobile/_content.scss */
+.main-content .section {
+  background: white;
+}
+
+/* line 69, sass/partials/mobile/_content.scss */
+.main-content .section .wrapper {
+  padding: 0 5px;
 }
 
 /* =============================================================================
    Section Navigation
    ========================================================================== */
-/* line 66, sass/partials/mobile/_content.scss */
+/* line 76, sass/partials/mobile/_content.scss */
 .featured nav {
-  margin: 11px 0;
+  overflow: hidden;
+  position: static;
+  text-align: left;
 }
 
-/* line 70, sass/partials/mobile/_content.scss */
+/* line 82, sass/partials/mobile/_content.scss */
 .featured nav a {
-  background: #ffcc00;
-  margin: 0 3px;
-  padding: 2px 5px;
-  line-height: 1.9em;
-  font-size: 1.1em;
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline;
+  line-height: 1.3em;
+  font-size: 1.4em;
 }
 
 /* =============================================================================
    Persistent Content Headers
    ========================================================================== */
-/* line 83, sass/partials/mobile/_content.scss */
+/* line 96, sass/partials/mobile/_content.scss */
 .persist-header {
   /*-settings for both-*/
   max-width: 100%;
 }
 
-/* line 87, sass/partials/mobile/_content.scss */
+/* line 100, sass/partials/mobile/_content.scss */
 .floatingHeader {
   background: rgba(0, 0, 0, 0.6);
   /*-using different settings-*/
@@ -2878,13 +2913,13 @@ section.feature {
   top: 0;
 }
 
-/* line 95, sass/partials/mobile/_content.scss */
+/* line 108, sass/partials/mobile/_content.scss */
 .persist-header h1 {
   margin: 0;
   width: 99.4%;
 }
 
-/* line 100, sass/partials/mobile/_content.scss */
+/* line 113, sass/partials/mobile/_content.scss */
 .persist-header ul.nav {
   margin: 0;
   padding: 0;
@@ -2893,22 +2928,22 @@ section.feature {
   text-align: right;
 }
 
-/* line 107, sass/partials/mobile/_content.scss */
+/* line 120, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li, ul.nav li {
   display: inline;
 }
 
-/* line 111, sass/partials/mobile/_content.scss */
+/* line 124, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li:first-child {
   float: left;
 }
 
-/* line 115, sass/partials/mobile/_content.scss */
+/* line 128, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li:last-child {
   padding-left: 15px;
 }
 
-/* line 119, sass/partials/mobile/_content.scss */
+/* line 132, sass/partials/mobile/_content.scss */
 .persist-header ul.nav li a {
   color: #cc9900;
   margin: 0 5px;
@@ -3002,20 +3037,17 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Navigation Menu - Discovery
      ========================================================================== */
-  /* wrapper */
+  /* nav */
   /* line 6, sass/partials/tablet/new/_nav.scss */
   nav.dl-menuwrapper {
-    border: 1px dashed red;
-    /*for development only - borderline*/
-    margin: 9px 0 9px;
+    background: none;
+    padding: 9px 0 9px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 1px;
     color: #ccc;
-    background-image: none;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    width: 60%;
     position: relative;
     perspective: 1000px;
     -webkit-perspective: 1000px;
@@ -3027,13 +3059,13 @@ footer .wrapper > ul > li ul li a {
     /* no shadow */
   }
 
-  /* line 27, sass/partials/tablet/new/_nav.scss */
+  /* line 24, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
   }
 
   /* home button */
-  /* line 32, sass/partials/tablet/new/_nav.scss */
+  /* line 29, sass/partials/tablet/new/_nav.scss */
   #dl-home {
     border: 1px solid #ddd;
     border-right: none;
@@ -3050,13 +3082,13 @@ footer .wrapper > ul > li ul li a {
     float: left;
   }
 
-  /* line 46, sass/partials/tablet/new/_nav.scss */
+  /* line 43, sass/partials/tablet/new/_nav.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 51, sass/partials/tablet/new/_nav.scss */
+  /* line 48, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
@@ -3079,7 +3111,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* discover icon = */
-  /* line 70, sass/partials/tablet/new/_nav.scss */
+  /* line 67, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper button:after {
     content: '';
     width: 20%;
@@ -3093,13 +3125,13 @@ footer .wrapper > ul > li ul li a {
     box-shadow: 0 10px 0 #555555, 0 20px 0 #555555;
   }
 
-  /* line 85, sass/partials/tablet/new/_nav.scss */
+  /* line 82, sass/partials/tablet/new/_nav.scss */
   .dl-home {
     background: url(../../images/icon-home-m.png) no-repeat;
     background-position: 5px 0px;
   }
 
-  /* line 91, sass/partials/tablet/new/_nav.scss */
+  /* line 88, sass/partials/tablet/new/_nav.scss */
   .dl-home,
   .dl-trigger {
     width: 50px;
@@ -3107,7 +3139,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* search */
-  /* line 97, sass/partials/tablet/new/_nav.scss */
+  /* line 94, sass/partials/tablet/new/_nav.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -3120,7 +3152,7 @@ footer .wrapper > ul > li ul li a {
     float: left;
   }
 
-  /* line 107, sass/partials/tablet/new/_nav.scss */
+  /* line 104, sass/partials/tablet/new/_nav.scss */
   .dl-searchbutton {
     border: 1px solid #eee;
     border-left: none;
@@ -3130,7 +3162,7 @@ footer .wrapper > ul > li ul li a {
     width: 50px;
   }
 
-  /* line 116, sass/partials/tablet/new/_nav.scss */
+  /* line 113, sass/partials/tablet/new/_nav.scss */
   .dl-searchfield {
     background: #fff;
     border: 1px solid #eee;
@@ -3148,13 +3180,13 @@ footer .wrapper > ul > li ul li a {
 
   /* submenus */
   /* menu ul only */
-  /* line 134, sass/partials/tablet/new/_nav.scss */
+  /* line 131, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 137, sass/partials/tablet/new/_nav.scss */
+  /* line 134, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -3169,14 +3201,14 @@ footer .wrapper > ul > li ul li a {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 150, sass/partials/tablet/new/_nav.scss */
+  /* line 147, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 155, sass/partials/tablet/new/_nav.scss */
+  /* line 152, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -3186,7 +3218,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* all uls */
-  /* line 164, sass/partials/tablet/new/_nav.scss */
+  /* line 161, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -3197,12 +3229,12 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* menu li */
-  /* line 174, sass/partials/tablet/new/_nav.scss */
+  /* line 171, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 177, sass/partials/tablet/new/_nav.scss */
+  /* line 174, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -3210,13 +3242,13 @@ footer .wrapper > ul > li ul li a {
     outline: none;
   }
 
-  /* line 183, sass/partials/tablet/new/_nav.scss */
+  /* line 180, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 187, sass/partials/tablet/new/_nav.scss */
+  /* line 184, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -3225,7 +3257,7 @@ footer .wrapper > ul > li ul li a {
     color: white;
   }
 
-  /* line 193, sass/partials/tablet/new/_nav.scss */
+  /* line 190, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -3234,7 +3266,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* li arrows */
-  /* line 201, sass/partials/tablet/new/_nav.scss */
+  /* line 198, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -3248,7 +3280,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* desktop - menu theme */
-  /* line 215, sass/partials/tablet/new/_nav.scss */
+  /* line 212, sass/partials/tablet/new/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -3257,7 +3289,7 @@ footer .wrapper > ul > li ul li a {
     /* li:hover color*/
   }
 
-  /* line 220, sass/partials/tablet/new/_nav.scss */
+  /* line 217, sass/partials/tablet/new/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -3268,43 +3300,34 @@ footer .wrapper > ul > li ul li a {
      Page/Section Layout
      ========================================================================== */
   /* line 5, sass/partials/tablet/new/_content.scss */
-  .page #container {
-    background: #FFF;
-    /* -- Big Background Image 
-    background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    --*/
-    /* -- Big Background Image 
-    background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-    --*/
-    height: 100%;
-  }
-
-  /* line 23, sass/partials/tablet/new/_content.scss */
-  .page .content-wrapper {
+  .page #container, .page .content-wrapper {
+    /* -- Big Background Image --*/
+    background: rgba(0, 0, 0, 0.3) url(../../images/cover-sample.jpg) no-repeat top left fixed;
+    background-size: contain;
     height: 100%;
   }
 
   /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 31, sass/partials/tablet/new/_content.scss */
+  /* line 18, sass/partials/tablet/new/_content.scss */
   .featured {
-    background: none;
-    width: 340px;
-    display: block;
-    float: left;
+    min-height: 830px;
     overflow: hidden;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 1px 2px #000;
   }
 
-  /* line 39, sass/partials/tablet/new/_content.scss */
+  /* line 27, sass/partials/tablet/new/_content.scss */
   .featured .wrapper {
-    height: 100%;
+    padding: 0 15px;
+    position: relative;
+  }
+
+  /* line 36, sass/partials/tablet/new/_content.scss */
+  .featured nav {
+    margin: 20px 0;
   }
 
   /* features 
@@ -3319,46 +3342,49 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Main-Content Section
      ========================================================================== */
-  /* line 64, sass/partials/tablet/new/_content.scss */
-  .featured + .main-content {
-    /*display background if both classes are present on page*/
+  /* line 55, sass/partials/tablet/new/_content.scss */
+  .main-content {
     background: url("../../Images/mcarrows.png") repeat-y right;
+    position: relative !important;
+  }
+
+  /* line 60, sass/partials/tablet/new/_content.scss */
+  .main-content section {
+    border: 2px dashed red;
+    /*--for development only--*/
+  }
+
+  /* line 62, sass/partials/tablet/new/_content.scss */
+  .main-content .index {
+    background: white;
+  }
+
+  /* line 64, sass/partials/tablet/new/_content.scss */
+  .main-content .index .wrapper {
+    padding: 0 5px;
+  }
+
+  /* line 66, sass/partials/tablet/new/_content.scss */
+  .main-content .section {
+    background: white;
   }
 
   /* line 68, sass/partials/tablet/new/_content.scss */
-  .main-content {
-    /*background: url("../../Images/accent.png") no-repeat; */
-    background: none;
-    overflow: hidden;
+  .main-content .section .wrapper {
+    padding: 0 5px;
   }
 
-  /* line 78, sass/partials/tablet/new/_content.scss */
-  .main-content section {
-    display: block;
-    float: left;
-    margin-left: 2%;
-  }
-
-  /* features 
-  section.feature {
-      float: left;
-      border: 1px solid #ccc;
-      padding: 10px;
-      display: block;
-      width: 100%;
-      height: 40px;
-  }*/
   /* =============================================================================
      Section Navigation
      ========================================================================== */
-  /* line 102, sass/partials/tablet/new/_content.scss */
+  /* line 75, sass/partials/tablet/new/_content.scss */
   .featured nav {
     overflow: hidden;
     position: static;
     text-align: left;
   }
 
-  /* line 108, sass/partials/tablet/new/_content.scss */
+  /* line 81, sass/partials/tablet/new/_content.scss */
   .featured nav a {
     border: none;
     background: none;
@@ -3371,7 +3397,7 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 122, sass/partials/tablet/new/_content.scss */
+  /* line 95, sass/partials/tablet/new/_content.scss */
   .persist-header {
     /*-settings for both-*/
     padding-top: 10px;
@@ -3379,7 +3405,7 @@ footer .wrapper > ul > li ul li a {
     max-width: 100%;
   }
 
-  /* line 128, sass/partials/tablet/new/_content.scss */
+  /* line 101, sass/partials/tablet/new/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3388,18 +3414,18 @@ footer .wrapper > ul > li ul li a {
     top: 0;
   }
 
-  /* line 135, sass/partials/tablet/new/_content.scss */
+  /* line 108, sass/partials/tablet/new/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 140, sass/partials/tablet/new/_content.scss */
+  /* line 113, sass/partials/tablet/new/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 144, sass/partials/tablet/new/_content.scss */
+  /* line 117, sass/partials/tablet/new/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
@@ -3587,26 +3613,24 @@ footer .wrapper > ul > li ul li a {
 @media only screen and (min-width: 1025px) {
   /* line 73, sass/site.scss */
   body {
-    color: grey;
+    color: #333;
   }
 
   /* =============================================================================
      Navigation Menu - Discovery
      ========================================================================== */
-  /* wrapper */
+  /* nav */
   /* line 6, sass/partials/desktop/_nav.scss */
   nav.dl-menuwrapper {
-    border: 1px dashed red;
-    /*for development only - borderline*/
-    margin: 9px 0 9px;
+    background: url(../../images/header-bg.png) repeat-x;
+    margin-bottom: 20px;
+    padding: 9px 0 9px;
+    font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
     line-height: 20px;
     letter-spacing: 1px;
     color: #ccc;
-    background-image: none;
-    font-family: 'Lato', Calibri, Arial, sans-serif;
-    width: 60%;
     position: relative;
     perspective: 1000px;
     -webkit-perspective: 1000px;
@@ -3614,17 +3638,18 @@ footer .wrapper > ul > li ul li a {
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
-    box-shadow: none;
-    /* no shadow */
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
   }
 
-  /* line 27, sass/partials/desktop/_nav.scss */
+  /* line 25, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
+    border: 1px solid blue;
   }
 
   /* home button */
-  /* line 32, sass/partials/desktop/_nav.scss */
+  /* line 31, sass/partials/desktop/_nav.scss */
   #dl-home {
     border: 1px solid #ddd;
     border-right: none;
@@ -3641,13 +3666,13 @@ footer .wrapper > ul > li ul li a {
     float: left;
   }
 
-  /* line 46, sass/partials/desktop/_nav.scss */
+  /* line 45, sass/partials/desktop/_nav.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 51, sass/partials/desktop/_nav.scss */
+  /* line 50, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
@@ -3670,7 +3695,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* discover icon = */
-  /* line 70, sass/partials/desktop/_nav.scss */
+  /* line 69, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:after {
     content: '';
     width: 20%;
@@ -3684,13 +3709,13 @@ footer .wrapper > ul > li ul li a {
     box-shadow: 0 10px 0 #555555, 0 20px 0 #555555;
   }
 
-  /* line 85, sass/partials/desktop/_nav.scss */
+  /* line 84, sass/partials/desktop/_nav.scss */
   .dl-home {
     background: url(../../images/icon-home-m.png) no-repeat;
     background-position: 5px 0px;
   }
 
-  /* line 91, sass/partials/desktop/_nav.scss */
+  /* line 90, sass/partials/desktop/_nav.scss */
   .dl-home,
   .dl-trigger {
     width: 50px;
@@ -3698,7 +3723,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* search */
-  /* line 97, sass/partials/desktop/_nav.scss */
+  /* line 96, sass/partials/desktop/_nav.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -3711,7 +3736,7 @@ footer .wrapper > ul > li ul li a {
     float: left;
   }
 
-  /* line 107, sass/partials/desktop/_nav.scss */
+  /* line 106, sass/partials/desktop/_nav.scss */
   .dl-searchbutton {
     border: 1px solid #eee;
     border-left: none;
@@ -3721,7 +3746,7 @@ footer .wrapper > ul > li ul li a {
     width: 50px;
   }
 
-  /* line 116, sass/partials/desktop/_nav.scss */
+  /* line 115, sass/partials/desktop/_nav.scss */
   .dl-searchfield {
     background: #fff;
     border: 1px solid #eee;
@@ -3739,13 +3764,13 @@ footer .wrapper > ul > li ul li a {
 
   /* submenus */
   /* menu ul only */
-  /* line 134, sass/partials/desktop/_nav.scss */
+  /* line 133, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 137, sass/partials/desktop/_nav.scss */
+  /* line 136, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -3760,14 +3785,14 @@ footer .wrapper > ul > li ul li a {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 150, sass/partials/desktop/_nav.scss */
+  /* line 149, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 155, sass/partials/desktop/_nav.scss */
+  /* line 154, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -3777,7 +3802,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* all uls */
-  /* line 164, sass/partials/desktop/_nav.scss */
+  /* line 163, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -3788,12 +3813,12 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* menu li */
-  /* line 174, sass/partials/desktop/_nav.scss */
+  /* line 173, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 177, sass/partials/desktop/_nav.scss */
+  /* line 176, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -3801,13 +3826,13 @@ footer .wrapper > ul > li ul li a {
     outline: none;
   }
 
-  /* line 183, sass/partials/desktop/_nav.scss */
+  /* line 182, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 187, sass/partials/desktop/_nav.scss */
+  /* line 186, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -3816,7 +3841,7 @@ footer .wrapper > ul > li ul li a {
     color: white;
   }
 
-  /* line 193, sass/partials/desktop/_nav.scss */
+  /* line 192, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -3825,7 +3850,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* li arrows */
-  /* line 201, sass/partials/desktop/_nav.scss */
+  /* line 200, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -3839,7 +3864,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* desktop - menu theme */
-  /* line 215, sass/partials/desktop/_nav.scss */
+  /* line 214, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -3848,7 +3873,7 @@ footer .wrapper > ul > li ul li a {
     /* li:hover color*/
   }
 
-  /* line 220, sass/partials/desktop/_nav.scss */
+  /* line 219, sass/partials/desktop/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -3859,45 +3884,54 @@ footer .wrapper > ul > li ul li a {
      Page/Section Layout
      ========================================================================== */
   /* line 5, sass/partials/desktop/_content.scss */
-  .page #container {
-    background: #FFF;
-    /* -- Big Background Image 
-    background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    --*/
-    /* -- Big Background Image 
-    background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+  .page #container, .page .content-wrapper {
+    /* -- Big Background Image --*/
+    background: rgba(0, 0, 0, 0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-    --*/
     height: 100%;
   }
 
-  /* line 23, sass/partials/desktop/_content.scss */
-  .page .content-wrapper {
-    height: 100%;
-    min-width: 1000px;
-    max-width: 1280px;
-  }
-
+  /* -- Big Background Images ----------------------
+   
+  background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+      
+  
+  background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+  
+  }--*/
   /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 33, sass/partials/desktop/_content.scss */
+  /* line 36, sass/partials/desktop/_content.scss */
   .featured {
-    background: none;
-    width: 340px;
+    width: 384px;
+    min-height: 500px;
     display: block;
     float: left;
     overflow: hidden;
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 1px 2px #000;
   }
 
-  /* line 41, sass/partials/desktop/_content.scss */
+  /* line 48, sass/partials/desktop/_content.scss */
   .featured .wrapper {
+    padding: 0 15px;
+    position: relative;
     height: 100%;
+  }
+
+  /* line 58, sass/partials/desktop/_content.scss */
+  .featured nav {
+    margin: 20px 0;
   }
 
   /* features 
@@ -3912,49 +3946,59 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Main-Content Section
      ========================================================================== */
-  /* line 66, sass/partials/desktop/_content.scss */
+  /* line 77, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
     background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 70, sass/partials/desktop/_content.scss */
+  /* line 81, sass/partials/desktop/_content.scss */
   .main-content {
-    /*background: url("../../Images/accent.png") no-repeat; */
     background: none;
-    overflow: hidden;
+    position: relative !important;
+    overflow: hidden !important;
   }
 
-  /* line 80, sass/partials/desktop/_content.scss */
+  /* line 87, sass/partials/desktop/_content.scss */
   .main-content section {
-    /**/
-    width: 80%;
+    /*margin-left:10%;*/
+    /*width: 80%;*/
+    max-width: 1240px;
     display: block;
     float: left;
-    /**/
-    margin-left: 15%;
   }
 
-  /* features 
-  section.feature {
-      float: left;
-      border: 1px solid #ccc;
-      padding: 10px;
-      display: block;
-      width: 100%;
-      height: 40px;
-  }*/
+  /* line 95, sass/partials/desktop/_content.scss */
+  .main-content .index {
+    background: none;
+  }
+
+  /* line 97, sass/partials/desktop/_content.scss */
+  .main-content .index .wrapper {
+    padding: 0 5px;
+  }
+
+  /* line 99, sass/partials/desktop/_content.scss */
+  .main-content .section {
+    background: white;
+  }
+
+  /* line 101, sass/partials/desktop/_content.scss */
+  .main-content .section .wrapper {
+    padding: 0 5px;
+  }
+
   /* =============================================================================
      Section Navigation
      ========================================================================== */
-  /* line 105, sass/partials/desktop/_content.scss */
+  /* line 108, sass/partials/desktop/_content.scss */
   .featured nav {
     overflow: hidden;
     position: static;
     text-align: left;
   }
 
-  /* line 111, sass/partials/desktop/_content.scss */
+  /* line 114, sass/partials/desktop/_content.scss */
   .featured nav a {
     border: none;
     background: none;
@@ -3967,7 +4011,7 @@ footer .wrapper > ul > li ul li a {
   /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 125, sass/partials/desktop/_content.scss */
+  /* line 128, sass/partials/desktop/_content.scss */
   .persist-header {
     /*-settings for both-*/
     padding-top: 10px;
@@ -3975,7 +4019,7 @@ footer .wrapper > ul > li ul li a {
     max-width: 100%;
   }
 
-  /* line 131, sass/partials/desktop/_content.scss */
+  /* line 134, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3984,18 +4028,18 @@ footer .wrapper > ul > li ul li a {
     top: 0;
   }
 
-  /* line 138, sass/partials/desktop/_content.scss */
+  /* line 141, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 143, sass/partials/desktop/_content.scss */
+  /* line 146, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 147, sass/partials/desktop/_content.scss */
+  /* line 150, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
@@ -4036,7 +4080,7 @@ footer .wrapper > ul > li ul li a {
     z-index: 1;
   }
 
-  /* line 15, sass/partials/desktop/_footer.scss */
+  /* line 13, sass/partials/desktop/_footer.scss */
   .page footer {
     height: 400px;
     /* <----- */
@@ -4050,7 +4094,7 @@ footer .wrapper > ul > li ul li a {
 
   /*-------------------------------*/
   /* The columns */
-  /* line 29, sass/partials/desktop/_footer.scss */
+  /* line 27, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul {
     padding-bottom: 150px;
     /* <----- */
@@ -4063,19 +4107,19 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* The four columns of links */
-  /* line 42, sass/partials/desktop/_footer.scss */
+  /* line 40, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li {
     width: 25%;
     float: left;
   }
 
-  /* line 47, sass/partials/desktop/_footer.scss */
+  /* line 45, sass/partials/desktop/_footer.scss */
   footer .wrapper ul {
     list-style: none;
   }
 
   /* The links */
-  /* line 53, sass/partials/desktop/_footer.scss */
+  /* line 51, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li ul li {
     text-transform: uppercase;
     font-weight: bold;
@@ -4085,7 +4129,7 @@ footer .wrapper > ul > li ul li a {
 
   /*-------------------------------*/
   /* The headers */
-  /* line 66, sass/partials/desktop/_footer.scss */
+  /* line 64, sass/partials/desktop/_footer.scss */
   footer .wrapper p {
     width: 90%;
     margin-right: 10%;
@@ -4106,21 +4150,21 @@ footer .wrapper > ul > li ul li a {
     transition: opacity 0.4s;
   }
 
-  /* line 88, sass/partials/desktop/_footer.scss */
+  /* line 86, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li:hover p {
     opacity: 1;
   }
 
   /*-------------------------------*/
   /* The links */
-  /* line 96, sass/partials/desktop/_footer.scss */
+  /* line 94, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li ul li a {
     border: none;
     text-decoration: none !important;
     color: #7d8691 !important;
   }
 
-  /* line 102, sass/partials/desktop/_footer.scss */
+  /* line 100, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li ul li a:hover {
     color: #ddd !important;
   }

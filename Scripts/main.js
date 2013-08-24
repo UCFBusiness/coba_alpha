@@ -57,24 +57,14 @@ require(['dmenu', 'easing'], function () {
         });
 
     if ((width > 480) && (width < 1025)) // load tablet scripts
-        require(['sticky'], function () {
+        require([], function () {
 
             //-- screensize ---------------------
             var msg = width + " x " + height + " - tablet";
             $("#message").html(msg);
             console.log(msg);
 
-            //-- sticky --------------------- 
-            $("#aside").stick_in_parent()
-                .on("sticky_kit:stick", function (e) {
-                    //console.log("has stuck!", e.target);
-                })
-                .on("sticky_kit:unstick", function (e) {
-                    //console.log("has unstuck!", e.target);
-                });
-
-            //-- match content sections height to viewport ----
-            $(".main-content section").css("min-height", height);
+            $('.main-content section').css('min-height', height);
 
         });
 
@@ -94,6 +84,8 @@ require(['dmenu', 'easing'], function () {
                 .on("sticky_kit:unstick", function (e) {
                     //console.log("has unstuck!", e.target);
                 });
+
+            $('section.index').css('min-height', height);
 
         });
 
@@ -119,7 +111,7 @@ require(['dmenu', 'easing'], function () {
             });
 
         if ((width > 480) && (width < 1025)) // load tablet scripts
-            require(['sticky'], function () {
+            require([], function () {
                 //alert(width + " - tablet");
 
                 //-- screensize ---------------------
@@ -127,11 +119,13 @@ require(['dmenu', 'easing'], function () {
             });
 
         if (width > 1024) // load desktop scripts
-            require(['sticky'], function () {
+            require([], function () {
                 //alert(width + " - desktop");
 
                 //-- screensize ---------------------
                 $("#message").html(width + " x " + height + " - desktop");
+
+                $('section.index').css('min-height', height);
             });
     });
 

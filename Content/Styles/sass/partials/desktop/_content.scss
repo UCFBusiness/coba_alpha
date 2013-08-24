@@ -2,43 +2,52 @@
    Page/Section Layout
    ========================================================================== */
 
-.page #container {background: #FFF;
-    /* -- Big Background Image 
-    background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-    --*/
-    
-    /* -- Big Background Image 
+.page #container, .page .content-wrapper {
+
+    /* -- Big Background Image --*/
     background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-    --*/
 
     height: 100%;
 }
 
-.page .content-wrapper {
-    height: 100%;
-    min-width: 1000px;
-    max-width: 1280px;
-}
+
+/* -- Big Background Images ----------------------
+ 
+background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
+background-size: cover;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+    
+
+background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+background-size: cover;
+filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+-ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+
+}--*/
 
 /* =============================================================================
    Featured Section
    ========================================================================== */
 
 .featured {
-    background: none;
-    width: 340px;
+    width: 384px;
+    min-height: 500px;
     display: block;
     float: left;
     overflow: hidden;
+
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 1px 2px #000;
 }
 
 .featured .wrapper {
+    padding: 0 15px;
+    position: relative;
     height: 100%;
 }
 
@@ -46,7 +55,9 @@
             
 .featured hgroup.title h1, .featured hgroup.title h2 {}
 
-.featured p {}
+.featured nav {
+    margin: 20px 0;
+}
 
 /* features 
 section.feature {
@@ -68,34 +79,26 @@ section.feature {
 }
 
 .main-content {
-    /*background: url("../../Images/accent.png") no-repeat; */
     background: none;
-    overflow: hidden; 
+    position: relative !important;
+    overflow: hidden !important; 
 }
-
-.main-content .index {}
-
-.main-content .index .wrapper {}
 
 .main-content section {
-    /**/width: 80%;
+    /*margin-left:10%;*/
+    /*width: 80%;*/
+    max-width: 1240px;
     display: block;
     float:left;
-    /**/margin-left:15%;
 }
 
-.main-content section .wrapper {}
+.main-content .index {background: none;}
 
+.main-content .index .wrapper {padding: 0 5px;}
 
-/* features 
-section.feature {
-    float: left;
-    border: 1px solid #ccc;
-    padding: 10px;
-    display: block;
-    width: 100%;
-    height: 40px;
-}*/
+.main-content .section {background: white;}
+
+.main-content .section .wrapper {padding: 0 5px;}
 
 
 /* =============================================================================

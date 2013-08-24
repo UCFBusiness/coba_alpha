@@ -70,7 +70,7 @@ body{color: blue;}
 
 /* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 1025px) {
-    body{color: grey;}
+    body{color: #333;}
 
     @import "partials/desktop/header";
     @import "partials/desktop/nav";

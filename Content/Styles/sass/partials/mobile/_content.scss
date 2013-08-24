@@ -2,30 +2,30 @@
    Page/Section Layout
    ========================================================================== */
 
-body {
-    position: relative;
-    z-index: 0;
-}
+.page #container, .page .content-wrapper {
 
-.page #container {
+    /* -- Big Background Image --*/
+    background: rgba(0,0,0,0.3) url(../../images/cover-sample.jpg) no-repeat top left fixed;
+    background-size: 120%;
+
     height: 100%;
 }
-
-.page .content-wrapper {     /*border:1px dashed red; for development only - borderline*/
-    padding: 0 5px;
-    height: 100%;
-}
-
 
 /* =============================================================================
    Featured Sections
    ========================================================================== */
 
 .featured {
+    min-height: 330px;
+    overflow: hidden;
 
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 1px 2px #000;
 }
     
 .featured .wrapper {
+    padding: 0 15px;
     position: relative;
     height: 100%;
 }
@@ -34,7 +34,9 @@ body {
             
 .featured hgroup.title h1, .featured hgroup.title h2 {}
 
-.featured p {}
+.featured nav {
+    margin: 20px 0;
+}
 
 /* features 
 section.feature {
@@ -42,6 +44,7 @@ section.feature {
     border: 1px solid #ccc;
     padding: 10px;
     display: block;
+    width: 100%;
     height: 40px;
 }*/
 
@@ -52,27 +55,37 @@ section.feature {
 
 .main-content {
     background: url("../../Images/mcarrows.png") repeat-y;
-    position: relative;
+    position: relative !important;
 }
 
-.main-content .index {}
+.main-content section {border: 2px dashed red; /*--for development only--*/}
 
-.main-content .section {}
+.main-content .index {background: white;}
+
+.main-content .index .wrapper {padding: 0 5px;}
+
+.main-content .section {background: white;}
+
+.main-content .section .wrapper {padding: 0 5px;}
+
 
 /* =============================================================================
    Section Navigation
    ========================================================================== */
 
 .featured nav {
-    margin: 11px 0;
+    overflow: hidden;
+    position: static;
+    text-align: left;
 }
 
 .featured nav a {
-    background: #ffcc00;
-    margin: 0 3px;
-    padding: 2px 5px;
-    line-height: 1.9em;
-    font-size: 1.1em;
+    border:  none;
+    background: none;
+    padding: 0;
+    display: inline;
+    line-height: 1.3em;
+    font-size: 1.4em;
 }
 
 
