@@ -194,7 +194,7 @@ nav.dl-menuwrapper {
     color: rgba(0,0,0,1);
 }
 
-.no-touch .dl-menuwrapper li a:after {
+.no-touch .dl-menuwrapper > li a:after {
 	background: rgba(0,0,0,1); 
     color: rgba(170,170,170,1);
 }

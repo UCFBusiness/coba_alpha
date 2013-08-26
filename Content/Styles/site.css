@@ -2790,7 +2790,7 @@ nav.dl-menuwrapper {
 }
 
 /* line 197, sass/partials/mobile/_nav.scss */
-.no-touch .dl-menuwrapper li a:after {
+.no-touch .dl-menuwrapper > li a:after {
   background: black;
   color: #aaaaaa;
 }
@@ -3623,6 +3623,7 @@ footer .wrapper > ul > li ul li a {
   /* line 6, sass/partials/desktop/_nav.scss */
   nav.dl-menuwrapper {
     background: url(../../images/header-bg.png) repeat-x;
+    border-bottom: 1px solid #bbb;
     margin-bottom: 20px;
     padding: 9px 0 9px;
     font-family: 'Lato', Calibri, Arial, sans-serif;
@@ -3642,14 +3643,14 @@ footer .wrapper > ul > li ul li a {
     /* shadow */
   }
 
-  /* line 25, sass/partials/desktop/_nav.scss */
+  /* line 26, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper:first-child {
     margin-right: 100px;
     border: 1px solid blue;
   }
 
   /* home button */
-  /* line 31, sass/partials/desktop/_nav.scss */
+  /* line 32, sass/partials/desktop/_nav.scss */
   #dl-home {
     border: 1px solid #ddd;
     border-right: none;
@@ -3666,13 +3667,13 @@ footer .wrapper > ul > li ul li a {
     float: left;
   }
 
-  /* line 45, sass/partials/desktop/_nav.scss */
+  /* line 46, sass/partials/desktop/_nav.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 50, sass/partials/desktop/_nav.scss */
+  /* line 51, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
@@ -3695,7 +3696,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* discover icon = */
-  /* line 69, sass/partials/desktop/_nav.scss */
+  /* line 70, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:after {
     content: '';
     width: 20%;
@@ -3709,13 +3710,13 @@ footer .wrapper > ul > li ul li a {
     box-shadow: 0 10px 0 #555555, 0 20px 0 #555555;
   }
 
-  /* line 84, sass/partials/desktop/_nav.scss */
+  /* line 85, sass/partials/desktop/_nav.scss */
   .dl-home {
     background: url(../../images/icon-home-m.png) no-repeat;
     background-position: 5px 0px;
   }
 
-  /* line 90, sass/partials/desktop/_nav.scss */
+  /* line 91, sass/partials/desktop/_nav.scss */
   .dl-home,
   .dl-trigger {
     width: 50px;
@@ -3723,7 +3724,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* search */
-  /* line 96, sass/partials/desktop/_nav.scss */
+  /* line 97, sass/partials/desktop/_nav.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -3736,7 +3737,7 @@ footer .wrapper > ul > li ul li a {
     float: left;
   }
 
-  /* line 106, sass/partials/desktop/_nav.scss */
+  /* line 107, sass/partials/desktop/_nav.scss */
   .dl-searchbutton {
     border: 1px solid #eee;
     border-left: none;
@@ -3746,7 +3747,7 @@ footer .wrapper > ul > li ul li a {
     width: 50px;
   }
 
-  /* line 115, sass/partials/desktop/_nav.scss */
+  /* line 116, sass/partials/desktop/_nav.scss */
   .dl-searchfield {
     background: #fff;
     border: 1px solid #eee;
@@ -3764,13 +3765,13 @@ footer .wrapper > ul > li ul li a {
 
   /* submenus */
   /* menu ul only */
-  /* line 133, sass/partials/desktop/_nav.scss */
+  /* line 134, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 136, sass/partials/desktop/_nav.scss */
+  /* line 137, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     margin: 35px 0 0 57px;
     position: absolute;
@@ -3785,14 +3786,14 @@ footer .wrapper > ul > li ul li a {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 149, sass/partials/desktop/_nav.scss */
+  /* line 150, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 154, sass/partials/desktop/_nav.scss */
+  /* line 155, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -3802,7 +3803,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* all uls */
-  /* line 163, sass/partials/desktop/_nav.scss */
+  /* line 164, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper ul {
     max-width: 330px;
     list-style: none;
@@ -3813,12 +3814,12 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* menu li */
-  /* line 173, sass/partials/desktop/_nav.scss */
+  /* line 174, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
   }
 
-  /* line 176, sass/partials/desktop/_nav.scss */
+  /* line 177, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -3826,13 +3827,13 @@ footer .wrapper > ul > li ul li a {
     outline: none;
   }
 
-  /* line 182, sass/partials/desktop/_nav.scss */
+  /* line 183, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
   /* back li */
-  /* line 186, sass/partials/desktop/_nav.scss */
+  /* line 187, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -3841,7 +3842,7 @@ footer .wrapper > ul > li ul li a {
     color: white;
   }
 
-  /* line 192, sass/partials/desktop/_nav.scss */
+  /* line 193, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -3850,7 +3851,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* li arrows */
-  /* line 200, sass/partials/desktop/_nav.scss */
+  /* line 201, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -3864,7 +3865,7 @@ footer .wrapper > ul > li ul li a {
   }
 
   /* desktop - menu theme */
-  /* line 214, sass/partials/desktop/_nav.scss */
+  /* line 215, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper ul, .dl-menuwrapper li a {
@@ -3873,7 +3874,7 @@ footer .wrapper > ul > li ul li a {
     /* li:hover color*/
   }
 
-  /* line 219, sass/partials/desktop/_nav.scss */
+  /* line 220, sass/partials/desktop/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
