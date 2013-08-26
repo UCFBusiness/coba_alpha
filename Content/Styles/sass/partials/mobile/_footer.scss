@@ -1,13 +1,6 @@
-body {
-    /* Create a page-wide stacking context 
-    (so that negative margins work as you expect) */
-    position: relative;
-}
-
-.page .content-wrapper {
-    position:relative;
-
-}
+/* =============================================================================
+   Footer/Section Layout
+   ========================================================================== */
 
 .page footer {
     border:1px dashed red; /*for development only - borderline*/

@@ -24,7 +24,7 @@ require(['dmenu', 'easing'], function () {
 
 
     //-- navigation menu -----------------------
-    $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-3', classout: 'dl-animate-out-3'} });
+    $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-4', classout: 'dl-animate-out-4'} });
     //$('nav#main_menu').mmenu();
 
     //-- easing -----------------------
