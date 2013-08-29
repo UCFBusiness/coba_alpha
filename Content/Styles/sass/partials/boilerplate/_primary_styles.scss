@@ -4,24 +4,31 @@ $blue-gray: #C7D1D6;
 $light-gray: #E2E2E2;
 $light-blue: #A6DBED;
 
-html {
-    background: white;
+html, body {
+    height: 100%;
 }
 
-/*remove if not used. - locks desktop screen and removes scrollbars*/
+.no-js {}
+
+/*remove if not used. - locks desktop screen and removes scrollbars
 .js {
     overflow: hidden;
-}
+}*/
 
-body {
-    background: white;
+.page {
+    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
     font-size: 1em;
     line-height:1.4em;
     /* Create a page-wide stacking context 
     (so that negative margins work as you expect) */
     position: relative;
     z-index: 0;
-    height: 100%;
+}
+
+.page .container {
+    background: white;
+    position:relative;
+    z-index:1;
 }
 
 h1, h2 {line-height: 1.1em;}

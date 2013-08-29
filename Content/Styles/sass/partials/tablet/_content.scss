@@ -2,34 +2,49 @@
    Page/Section Layout
    ========================================================================== */
 
-.page #container {
-    height: 100%;
+/*remove if not used. - locks desktop screen and removes scrollbars*/
+.js {
+    overflow: hidden;
 }
 
-.page .content-wrapper {
-    padding: 0 5px;
-    height: 100%;
-}
 
+.page #container, .page .content-wrapper {
+
+    /* -- Big Background Image 
+    background: rgba(0,0,0,0.3) url(../../images/cover-sample.jpg) no-repeat top left fixed;
+    background-size: cover;--*/
+
+}
 
 /* =============================================================================
    Featured Section
    ========================================================================== */
-   
+
 .featured {
-    background: none;
+    min-height: 830px;
+    overflow: hidden;
+
+    font-weight: 400;
+    color: white;
+    text-shadow: 0px 1px 2px #000;
 }
-    
+
 .featured .wrapper {
+    padding: 0 15px;
     position: relative;
-    height: 100%;
 }
 
 .featured hgroup {}
             
 .featured hgroup.title h1, .featured hgroup.title h2 {}
 
-.featured p {}
+.featured nav {
+    margin: 20px 0;
+}
+
+.featured nav a {
+    text-decoration: none;
+}
 
 /* features 
 section.feature {
@@ -46,37 +61,39 @@ section.feature {
    Main-Content Section
    ========================================================================== */
 
-.index .wrapper {}
-
-.main-content {
-    background: url("../../Images/mcarrows.png") repeat-y right;
-    position: relative;
+.main-content { /*display background if both classes are present on page
+    background: url("../../Images/mcarrows.png") repeat-y right;*/
+    position: relative !important;
 }
-
-.main-content .index {}
-
-.main-content .index .wrapper {}
 
 .main-content section {}
 
-.main-content section .wrapper {}
+.main-content .index {}
+
+.main-content .index .wrapper {padding: 0 5px;}
+
+.main-content .section {}
+
+.main-content .section .wrapper {padding: 0 5px;}
 
 
 /* =============================================================================
    Section Navigation
    ========================================================================== */
 
-.featured nav {}
-            
+.featured nav {
+    overflow: hidden;
+    position: static;
+    text-align: left;
+}
+
 .featured nav a {
-    background: #ffcc00;
-    margin: 3px 3px;
-    padding: 2px 5px;
-    line-height: 1.9em;
-    font-size: 1.1em;
-    
-    display: inline-block;
-    min-width: 100px;
+    border:  none;
+    background: none;
+    padding: 0;
+    display: inline;
+    line-height: 1.3em;
+    font-size: 1.4em;
 }
 
 
@@ -109,3 +126,30 @@ section.feature {
 .persist-header ul.nav li:last-child {
     padding-left: 20px;
 }
+
+
+
+
+
+/* homepage content 
+----------------------------------------------------------
+article {
+    float: left;
+    width: 70%;
+}
+
+aside {
+    float: right;
+    width: 25%;
+}
+
+    aside ul {
+        list-style: none;
+        padding: 0;
+    }
+
+        aside ul li {
+            background: url("../../Images/bullet.png") no-repeat 0 50%;
+            padding: 2px 0 2px 20px;
+        }
+*/

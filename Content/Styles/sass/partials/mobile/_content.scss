@@ -4,11 +4,10 @@
 
 .page #container, .page .content-wrapper {
 
-    /* -- Big Background Image --*/
+    /* -- Big Background Image 
     background: rgba(0,0,0,0.3) url(../../images/cover-sample.jpg) no-repeat top left fixed;
-    background-size: 120%;
-    /**/position:relative;
-    height: 100%;
+    background-size: 120%;--*/
+
 }
 
 /* =============================================================================
@@ -38,6 +37,10 @@
     margin: 20px 0;
 }
 
+.featured nav a {
+    text-decoration: none;
+}
+
 /* features 
 section.feature {
     float: left;
@@ -53,18 +56,18 @@ section.feature {
    Main-Content Section
    ========================================================================== */
 
-.main-content {
-    background: url("../../Images/mcarrows.png") repeat-y;
+.main-content {/*display background if both classes are present on page
+    background: url("../../Images/mcarrows.png") repeat-y right;*/
     position: relative !important;
 }
 
-.main-content section {border: 2px dashed red; /*--for development only--*/}
+.main-content section {}
 
-.main-content .index {background: white;}
+.main-content .index {}
 
 .main-content .index .wrapper {padding: 0 5px;}
 
-.main-content .section {background: white;}
+.main-content .section {}
 
 .main-content .section .wrapper {padding: 0 5px;}
 

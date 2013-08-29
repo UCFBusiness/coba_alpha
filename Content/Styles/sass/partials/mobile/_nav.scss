@@ -12,7 +12,7 @@ nav.dl-menuwrapper {
 	    color-stop(0.73, rgb(78,77,79)),
 	    color-stop(1, rgb(71,71,71))
     );
-    width: 100%;
+
     letter-spacing: 1px;
     position: relative;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
@@ -59,7 +59,7 @@ nav.dl-menuwrapper {
     border-right: 2px solid #333;
 }
 
-/* hide search button - not used on mobile */
+/* hide search button - not used on mobile or tablet */
 .dl-searchbutton {
     visibility: hidden;
     display: none;
@@ -125,6 +125,7 @@ nav.dl-menuwrapper {
 	transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
+    z-index: 1000;
 }
 
 /* li */

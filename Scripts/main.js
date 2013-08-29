@@ -19,6 +19,20 @@ require(['dmenu', 'easing'], function () {
     var width = parseInt($(this).width());
     var height = parseInt($(this).height());
 
+    //----- Responsive Script Loader Sample ----------------------
+    //-- 1 -- check browser width on window load
+    //ScreenSizeLabel($(this).width());
+
+    //-- 2 -- check browser width on window resize
+    //$(window).resize(function () {
+    //ScreenSizeLabel($(this).width());
+
+    //var h = parseInt($(this).height());
+    //$("section").css("height", h); //OR
+    //$('#section').css('margin-top', (h - 620));
+    //})
+    //------------------------------------------------------
+
 
     //------------------------------------------------
 
@@ -50,9 +64,7 @@ require(['dmenu', 'easing'], function () {
         require([], function () {
 
             //-- screensize ---------------------
-            var msg = width + " x " + height + " - mobile";
-            $("#message").html(msg);
-            console.log(msg);
+            $("#message").html(width + " x " + height + " - mobile");
 
         });
 
@@ -60,10 +72,8 @@ require(['dmenu', 'easing'], function () {
         require([], function () {
 
             //-- screensize ---------------------
-            var msg = width + " x " + height + " - tablet";
-            $("#message").html(msg);
-            console.log(msg);
-
+            $("#message").html(width + " x " + height + " - tablet");
+            //--resize to fit portrait-----------
             $('.main-content section').css('min-height', height);
 
         });
@@ -72,9 +82,7 @@ require(['dmenu', 'easing'], function () {
         require(['sticky'], function () {
 
             //-- screensize ---------------------
-            var msg = width + " x " + height + " - desktop";
-            $("#message").html(msg);
-            console.log(msg);
+            $("#message").html(width + " x " + height + " - desktop");
 
             //-- sticky ---------------------  
             $("#aside").stick_in_parent()
@@ -85,7 +93,7 @@ require(['dmenu', 'easing'], function () {
                     //console.log("has unstuck!", e.target);
                 });
 
-            $('section.index').css('min-height', height);
+            $('.main-content section.index').css('min-height', height);
 
         });
 

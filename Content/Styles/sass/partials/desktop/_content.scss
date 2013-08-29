@@ -2,15 +2,18 @@
    Page/Section Layout
    ========================================================================== */
 
-.page #container, .page .content-wrapper {
+/*remove if not used. - locks desktop screen and removes scrollbars*/
+.js {
+    overflow: auto;
+}
 
-    /* -- Big Background Image --*/
+.page #container, .page .content-wrapper { 
+    /* -- Big Background Image 
     background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-
-    height: 100%;
+--*/
 }
 
 
@@ -59,6 +62,10 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
     margin: 20px 0;
 }
 
+.featured nav a {
+    text-decoration: none;
+}
+
 /* features 
 section.feature {
     float: left;
@@ -74,8 +81,8 @@ section.feature {
    Main-Content Section
    ========================================================================== */
     
-.featured + .main-content { /*display background if both classes are present on page*/
-    background: url("../../Images/mcarrows.png") repeat-y right;
+.featured + .main-content { /*display background if both classes are present on page
+    background: url("../../Images/mcarrows.png") repeat-y right;*/
 }
 
 .main-content {
@@ -92,11 +99,11 @@ section.feature {
     float:left;
 }
 
-.main-content .index {background: none;}
+.main-content .index {}
 
 .main-content .index .wrapper {padding: 0 5px;}
 
-.main-content .section {background: white;}
+.main-content .section {}
 
 .main-content .section .wrapper {padding: 0 5px;}
 

@@ -1,16 +1,6 @@
-body {
-    /* Create a page-wide stacking context 
-    (so that negative margins work as you expect) */
-    position: relative;
-    z-index: 0;
-}
-
-.page #container {
-    position:relative;
-    z-index:1;
-
-
-}
+/* =============================================================================
+   Footer/Section Layout
+   ========================================================================== */
 
 .page footer {
     height: 400px; /* <----- */
@@ -18,6 +8,12 @@ body {
     font-size:12px;
     position:relative;
     z-index:-2;
+
+    background-color:#31353a;
+
+    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
+    background-image:-moz-linear-gradient(top, #31353a, #2f3337);
+    background-image:linear-gradient(top, #31353a, #2f3337);
 
     border:1px dashed red; /*for development only - borderline*/
 }
@@ -28,15 +24,20 @@ body {
 
 footer .wrapper > ul {
     padding-bottom: 150px; /* <----- */
-    margin-left: 8%;
+    width:800px;
+    position:fixed;
+    left:50%;
+    bottom:0;
+    margin-left:-270px;
     z-index:-1;
 }
+
 
 /* The four columns of links */
 
 footer .wrapper > ul > li {
-    width: 25%;
-    float: left;
+    width:25%;
+    float:left;
 }
 
 footer .wrapper ul {
@@ -46,11 +47,13 @@ footer .wrapper ul {
 /* The links */
 
 footer .wrapper > ul > li ul li {
+    
     text-transform: uppercase;
     font-weight:bold;
     line-height:1.8;
-    width: 125%;
+    width: 100%;
 }
+
 
 
 /*-------------------------------*/
@@ -78,11 +81,72 @@ footer .wrapper p {
     transition: opacity 0.4s;
 }
 
+footer .wrapper > ul > li:hover p {
+    opacity:1;
+}
+
 
 /*-------------------------------*/
 /* The links */
 
 footer .wrapper > ul > li ul li a {
+    border: none;
     text-decoration: none !important;
     color:#7d8691 !important;
 }
+
+footer .wrapper > ul > li ul li a:hover {
+    color:#ddd !important;
+}
+
+
+
+/*------------color themes (optional)-------------------
+footer p.home{
+    background-color: #0096d6;
+
+    background-image:-webkit-linear-gradient(top, #0096d6, #008ac6);
+    background-image:-moz-linear-gradient(top, #0096d6, #008ac6);
+    background-image:linear-gradient(top, #0096d6, #008ac6);
+}
+
+footer p.home:before{
+    background-position: 0 -110px;
+}
+
+footer p.services{
+    background-color: #00b274;
+
+    background-image:-webkit-linear-gradient(top, #00b274, #00a46b);
+    background-image:-moz-linear-gradient(top, #00b274, #00a46b);
+    background-image:linear-gradient(top, #00b274, #00a46b);
+}
+
+footer p.services:before{
+    background-position: 0 -129px;
+}
+
+footer p.reachus{
+    background-color: #d75ba2;
+
+    background-image:-webkit-linear-gradient(top, #d75ba2, #c75496);
+    background-image:-moz-linear-gradient(top, #d75ba2, #c75496);
+    background-image:linear-gradient(top, #d75ba2, #c75496);
+}
+
+footer p.reachus:before{
+    background-position: 0 -89px;
+}
+
+footer p.clients{
+    background-color: #e9ac40;
+
+    background-image:-webkit-linear-gradient(top, #e9ac40, #d89f3b);
+    background-image:-moz-linear-gradient(top, #e9ac40, #d89f3b);
+    background-image:linear-gradient(top, #e9ac40, #d89f3b);
+}
+
+footer p.clients:before{
+    background-position: 0 -69px;
+}
+---*/

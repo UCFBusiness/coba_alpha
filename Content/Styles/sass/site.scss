@@ -1,7 +1,6 @@
 // * In this file you should write your main styles. (or centralize your imports)
 
-// Modules and Variables
-// body{background: white;}
+// Modules and Variables {}
 
 @import "partials/normalize";
 
@@ -41,7 +40,7 @@ img, object, embed, video {
 
 
 
-// Partials
+// Partials {}
 /* Mobile Layout: 480px and below. */
 body{color: blue;}
 
@@ -55,15 +54,10 @@ body{color: blue;}
 @media only screen and (min-width: 481px) {
     body{color: red;}
 
-    @import "partials/tablet/new/header";
-    @import "partials/tablet/new/nav";
-    @import "partials/tablet/new/content";
-    @import "partials/tablet/new/footer";
-
-    //@import "partials/tablet/header";
-    //@import "partials/tablet/nav";
-    //@import "partials/tablet/content";
-    //@import "partials/tablet/footer";
+    @import "partials/tablet/header";
+    @import "partials/tablet/nav";
+    @import "partials/tablet/content";
+    @import "partials/tablet/footer";
 
 }
 

@@ -4,10 +4,11 @@
 
 /* nav */
 nav.dl-menuwrapper {
+    /*
     background: url(../../images/header-bg.png) repeat-x;
-    border-bottom: 1px solid #bbb;
-    margin-bottom: 20px;
-    padding: 9px 0 9px;
+    border-bottom: 1px solid #bbb;*/
+    width: 768px;
+    padding: 5px 0 5px;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
 	font-weight: 300;
@@ -21,7 +22,8 @@ nav.dl-menuwrapper {
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    /*box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);  shadow */
+    z-index: 999;
 }
 .dl-menuwrapper:first-child {
 	margin-right: 100px;
@@ -33,7 +35,6 @@ nav.dl-menuwrapper {
     border: 1px solid #ddd;
     border-right: none;
     padding: 7px 9px 11px 6px;
-    width: 40px;
     height: 16px;
     font-size: 13px;
     font-weight: 300;
@@ -52,7 +53,7 @@ nav.dl-menuwrapper {
     border: 1px solid #ddd;
     border-right: none;
     padding-left: 30px;
-    width: 150px;
+    width: 130px;
     height: 45px;
     position: relative;
     overflow: hidden;
@@ -84,7 +85,7 @@ nav.dl-menuwrapper {
 
 .dl-home {
     background: url(../../images/icon-home-m.png) no-repeat;
-    background-position: 5px 0px;
+    background-position: 4px 3px;
 }
 
 .dl-home, 
@@ -105,23 +106,21 @@ nav.dl-menuwrapper {
 }
 
 .dl-searchbutton {
-    border: 1px solid #eee;
+
     border-left: none;
     visibility: visible;
     display: block;
-    background: #fff;
+
     width: 50px;
 }
 
 .dl-searchfield {
     background: #fff;
     border: 1px solid #eee;
-    border-right: none;
     position: static;
     margin: 0;
     padding: 0 10px;
-    min-width: 170px;
-    max-width: 170px;
+    width: 80%;
     font-size: .8em;
     height: 43px;
     color: #999;
@@ -135,9 +134,9 @@ nav.dl-menuwrapper {
     visibility: hidden;
 }
 .dl-menuwrapper .dl-menu {
-	margin: 35px 0 0 57px;
+	margin: 43px 0 0 0px;
 	position: absolute;
-	max-width: 330px;
+	max-width: 371px;
 	opacity: 0;
 	pointer-events: none;
     transform: translateY(10px);
@@ -162,7 +161,7 @@ nav.dl-menuwrapper {
 
 /* all uls */
 .dl-menuwrapper ul {
-	max-width: 330px;
+	max-width: 371px;
     list-style: none;
     overflow: hidden;
     transform-style: preserve-3d;

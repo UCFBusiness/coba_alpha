@@ -1,14 +1,6 @@
-body {
-    /* Create a page-wide stacking context 
-    (so that negative margins work as you expect) */
-    position: relative;
-    z-index: 0;
-}
-
-.page #container {
-    position:relative;
-    z-index:1;
-}
+/* =============================================================================
+   Footer/Section Layout
+   ========================================================================== */
 
 .page footer {
     height: 400px; /* <----- */
@@ -16,6 +8,12 @@ body {
     font-size:12px;
     position:relative;
     z-index:-2;
+
+    background-color:#31353a;
+
+    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
+    background-image:-moz-linear-gradient(top, #31353a, #2f3337);
+    background-image:linear-gradient(top, #31353a, #2f3337);
 
     border:1px dashed red; /*for development only - borderline*/
 }
@@ -26,7 +24,7 @@ body {
 
 footer .wrapper > ul {
     padding-bottom: 150px; /* <----- */
-    width:960px;
+    width:1240px;
     position:fixed;
     left:50%;
     bottom:0;
