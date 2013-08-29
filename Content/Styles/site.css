@@ -736,13 +736,15 @@ html, body {
   height: 100%;
 }
 
-/*remove if not used. - locks desktop screen and removes scrollbars
+/*.no-js {}
+
+remove if not used. - locks desktop screen and removes scrollbars
 .js {
     overflow: hidden;
 }*/
 /* line 18, sass/partials/boilerplate/_primary_styles.scss */
 .page {
-  background-image: -webkit-linear-gradient(top, #31353a, #2f3337);
+  /*background-image:-webkit-linear-gradient(top, #31353a, #2f3337);  -- charcoal background --*/
   font-size: 1em;
   line-height: 1.4em;
   /* Create a page-wide stacking context 
@@ -752,8 +754,8 @@ html, body {
 }
 
 /* line 28, sass/partials/boilerplate/_primary_styles.scss */
-.page .container {
-  background: white;
+.page #container {
+  color: #ddd;
   position: relative;
   z-index: 1;
 }

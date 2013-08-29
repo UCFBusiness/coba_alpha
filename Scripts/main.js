@@ -93,7 +93,7 @@ require(['dmenu', 'easing'], function () {
                     //console.log("has unstuck!", e.target);
                 });
 
-            $('.main-content section.index').css('min-height', height);
+            $('.main-content section').css('min-height', height);
 
         });
 

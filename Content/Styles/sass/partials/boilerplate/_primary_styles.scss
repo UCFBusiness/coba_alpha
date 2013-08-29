@@ -8,15 +8,15 @@ html, body {
     height: 100%;
 }
 
-.no-js {}
+/*.no-js {}
 
-/*remove if not used. - locks desktop screen and removes scrollbars
+remove if not used. - locks desktop screen and removes scrollbars
 .js {
     overflow: hidden;
 }*/
 
 .page {
-    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
+    /*background-image:-webkit-linear-gradient(top, #31353a, #2f3337);  -- charcoal background --*/
     font-size: 1em;
     line-height:1.4em;
     /* Create a page-wide stacking context 
@@ -25,8 +25,8 @@ html, body {
     z-index: 0;
 }
 
-.page .container {
-    background: white;
+.page #container {
+                        color: #ddd;
     position:relative;
     z-index:1;
 }
