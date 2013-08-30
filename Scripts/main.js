@@ -75,7 +75,7 @@ require(['dmenu', 'easing'], function () {
             $("#message").html(width + " x " + height + " - tablet");
             
             //--resize to fit portrait-----------
-            //$('.main-content section').css('min-height', height);
+            $('.main-content .section').css('min-height', height);
 
         });
 
@@ -94,7 +94,8 @@ require(['dmenu', 'easing'], function () {
                     //console.log("has unstuck!", e.target);
                 });
 
-            //$('.main-content section').css('min-height', height);
+            //--resize to fit screen-----------
+            $('.main-content .section').css('min-height', height);
 
         });
 
@@ -134,7 +135,8 @@ require(['dmenu', 'easing'], function () {
                 //-- screensize ---------------------
                 $("#message").html(width + " x " + height + " - desktop");
 
-                //$('section.index').css('min-height', height);
+                //--resize to fit screen-----------
+                $('.main-content .section').css('min-height', height);
             });
     });
 

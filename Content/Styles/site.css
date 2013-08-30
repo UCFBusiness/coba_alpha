@@ -2623,7 +2623,7 @@ nav.dl-menuwrapper {
   position: relative;
   box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
   /* shadow */
-  z-index: 999;
+  z-index: 1000;
 }
 
 /* buttons */
@@ -2865,7 +2865,7 @@ nav.dl-menuwrapper {
     -moz-perspective-origin: 50% 200%;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
     /* shadow */
-    z-index: 999;
+    z-index: 1000;
   }
 
   /* line 27, sass/partials/desktop/_nav.scss */
@@ -3102,35 +3102,9 @@ nav.dl-menuwrapper {
   }
 
   /* =============================================================================
-     Page/Section Layout
-     ========================================================================== */
-  /* line 5, sass/partials/desktop/_content.scss */
-  .page #container, .page .content-wrapper {
-    /* -- Big Background Image --*/
-    background: rgba(0, 0, 0, 0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-  }
-
-  /* -- Big Background Images ----------------------
-   
-  background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
-      
-  
-  background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
-  background-size: cover;
-  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
-  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-  
-  }--*/
-  /* =============================================================================
      Featured Section
      ========================================================================== */
-  /* line 39, sass/partials/desktop/_content.scss */
+  /* line 5, sass/partials/desktop/_featured.scss */
   .featured {
     border: 1px dashed red;
     min-height: 400px;
@@ -3139,21 +3113,11 @@ nav.dl-menuwrapper {
     text-shadow: 0px 1px 2px #333;
   }
 
-  /* line 49, sass/partials/desktop/_content.scss */
+  /* line 14, sass/partials/desktop/_featured.scss */
   .featured .wrapper {
     padding: 0 15px;
     position: relative;
     height: 100%;
-  }
-
-  /* line 59, sass/partials/desktop/_content.scss */
-  .featured nav {
-    margin: 20px 0;
-  }
-
-  /* line 61, sass/partials/desktop/_content.scss */
-  .featured nav a {
-    text-decoration: none;
   }
 
   /* features 
@@ -3166,15 +3130,138 @@ nav.dl-menuwrapper {
       height: 40px;
   }*/
   /* =============================================================================
+     Section Navigation
+     ========================================================================== */
+  /*.featured nav {
+      margin: 20px 0;
+      overflow: hidden;
+      position: static;
+      text-align: left;
+  }
+  
+  .featured nav a {
+      border:  none;
+      background: none;
+      padding: 0;
+  
+      display: inline;
+      text-decoration: none;
+      line-height: 1.3em;
+      font-size: 1.4em;
+  }*/
+  /* line 59, sass/partials/desktop/_featured.scss */
+  .featured nav a {
+    position: relative;
+    display: inline-block;
+    margin: 15px 25px;
+    outline: none;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
+    font-size: 1.35em;
+  }
+
+  /* line 74, sass/partials/desktop/_featured.scss */
+  .featured nav a:hover,
+  .featured nav a:focus {
+    outline: none;
+  }
+
+  /* =============================================================================
+     Section Navigation Effect 10: reveal, push out
+     ========================================================================== */
+  /* line 83, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* line 88, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 a {
+    overflow: hidden;
+    margin: 0 15px;
+  }
+
+  /* line 93, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 a span {
+    display: block;
+    padding: 10px 20px;
+    background: #0f7c67;
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+  }
+
+  /* line 102, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 a::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    padding: 10px 20px;
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    color: #0f7c67;
+    content: attr(data-hover);
+    -webkit-transition: -webkit-transform 0.3s;
+    -moz-transition: -moz-transform 0.3s;
+    transition: transform 0.3s;
+    -webkit-transform: translateX(-25%);
+  }
+
+  /* line 120, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 a:hover span,
+  .cl-effect-10 a:focus span {
+    -webkit-transform: translateX(100%);
+    -moz-transform: translateX(100%);
+    transform: translateX(100%);
+  }
+
+  /* line 127, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 a:hover::before,
+  .cl-effect-10 a:focus::before {
+    -webkit-transform: translateX(0%);
+    -moz-transform: translateX(0%);
+    transform: translateX(0%);
+  }
+
+  /* =============================================================================
+     Main Container and Wrapper
+     ========================================================================== */
+  /* line 5, sass/partials/desktop/_content.scss */
+  .page #container, .page .content-wrapper {
+    /* -- Big Background Image --*/
+    background: rgba(0, 0, 0, 0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+    background-size: cover;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+  }
+
+  /* -- Big Background Images ----------------------
+  background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/millican.jpg', sizingMethod='scale')";
+      
+  background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
+  background-size: cover;
+  filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
+  -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
+  --*/
+  /* =============================================================================
      Main-Content Section
      ========================================================================== */
-  /* line 80, sass/partials/desktop/_content.scss */
+  /* line 32, sass/partials/desktop/_content.scss */
   .featured + .main-content {
                         /*display background if both classes are present on page
 background: url("../../Images/mcarrows.png") repeat-y right;*/
   }
 
-  /* line 84, sass/partials/desktop/_content.scss */
+  /* line 36, sass/partials/desktop/_content.scss */
   .main-content {
     background: #FFF;
     border: 1px dashed red;
@@ -3182,51 +3269,31 @@ background: url("../../Images/mcarrows.png") repeat-y right;*/
     overflow: hidden !important;
   }
 
-  /* line 94, sass/partials/desktop/_content.scss */
+  /* line 46, sass/partials/desktop/_content.scss */
   .main-content .index .wrapper {
     /*max-width: 1600px; margin: 0 auto; padding: 0 15px;*/
   }
 
-  /* line 96, sass/partials/desktop/_content.scss */
+  /* line 48, sass/partials/desktop/_content.scss */
   .main-content .section {
     min-height: 700px;
   }
 
-  /* line 98, sass/partials/desktop/_content.scss */
+  /* line 50, sass/partials/desktop/_content.scss */
   .main-content .section .wrapper {
     /*max-width: 1600px; margin: 0 auto; padding: 0 15px;*/
   }
 
   /* =============================================================================
-     Section Navigation
-     ========================================================================== */
-  /* line 105, sass/partials/desktop/_content.scss */
-  .featured nav {
-    overflow: hidden;
-    position: static;
-    text-align: left;
-  }
-
-  /* line 111, sass/partials/desktop/_content.scss */
-  .featured nav a {
-    border: none;
-    background: none;
-    padding: 0;
-    display: inline;
-    line-height: 1.3em;
-    font-size: 1.4em;
-  }
-
-  /* =============================================================================
      Persistent Content Headers
      ========================================================================== */
-  /* line 125, sass/partials/desktop/_content.scss */
+  /* line 57, sass/partials/desktop/_content.scss */
   .persist-header {
     /*-settings for both-*/
     min-height: 10px;
   }
 
-  /* line 129, sass/partials/desktop/_content.scss */
+  /* line 61, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3237,23 +3304,23 @@ background: url("../../Images/mcarrows.png") repeat-y right;*/
     /*z-index: 100; -exchange with bb-bookblock*/
   }
 
-  /* line 138, sass/partials/desktop/_content.scss */
+  /* line 70, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav li a {
     color: #ffcc00;
   }
 
-  /* line 142, sass/partials/desktop/_content.scss */
+  /* line 74, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 147, sass/partials/desktop/_content.scss */
+  /* line 79, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 151, sass/partials/desktop/_content.scss */
+  /* line 83, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
