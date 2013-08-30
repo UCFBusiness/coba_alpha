@@ -73,8 +73,9 @@ require(['dmenu', 'easing'], function () {
 
             //-- screensize ---------------------
             $("#message").html(width + " x " + height + " - tablet");
+            
             //--resize to fit portrait-----------
-            $('.main-content section').css('min-height', height);
+            //$('.main-content section').css('min-height', height);
 
         });
 
@@ -85,7 +86,7 @@ require(['dmenu', 'easing'], function () {
             $("#message").html(width + " x " + height + " - desktop");
 
             //-- sticky ---------------------  
-            $("#aside").stick_in_parent()
+            $("#feature").stick_in_parent()
                 .on("sticky_kit:stick", function (e) {
                     //console.log("has stuck!", e.target);
                 })
@@ -93,7 +94,7 @@ require(['dmenu', 'easing'], function () {
                     //console.log("has unstuck!", e.target);
                 });
 
-            $('.main-content section').css('min-height', height);
+            //$('.main-content section').css('min-height', height);
 
         });
 
@@ -133,7 +134,7 @@ require(['dmenu', 'easing'], function () {
                 //-- screensize ---------------------
                 $("#message").html(width + " x " + height + " - desktop");
 
-                $('section.index').css('min-height', height);
+                //$('section.index').css('min-height', height);
             });
     });
 

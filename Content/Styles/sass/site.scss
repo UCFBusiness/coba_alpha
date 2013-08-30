@@ -44,20 +44,20 @@ img, object, embed, video {
 /* Mobile Layout: 480px and below. */
 body{color: blue;}
 
-@import "partials/mobile/header";
-@import "partials/mobile/nav";
-@import "partials/mobile/content";
-@import "partials/mobile/footer";
+@import "partials/mobile/new/header";
+@import "partials/mobile/new/nav";
+//@import "partials/mobile/content";
+//@import "partials/mobile/footer";
 
 
 /* Tablet Layout: 481px past 768px(portrait mode) to 1024px(landscape mode). Inherits styles from: Mobile Layout. */
 @media only screen and (min-width: 481px) {
     body{color: red;}
 
-    @import "partials/tablet/header";
-    @import "partials/tablet/nav";
-    @import "partials/tablet/content";
-    @import "partials/tablet/footer";
+    @import "partials/tablet/new/header";
+    //@import "partials/tablet/nav";
+    //@import "partials/tablet/content";
+    //@import "partials/tablet/footer";
 
 }
 

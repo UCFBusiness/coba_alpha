@@ -4,11 +4,10 @@
 
 /* nav */
 nav.dl-menuwrapper {
-    /*
+    
     background: url(../../images/header-bg.png) repeat-x;
-    border-bottom: 1px solid #bbb;*/
-    width: 768px;
-    padding: 5px 0 5px;
+    border-bottom: 1px solid #bbb;
+    /*padding: 5px 0 5px;*/
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
 	font-weight: 300;
@@ -22,7 +21,7 @@ nav.dl-menuwrapper {
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
-    /*box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1);  shadow */
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
     z-index: 999;
 }
 .dl-menuwrapper:first-child {
@@ -52,7 +51,7 @@ nav.dl-menuwrapper {
 .dl-menuwrapper button {
     border: 1px solid #ddd;
     border-right: none;
-    padding-left: 30px;
+    padding-left: 40px;
     width: 130px;
     height: 45px;
     position: relative;
@@ -74,7 +73,7 @@ nav.dl-menuwrapper {
 	height: 4px;
     position: absolute;
 	top: 10px;
-	left: 6%;
+	left: 7%;
 	right: 15px;
     line-height: 50px;
     background: #555;
@@ -106,12 +105,10 @@ nav.dl-menuwrapper {
 }
 
 .dl-searchbutton {
-
     border-left: none;
+    width: 50px;
     visibility: visible;
     display: block;
-
-    width: 50px;
 }
 
 .dl-searchfield {
@@ -119,10 +116,10 @@ nav.dl-menuwrapper {
     border: 1px solid #eee;
     position: static;
     margin: 0;
-    padding: 0 10px;
-    width: 80%;
+    padding: 1px 10px 0;
+    width: 169px;
     font-size: .8em;
-    height: 43px;
+    height: 42px;
     color: #999;
     float: left;
 }

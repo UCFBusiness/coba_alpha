@@ -35,14 +35,17 @@
 
         <div id="container" class="clearfix">
 
-            <!-- BEGIN:UCF Header -->
+            <!-- BEGIN:Header -->
             <header id="UCFHBHeader">
+
                 <!--UCF Header Wrapper-->
                 <div class="UCFHBWrapper clearfix">
+
                     <!--UCF Logo-->
                     <section id="UCFtitle">
                         <a href="http://www.ucf.edu" target="_blank"><span class="UCFHBText">University of Central Florida</span></a>
                     </section>
+
                     <!--Login-->
                     @*<section id="login">
                         @if (WebSecurity.IsAuthenticated) {
@@ -70,8 +73,9 @@
 				    <span>College of Business</span>
 				    <a href="#menu-right" class="friends right"></a>
 			    </div>*@
-            </header>
-            <!-- FINIS:UCF Header -->
+
+            </header><!-- /UCFHBHeader -->
+            <!-- FINIS:Header -->
 
             <!-- BEGIN:Nav -->
             <nav id="main_menu" class="dl-menuwrapper clearfix">
@@ -169,61 +173,61 @@
             </nav><!-- /dl-menuwrapper -->
             <!-- FINIS:Nav -->
 
-            <!-- BEGIN:Content -->
+            <!-- BEGIN:Body -->
             <div id="body" class="content-wrapper clearfix" data-sticky_parent>
                 @RenderSection("featured", required: false)
                 <article class="main-content">
                     @RenderBody()
                 </article>
-            </div>
-            <!-- FINIS:Content -->
+            </div><!-- /content-wrapper -->
+            <!-- FINIS:Body -->
 
         </div><!-- /container -->
 
         <!-- BEGIN:Footer -->
-            <footer>
-                <div class="copy">&copy; @DateTime.Now.Year - University of Central Florida, College of Business Administration</div>
-                <div class="wrapper clearfix">
-                    <!--BEGIN-->
-                    <ul>
-                        <li>
-                            <p class="home">Address</p>
+        <footer>
+            <div class="copy">&copy; @DateTime.Now.Year - University of Central Florida, College of Business Administration</div>
+            <div class="wrapper clearfix">
+                <!--BEGIN-->
+                <ul>
+                    <li>
+                        <p class="home">Address</p>
 
-                            <a href="#">un-styled ink</i></a>
-                        </li>
-                        <li>
-                            <p class="services">Contact</p>
+                        <a href="#">un-styled ink</i></a>
+                    </li>
+                    <li>
+                        <p class="services">Contact</p>
 
-                            <ul>
-                                <li><a href="#">Link to page.</a></li>
-                                <li><a href="#">Link to page.</a></li>
-                                <li><a href="#">Link to page.</a></li>
-                                <li><a href="#">Link to page.</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="reachus">Follow Us</p>
+                        <ul>
+                            <li><a href="#">Link to page.</a></li>
+                            <li><a href="#">Link to page.</a></li>
+                            <li><a href="#">Link to page.</a></li>
+                            <li><a href="#">Link to page.</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="reachus">Follow Us</p>
 
-                            <ul>
-                                <li><a href="#">LinkedIn</a></li>
-                                <li><a href="#">Twitter</a></li>
-                                <li><a href="#">Facebook</a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <p class="clients">Quick Links</p>
+                        <ul>
+                            <li><a href="#">LinkedIn</a></li>
+                            <li><a href="#">Twitter</a></li>
+                            <li><a href="#">Facebook</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p class="clients">Quick Links</p>
 
-                            <ul>
-                                <li><a href="#">Link to page.</a></li>
-                                <li><a href="#">Link to page.</a></li>
-                                <li><a href="#">Link to page.</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <!--FINIS-->
-                </div>
-            </footer>
-            <!-- FINIS:Footer -->
+                        <ul>
+                            <li><a href="#">Link to page.</a></li>
+                            <li><a href="#">Link to page.</a></li>
+                            <li><a href="#">Link to page.</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <!--FINIS-->
+            </div>
+        </footer>
+        <!-- FINIS:Footer -->
 
         <!-- JQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
@@ -235,8 +239,6 @@
 
         <!-- JQuery Plugins -->
         <script src="http://scripts.bus.ucf.edu/js/libs/bootstrap-scrollspy.js" type="text/javascript"></script>
-
-
 
         <script>
             $(function () { //load on document.ready
@@ -250,8 +252,6 @@
                 $(window).scroll(content_updateHeaders).trigger("scroll");
                 //-- 4 in requireJS
                 //------------------------------------------------------
-
-
 
             });
         </script>

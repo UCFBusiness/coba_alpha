@@ -2,19 +2,19 @@
    Page/Section Layout
    ========================================================================== */
 
-/*remove if not used. - locks desktop screen and removes scrollbars*/
-.js {
-    overflow: auto;
-}
-
 .page #container, .page .content-wrapper { 
-    /* -- Big Background Image 
+    
+    /* -- Big Background Image --*/
     background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
     background-size: cover;
     filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
     -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
---*/
+
 }
+
+.content-wrapper section {}
+
+.content-wrapper section > .wrapper {}
 
 
 /* -- Big Background Images ----------------------
@@ -37,15 +37,13 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
    ========================================================================== */
 
 .featured {
-    width: 384px;
-    min-height: 500px;
-    display: block;
-    float: left;
-    overflow: hidden;
+
+    border: 1px dashed red;
+    min-height:400px;
 
     font-weight: 400;
     color: white;
-    text-shadow: 0px 1px 2px #000;
+    text-shadow: 0px 1px 2px #333;
 }
 
 .featured .wrapper {
@@ -58,9 +56,7 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
             
 .featured hgroup.title h1, .featured hgroup.title h2 {}
 
-.featured nav {
-    margin: 20px 0;
-}
+.featured nav {margin: 20px 0;}
 
 .featured nav a {
     text-decoration: none;
@@ -86,26 +82,20 @@ section.feature {
 }
 
 .main-content {
-    background: none;
+background: #FFF;
+border: 1px dashed red;
+
     position: relative !important;
     overflow: hidden !important; 
 }
 
-.main-content section {
-    /*margin-left:10%;*/
-    /*width: 80%;*/
-    max-width: 1240px;
-    display: block;
-    float:left;
-}
-
 .main-content .index {}
 
-.main-content .index .wrapper {padding: 0 5px;}
+.main-content .index .wrapper {/*max-width: 1600px; margin: 0 auto; padding: 0 15px;*/}
 
-.main-content .section {}
+.main-content .section {min-height: 700px;}
 
-.main-content .section .wrapper {padding: 0 5px;}
+.main-content .section .wrapper {/*max-width: 1600px; margin: 0 auto; padding: 0 15px;*/}
 
 
 /* =============================================================================
@@ -133,9 +123,7 @@ section.feature {
    ========================================================================== */
 
 .persist-header { /*-settings for both-*/
-    padding-top: 10px;
     min-height:10px;
-    max-width:100%;
 }
 
 .floatingHeader {
@@ -143,6 +131,12 @@ section.feature {
     visibility: hidden;
     position: fixed;
     top:0;
+    color: #ffcc00;
+    /*z-index: 100; -exchange with bb-bookblock*/
+}
+
+.floatingHeader ul.nav li a {
+    color: #ffcc00;
 }
             
 .persist-header ul.nav {
