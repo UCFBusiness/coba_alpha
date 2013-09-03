@@ -8,7 +8,8 @@ require.config({
         'dmenu': 'plugins/jquery.dlmenu',
         'mmenu': 'plugins/jquery.mmenu.min',
         'easing': 'plugins/jquery.easing.1.3',
-        'sticky': 'plugins/jquery.sticky-kit.min'
+        'sticky': 'plugins/jquery.sticky-kit.min',
+        'waypoint': 'plugins/jquery.waypoints.min.js'
     }
 });
 
@@ -86,7 +87,7 @@ require(['dmenu', 'easing'], function () {
             $("#message").html(width + " x " + height + " - desktop");
 
             //-- sticky ---------------------  
-            $("#feature").stick_in_parent()
+            $("#main_menu").stick_in_parent()
                 .on("sticky_kit:stick", function (e) {
                     //console.log("has stuck!", e.target);
                 })
@@ -95,7 +96,7 @@ require(['dmenu', 'easing'], function () {
                 });
 
             //--resize to fit screen-----------
-            $('.main-content .section').css('min-height', height);
+            $('.featured').css('min-height', height - 300);
 
         });
 
@@ -136,7 +137,7 @@ require(['dmenu', 'easing'], function () {
                 $("#message").html(width + " x " + height + " - desktop");
 
                 //--resize to fit screen-----------
-                $('.main-content .section').css('min-height', height);
+                $('.featured').css('min-height', height - 300);
             });
     });
 

@@ -31,6 +31,11 @@ remove if not used. - locks desktop screen and removes scrollbars
     z-index: 1;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    letter-spacing: 1px;
+	font-weight: 400;
+}
+
 h1, h2 {line-height: 1.1em;}
 
 h1 {font-size: 2em;}

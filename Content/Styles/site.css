@@ -762,41 +762,47 @@ remove if not used. - locks desktop screen and removes scrollbars
 }
 
 /* line 34, sass/partials/boilerplate/_primary_styles.scss */
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+/* line 39, sass/partials/boilerplate/_primary_styles.scss */
 h1, h2 {
   line-height: 1.1em;
 }
 
-/* line 36, sass/partials/boilerplate/_primary_styles.scss */
+/* line 41, sass/partials/boilerplate/_primary_styles.scss */
 h1 {
   font-size: 2em;
 }
 
-/* line 37, sass/partials/boilerplate/_primary_styles.scss */
+/* line 42, sass/partials/boilerplate/_primary_styles.scss */
 h2 {
   font-size: 1.75em;
 }
 
-/* line 38, sass/partials/boilerplate/_primary_styles.scss */
+/* line 43, sass/partials/boilerplate/_primary_styles.scss */
 h3 {
   font-size: 1.2em;
 }
 
-/* line 39, sass/partials/boilerplate/_primary_styles.scss */
+/* line 44, sass/partials/boilerplate/_primary_styles.scss */
 h4 {
   font-size: 1.1em;
 }
 
-/* line 40, sass/partials/boilerplate/_primary_styles.scss */
+/* line 45, sass/partials/boilerplate/_primary_styles.scss */
 h5, h6 {
   font-size: 1em;
 }
 
-/* line 42, sass/partials/boilerplate/_primary_styles.scss */
+/* line 47, sass/partials/boilerplate/_primary_styles.scss */
 p {
   margin: 0 0 10px 0;
 }
 
-/* line 44, sass/partials/boilerplate/_primary_styles.scss */
+/* line 49, sass/partials/boilerplate/_primary_styles.scss */
 blockquote {
   /*background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
   background-position: 0px 5px;*/
@@ -805,7 +811,7 @@ blockquote {
   font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
 }
 
-/* line 52, sass/partials/boilerplate/_primary_styles.scss */
+/* line 57, sass/partials/boilerplate/_primary_styles.scss */
 blockquote:before {
   content: '"';
   padding-right: 10px;
@@ -813,7 +819,7 @@ blockquote:before {
   float: left;
 }
 
-/* line 59, sass/partials/boilerplate/_primary_styles.scss */
+/* line 64, sass/partials/boilerplate/_primary_styles.scss */
 blockquote small {
   font: italic .9em "Georgia", "Times New Roman", "Times", serif;
 }
@@ -821,12 +827,12 @@ blockquote small {
 /*---------------------*/
 /*-- Special Classes --*/
 /*---------------------*/
-/* line 67, sass/partials/boilerplate/_primary_styles.scss */
+/* line 72, sass/partials/boilerplate/_primary_styles.scss */
 .noshow {
   display: none;
 }
 
-/* line 71, sass/partials/boilerplate/_primary_styles.scss */
+/* line 76, sass/partials/boilerplate/_primary_styles.scss */
 .shadow {
   box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
   /*-CSS3 Box Shadow-*/
@@ -834,7 +840,7 @@ blockquote small {
   /*-CSS3 Box Shadow-*/
 }
 
-/* line 76, sass/partials/boilerplate/_primary_styles.scss */
+/* line 81, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   background-color: #fff34d;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -845,23 +851,23 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 83, sass/partials/boilerplate/_primary_styles.scss */
+/* line 88, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 88, sass/partials/boilerplate/_primary_styles.scss */
+/* line 93, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 92, sass/partials/boilerplate/_primary_styles.scss */
+/* line 97, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 96, sass/partials/boilerplate/_primary_styles.scss */
+/* line 101, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
@@ -3106,6 +3112,7 @@ nav.dl-menuwrapper {
      ========================================================================== */
   /* line 5, sass/partials/desktop/_featured.scss */
   .featured {
+    background: rgba(0, 0, 0, 0.3);
     border: 1px dashed red;
     min-height: 400px;
     font-weight: 400;
@@ -3113,22 +3120,24 @@ nav.dl-menuwrapper {
     text-shadow: 0px 1px 2px #333;
   }
 
-  /* line 14, sass/partials/desktop/_featured.scss */
+  /* line 15, sass/partials/desktop/_featured.scss */
   .featured .wrapper {
     padding: 0 15px;
     position: relative;
     height: 100%;
   }
 
-  /* features 
-  section.feature {
-      float: left;
-      border: 1px solid #ccc;
-      padding: 10px;
-      display: block;
-      width: 100%;
-      height: 40px;
-  }*/
+  /* features */
+  /* line 29, sass/partials/desktop/_featured.scss */
+  #feature .container {
+    background: rgba(0, 0, 0, 0.3);
+    float: right;
+    border: 1px solid #ccc;
+    padding: 10px;
+    display: block;
+    width: 60%;
+  }
+
   /* =============================================================================
      Section Navigation
      ========================================================================== */
@@ -3149,11 +3158,11 @@ nav.dl-menuwrapper {
       line-height: 1.3em;
       font-size: 1.4em;
   }*/
-  /* line 59, sass/partials/desktop/_featured.scss */
+  /* line 61, sass/partials/desktop/_featured.scss */
   .featured nav a {
     position: relative;
     display: inline-block;
-    margin: 15px 25px;
+    margin: 5px 20px;
     outline: none;
     color: #fff;
     text-decoration: none;
@@ -3161,10 +3170,10 @@ nav.dl-menuwrapper {
     letter-spacing: 1px;
     font-weight: 400;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-    font-size: 1.35em;
+    font-size: 1.3em;
   }
 
-  /* line 74, sass/partials/desktop/_featured.scss */
+  /* line 76, sass/partials/desktop/_featured.scss */
   .featured nav a:hover,
   .featured nav a:focus {
     outline: none;
@@ -3173,19 +3182,19 @@ nav.dl-menuwrapper {
   /* =============================================================================
      Section Navigation Effect 10: reveal, push out
      ========================================================================== */
-  /* line 83, sass/partials/desktop/_featured.scss */
+  /* line 85, sass/partials/desktop/_featured.scss */
   .cl-effect-10 {
     position: relative;
     z-index: 1;
   }
 
-  /* line 88, sass/partials/desktop/_featured.scss */
+  /* line 90, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a {
     overflow: hidden;
     margin: 0 15px;
   }
 
-  /* line 93, sass/partials/desktop/_featured.scss */
+  /* line 95, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a span {
     display: block;
     padding: 10px 20px;
@@ -3195,7 +3204,7 @@ nav.dl-menuwrapper {
     transition: transform 0.3s;
   }
 
-  /* line 102, sass/partials/desktop/_featured.scss */
+  /* line 104, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a::before {
     position: absolute;
     top: 0;
@@ -3213,7 +3222,7 @@ nav.dl-menuwrapper {
     -webkit-transform: translateX(-25%);
   }
 
-  /* line 120, sass/partials/desktop/_featured.scss */
+  /* line 122, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a:hover span,
   .cl-effect-10 a:focus span {
     -webkit-transform: translateX(100%);
@@ -3221,7 +3230,7 @@ nav.dl-menuwrapper {
     transform: translateX(100%);
   }
 
-  /* line 127, sass/partials/desktop/_featured.scss */
+  /* line 129, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a:hover::before,
   .cl-effect-10 a:focus::before {
     -webkit-transform: translateX(0%);
@@ -3265,8 +3274,14 @@ background: url("../../Images/mcarrows.png") repeat-y right;*/
   .main-content {
     background: #FFF;
     border: 1px dashed red;
+    z-index: 10;
     position: relative !important;
     overflow: hidden !important;
+  }
+
+  /* line 44, sass/partials/desktop/_content.scss */
+  .main-content .index {
+    min-height: 200px;
   }
 
   /* line 46, sass/partials/desktop/_content.scss */
@@ -3276,7 +3291,7 @@ background: url("../../Images/mcarrows.png") repeat-y right;*/
 
   /* line 48, sass/partials/desktop/_content.scss */
   .main-content .section {
-    min-height: 700px;
+    padding-top: 40px;
   }
 
   /* line 50, sass/partials/desktop/_content.scss */
@@ -3291,9 +3306,10 @@ background: url("../../Images/mcarrows.png") repeat-y right;*/
   .persist-header {
     /*-settings for both-*/
     min-height: 10px;
+    padding-top: 40px;
   }
 
-  /* line 61, sass/partials/desktop/_content.scss */
+  /* line 62, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3304,23 +3320,23 @@ background: url("../../Images/mcarrows.png") repeat-y right;*/
     /*z-index: 100; -exchange with bb-bookblock*/
   }
 
-  /* line 70, sass/partials/desktop/_content.scss */
+  /* line 71, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav li a {
     color: #ffcc00;
   }
 
-  /* line 74, sass/partials/desktop/_content.scss */
+  /* line 75, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     padding: 0 10px;
   }
 
-  /* line 79, sass/partials/desktop/_content.scss */
+  /* line 80, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li, ul.nav li {
     display: inline;
   }
 
-  /* line 83, sass/partials/desktop/_content.scss */
+  /* line 84, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
