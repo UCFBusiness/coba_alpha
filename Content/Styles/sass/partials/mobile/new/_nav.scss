@@ -4,6 +4,7 @@
 
 /* wrapper */
 nav.dl-menuwrapper {
+    /*
     background-image: -webkit-gradient(
 	    linear,
 	    left bottom,
@@ -11,8 +12,8 @@ nav.dl-menuwrapper {
 	    color-stop(0.21, rgb(39,46,45)),
 	    color-stop(0.73, rgb(78,77,79)),
 	    color-stop(1, rgb(71,71,71))
-    );
-
+    );*/
+        background-image: -webkit-linear-gradient(top, #31353a, #2f3337);
     letter-spacing: 1px;
     position: relative;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
@@ -49,7 +50,7 @@ nav.dl-menuwrapper {
 }
 
 .dl-home {
-    background: url(../../images/icon-home-m.png) no-repeat;
+    background: url(../../images/icon-home.png) no-repeat;
     background-position: 5px 2px;
 }
 

@@ -1,16 +1,63 @@
 /* =============================================================================
+   Persistent Content Headers
+   ========================================================================== */
+
+.persist-header { /*-settings for both-*/
+    min-height:10px;
+}
+
+.persist-header h2 {
+    margin-left: 25px;
+}
+
+.persist-header ul.nav {
+    float: right;
+    list-style: none;
+}
+
+.persist-header ul.nav li {
+    display: inline-block;
+    text-indent:-9999px;
+}
+
+.persist-header ul.nav li a {
+    padding: 10px;
+}
+
+.persist-header ul.nav li:last-child {
+    padding-left: 20px;
+}
+
+/*----------------------------------*/
+
+.floatingHeader {
+    background: rgba(0,0,0,0.6); /*-using different settings-*/
+    visibility: hidden;
+    color: #ffcc00;    
+    position: fixed;
+    top:0;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
+}
+            
+.floatingHeader ul.nav {
+    color: #ffcc00;
+
+}
+
+.floatingHeader ul.nav li {
+    text-indent: 0;
+}
+
+.floatingHeader ul.nav li a {
+    color: #ffcc00;
+    text-indent: 0;
+}
+
+
+/* =============================================================================
    Main Container and Wrapper
    ========================================================================== */
 
-.page #container, .page .content-wrapper { 
-    
-    /* -- Big Background Image --*/
-    background: rgba(0,0,0,0.3) url(../../images/sample-bg1.jpg) no-repeat top center fixed;
-    background-size: cover;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
-
-}
 
 /* -- Big Background Images ----------------------
 background: #FFF url(../../images/millican.jpg) no-repeat top center fixed;
@@ -29,61 +76,58 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
    Main-Content Section
    ========================================================================== */
     
-.featured + .main-content { /*display background if both classes are present on page
-    background: url("../../Images/mcarrows.png") repeat-y right;*/
+.featured + .main-content { /*display background if both classes are present on page*/
+    background: url("../../Images/mcarrows.png") repeat-y right;
 }
 
 .main-content {
-background: #FFF;
-border: 1px dashed red;
-z-index: 10;
+/*background: #FFF; white canvas*/
     position: relative !important;
-    overflow: hidden !important; 
+    overflow: hidden !important;
+    z-index: 10;
 }
 
-.main-content .index {min-height:200px;}
+main-content section {
+    /**/
+    display: block;
+    float: left;
+    width: 80%;
 
-.main-content .index .wrapper {/*max-width: 1600px; margin: 0 auto; padding: 0 15px;*/}
+}
 
-.main-content .section {padding-top: 40px;}
+.main-content .index {min-height:600px;}
 
-.main-content .section .wrapper {/*max-width: 1600px; margin: 0 auto; padding: 0 15px;*/}
+.main-content .index .wrapper {padding: 25px;}
+
+.main-content .section {
+/*margin-top: 25px; */
+background: rgba(225,225,225,0.9);
+box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+}
+
+.main-content .section .wrapper {
+padding: 25px; 
+/*margin: 0 auto; max-width: 1280px;*/
+}
 
 
 /* =============================================================================
-   Persistent Content Headers
+   FB Scroller
    ========================================================================== */
 
-.persist-header { /*-settings for both-*/
-    min-height:10px;
-    padding-top: 40px;
+/* background-attachment does the trick */
+.cbp-fbscroller section {
+	position: relative;
+	background-position: top center;
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-.floatingHeader {
-    background: rgba(0,0,0,0.6); /*-using different settings-*/
-    visibility: hidden;
-    position: fixed;
-    top:0;
-    color: #ffcc00;
-    /*z-index: 100; -exchange with bb-bookblock*/
+.no-touch .cbp-fbscroller section {
+	background-attachment: fixed;
 }
 
-.floatingHeader ul.nav li a {
-    color: #ffcc00;
-}
-            
-.persist-header ul.nav {
-    float: right;
-    padding: 0 10px;
-}
-            
-.persist-header ul.nav li, ul.nav li {
-    display: inline;
-}
-            
-.persist-header ul.nav li:last-child {
-    padding-left: 20px;
-}
+
 
 
 

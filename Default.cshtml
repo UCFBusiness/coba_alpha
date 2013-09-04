@@ -3,29 +3,60 @@
     Page.Title = "Home";
 }
 
+@section styles {
+
+
+@@media only screen and (min-width: 1025px) {
+
+    .page #container, .page .content-wrapper { 
+        /* -- Big Background Image --*/
+        background: url(../../images/stock-illustration-16588803-finance-backround.jpg) no-repeat top center fixed;
+        background-size: cover;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/stock-illustration-16588803-finance-backround.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/stock-illustration-16588803-finance-backround.jpg', sizingMethod='scale')";
+    }
+
+    /**/
+
+    #CurricularLearningGoals.section {/*background: url(../../images/1.jpg);*/}
+
+    #CoreBusinessCourses {/*background: url(../../images/2.jpg);*/}
+
+    #MajorRequiredCourses {/*background: url(../../images/3.jpg);*/}
+}
+
+}
+
 @section featured {
 <section id="feature" class="featured" data-sticky_column>
-    <div class="wrapper">
-        <!-- for development only --><label id="message" style="display: block;"></label><!-- for development only -->
+    <div class="wrapper clearfix">
 
-        <div class="container">
+        <hgroup class="title">
+          
+            <h2>Bachelors of Science Business Administration</h2>
+            <h1>Accounting</h1>
+        </hgroup>
+
+<!-- for development only --><label id="message" style="display: block;"></label><!-- for development only -->
+
+        @*<div class="container">
+            
             <p>paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
             Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
             netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
             Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
             ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
             <p>Featured content.</p>
-        </div>
-
-        <hgroup class="title">
-            <h1>College of Business</h1>
-            <h2>This is an h2 header.</h2>
-        </hgroup>
+        </div>*@
 
         <nav class="cl-effect-10">
-            <a href="#CurricularLearningGoals" data-hover="Curricular Learning Goals"><span>Curricular Learning Goals</span></a><br>
-            <a href="#CoreBusinessCourses" data-hover="Core Business Courses"><span>Core Business Courses</span></a><br>
-            <a href="#MajorRequiredCourses" data-hover="Major Required Courses"><span>Major Required Courses</span></a><br>
+            <a href="#curricular-learning-goals" data-hover="Curricular Learning Goals"><span>Curricular Learning Goals</span></a><br>
+            <a href="#core-business-courses" data-hover="Core Business Courses"><span>Core Business Courses</span></a><br>
+            <a href="#major-required-courses" data-hover="Major Required Courses"><span>Major Required Courses</span></a><br>
+            <a href="#plan-of-study" data-hover="Plan of Study"><span>Plan of Study</span></a><br>
+            <a href="#internships" data-hover="Internships"><span>Internships</span></a><br>
+            <a href="#careers" data-hover="Careers"><span>Careers</span></a><br>
+            <a href="#certificates" data-hover="Certificates"><span>Certificates</span></a><br>
         </nav>
 
     </div>
@@ -38,168 +69,54 @@
     </div>
 </section>
 
-<section id="CurricularLearningGoals" class="section">
-    <div class="wrapper persist-area">
-        
-        <div class="container">
-			<header class="persist-header clearfix">
-                <h2>Curricular Learning Goals</h2>
-                <ul class="nav">
-                    <li><a href="#">share</a></li>
-                    <li><a href="#top">top</a></li>
-                </ul>
-            </header>
-			<div class="main clearfix">
-				<div class="bb-custom-wrapper">
-					@*<h3>Illustrations by <a href="http://dribbble.com/kevinhowdeshell">Kevin Howdeshell</a></h3>*@
-                    <nav>
-						<a id="nav-first" href="#" class="bb-custom-icon bb-custom-icon-first">First page</a>
-						<a id="nav-prev" href="#" class="bb-custom-icon bb-custom-icon-arrow-left">Previous</a>
-						<a id="nav-next" href="#" class="bb-custom-icon bb-custom-icon-arrow-right">Next</a>
-						<a id="nav-last" href="#" class="bb-custom-icon bb-custom-icon-last">Last page</a>
-					</nav>
-					<div id="bb-bookblock" class="bb-bookblock">
-						<div class="bb-item">
+<section id="curricular-learning-goals" class="section persist-area">
+    
+    <header class="persist-header clearfix">
+        <ul class="nav">
+            <li><a href="#">prev</a></li>
+            <li><a href="#">next</a></li>
+            <li><a href="#">share</a></li>
+        </ul>
+        <h2>Curricular Learning Goals</h2>
+    </header>
 
-							<h3>&lt;h3&gt; title 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
-                            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
-                            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
-                            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
-                            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                                <small>&mdash; Dr. Julius Hibbert</small>
-                            </blockquote><br />
+    <div class="wrapper ">
+        <h3>&lt;h3&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+        <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
+        aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
+        Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
+        Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
+        leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+        Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+        netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+        Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+        ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+        <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+        Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+        netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+        Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+        ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+        <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+        <blockquote>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+            <small>&mdash; Dr. Julius Hibbert</small>
+        </blockquote><br />    </div>
 
-						</div>
-						<div class="bb-item">
-
-							<h3>&lt;h3&gt; title 2. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
-                            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
-                            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
-                            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
-                            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                                <small>&mdash; Dr. Julius Hibbert</small>
-                            </blockquote><br />
-
-						</div>
-						<div class="bb-item">
-
-							<h3>&lt;h3&gt; title 3. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
-                            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
-                            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
-                            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
-                            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                                <small>&mdash; Dr. Julius Hibbert</small>
-                            </blockquote><br />
-
-						</div>
-						<div class="bb-item">
-
-							<h3>&lt;h3&gt; title 4. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
-                            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
-                            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
-                            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
-                            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                                <small>&mdash; Dr. Julius Hibbert</small>
-                            </blockquote><br />
-
-						</div>
-						<div class="bb-item">
-
-							<h3>&lt;h3&gt; title 5. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
-                            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
-                            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
-                            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
-                            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
-                            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
-                            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
-                            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
-                            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
-                            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
-                            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
-                            <blockquote>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
-                                <small>&mdash; Dr. Julius Hibbert</small>
-                            </blockquote><br />
-
-						</div>
-					</div>
-				</div>
-			</div>
-		</div><!-- /container -->    </div>
 </section>
 
-<section id="CoreBusinessCourses" class="section">
-    <div class="wrapper persist-area">
-        <header class="persist-header clearfix">
-            <h2>Core Business Courses</h2>
-            <ul class="nav">
-                <li><a href="#">share</a></li>
-                <li><a href="#top">top</a></li>
-            </ul>
-        </header>
+<section id="core-business-courses" class="section persist-area">
+    
+    <header class="persist-header clearfix">
+        <ul class="nav">
+            <li><a href="#">prev</a></li>
+            <li><a href="#">next</a></li>
+            <li><a href="#">share</a></li>
+        </ul>
+        <h2>Core Business Courses</h2>
+    </header>
 
+    <div class="wrapper">
         <h3>&lt;h3&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
         <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
         aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
@@ -221,18 +138,21 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
             <small>&mdash; Dr. Julius Hibbert</small>
         </blockquote><br />    </div>
+
 </section>
 
-<section id="MajorRequiredCourses" class="section">
-    <div class="wrapper persist-area">
-        <header class="persist-header clearfix">
-            <h2>Major Required Courses</h2>
-            <ul class="nav">
-                <li><a href="#">share</a></li>
-                <li><a href="#top">top</a></li>
-            </ul>
-        </header>
+<section id="major-required-courses" class="section persist-area">
+    
+    <header class="persist-header clearfix">
+        <ul class="nav">
+            <li><a href="#">prev</a></li>
+            <li><a href="#">next</a></li>
+            <li><a href="#">share</a></li>
+        </ul>
+        <h2>Major Required Courses</h2>
+    </header>
 
+    <div class="wrapper">
         <h3>&lt;h3&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
         <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
         aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
@@ -254,4 +174,5 @@
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
             <small>&mdash; Dr. Julius Hibbert</small>
         </blockquote><br />    </div>
+
 </section>

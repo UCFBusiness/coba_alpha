@@ -15,18 +15,12 @@
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
         <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
-        @RenderSection("styles", required: false)
-
-
-        <link rel="stylesheet" type="text/css" href="~/content/styles/default.css" />
-		<link rel="stylesheet" type="text/css" href="~/content/styles/bookblock.css" />
-		<!-- custom demo style -->
-		<link rel="stylesheet" type="text/css" href="~/content/styles/demo1.css" />
-
         <style>
             :target {
                 background: #F6FD86;
             }
+
+            @RenderSection("styles", required: false)
         </style>
 
         <script src="~/scripts/modernizr-2.6.2.js"></script>
@@ -176,16 +170,16 @@
                 </form>
             </nav><!-- /dl-menuwrapper -->
             <!-- FINIS:Nav -->
-
+            
             <!-- BEGIN:Body -->
-            <div id="body" class="content-wrapper clearfix" data-sticky_parent>
+            <div id="body" class="content-wrapper cbp-fbscroller clearfix" data-sticky_parent>
                 @RenderSection("featured", required: false)
                 <article class="main-content">
                     @RenderBody()
                 </article>
             </div><!-- /content-wrapper -->
             <!-- FINIS:Body -->
-
+            
         </div><!-- /container -->
 
         <!-- BEGIN:Footer -->
@@ -232,7 +226,7 @@
             </div>
         </footer>
         <!-- FINIS:Footer -->
-
+<a href="#" class="back-to-top">Back to Top</a>
         <!-- JQuery -->
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="~/scripts/jquery-2.0.3.min.js"><\/script>')</script>
@@ -243,6 +237,7 @@
 
         <!-- JQuery Plugins -->
         <script src="http://scripts.bus.ucf.edu/js/libs/bootstrap-scrollspy.js" type="text/javascript"></script>
+
 
         <script>
             $(function () { //load on document.ready
@@ -255,6 +250,24 @@
                 //-- 3 -- update header position when window is scrolled
                 $(window).scroll(content_updateHeaders).trigger("scroll");
                 //-- 4 in requireJS
+                //------------------------------------------------------
+
+                //----- Back to top link- ------------------------------
+                var offset = 220;
+                var duration = 500;
+                $(window).scroll(function() {
+                    if ($(this).scrollTop() > offset) {
+                        $('.back-to-top').fadeIn(duration);
+                    } else {
+                        $('.back-to-top').fadeOut(duration);
+                    }
+                });
+    
+                $('.back-to-top').click(function(event) {
+                    event.preventDefault();
+                    $('html, body').animate({scrollTop: 0}, duration);
+                    return false;
+                })
                 //------------------------------------------------------
 
             });
@@ -299,94 +312,10 @@
             }
         </script>
 
-
-        <script src="~/scripts/plugins/jquerypp.custom.js"></script>
-		<script src="~/scripts/plugins/jquery.bookblock.min.js"></script>
-        <script>
-			var Page = (function() {
-				
-				var config = {
-						$bookBlock : $( '#bb-bookblock' ),
-						$navNext : $( '#nav-next' ),
-						$navPrev : $( '#nav-prev' ),
-						$navFirst : $( '#nav-first' ),
-						$navLast : $( '#nav-last' )
-					},
-					init = function() {
-						config.$bookBlock.bookblock( {
-							speed : 800,
-							shadowSides : 0.8,
-							shadowFlip : 0.7
-						} );
-						initEvents();
-					},
-					initEvents = function() {
-						
-						var $slides = config.$bookBlock.children();
-
-						// add navigation events
-						config.$navNext.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'next' );
-							return false;
-						} );
-
-						config.$navPrev.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'prev' );
-							return false;
-						} );
-
-						config.$navFirst.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'first' );
-							return false;
-						} );
-
-						config.$navLast.on( 'click touchstart', function() {
-							config.$bookBlock.bookblock( 'last' );
-							return false;
-						} );
-						
-						// add swipe events
-						$slides.on( {
-							'swipeleft' : function( event ) {
-								config.$bookBlock.bookblock( 'next' );
-								return false;
-							},
-							'swiperight' : function( event ) {
-								config.$bookBlock.bookblock( 'prev' );
-								return false;
-							}
-						} );
-
-						// add keyboard events
-						$( document ).keydown( function(e) {
-							var keyCode = e.keyCode || e.which,
-								arrow = {
-									left : 37,
-									up : 38,
-									right : 39,
-									down : 40
-								};
-
-							switch (keyCode) {
-								case arrow.left:
-									config.$bookBlock.bookblock( 'prev' );
-									break;
-								case arrow.right:
-									config.$bookBlock.bookblock( 'next' );
-									break;
-							}
-						} );
-					};
-
-					return { init : init };
-
-			})();
-		</script>
-		<script>
-				Page.init();
-		</script>
-
         <!----------------------------------->
+
+
+
 
         @*<script>
             //----- Responsive Script Loader ---------------------------

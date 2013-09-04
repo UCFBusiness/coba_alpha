@@ -4,10 +4,13 @@
 
 /* nav */
 nav.dl-menuwrapper {
-    
-    background: url(../../images/header-bg.png) repeat-x;
-    border-bottom: 1px solid #bbb;
-    /*padding: 5px 0 5px;*/
+    background:  rgba(0,0,0,0.3) ;
+    /*border-bottom: 1px solid #bbb;
+    padding: 5px 0 5px;*/
+    margin-top: 30px;
+
+    background: none;
+
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
 	font-weight: 300;
@@ -21,7 +24,7 @@ nav.dl-menuwrapper {
     perspective-origin: 50% 200%;
     -webkit-perspective-origin: 50% 200%;
     -moz-perspective-origin: 50% 200%;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
+    box-shadow: none; /* no-shadow */
     z-index: 1000;
 }
 .dl-menuwrapper:first-child {
@@ -83,7 +86,7 @@ nav.dl-menuwrapper {
 }
 
 .dl-home {
-    background: url(../../images/icon-home-m.png) no-repeat;
+    background: url(../../images/icon-home.png) no-repeat;
     background-position: 4px 3px;
 }
 
@@ -105,7 +108,8 @@ nav.dl-menuwrapper {
 }
 
 .dl-searchbutton {
-    border-left: none;
+    background: url(../../images/icon-search.png) no-repeat;
+    background-position: 4px 3px;
     width: 50px;
     visibility: visible;
     display: block;
@@ -131,6 +135,7 @@ nav.dl-menuwrapper {
     visibility: hidden;
 }
 .dl-menuwrapper .dl-menu {
+    background: #fff;
 	margin: 43px 0 0 0px;
 	position: absolute;
 	max-width: 371px;
@@ -158,6 +163,7 @@ nav.dl-menuwrapper {
 
 /* all uls */
 .dl-menuwrapper ul {
+    background: #fff;
 	max-width: 371px;
     list-style: none;
     overflow: hidden;
@@ -208,8 +214,7 @@ nav.dl-menuwrapper {
 /* desktop - menu theme */
 .dl-menuwrapper button:hover,
 .dl-menuwrapper button.dl-active,
-.dl-menuwrapper ul, .dl-menuwrapper li a {
-
+.dl-menuwrapper li a {
     background: #ffcc00; color: #555; /* li:hover color*/
 }
 
