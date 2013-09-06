@@ -9,7 +9,7 @@ require.config({
         'mmenu': 'plugins/jquery.mmenu.min',
         'easing': 'plugins/jquery.easing.1.3',
         'sticky': 'plugins/jquery.sticky-kit.min',
-        'waypoint': 'plugins/jquery.waypoints.min.js'
+        'waypoint': 'plugins/jquery.waypoints.min'
     }
 });
 
@@ -87,16 +87,10 @@ require(['dmenu', 'easing'], function () {
             $("#message").html(width + " x " + height + " - desktop");
 
             //-- sticky ---------------------  
-            $("#feature").stick_in_parent()
-                .on("sticky_kit:stick", function (e) {
-                    //console.log("has stuck!", e.target);
-                })
-                .on("sticky_kit:unstick", function (e) {
-                    //console.log("has unstuck!", e.target);
-                });
+            $(".featured").stick_in_parent();
 
             //--resize to fit screen-----------
-            $('.featured').css('min-height', height);
+            $('.page .index').css('min-height', height - 120);
         });
 
 
@@ -136,7 +130,7 @@ require(['dmenu', 'easing'], function () {
                 $("#message").html(width + " x " + height + " - desktop");
 
                 //--resize to fit screen-----------
-                $('.featured').css('min-height', height);
+                $('.page .index').css('min-height', height);
             });
     });
 

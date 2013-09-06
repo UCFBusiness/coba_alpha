@@ -744,64 +744,57 @@ remove if not used. - locks desktop screen and removes scrollbars
     overflow: hidden;
 }*/
 /* line 18, sass/partials/boilerplate/_primary_styles.scss */
-.page {
-  /*background-image:-webkit-linear-gradient(top, #31353a, #2f3337);  -- charcoal background --*/
-  font-size: 1em;
-  line-height: 1.4em;
+body {
+  /*--font-size: 1em;
+  line-height:1.4em;--*/
+  background: #1e5799;
+  /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1e5799), color-stop(50%, #2989d8), color-stop(51%, #207cca), color-stop(100%, #7db9e8));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  /* IE10+ */
+  background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
+  /* IE6-9 fallback on horizontal gradient */
   /* Create a page-wide stacking context 
   (so that negative margins work as you expect) */
   position: relative;
   z-index: 0;
 }
 
-/* line 28, sass/partials/boilerplate/_primary_styles.scss */
-.page #container {
+/* line 39, sass/partials/boilerplate/_primary_styles.scss */
+#container {
   position: relative;
   z-index: 1;
 }
 
-/* line 33, sass/partials/boilerplate/_primary_styles.scss */
+/*
 h1, h2, h3, h4, h5, h6 {
-  letter-spacing: 1px;
-  font-weight: 400;
+    letter-spacing: 1px;
+	font-weight: 400;
 }
 
-/* line 38, sass/partials/boilerplate/_primary_styles.scss */
-h1, h2 {
-  line-height: 1.1em;
-}
+h1, h2 {line-height: 1.1em;}
 
-/* line 40, sass/partials/boilerplate/_primary_styles.scss */
-h1 {
-  font-size: 2em;
-}
-
-/* line 41, sass/partials/boilerplate/_primary_styles.scss */
-h2 {
-  font-size: 1.75em;
-}
-
-/* line 42, sass/partials/boilerplate/_primary_styles.scss */
-h3 {
-  font-size: 1.2em;
-}
-
-/* line 43, sass/partials/boilerplate/_primary_styles.scss */
-h4 {
-  font-size: 1.1em;
-}
-
-/* line 44, sass/partials/boilerplate/_primary_styles.scss */
-h5, h6 {
-  font-size: 1em;
-}
-
-/* line 46, sass/partials/boilerplate/_primary_styles.scss */
+h1 {font-size: 2em;}
+h2 {font-size: 1.75em;}
+h3 {font-size: 1.2em;}
+h4 {font-size: 1.1em;}
+h5, h6 {font-size: 1em;}
+*/
+/* line 59, sass/partials/boilerplate/_primary_styles.scss */
 p {
   margin: 0 0 10px 0;
 }
 
-/* line 48, sass/partials/boilerplate/_primary_styles.scss */
+/* line 61, sass/partials/boilerplate/_primary_styles.scss */
 blockquote {
   /*background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
   background-position: 0px 5px;*/
@@ -810,7 +803,7 @@ blockquote {
   font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
 }
 
-/* line 56, sass/partials/boilerplate/_primary_styles.scss */
+/* line 69, sass/partials/boilerplate/_primary_styles.scss */
 blockquote:before {
   content: '"';
   padding-right: 10px;
@@ -818,7 +811,7 @@ blockquote:before {
   float: left;
 }
 
-/* line 63, sass/partials/boilerplate/_primary_styles.scss */
+/* line 76, sass/partials/boilerplate/_primary_styles.scss */
 blockquote small {
   font: italic .9em "Georgia", "Times New Roman", "Times", serif;
 }
@@ -826,12 +819,12 @@ blockquote small {
 /*---------------------*/
 /*-- Special Classes --*/
 /*---------------------*/
-/* line 71, sass/partials/boilerplate/_primary_styles.scss */
+/* line 84, sass/partials/boilerplate/_primary_styles.scss */
 .noshow {
   display: none;
 }
 
-/* line 75, sass/partials/boilerplate/_primary_styles.scss */
+/* line 88, sass/partials/boilerplate/_primary_styles.scss */
 .shadow {
   box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
   /*-CSS3 Box Shadow-*/
@@ -839,7 +832,7 @@ blockquote small {
   /*-CSS3 Box Shadow-*/
 }
 
-/* line 80, sass/partials/boilerplate/_primary_styles.scss */
+/* line 93, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   background-color: #fff34d;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -850,23 +843,23 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 87, sass/partials/boilerplate/_primary_styles.scss */
+/* line 100, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 92, sass/partials/boilerplate/_primary_styles.scss */
+/* line 105, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 96, sass/partials/boilerplate/_primary_styles.scss */
+/* line 109, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 100, sass/partials/boilerplate/_primary_styles.scss */
+/* line 113, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
@@ -2838,7 +2831,83 @@ nav.dl-menuwrapper {
   color: #aaaaaa;
 }
 
-/* line 2, sass/partials/mobile/new/_content.scss */
+/* =============================================================================
+   Persistent Content Headers
+   ========================================================================== */
+/* line 5, sass/partials/mobile/new/_content.scss */
+.persist-header {
+  /*-settings for both-*/
+  min-height: 5px;
+}
+
+/* line 9, sass/partials/mobile/new/_content.scss */
+.persist-header h2 {
+  margin-left: 5px;
+  font-size: 1.2em;
+  line-height: 1em;
+}
+
+/* line 15, sass/partials/mobile/new/_content.scss */
+.persist-header ul.nav {
+  list-style: none;
+  display: block;
+  text-align: right;
+}
+
+/* line 21, sass/partials/mobile/new/_content.scss */
+.persist-header ul.nav li {
+  display: inline-block;
+  text-indent: -9999px;
+}
+
+/* line 26, sass/partials/mobile/new/_content.scss */
+.persist-header ul.nav li a {
+  padding: 10px;
+}
+
+/* line 30, sass/partials/mobile/new/_content.scss */
+.persist-header ul.nav li:last-child {
+  padding-left: 20px;
+}
+
+/*----------------------------------*/
+/* line 36, sass/partials/mobile/new/_content.scss */
+.floatingHeader {
+  background: rgba(0, 0, 0, 0.6);
+  /*-using different settings-*/
+  visibility: hidden;
+  color: #ffcc00;
+  position: fixed;
+  top: 0;
+  box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
+  /* shadow */
+}
+
+/* line 45, sass/partials/mobile/new/_content.scss */
+.floatingHeader ul.nav {
+  color: #ffcc00;
+}
+
+/* line 50, sass/partials/mobile/new/_content.scss */
+.floatingHeader ul.nav li {
+  text-indent: 0;
+}
+
+/* line 54, sass/partials/mobile/new/_content.scss */
+.floatingHeader ul.nav li a {
+  color: #ffcc00;
+  text-indent: 0;
+}
+
+/* =============================================================================
+   Main
+   ========================================================================== */
+/* line 64, sass/partials/mobile/new/_content.scss */
+.page #container, .page .content-wrapper {
+  background: #FFF;
+}
+
+/* line 68, sass/partials/mobile/new/_content.scss */
 .back-to-top {
   position: fixed;
   bottom: 2em;
@@ -2852,7 +2921,7 @@ nav.dl-menuwrapper {
   z-index: 1000;
 }
 
-/* line 15, sass/partials/mobile/new/_content.scss */
+/* line 81, sass/partials/mobile/new/_content.scss */
 .back-to-top:hover {
   background-color: rgba(135, 135, 135, 0.5);
 }
@@ -2865,6 +2934,157 @@ nav.dl-menuwrapper {
   }
 
   /*-- inherited from mobile --*/
+  /* =============================================================================
+     Footer/Section Layout
+     ========================================================================== */
+  /* line 5, sass/partials/tablet/new/_footer.scss */
+  .page footer {
+    height: 50%;
+    /* <----- */
+    color: #ccc;
+    font-size: 12px;
+    z-index: -2;
+    border: 1px dashed red;
+    /*-- development only - borderline --*/
+  }
+
+  /*-------------------------------*/
+  /* The columns */
+  /* line 21, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper {
+    padding-bottom: 150px;
+    /* <----- */
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    border: 1px dashed red;
+    /*-- development only - borderline --*/
+  }
+
+  /* line 33, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  /* The four columns of links */
+  /* line 40, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper ul > li {
+    width: 25%;
+    float: left;
+  }
+
+  /* line 46, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper ul {
+    list-style: none;
+  }
+
+  /* The links */
+  /* line 52, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul > li ul li {
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 1.8;
+    width: 100%;
+  }
+
+  /*-------------------------------*/
+  /* The headers */
+  /* line 64, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper p {
+    background-color: #058cc7;
+    padding: 9px;
+    width: 90%;
+    line-height: 18px;
+    font-weight: bold;
+    font-size: 14px;
+    color: #fff;
+    text-transform: uppercase;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    opacity: 0.9;
+    cursor: default;
+  }
+
+  /* line 82, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul > li:hover p {
+    opacity: 1;
+  }
+
+  /*-------------------------------*/
+  /* The links */
+  /* line 90, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul ul a {
+    text-decoration: none !important;
+    color: #7d8691 !important;
+    font-size: 1em;
+    text-indent: 0;
+    margin-left: -30px;
+  }
+
+  /* line 99, sass/partials/tablet/new/_footer.scss */
+  footer .wrapper > ul ul a:hover {
+    color: #ddd !important;
+  }
+
+  /* line 103, sass/partials/tablet/new/_footer.scss */
+  footer .copy {
+    position: fixed;
+    left: 20px;
+    bottom: 10px;
+  }
+
+  /*------------color themes (optional)-------------------
+  footer p.home{
+      background-color: #0096d6;
+  
+      background-image:-webkit-linear-gradient(top, #0096d6, #008ac6);
+      background-image:-moz-linear-gradient(top, #0096d6, #008ac6);
+      background-image:linear-gradient(top, #0096d6, #008ac6);
+  }
+  
+  footer p.home:before{
+      background-position: 0 -110px;
+  }
+  
+  footer p.services{
+      background-color: #00b274;
+  
+      background-image:-webkit-linear-gradient(top, #00b274, #00a46b);
+      background-image:-moz-linear-gradient(top, #00b274, #00a46b);
+      background-image:linear-gradient(top, #00b274, #00a46b);
+  }
+  
+  footer p.services:before{
+      background-position: 0 -129px;
+  }
+  
+  footer p.reachus{
+      background-color: #d75ba2;
+  
+      background-image:-webkit-linear-gradient(top, #d75ba2, #c75496);
+      background-image:-moz-linear-gradient(top, #d75ba2, #c75496);
+      background-image:linear-gradient(top, #d75ba2, #c75496);
+  }
+  
+  footer p.reachus:before{
+      background-position: 0 -89px;
+  }
+  
+  footer p.clients{
+      background-color: #e9ac40;
+  
+      background-image:-webkit-linear-gradient(top, #e9ac40, #d89f3b);
+      background-image:-moz-linear-gradient(top, #e9ac40, #d89f3b);
+      background-image:linear-gradient(top, #e9ac40, #d89f3b);
+  }
+  
+  footer p.clients:before{
+      background-position: 0 -69px;
+  }
+  ---*/
 }
 /* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
 @media only screen and (min-width: 1025px) {
@@ -2880,11 +3100,10 @@ nav.dl-menuwrapper {
   /* nav */
   /* line 6, sass/partials/desktop/_nav.scss */
   nav.dl-menuwrapper {
-    background: rgba(0, 0, 0, 0.3);
-    /*border-bottom: 1px solid #bbb;
-    padding: 5px 0 5px;*/
     margin-top: 30px;
+    margin-left: 30px;
     background: none;
+    height: 60px;
     font-family: 'Lato', Calibri, Arial, sans-serif;
     font-size: 16px;
     font-weight: 300;
@@ -2915,27 +3134,20 @@ nav.dl-menuwrapper {
     border: 1px solid #ddd;
     border-right: none;
     padding: 7px 9px 11px 6px;
-    height: 16px;
-    font-size: 13px;
-    font-weight: 300;
-    text-indent: 0;
-    background: white;
-    color: #555;
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-    /* shadow */
+    height: 15px;
     float: left;
   }
 
-  /* line 49, sass/partials/desktop/_nav.scss */
+  /* line 44, sass/partials/desktop/_nav.scss */
   #dl-home:hover {
     background: #f2f2f2;
   }
 
   /* discover button */
-  /* line 54, sass/partials/desktop/_nav.scss */
+  /* line 49, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button {
-    border: 1px solid #ddd;
-    border-right: none;
+    border: 1px solid #eee;
+    border-bottom: 1px solid #eee;
     padding-left: 40px;
     width: 130px;
     height: 45px;
@@ -2943,11 +3155,11 @@ nav.dl-menuwrapper {
     overflow: hidden;
     display: block;
     font-size: 13px;
-    font-weight: 300;
+    font-weight: 400;
     text-indent: 0em;
     cursor: pointer;
     outline: none;
-    background: white;
+    background: rgba(255, 255, 255, 0.7);
     color: #555;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     /* shadow */
@@ -2955,7 +3167,7 @@ nav.dl-menuwrapper {
   }
 
   /* discover icon = */
-  /* line 73, sass/partials/desktop/_nav.scss */
+  /* line 68, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:after {
     content: '';
     width: 20%;
@@ -2963,27 +3175,36 @@ nav.dl-menuwrapper {
     position: absolute;
     top: 10px;
     left: 7%;
-    right: 15px;
+    right: 13px;
     line-height: 50px;
     background: #555;
     box-shadow: 0 10px 0 #555555, 0 20px 0 #555555;
   }
 
-  /* line 88, sass/partials/desktop/_nav.scss */
-  .dl-home {
-    background: url(../../images/icon-home.png) no-repeat;
-    background-position: 4px 3px;
+  /* line 84, sass/partials/desktop/_nav.scss */
+  .dl-home,
+  .dl-searchbutton {
+    width: 45px;
+    border: 1px solid #fff;
   }
 
-  /* line 94, sass/partials/desktop/_nav.scss */
-  .dl-home,
-  .dl-trigger {
-    width: 50px;
+  /* line 89, sass/partials/desktop/_nav.scss */
+  .dl-home {
     border-right: none;
+    background: rgba(255, 255, 255, 0.6) url(../../images/icon-home.png) no-repeat;
+    background-position: 1px 1px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
+    border-radius: 5px 0 0 5px;
+  }
+
+  /* line 96, sass/partials/desktop/_nav.scss */
+  .dl-home:hover {
+    background-position: 2px 3px;
   }
 
   /* search */
-  /* line 100, sass/partials/desktop/_nav.scss */
+  /* line 103, sass/partials/desktop/_nav.scss */
   #dl-search {
     border: 1px solid #eee;
     padding: 1px 15px;
@@ -2996,43 +3217,55 @@ nav.dl-menuwrapper {
     float: left;
   }
 
-  /* line 110, sass/partials/desktop/_nav.scss */
+  /* line 113, sass/partials/desktop/_nav.scss */
   .dl-searchbutton {
-    background: url(../../images/icon-search.png) no-repeat;
-    background-position: 4px 3px;
-    width: 50px;
+    border-left: 1px solid #ddd;
+    background: rgba(255, 255, 255, 0.6) url(../../images/icon-search.png) no-repeat;
+    background-position: 2px 1px;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
+    border-radius: 0 5px 5px 0;
     visibility: visible;
     display: block;
   }
 
-  /* line 118, sass/partials/desktop/_nav.scss */
+  /* line 122, sass/partials/desktop/_nav.scss */
+  .dl-searchbutton:hover {
+    background-position: 3px 2px;
+  }
+
+  /* line 126, sass/partials/desktop/_nav.scss */
   .dl-searchfield {
-    background: #fff;
-    border: 1px solid #eee;
+    background: rgba(255, 255, 255, 0.7);
+    border: 1px solid #fff;
     position: static;
     margin: 0;
+    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
+    /* shadow */
     padding: 1px 10px 0;
-    width: 169px;
-    font-size: .8em;
-    height: 42px;
-    color: #999;
+    width: 160px;
+    font-size: .7em;
+    height: 45px;
+    color: #333;
     float: left;
   }
 
   /* submenus */
   /* menu ul only */
-  /* line 134, sass/partials/desktop/_nav.scss */
+  /* line 143, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
     /* ie fix */
     visibility: hidden;
   }
 
-  /* line 137, sass/partials/desktop/_nav.scss */
+  /* line 146, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
-    background: #fff;
-    margin: 43px 0 0 0px;
+    /*background: #FFF;*/
+    background: rgba(255, 255, 255, 0.8);
+    margin: 46px 0 0 3px;
     position: absolute;
-    max-width: 371px;
+    max-width: 373px;
+    /* <== */
     opacity: 0;
     pointer-events: none;
     transform: translateY(10px);
@@ -3043,14 +3276,14 @@ nav.dl-menuwrapper {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 151, sass/partials/desktop/_nav.scss */
+  /* line 162, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 156, sass/partials/desktop/_nav.scss */
+  /* line 167, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -3059,11 +3292,21 @@ nav.dl-menuwrapper {
     -moz-transform: translateY(0px);
   }
 
+  /* line 175, sass/partials/desktop/_nav.scss */
+  .dl-menuwrapper .dl-menu li {
+    width: 373px;
+    /* <== */
+    margin: 2px 0;
+    border: none;
+  }
+
   /* all uls */
-  /* line 165, sass/partials/desktop/_nav.scss */
+  /* line 182, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper ul {
-    background: #fff;
-    max-width: 371px;
+    background: none;
+    border: none;
+    max-width: 373px;
+    /* <== */
     list-style: none;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -3072,12 +3315,13 @@ nav.dl-menuwrapper {
   }
 
   /* menu li */
-  /* line 176, sass/partials/desktop/_nav.scss */
+  /* line 194, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
+    border: none;
   }
 
-  /* line 179, sass/partials/desktop/_nav.scss */
+  /* line 198, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -3085,22 +3329,30 @@ nav.dl-menuwrapper {
     outline: none;
   }
 
-  /* line 185, sass/partials/desktop/_nav.scss */
+  /* line 204, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
+  /* line 208, sass/partials/desktop/_nav.scss */
+  .dl-menuwrapper li.breadcrumb {
+    padding: 2px 15px;
+    font-size: 15px;
+    color: #cc9900;
+  }
+
   /* back li */
-  /* line 189, sass/partials/desktop/_nav.scss */
+  /* line 215, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
     text-transform: uppercase;
-    background: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.3);
     color: white;
+    text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
   }
 
-  /* line 195, sass/partials/desktop/_nav.scss */
+  /* line 222, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -3109,7 +3361,7 @@ nav.dl-menuwrapper {
   }
 
   /* li arrows */
-  /* line 203, sass/partials/desktop/_nav.scss */
+  /* line 230, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -3119,20 +3371,20 @@ nav.dl-menuwrapper {
     speak: none;
     -webkit-font-smoothing: antialiased;
     content: "\e000";
-    color: rgba(170, 170, 170, 0.3);
+    color: rgba(170, 170, 170, 0.7);
   }
 
   /* desktop - menu theme */
-  /* line 217, sass/partials/desktop/_nav.scss */
+  /* line 244, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper li a {
-    background: #ffcc00;
+    background: rgba(255, 255, 255, 0.9);
     color: #555;
     /* li:hover color*/
   }
 
-  /* line 221, sass/partials/desktop/_nav.scss */
+  /* line 248, sass/partials/desktop/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -3149,9 +3401,9 @@ nav.dl-menuwrapper {
     line-height: 1em;
     color: white;
     text-shadow: 0px 1px 2px #333;
-    /**/
     min-height: 400px;
-    width: 380px;
+    /*width: 380px;*/
+    width: 480px;
     display: block;
     float: left;
     overflow: hidden;
@@ -3161,28 +3413,30 @@ nav.dl-menuwrapper {
   .featured .wrapper {
     position: relative;
     height: 100%;
-    /*padding: 15px; margin: 0 auto; max-width: 1280px;*/
   }
 
-  /* line 28, sass/partials/desktop/_featured.scss */
+  /* line 27, sass/partials/desktop/_featured.scss */
   .featured hgroup {
-    margin-left: 15px;
-    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-bottom: 30px;
   }
 
-  /* line 33, sass/partials/desktop/_featured.scss */
+  /* line 32, sass/partials/desktop/_featured.scss */
   .featured hgroup.title h1 {
+    margin: 0;
     font-size: 2.8em;
-    margin-bottom: 0;
+    color: #fff;
   }
 
   /* line 38, sass/partials/desktop/_featured.scss */
   .featured hgroup.title h2 {
-    margin-bottom: 0;
+    margin-bottom: 10px;
+    font-size: 1.8em;
+    color: #fff;
   }
 
   /* features */
-  /* line 45, sass/partials/desktop/_featured.scss */
+  /* line 46, sass/partials/desktop/_featured.scss */
   #feature .container {
     /*
     background: rgba(0,0,0,0.3);
@@ -3214,13 +3468,13 @@ nav.dl-menuwrapper {
       line-height: 1.3em;
       font-size: 1.4em;
   }*/
-  /* line 84, sass/partials/desktop/_featured.scss */
+  /* line 83, sass/partials/desktop/_featured.scss */
   .featured nav a {
     position: relative;
     display: inline-block;
     margin: 5px 0px;
     outline: none;
-    color: #fff;
+    color: #ffcc00;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
@@ -3230,66 +3484,69 @@ nav.dl-menuwrapper {
     line-height: 1em;
   }
 
-  /* line 100, sass/partials/desktop/_featured.scss */
-  .featured nav a:hover,
-  .featured nav a:focus {
-    outline: none;
-  }
-
   /* =============================================================================
      Section Navigation Effect 10: reveal, push out
      ========================================================================== */
-  /* line 109, sass/partials/desktop/_featured.scss */
+  /* line 103, sass/partials/desktop/_featured.scss */
   .cl-effect-10 {
     position: relative;
     z-index: 1;
   }
 
-  /* line 114, sass/partials/desktop/_featured.scss */
+  /* line 108, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a {
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-    /* shadow */
     overflow: hidden;
     margin: 0 15px;
   }
 
-  /* line 120, sass/partials/desktop/_featured.scss */
+  /* line 113, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a span {
     display: block;
-    padding: 10px 15px;
-    background: #0f7c67;
+    padding: 15px 20px;
+    border-right: 2px solid #000;
+    background: rgba(0, 0, 0, 0.8);
+    /*-change color to match page-*/
+    box-shadow: 0px 2px 8px 0px rgba(0, 5, 0, 0.3);
+    /* shadow */
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
   }
 
-  /* line 129, sass/partials/desktop/_featured.scss */
+  /* line 124, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a::before {
+    background: rgba(225, 225, 225, 0.6);
+    border-right: 2px solid #ddd;
+    padding: 15px 20px;
+    width: 100%;
+    height: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1;
-    padding: 10px 15px;
-    width: 100%;
-    height: 100%;
-    background: #fff;
-    color: #0f7c67;
+    color: #000;
+    font-weight: 400px;
+    font-size: 1em;
+    box-shadow: 0px 2px 8px 0px rgba(0, 5, 0, 0.3);
+    /* shadow */
     content: attr(data-hover);
     -webkit-transition: -webkit-transform 0.3s;
     -moz-transition: -moz-transform 0.3s;
     transition: transform 0.3s;
-    -webkit-transform: translateX(-25%);
+    -webkit-transform: translateX(-100%);
+    z-index: -1;
   }
 
   /* line 147, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 .active a span,
   .cl-effect-10 a:hover span,
   .cl-effect-10 a:focus span {
-    -webkit-transform: translateX(100%);
-    -moz-transform: translateX(100%);
-    transform: translateX(100%);
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    transform: translateX(-100%);
   }
 
-  /* line 154, sass/partials/desktop/_featured.scss */
+  /* line 155, sass/partials/desktop/_featured.scss */
+  .cl-effect-10 .active a::before,
   .cl-effect-10 a:hover::before,
   .cl-effect-10 a:focus::before {
     -webkit-transform: translateX(0%);
@@ -3304,37 +3561,38 @@ nav.dl-menuwrapper {
   .persist-header {
     /*-settings for both-*/
     min-height: 10px;
+    padding-top: 5px;
   }
 
-  /* line 9, sass/partials/desktop/_content.scss */
-  .persist-header h2 {
-    margin-left: 25px;
+  /* line 10, sass/partials/desktop/_content.scss */
+  .persist-header span {
+    margin-left: 10px;
   }
 
-  /* line 13, sass/partials/desktop/_content.scss */
+  /* line 14, sass/partials/desktop/_content.scss */
   .persist-header ul.nav {
     float: right;
     list-style: none;
   }
 
-  /* line 18, sass/partials/desktop/_content.scss */
+  /* line 19, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li {
     display: inline-block;
     text-indent: -9999px;
   }
 
-  /* line 23, sass/partials/desktop/_content.scss */
+  /* line 24, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li a {
     padding: 10px;
   }
 
-  /* line 27, sass/partials/desktop/_content.scss */
+  /* line 28, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
 
   /*----------------------------------*/
-  /* line 33, sass/partials/desktop/_content.scss */
+  /* line 34, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3342,21 +3600,22 @@ nav.dl-menuwrapper {
     color: #ffcc00;
     position: fixed;
     top: 0;
+    border-radius: 0 0 5px 5px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
     /* shadow */
   }
 
-  /* line 42, sass/partials/desktop/_content.scss */
+  /* line 44, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav {
     color: #ffcc00;
   }
 
-  /* line 47, sass/partials/desktop/_content.scss */
+  /* line 49, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav li {
     text-indent: 0;
   }
 
-  /* line 51, sass/partials/desktop/_content.scss */
+  /* line 53, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav li a {
     color: #ffcc00;
     text-indent: 0;
@@ -3377,59 +3636,49 @@ nav.dl-menuwrapper {
   -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sample-bg1.jpg', sizingMethod='scale')";
   --*/
   /* =============================================================================
-     Main-Content Section
+     Main-Content 
      ========================================================================== */
-  /* line 79, sass/partials/desktop/_content.scss */
+  /* line 81, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
     background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 83, sass/partials/desktop/_content.scss */
+  /* line 85, sass/partials/desktop/_content.scss */
   .main-content {
-    /*background: #FFF; white canvas*/
     position: relative !important;
     overflow: hidden !important;
     z-index: 10;
+    padding: 25px;
   }
 
-  /* line 90, sass/partials/desktop/_content.scss */
-  main-content section {
-    /**/
+  /* line 92, sass/partials/desktop/_content.scss */
+  .main-content section {
+    display: block;
+  }
+
+  /* line 96, sass/partials/desktop/_content.scss */
+  .main-content section .wrapper {
+    padding: 25px;
     display: block;
     float: left;
-    width: 80%;
+    border: 1px dashed red;
+    /*-- development only - borderline --*/
   }
 
-  /* line 98, sass/partials/desktop/_content.scss */
+  /* =============================================================================
+     Sections
+     ========================================================================== */
+  /* line 110, sass/partials/desktop/_content.scss */
   .main-content .index {
-    min-height: 600px;
-  }
-
-  /* line 100, sass/partials/desktop/_content.scss */
-  .main-content .index .wrapper {
-    padding: 25px;
-  }
-
-  /* line 102, sass/partials/desktop/_content.scss */
-  .main-content .section {
-    /*margin-top: 25px; */
-    background: rgba(225, 225, 225, 0.9);
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
-    /* shadow */
-  }
-
-  /* line 108, sass/partials/desktop/_content.scss */
-  .main-content .section .wrapper {
-    padding: 25px;
-    /*margin: 0 auto; max-width: 1280px;*/
+    min-height: 300px;
   }
 
   /* =============================================================================
      FB Scroller
      ========================================================================== */
   /* background-attachment does the trick */
-  /* line 119, sass/partials/desktop/_content.scss */
+  /* line 124, sass/partials/desktop/_content.scss */
   .cbp-fbscroller section {
     position: relative;
     background-position: top center;
@@ -3437,7 +3686,7 @@ nav.dl-menuwrapper {
     background-size: cover;
   }
 
-  /* line 126, sass/partials/desktop/_content.scss */
+  /* line 131, sass/partials/desktop/_content.scss */
   .no-touch .cbp-fbscroller section {
     background-attachment: fixed;
   }
@@ -3473,44 +3722,45 @@ nav.dl-menuwrapper {
     /* <----- */
     color: #ccc;
     font-size: 12px;
-    background-color: #31353a;
-    background-image: -webkit-linear-gradient(top, #31353a, #2f3337);
-    background-image: -moz-linear-gradient(top, #31353a, #2f3337);
-    background-image: linear-gradient(top, #31353a, #2f3337);
-    position: relative;
     z-index: -2;
     border: 1px dashed red;
-    /*for development only - borderline*/
+    /*-- development only - borderline --*/
   }
 
   /*-------------------------------*/
   /* The columns */
-  /* line 25, sass/partials/desktop/_footer.scss */
-  footer .wrapper > ul {
+  /* line 21, sass/partials/desktop/_footer.scss */
+  footer .wrapper {
     padding-bottom: 150px;
     /* <----- */
-    width: 1240px;
+    width: 100%;
     position: fixed;
-    left: 50%;
     bottom: 0;
-    margin-left: -470px;
     z-index: -1;
+    border: 1px dashed red;
+    /*-- development only - borderline --*/
+  }
+
+  /* line 33, sass/partials/desktop/_footer.scss */
+  footer .wrapper > ul {
+    width: 80%;
+    margin: 0 auto;
   }
 
   /* The four columns of links */
-  /* line 38, sass/partials/desktop/_footer.scss */
-  footer .wrapper > ul > li {
+  /* line 40, sass/partials/desktop/_footer.scss */
+  footer .wrapper ul > li {
     width: 25%;
     float: left;
   }
 
-  /* line 43, sass/partials/desktop/_footer.scss */
+  /* line 46, sass/partials/desktop/_footer.scss */
   footer .wrapper ul {
     list-style: none;
   }
 
   /* The links */
-  /* line 49, sass/partials/desktop/_footer.scss */
+  /* line 52, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li ul li {
     text-transform: uppercase;
     font-weight: bold;
@@ -3520,13 +3770,12 @@ nav.dl-menuwrapper {
 
   /*-------------------------------*/
   /* The headers */
-  /* line 62, sass/partials/desktop/_footer.scss */
+  /* line 64, sass/partials/desktop/_footer.scss */
   footer .wrapper p {
-    width: 90%;
-    margin-right: 10%;
-    padding: 9px 0;
-    line-height: 18px;
     background-color: #058cc7;
+    padding: 9px;
+    width: 90%;
+    line-height: 18px;
     font-weight: bold;
     font-size: 14px;
     color: #fff;
@@ -3536,26 +3785,23 @@ nav.dl-menuwrapper {
     margin-bottom: 20px;
     opacity: 0.9;
     cursor: default;
-    -webkit-transition: opacity 0.4s;
-    -moz-transition: opacity 0.4s;
-    transition: opacity 0.4s;
   }
 
-  /* line 84, sass/partials/desktop/_footer.scss */
+  /* line 82, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li:hover p {
     opacity: 1;
   }
 
   /*-------------------------------*/
   /* The links */
-  /* line 92, sass/partials/desktop/_footer.scss */
+  /* line 90, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li ul li a {
-    border: none;
     text-decoration: none !important;
     color: #7d8691 !important;
+    font-size: 1.3em;
   }
 
-  /* line 98, sass/partials/desktop/_footer.scss */
+  /* line 96, sass/partials/desktop/_footer.scss */
   footer .wrapper > ul > li ul li a:hover {
     color: #ddd !important;
   }
