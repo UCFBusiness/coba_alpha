@@ -9,102 +9,88 @@ require.config({
         'mmenu': 'plugins/jquery.mmenu.min',
         'easing': 'plugins/jquery.easing.1.3',
         'sticky': 'plugins/jquery.sticky-kit.min',
+        'resize': 'plugins/jquery.debouncedresize',
         'waypoint': 'plugins/jquery.waypoints.min'
     }
 });
 
-require(['dmenu', 'easing'], function () {
-
-    // On PageLoad...
+require(['dmenu', 'easing', 'resize'], function () {
 
     var width = parseInt($(this).width());
     var height = parseInt($(this).height());
 
-    //----- Responsive Script Loader Sample ----------------------
-    //-- 1 -- check browser width on window load
-    //ScreenSizeLabel($(this).width());
+    // On DOM Ready...
+    $(document).ready(function () {
 
-    //-- 2 -- check browser width on window resize
-    //$(window).resize(function () {
-    //ScreenSizeLabel($(this).width());
+        //-- navigation menu -----------------------
+        $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+        //$('nav#main_menu').mmenu();
 
-    //var h = parseInt($(this).height());
-    //$("section").css("height", h); //OR
-    //$('#section').css('margin-top', (h - 620));
-    //})
-    //------------------------------------------------------
+        //-- easing -----------------------
+        $('.featured nav a').bind('click', function (event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
 
+        $('ul.nav a').bind('click', function (event) {
+            var $anchor = $(this);
+            $('html, body').stop().animate({
+                scrollTop: $($anchor.attr('href')).offset().top
+            }, 1500, 'easeInOutExpo');
+            event.preventDefault();
+        });
 
-    //------------------------------------------------
+        //------------------------------------------------
 
+        if (width < 481) // load mobile scripts
+            require([], function () {
 
-    //-- navigation menu -----------------------
-    $('.dl-menuwrapper').dlmenu({ animationClasses : { classin : 'dl-animate-in-1', classout : 'dl-animate-out-1' } });
-    //$('nav#main_menu').mmenu();
+                //-- screensize ---------------------
+                $("#message").html(width + " x " + height + " - mobile");
 
-    //-- easing -----------------------
-    $('.featured nav a').bind('click', function (event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
+            });
+
+        if ((width > 480) && (width < 1025)) // load tablet scripts
+            require([], function () {
+
+                //-- screensize ---------------------
+                $("#message").html(width + " x " + height + " - tablet");
+
+                //--resize to fit portrait-----------
+                $('.main-content .section').css('min-height', height);
+
+            });
+
+        if (width > 1024) // load desktop scripts
+            require(['sticky'], function () {
+
+                //-- screensize ---------------------
+                $("#message").html(width + " x " + height + " - desktop");
+
+                //-- sticky ---------------------  
+                $(".featured").stick_in_parent();
+
+                //--resize to fit screen-----------
+                $('.page .index').css('min-height', height - 120);
+            });
     });
 
-    $('ul.nav a').bind('click', function (event) {
-        var $anchor = $(this);
-        $('html, body').stop().animate({
-            scrollTop: $($anchor.attr('href')).offset().top
-        }, 1500, 'easeInOutExpo');
-        event.preventDefault();
-    });
 
     //------------------------------------------------
-
-    if (width < 481) // load mobile scripts
-        require([], function () {
-
-            //-- screensize ---------------------
-            $("#message").html(width + " x " + height + " - mobile");
-
-        });
-
-    if ((width > 480) && (width < 1025)) // load tablet scripts
-        require([], function () {
-
-            //-- screensize ---------------------
-            $("#message").html(width + " x " + height + " - tablet");
-            
-            //--resize to fit portrait-----------
-            $('.main-content .section').css('min-height', height);
-
-        });
-
-    if (width > 1024) // load desktop scripts
-        require(['sticky'], function () {
-
-            //-- screensize ---------------------
-            $("#message").html(width + " x " + height + " - desktop");
-
-            //-- sticky ---------------------  
-            $(".featured").stick_in_parent();
-
-            //--resize to fit screen-----------
-            $('.page .index').css('min-height', height - 120);
-        });
-
-
-    //------------------------------------------------
-
-
     // On PageResize...
 
-    $(window).resize(function () {
+    //-- Delayed response on resize (waits until user is done resizing the window)
+    $(window).on('debouncedresize', function (event) {
 
         var width = parseInt($(this).width());
         var height = parseInt($(this).height());
 
-        //------------------------
+        //-- resize header to match window size
+        content_resizeHeaders();
+
 
         if (width < 481) // load mobile scripts
             require([], function () {
@@ -130,11 +116,41 @@ require(['dmenu', 'easing'], function () {
                 $("#message").html(width + " x " + height + " - desktop");
 
                 //--resize to fit screen-----------
-                $('.page .index').css('min-height', height - 120);
+                $('.page .index').css('min-height', height);
             });
+    })
+
+    //-- Instant response on resize (fires while the user resizes the window)
+    $(window).resize(function (event) {
+
+        //var width = parseInt($(this).width());
+        //var height = parseInt($(this).height());
+
+        //------------------------
     });
 
+
     //------------------------------------------------
+
+
+    //----- Responsive Script Loader Sample ----------------------
+    //-- 1 -- check browser width on window load
+    //ScreenSizeLabel($(this).width());
+
+    //-- 2 -- check browser width on window resize
+    //$(window).resize(function () {
+    //ScreenSizeLabel($(this).width());
+
+    //var h = parseInt($(this).height());
+    //$("section").css("height", h); //OR
+    //$('#section').css('margin-top', (h - 620));
+    //})
+    //------------------------------------------------------
+
+
+    //------------------------------------------------
+
+
 
     // Log that jquery was loaded into the global name-space.
     console.log("jQuery", $.fn.jquery, "loaded!");

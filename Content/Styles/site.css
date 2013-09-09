@@ -747,29 +747,14 @@ remove if not used. - locks desktop screen and removes scrollbars
 body {
   /*--font-size: 1em;
   line-height:1.4em;--*/
-  background: #1e5799;
-  /* Old browsers */
-  background: -moz-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  /* FF3.6+ */
-  background: -webkit-gradient(linear, left top, right bottom, color-stop(0%, #1e5799), color-stop(50%, #2989d8), color-stop(51%, #207cca), color-stop(100%, #7db9e8));
-  /* Chrome,Safari4+ */
-  background: -webkit-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  /* Chrome10+,Safari5.1+ */
-  background: -o-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  /* Opera 11.10+ */
-  background: -ms-linear-gradient(-45deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  /* IE10+ */
-  background: linear-gradient(135deg, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%);
-  /* W3C */
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1e5799', endColorstr='#7db9e8',GradientType=1 );
-  /* IE6-9 fallback on horizontal gradient */
+  background: #333333 url(../../images/footer_bg.fw.png) left bottom;
   /* Create a page-wide stacking context 
   (so that negative margins work as you expect) */
   position: relative;
   z-index: 0;
 }
 
-/* line 39, sass/partials/boilerplate/_primary_styles.scss */
+/* line 32, sass/partials/boilerplate/_primary_styles.scss */
 #container {
   position: relative;
   z-index: 1;
@@ -789,12 +774,12 @@ h3 {font-size: 1.2em;}
 h4 {font-size: 1.1em;}
 h5, h6 {font-size: 1em;}
 */
-/* line 59, sass/partials/boilerplate/_primary_styles.scss */
+/* line 52, sass/partials/boilerplate/_primary_styles.scss */
 p {
   margin: 0 0 10px 0;
 }
 
-/* line 61, sass/partials/boilerplate/_primary_styles.scss */
+/* line 54, sass/partials/boilerplate/_primary_styles.scss */
 blockquote {
   /*background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
   background-position: 0px 5px;*/
@@ -803,7 +788,7 @@ blockquote {
   font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
 }
 
-/* line 69, sass/partials/boilerplate/_primary_styles.scss */
+/* line 62, sass/partials/boilerplate/_primary_styles.scss */
 blockquote:before {
   content: '"';
   padding-right: 10px;
@@ -811,7 +796,7 @@ blockquote:before {
   float: left;
 }
 
-/* line 76, sass/partials/boilerplate/_primary_styles.scss */
+/* line 69, sass/partials/boilerplate/_primary_styles.scss */
 blockquote small {
   font: italic .9em "Georgia", "Times New Roman", "Times", serif;
 }
@@ -819,12 +804,12 @@ blockquote small {
 /*---------------------*/
 /*-- Special Classes --*/
 /*---------------------*/
-/* line 84, sass/partials/boilerplate/_primary_styles.scss */
+/* line 77, sass/partials/boilerplate/_primary_styles.scss */
 .noshow {
   display: none;
 }
 
-/* line 88, sass/partials/boilerplate/_primary_styles.scss */
+/* line 81, sass/partials/boilerplate/_primary_styles.scss */
 .shadow {
   box-shadow: 2px 4px 7px 1px rgba(135, 139, 144, 0.3);
   /*-CSS3 Box Shadow-*/
@@ -832,7 +817,7 @@ blockquote small {
   /*-CSS3 Box Shadow-*/
 }
 
-/* line 93, sass/partials/boilerplate/_primary_styles.scss */
+/* line 86, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   background-color: #fff34d;
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7);
@@ -843,23 +828,23 @@ blockquote small {
   /* Opera 10.5+, IE 9.0 */
 }
 
-/* line 100, sass/partials/boilerplate/_primary_styles.scss */
+/* line 93, sass/partials/boilerplate/_primary_styles.scss */
 .highlight {
   padding: 1px 4px;
   margin: 0 -4px;
 }
 
-/* line 105, sass/partials/boilerplate/_primary_styles.scss */
+/* line 98, sass/partials/boilerplate/_primary_styles.scss */
 .left {
   float: left;
 }
 
-/* line 109, sass/partials/boilerplate/_primary_styles.scss */
+/* line 102, sass/partials/boilerplate/_primary_styles.scss */
 .right {
   float: right;
 }
 
-/* line 113, sass/partials/boilerplate/_primary_styles.scss */
+/* line 106, sass/partials/boilerplate/_primary_styles.scss */
 .note {
   border: 1px solid orange;
   padding: 1em;
@@ -3584,23 +3569,22 @@ nav.dl-menuwrapper {
   }
 
   /* line 19, sass/partials/desktop/_content.scss */
-  .persist-header ul.nav li {
-    display: inline-block;
+  .persist-header div {
     text-indent: -9999px;
   }
 
-  /* line 24, sass/partials/desktop/_content.scss */
+  /* line 23, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li a {
     padding: 10px;
   }
 
-  /* line 28, sass/partials/desktop/_content.scss */
+  /* line 27, sass/partials/desktop/_content.scss */
   .persist-header ul.nav li:last-child {
     padding-left: 20px;
   }
 
   /*----------------------------------*/
-  /* line 34, sass/partials/desktop/_content.scss */
+  /* line 33, sass/partials/desktop/_content.scss */
   .floatingHeader {
     background: rgba(0, 0, 0, 0.6);
     /*-using different settings-*/
@@ -3613,17 +3597,17 @@ nav.dl-menuwrapper {
     /* shadow */
   }
 
-  /* line 44, sass/partials/desktop/_content.scss */
+  /* line 43, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav {
     color: #ffcc00;
   }
 
-  /* line 49, sass/partials/desktop/_content.scss */
-  .floatingHeader ul.nav li {
+  /* line 48, sass/partials/desktop/_content.scss */
+  .floatingHeader div {
     text-indent: 0;
   }
 
-  /* line 53, sass/partials/desktop/_content.scss */
+  /* line 52, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav li a {
     color: #ffcc00;
     text-indent: 0;
@@ -3646,26 +3630,25 @@ nav.dl-menuwrapper {
   /* =============================================================================
      Main-Content 
      ========================================================================== */
-  /* line 81, sass/partials/desktop/_content.scss */
+  /* line 80, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
     background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 85, sass/partials/desktop/_content.scss */
+  /* line 84, sass/partials/desktop/_content.scss */
   .main-content {
     position: relative !important;
     overflow: hidden !important;
     z-index: 10;
-    padding: 25px;
   }
 
-  /* line 92, sass/partials/desktop/_content.scss */
+  /* line 90, sass/partials/desktop/_content.scss */
   .main-content section {
     display: block;
   }
 
-  /* line 96, sass/partials/desktop/_content.scss */
+  /* line 94, sass/partials/desktop/_content.scss */
   .main-content section .wrapper {
     padding: 25px;
     display: block;
@@ -3677,16 +3660,52 @@ nav.dl-menuwrapper {
   /* =============================================================================
      Sections
      ========================================================================== */
-  /* line 110, sass/partials/desktop/_content.scss */
+  /* line 108, sass/partials/desktop/_content.scss */
   .main-content .index {
     height: 1100px;
+  }
+
+  /* line 116, sass/partials/desktop/_content.scss */
+  .main-content > .section .section-top {
+    background: #fff;
+    border-radius: 5px 5px 0 0;
+  }
+
+  /* line 121, sass/partials/desktop/_content.scss */
+  .main-content .section-top img:before {
+    content: '';
+    background: url(../../images/up_arrow_main_content.png) no-repeat;
+    width: 40px;
+    height: 30px;
+    position: absolute;
+    top: 410px;
+  }
+
+  /* line 130, sass/partials/desktop/_content.scss */
+  .main-content > .section .section-title {
+    position: absolute;
+    margin: 0 auto;
+    width: 90%;
+    top: 250px;
+    color: #fff;
+    font-size: 260%;
+    text-align: center;
+    text-shadow: 0px 1px 2px #333;
+  }
+
+  /* line 141, sass/partials/desktop/_content.scss */
+  .main-content > .section .section-bottom {
+    background: rgba(225, 225, 225, 0.8);
+    padding: 25px;
+    box-shadow: 5px 20px 30px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 0 0 5px 5px;
   }
 
   /* =============================================================================
      FB Scroller
      ========================================================================== */
   /* background-attachment does the trick */
-  /* line 124, sass/partials/desktop/_content.scss */
+  /* line 154, sass/partials/desktop/_content.scss */
   .cbp-fbscroller section {
     position: relative;
     background-position: top center;
@@ -3694,7 +3713,7 @@ nav.dl-menuwrapper {
     background-size: cover;
   }
 
-  /* line 131, sass/partials/desktop/_content.scss */
+  /* line 161, sass/partials/desktop/_content.scss */
   .no-touch .cbp-fbscroller section {
     background-attachment: fixed;
   }
@@ -3731,8 +3750,6 @@ nav.dl-menuwrapper {
     color: #ccc;
     font-size: 12px;
     z-index: -2;
-    border: 1px dashed red;
-    /*-- development only - borderline --*/
   }
 
   /*-------------------------------*/
