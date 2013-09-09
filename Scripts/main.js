@@ -39,7 +39,7 @@ require(['dmenu', 'easing'], function () {
 
 
     //-- navigation menu -----------------------
-    $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-2', classout: 'dl-animate-out-2'} });
+    $('.dl-menuwrapper').dlmenu({ animationClasses : { classin : 'dl-animate-in-1', classout : 'dl-animate-out-1' } });
     //$('nav#main_menu').mmenu();
 
     //-- easing -----------------------
@@ -130,7 +130,7 @@ require(['dmenu', 'easing'], function () {
                 $("#message").html(width + " x " + height + " - desktop");
 
                 //--resize to fit screen-----------
-                $('.page .index').css('min-height', height);
+                $('.page .index').css('min-height', height - 120);
             });
     });
 

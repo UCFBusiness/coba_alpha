@@ -2758,7 +2758,7 @@ nav.dl-menuwrapper {
 /* line 138, sass/partials/mobile/new/_nav.scss */
 .dl-menuwrapper li.breadcrumb {
   padding: 0 20px;
-  font-size: 11px;
+  font-size: 12px;
   color: #ffcc00;
 }
 
@@ -3244,7 +3244,7 @@ nav.dl-menuwrapper {
     /* shadow */
     padding: 1px 10px 0;
     width: 160px;
-    font-size: .7em;
+    font-size: .8em;
     height: 45px;
     color: #333;
     float: left;
@@ -3323,9 +3323,10 @@ nav.dl-menuwrapper {
   .dl-menuwrapper li {
     position: relative;
     border: none;
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
 
-  /* line 202, sass/partials/desktop/_nav.scss */
+  /* line 203, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
@@ -3335,12 +3336,12 @@ nav.dl-menuwrapper {
     border: 1px solid #ddd;
   }
 
-  /* line 210, sass/partials/desktop/_nav.scss */
+  /* line 211, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
-  /* line 214, sass/partials/desktop/_nav.scss */
+  /* line 215, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.breadcrumb {
     padding: 2px 15px;
     font-size: 15px;
@@ -3349,15 +3350,13 @@ nav.dl-menuwrapper {
   }
 
   /* back li */
-  /* line 222, sass/partials/desktop/_nav.scss */
+  /* line 223, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
     text-transform: uppercase;
-    border: 1px solid #999;
     background: rgba(0, 0, 0, 0.4);
     color: white;
-    text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
 
   /* line 230, sass/partials/desktop/_nav.scss */
@@ -3680,7 +3679,7 @@ nav.dl-menuwrapper {
      ========================================================================== */
   /* line 110, sass/partials/desktop/_content.scss */
   .main-content .index {
-    min-height: 300px;
+    height: 1100px;
   }
 
   /* =============================================================================
