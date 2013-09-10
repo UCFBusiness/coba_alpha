@@ -761,7 +761,7 @@ remove if not used. - locks desktop screen and removes scrollbars
 body {
   /*--font-size: 1em;
   line-height:1.4em;--*/
-  background: #333333 url(../../images/footer_bg.fw.png) left bottom;
+  background: #333333 url(../../images/footer-bg.jpg) left bottom;
   /* Create a page-wide stacking context 
   (so that negative margins work as you expect) */
   position: relative;
@@ -3466,8 +3466,7 @@ nav.dl-menuwrapper {
     display: block;
     float: left;
     overflow: hidden;
-    border: 1px dashed red;
-    /*-- development only - borderline --*/
+    /*--border:1px dashed red;  development only - borderline --*/
   }
 
   /* line 23, sass/partials/desktop/_featured.scss */
@@ -3566,11 +3565,11 @@ nav.dl-menuwrapper {
 
   /* line 118, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a span {
+    background: rgba(0, 0, 0, 0.8);
+    /*--*/
     display: block;
     padding: 15px 20px;
     border-right: 2px solid #000;
-    background: rgba(0, 0, 0, 0.8);
-    /*-change color to match page-*/
     box-shadow: 0px 2px 8px 0px rgba(0, 5, 0, 0.3);
     /* shadow */
     -webkit-transition: -webkit-transform 0.3s;
@@ -3578,9 +3577,10 @@ nav.dl-menuwrapper {
     transition: transform 0.3s;
   }
 
-  /* line 129, sass/partials/desktop/_featured.scss */
+  /* line 130, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a::before {
     background: rgba(225, 225, 225, 0.6);
+    /*--*/
     border-right: 2px solid #ddd;
     padding: 15px 20px;
     width: 100%;
@@ -3601,7 +3601,7 @@ nav.dl-menuwrapper {
     z-index: -1;
   }
 
-  /* line 152, sass/partials/desktop/_featured.scss */
+  /* line 153, sass/partials/desktop/_featured.scss */
   .cl-effect-10 .active a span,
   .cl-effect-10 a:hover span,
   .cl-effect-10 a:focus span {
@@ -3610,7 +3610,7 @@ nav.dl-menuwrapper {
     transform: translateX(-100%);
   }
 
-  /* line 160, sass/partials/desktop/_featured.scss */
+  /* line 161, sass/partials/desktop/_featured.scss */
   .cl-effect-10 .active a::before,
   .cl-effect-10 a:hover::before,
   .cl-effect-10 a:focus::before {
@@ -3711,55 +3711,63 @@ nav.dl-menuwrapper {
 
   /* line 85, sass/partials/desktop/_content.scss */
   .main-content {
+    max-width: 1400px;
     position: relative !important;
     overflow: hidden !important;
     z-index: 10;
   }
 
-  /* line 91, sass/partials/desktop/_content.scss */
+  /* line 92, sass/partials/desktop/_content.scss */
   .main-content section {
     display: block;
   }
 
-  /* line 95, sass/partials/desktop/_content.scss */
+  /* line 96, sass/partials/desktop/_content.scss */
   .main-content section .wrapper {
     padding: 25px;
     display: block;
     float: left;
-    border: 1px dashed red;
-    /*-- development only - borderline --*/
+    /*--border:1px dashed red;  development only - borderline --*/
   }
 
   /* =============================================================================
      Sections
      ========================================================================== */
-  /* line 109, sass/partials/desktop/_content.scss */
+  /* line 110, sass/partials/desktop/_content.scss */
   .main-content .index {
-    height: 1100px;
+    min-height: 650px;
+    /*- initial height -*/
   }
 
-  /* line 117, sass/partials/desktop/_content.scss */
+  /* line 114, sass/partials/desktop/_content.scss */
+  .main-content .section {
+    width: 100%;
+  }
+
+  /* line 118, sass/partials/desktop/_content.scss */
   .main-content > .section .section-top {
+    width: 100%;
     background: #fff;
     border-radius: 5px 5px 0 0;
   }
 
-  /* line 122, sass/partials/desktop/_content.scss */
+  /* line 123, sass/partials/desktop/_content.scss */
   .main-content .section-top:before {
     content: '';
     background: url(../../images/up_arrow_main_content.png) no-repeat;
     width: 40px;
     height: 30px;
     position: absolute;
-    top: 0px;
+    top: 80px;
+    left: 50px;
   }
 
-  /* line 131, sass/partials/desktop/_content.scss */
+  /* line 133, sass/partials/desktop/_content.scss */
   .main-content > .section .section-title {
     position: absolute;
     margin: 0 auto;
     width: 93%;
-    top: 20%;
+    top: 23%;
     color: #fff;
     font-family: 'Cinzel', serif;
     text-align: center;
@@ -3767,9 +3775,10 @@ nav.dl-menuwrapper {
     text-shadow: 0px 1px 2px #333;
   }
 
-  /* line 143, sass/partials/desktop/_content.scss */
+  /* line 145, sass/partials/desktop/_content.scss */
   .main-content > .section .section-bottom {
-    background: rgba(225, 225, 225, 0.8);
+    width: 100%;
+    background: rgba(225, 225, 225, 0.9);
     padding: 25px;
     box-shadow: 5px 20px 30px 10px rgba(0, 0, 0, 0.3);
     border-radius: 0 0 5px 5px;
@@ -3779,19 +3788,33 @@ nav.dl-menuwrapper {
      FB Scroller
      ========================================================================== */
   /* background-attachment does the trick */
-  /* line 156, sass/partials/desktop/_content.scss */
+  /* line 159, sass/partials/desktop/_content.scss */
   .cbp-fbscroller section {
     position: relative;
     background-position: top center;
     background-repeat: no-repeat;
     background-size: cover;
+    background-attachment: fixed;
   }
 
-  /* line 163, sass/partials/desktop/_content.scss */
+  /* line 167, sass/partials/desktop/_content.scss */
   .no-touch .cbp-fbscroller section {
     background-attachment: fixed;
   }
 
+  /*
+  #curricular-learning-goals {
+      background-image: url(../../images/background1.jpg);
+  }
+   
+  #core-business-courses {
+      background-image: url(../../images/background3.jpg);
+  }
+   
+  #major-required-courses {
+      background-image: url(../../images/3.jpg);
+  }
+  */
   /* homepage content 
   ----------------------------------------------------------
   article {

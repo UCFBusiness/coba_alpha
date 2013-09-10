@@ -83,6 +83,7 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
 }
 
 .main-content {
+    max-width:1400px;
     position: relative !important;
     overflow: hidden !important;
     z-index: 10;
@@ -97,7 +98,7 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
     display: block;
     float: left;
 
-border:1px dashed red; /*-- development only - borderline --*/
+/*--border:1px dashed red;  development only - borderline --*/
 
 }
 
@@ -107,14 +108,14 @@ border:1px dashed red; /*-- development only - borderline --*/
    ========================================================================== */
 
 .main-content .index {
-    height: 1100px;
+    min-height: 650px; /*- initial height -*/
 }
 
-.main-content .section {}
+.main-content .section {width:100%;}
 
 .main-content .section .block-full {}
 
-.main-content > .section .section-top {
+.main-content > .section .section-top {width:100%;
     background: #fff;
     border-radius: 5px 5px 0 0;
 }
@@ -125,14 +126,15 @@ border:1px dashed red; /*-- development only - borderline --*/
     width: 40px;
     height: 30px;
     position: absolute;
-    top: 0px;
+    top: 80px;
+    left: 50px;
 }
     
 .main-content > .section .section-title {
     position: absolute;
     margin: 0 auto;
     width: 93%;
-    top: 20%;
+    top: 23%;
     color: #fff;
     font-family: 'Cinzel', serif;
     text-align: center;
@@ -140,8 +142,8 @@ border:1px dashed red; /*-- development only - borderline --*/
     text-shadow: 0px 1px 2px #333;
 }
     
-.main-content > .section .section-bottom {
-    background: rgba(225,225,225,0.8);
+.main-content > .section .section-bottom {width:100%;
+    background: rgba(225,225,225,0.9);
     padding: 25px;
     box-shadow: 5px 20px 30px 10px rgba(0,0,0,0.3);
     border-radius: 0 0 5px 5px;
@@ -152,20 +154,33 @@ border:1px dashed red; /*-- development only - borderline --*/
    FB Scroller
    ========================================================================== */
 
+
 /* background-attachment does the trick */
 .cbp-fbscroller section {
-	position: relative;
-	background-position: top center;
-	background-repeat: no-repeat;
-	background-size: cover;
+    position: relative;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .no-touch .cbp-fbscroller section {
 	background-attachment: fixed;
 }
 
-
-
+/*
+#curricular-learning-goals {
+    background-image: url(../../images/background1.jpg);
+}
+ 
+#core-business-courses {
+    background-image: url(../../images/background3.jpg);
+}
+ 
+#major-required-courses {
+    background-image: url(../../images/3.jpg);
+}
+*/ 
 
 
 

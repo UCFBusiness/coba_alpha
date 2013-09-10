@@ -10,25 +10,30 @@
     
     /* -- Big Background Image --*/
     .page #container, .page .content-wrapper { 
-        background: url(../../images/bg-accounting.jpg) no-repeat top center fixed;
+        background: url(../../images/background0.jpg) no-repeat top center fixed;
         background-size: cover;
-        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/bg-accounting.jpg', sizingMethod='scale');
-        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/bg-accounting.jpg', sizingMethod='scale')";
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/background0.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/background0.jpg', sizingMethod='scale')";
     }
     
-    .page .index {
+    .index .wrapper > div {
         /*
         background: #FFF url(../../images/stock-illustration-16588803-finance-backround.jpg) no-repeat top center fixed;
         background-size: cover;
         min-height: 300px;
     */
+    
+        background: #FFF;
+        border: 1px solid #aaa;
+        min-height: 30%;
+        max-width: 50%;
+        margin: 5px;
+        padding: 25px;
+        float: left;
+    
     }
-
-    /*
-    #curricular-learning-goals {}
-    #core-business-courses {background: url(../../images/1.jpg);}
-    #major-required-courses {background: url(../../images/1.jpg);}
-    */ 
+    
+    
     
 }
 </style>
@@ -41,7 +46,7 @@
 
         <hgroup class="title">
             <h2>Bachelors of Science in Business Administration</h2>
-            <h1>Accounting</h1>
+            <h1>Finance</h1>
         </hgroup>
 
         <nav id="menu" data-scrollspy="scrollspy">
@@ -65,8 +70,32 @@
 
 <section class="index clearfix">
     <div class="wrapper">
-        Index section content.
+
+        <div class="title">
+            <h1>@Page.Title</h1>
+            <h2>Page description</h2>
+        </div>
+
         <p><!-- for development only --><label id="message" style="display: block;"></label><!-- for development only --></p>
+        
+        <div>
+            <h3>The Finance Major</h3>
+            <p>The finance major is designed to provide the student with a broad knowledge in business finance, 
+                investments, financial institutions, international finance, risk management and insurance, 
+                and real estate. The program provides the student with the theoretical background and tools 
+                of analysis required for making effective financial decisions.</p>
+        </div>
+        <div>video</div>
+        <div>image</div>
+        <div>
+            <h3>The Finance Student</h3>
+            <p>Envision an education where hands-on guidance from award-winning faculty is a given. 
+                Where classes aren’t just classes, but components of an innovative curriculum that teaches 
+                the science, ethics, and art of good business.</p>
+            <p>The study of finance prepares the student for careers in business financial management. 
+                Students that major in finance are sought by both financial and non-financial firms.</p>
+        </div>
+
     </div>
 </section>
 
@@ -80,7 +109,7 @@
         </header>
 
         <div class="section-top">
-            <img src="../../images/comp.jpg" width="100%" alt="students">
+            <img src="../../images/section1.jpg" width="100%" alt="students">
             <div class="section-title"><span>Curricular Learning Goals</span></div>
         </div>
 
@@ -117,7 +146,7 @@
         </header>
 
         <div class="section-top">
-            <img src="../../images/students.jpg" width="100%" alt="students">
+            <img src="../../images/section2.jpg" width="100%" alt="students">
             <div class="section-title"><span>Core Business Courses</span></div>
         </div>
         
@@ -156,7 +185,7 @@
         </header>
 
         <div class="section-top">
-            <img src="../../images/knight.jpg" width="100%" alt="students">
+            <img src="../../images/section3.jpg" width="100%" alt="students">
             <div class="section-title"><span>Major Business Courses</span></div>
         </div>
 

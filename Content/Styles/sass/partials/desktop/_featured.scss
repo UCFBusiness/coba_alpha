@@ -17,7 +17,7 @@
     float: left;
     overflow: hidden;
 
-     border:1px dashed red; /*-- development only - borderline --*/
+     /*--border:1px dashed red;  development only - borderline --*/
 }
 
 .featured .wrapper {
@@ -116,18 +116,19 @@
 }
 
 .cl-effect-10 a span {
+    background: rgba(0,0,0,.8); /*--*/
 	display: block;
 	padding: 15px 20px;
     border-right: 2px solid #000;
-	background: rgba(0,0,0,.8); /*-change color to match page-*/
     box-shadow: 0px 2px 8px 0px rgba(0,5px,0,0.3); /* shadow */
+
 	-webkit-transition: -webkit-transform 0.3s;
 	-moz-transition: -moz-transform 0.3s;
 	transition: transform 0.3s;
 }
 
 .cl-effect-10 a::before {
-	background: rgba(225,225,225,.6);
+	background: rgba(225,225,225,.6); /*--*/
     border-right: 2px solid #ddd;
 	padding: 15px 20px;
 	width: 100%;
