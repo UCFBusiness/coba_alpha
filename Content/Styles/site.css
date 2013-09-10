@@ -1,5 +1,19 @@
 @import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
 @import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Cinzel:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900|Roboto+Slab:400,700);
+@import url(http://fonts.googleapis.com/css?family=Raleway:400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,900);
+@import url(http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700);
+@import url(http://fonts.googleapis.com/css?family=Noto+Serif:400,700);
+@import url(http://fonts.googleapis.com/css?family=Libre+Baskerville:400,700,400italic);
+@import url(http://fonts.googleapis.com/css?family=Cinzel:400,700);
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,900|Roboto+Slab:400,700);
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
 /* ==========================================================================
    HTML5 display definitions
@@ -2525,6 +2539,58 @@ All this is done for any sub-level being entered.
   font-style: normal;
 }
 
+@font-face {
+  font-family: Lato;
+  src: local("Lato Light"), local("Lato-Light"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/zLhfkPOm_5ykmdm-wXaiuw.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/KT3KS9Aol4WfR6Vas8kNcg.woff) format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local("Lato Regular"), local("Lato-Regular"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/nQhiC-wSiJx0pvEuJl8d8A.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/9k-RPmcnxYEPm8CNFsH2gg.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Lato;
+  src: local("Lato Bold"), local("Lato-Bold"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/sBtfDPlEIwvKKU53nAG7AQ.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/lato/v6/wkfQbvfT_02e2IWO3yYueQ.woff) format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Satisfy;
+  src: local("Satisfy"), url(http://themes.googleusercontent.com/static/fonts/satisfy/v3/swgYNTW5Q6X61bBH6SDBsg.eot) format("embedded-opentype"), url(http://themes.googleusercontent.com/static/fonts/satisfy/v3/ch7X2unYkww0EzsjlC3m8w.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon/icomoon.eot");
+  src: url("../fonts/icomoon/icomoon.eot?#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.woff") format("woff"), url("../fonts/icomoon/icomoon.ttf") format("truetype"), url("../fonts/icomoon/icomoon.svg#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'arrows';
+  src: url("../fonts/arrows/arrows.eot");
+  src: url("../fonts/arrows/arrows.eot?#iefix") format("embedded-opentype"), url("../fonts/arrows/arrows.woff") format("woff"), url("../fonts/arrows/arrows.ttf") format("truetype"), url("../fonts/arrows/arrows.svg#arrows") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'codropsicons';
+  src: url("../fonts/codropsicons/codropsicons.eot");
+  src: url("../fonts/codropsicons/codropsicons.eot?#iefix") format("embedded-opentype"), url("../fonts/codropsicons/codropsicons.woff") format("woff"), url("../fonts/codropsicons/codropsicons.ttf") format("truetype"), url("../fonts/codropsicons/codropsicons.svg#codropsicons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* =============================================================================
    Simple fluid media
    ========================================================================== */
@@ -3134,7 +3200,7 @@ nav.dl-menuwrapper {
     border: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding-left: 40px;
-    width: 130px;
+    width: 125px;
     height: 45px;
     position: relative;
     overflow: hidden;
@@ -3176,7 +3242,7 @@ nav.dl-menuwrapper {
   /* line 89, sass/partials/desktop/_nav.scss */
   .dl-home {
     border-right: none;
-    background: rgba(255, 255, 255, 0.6) url(../../images/icon-home.png) no-repeat;
+    background: rgba(255, 255, 255, 0.7) url(../../images/icon-home.png) no-repeat;
     background-position: 1px 1px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     /* shadow */
@@ -3205,7 +3271,7 @@ nav.dl-menuwrapper {
   /* line 113, sass/partials/desktop/_nav.scss */
   .dl-searchbutton {
     border-left: 1px solid #ddd;
-    background: rgba(255, 255, 255, 0.6) url(../../images/icon-search.png) no-repeat;
+    background: rgba(255, 255, 255, 0.7) url(../../images/icon-search.png) no-repeat;
     background-position: 2px 1px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     /* shadow */
@@ -3228,7 +3294,7 @@ nav.dl-menuwrapper {
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.1);
     /* shadow */
     padding: 1px 10px 0;
-    width: 160px;
+    width: 150px;
     font-size: .8em;
     height: 45px;
     color: #333;
@@ -3245,18 +3311,19 @@ nav.dl-menuwrapper {
 
   /* line 146, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu {
-    background: rgba(255, 255, 255, 0.9);
+    /*
+    background: rgba(255,255,255,.9);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,.4);  shadow */
+    background: #FFF;
     margin: 47px 0 0 0;
-    padding: 0;
+    padding: 3px 0;
     padding-left: 3px;
     position: absolute;
-    max-width: 379px;
+    max-width: 365px;
     /* <== */
     opacity: 0;
     pointer-events: none;
     border-radius: 5px;
-    box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.4);
-    /* shadow */
     transform: translateY(10px);
     -webkit-transform: translateY(10px);
     -moz-transform: translateY(10px);
@@ -3265,14 +3332,14 @@ nav.dl-menuwrapper {
     -moz-backface-visibility: hidden;
   }
 
-  /* line 166, sass/partials/desktop/_nav.scss */
+  /* line 169, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menu-toggle {
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
   }
 
-  /* line 171, sass/partials/desktop/_nav.scss */
+  /* line 174, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu.dl-menuopen {
     opacity: 1;
     pointer-events: auto;
@@ -3281,20 +3348,20 @@ nav.dl-menuwrapper {
     -moz-transform: translateY(0px);
   }
 
-  /* line 179, sass/partials/desktop/_nav.scss */
+  /* line 182, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper .dl-menu li {
-    width: 373px;
+    width: 360px;
     /* <== */
-    margin: 3px 0;
     border: none;
+    margin-bottom: 1px;
   }
 
   /* all uls */
-  /* line 186, sass/partials/desktop/_nav.scss */
+  /* line 189, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper ul {
     background: none;
     border: none;
-    max-width: 373px;
+    max-width: 360px;
     /* <== */
     list-style: none;
     overflow: hidden;
@@ -3304,38 +3371,38 @@ nav.dl-menuwrapper {
   }
 
   /* menu li */
-  /* line 198, sass/partials/desktop/_nav.scss */
+  /* line 201, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li {
     position: relative;
     border: none;
     text-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
   }
 
-  /* line 203, sass/partials/desktop/_nav.scss */
+  /* line 206, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
     position: relative;
     outline: none;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
   }
 
-  /* line 211, sass/partials/desktop/_nav.scss */
+  /* line 214, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li > a:after {
     right: 10px;
   }
 
-  /* line 215, sass/partials/desktop/_nav.scss */
+  /* line 218, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.breadcrumb {
     padding: 2px 15px;
     font-size: 15px;
     color: #cc9900;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
   }
 
   /* back li */
-  /* line 223, sass/partials/desktop/_nav.scss */
+  /* line 226, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back > a {
     padding-left: 30px;
     font-size: 11px;
@@ -3344,7 +3411,7 @@ nav.dl-menuwrapper {
     color: white;
   }
 
-  /* line 230, sass/partials/desktop/_nav.scss */
+  /* line 233, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after {
     left: 10px;
     transform: rotate(180deg);
@@ -3353,7 +3420,7 @@ nav.dl-menuwrapper {
   }
 
   /* li arrows */
-  /* line 238, sass/partials/desktop/_nav.scss */
+  /* line 241, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper li.dl-back:after,
   .dl-menuwrapper li > a:not(:only-child):after {
     position: absolute;
@@ -3367,7 +3434,7 @@ nav.dl-menuwrapper {
   }
 
   /* desktop - menu theme */
-  /* line 252, sass/partials/desktop/_nav.scss */
+  /* line 255, sass/partials/desktop/_nav.scss */
   .dl-menuwrapper button:hover,
   .dl-menuwrapper button.dl-active,
   .dl-menuwrapper li a {
@@ -3376,7 +3443,7 @@ nav.dl-menuwrapper {
     /* li:hover color*/
   }
 
-  /* line 256, sass/partials/desktop/_nav.scss */
+  /* line 259, sass/partials/desktop/_nav.scss */
   .no-touch .dl-menuwrapper li a:hover {
     background: #FFE599;
     color: #333;
@@ -3417,19 +3484,23 @@ nav.dl-menuwrapper {
 
   /* line 33, sass/partials/desktop/_featured.scss */
   .featured hgroup.title h1 {
-    font-size: 2.8em;
+    font-family: 'Lato', serif;
+    font-weight: 700;
+    font-size: 3.9em;
     color: #fff;
   }
 
-  /* line 39, sass/partials/desktop/_featured.scss */
+  /* line 40, sass/partials/desktop/_featured.scss */
   .featured hgroup.title h2 {
     margin-bottom: 10px;
-    font-size: 1.8em;
+    font-family: 'Lato', serif;
+    font-weight: 700;
+    font-size: 1.9em;
     color: #fff;
   }
 
   /* features */
-  /* line 47, sass/partials/desktop/_featured.scss */
+  /* line 50, sass/partials/desktop/_featured.scss */
   #feature .container {
     /*
     background: rgba(0,0,0,0.3);
@@ -3461,38 +3532,39 @@ nav.dl-menuwrapper {
       line-height: 1.3em;
       font-size: 1.4em;
   }*/
-  /* line 84, sass/partials/desktop/_featured.scss */
+  /* line 87, sass/partials/desktop/_featured.scss */
   .featured nav a {
     position: relative;
     display: inline-block;
     margin: 5px 0px;
     outline: none;
     color: #ffcc00;
+    font-family: 'Roboto', sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     letter-spacing: 1px;
     font-weight: 400;
     text-shadow: 0 0 1px rgba(255, 255, 255, 0.3);
-    font-size: 1.1em;
+    font-size: 1.3em;
     line-height: 1em;
   }
 
   /* =============================================================================
      Section Navigation Effect 10: reveal, push out
      ========================================================================== */
-  /* line 104, sass/partials/desktop/_featured.scss */
+  /* line 108, sass/partials/desktop/_featured.scss */
   .cl-effect-10 {
     position: relative;
     z-index: 1;
   }
 
-  /* line 109, sass/partials/desktop/_featured.scss */
+  /* line 113, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a {
     overflow: hidden;
     margin: 0 15px;
   }
 
-  /* line 114, sass/partials/desktop/_featured.scss */
+  /* line 118, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a span {
     display: block;
     padding: 15px 20px;
@@ -3506,7 +3578,7 @@ nav.dl-menuwrapper {
     transition: transform 0.3s;
   }
 
-  /* line 125, sass/partials/desktop/_featured.scss */
+  /* line 129, sass/partials/desktop/_featured.scss */
   .cl-effect-10 a::before {
     background: rgba(225, 225, 225, 0.6);
     border-right: 2px solid #ddd;
@@ -3529,7 +3601,7 @@ nav.dl-menuwrapper {
     z-index: -1;
   }
 
-  /* line 148, sass/partials/desktop/_featured.scss */
+  /* line 152, sass/partials/desktop/_featured.scss */
   .cl-effect-10 .active a span,
   .cl-effect-10 a:hover span,
   .cl-effect-10 a:focus span {
@@ -3538,7 +3610,7 @@ nav.dl-menuwrapper {
     transform: translateX(-100%);
   }
 
-  /* line 156, sass/partials/desktop/_featured.scss */
+  /* line 160, sass/partials/desktop/_featured.scss */
   .cl-effect-10 .active a::before,
   .cl-effect-10 a:hover::before,
   .cl-effect-10 a:focus::before {
@@ -3595,19 +3667,20 @@ nav.dl-menuwrapper {
     border-radius: 0 0 5px 5px;
     box-shadow: 0px 2px 8px 0px rgba(0, 0, 0, 0.3);
     /* shadow */
+    z-index: 10;
   }
 
-  /* line 43, sass/partials/desktop/_content.scss */
+  /* line 44, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav {
     color: #ffcc00;
   }
 
-  /* line 48, sass/partials/desktop/_content.scss */
+  /* line 49, sass/partials/desktop/_content.scss */
   .floatingHeader div {
     text-indent: 0;
   }
 
-  /* line 52, sass/partials/desktop/_content.scss */
+  /* line 53, sass/partials/desktop/_content.scss */
   .floatingHeader ul.nav li a {
     color: #ffcc00;
     text-indent: 0;
@@ -3630,25 +3703,25 @@ nav.dl-menuwrapper {
   /* =============================================================================
      Main-Content 
      ========================================================================== */
-  /* line 80, sass/partials/desktop/_content.scss */
+  /* line 81, sass/partials/desktop/_content.scss */
   .featured + .main-content {
     /*display background if both classes are present on page*/
     background: url("../../Images/mcarrows.png") repeat-y right;
   }
 
-  /* line 84, sass/partials/desktop/_content.scss */
+  /* line 85, sass/partials/desktop/_content.scss */
   .main-content {
     position: relative !important;
     overflow: hidden !important;
     z-index: 10;
   }
 
-  /* line 90, sass/partials/desktop/_content.scss */
+  /* line 91, sass/partials/desktop/_content.scss */
   .main-content section {
     display: block;
   }
 
-  /* line 94, sass/partials/desktop/_content.scss */
+  /* line 95, sass/partials/desktop/_content.scss */
   .main-content section .wrapper {
     padding: 25px;
     display: block;
@@ -3660,40 +3733,41 @@ nav.dl-menuwrapper {
   /* =============================================================================
      Sections
      ========================================================================== */
-  /* line 108, sass/partials/desktop/_content.scss */
+  /* line 109, sass/partials/desktop/_content.scss */
   .main-content .index {
     height: 1100px;
   }
 
-  /* line 116, sass/partials/desktop/_content.scss */
+  /* line 117, sass/partials/desktop/_content.scss */
   .main-content > .section .section-top {
     background: #fff;
     border-radius: 5px 5px 0 0;
   }
 
-  /* line 121, sass/partials/desktop/_content.scss */
-  .main-content .section-top img:before {
+  /* line 122, sass/partials/desktop/_content.scss */
+  .main-content .section-top:before {
     content: '';
     background: url(../../images/up_arrow_main_content.png) no-repeat;
     width: 40px;
     height: 30px;
     position: absolute;
-    top: 410px;
+    top: 0px;
   }
 
-  /* line 130, sass/partials/desktop/_content.scss */
+  /* line 131, sass/partials/desktop/_content.scss */
   .main-content > .section .section-title {
     position: absolute;
     margin: 0 auto;
-    width: 90%;
-    top: 250px;
+    width: 93%;
+    top: 20%;
     color: #fff;
-    font-size: 260%;
+    font-family: 'Cinzel', serif;
     text-align: center;
+    line-height: 1em;
     text-shadow: 0px 1px 2px #333;
   }
 
-  /* line 141, sass/partials/desktop/_content.scss */
+  /* line 143, sass/partials/desktop/_content.scss */
   .main-content > .section .section-bottom {
     background: rgba(225, 225, 225, 0.8);
     padding: 25px;
@@ -3705,7 +3779,7 @@ nav.dl-menuwrapper {
      FB Scroller
      ========================================================================== */
   /* background-attachment does the trick */
-  /* line 154, sass/partials/desktop/_content.scss */
+  /* line 156, sass/partials/desktop/_content.scss */
   .cbp-fbscroller section {
     position: relative;
     background-position: top center;
@@ -3713,7 +3787,7 @@ nav.dl-menuwrapper {
     background-size: cover;
   }
 
-  /* line 161, sass/partials/desktop/_content.scss */
+  /* line 163, sass/partials/desktop/_content.scss */
   .no-touch .cbp-fbscroller section {
     background-attachment: fixed;
   }

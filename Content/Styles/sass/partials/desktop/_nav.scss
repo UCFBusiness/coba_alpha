@@ -50,7 +50,7 @@ nav.dl-menuwrapper {
     border: 1px solid #eee;
     border-bottom: 1px solid #eee;
     padding-left: 40px;
-    width: 130px;
+    width: 125px;
     height: 45px;
     position: relative;
     overflow: hidden;
@@ -88,7 +88,7 @@ nav.dl-menuwrapper {
 
 .dl-home {
     border-right: none;
-    background: rgba(255,255,255,.6) url(../../images/icon-home.png) no-repeat;
+    background: rgba(255,255,255,.7) url(../../images/icon-home.png) no-repeat;
     background-position: 1px 1px;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
     border-radius: 5px 0 0 5px;
@@ -112,7 +112,7 @@ nav.dl-menuwrapper {
 
 .dl-searchbutton {
     border-left: 1px solid #ddd;
-    background: rgba(255,255,255,.6) url(../../images/icon-search.png) no-repeat;
+    background: rgba(255,255,255,.7) url(../../images/icon-search.png) no-repeat;
     background-position: 2px 1px;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
     border-radius: 0 5px 5px 0;
@@ -130,7 +130,7 @@ nav.dl-menuwrapper {
     margin: 0;
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
     padding: 1px 10px 0;
-    width: 160px;
+    width: 150px;
     font-size: .8em;
     height: 45px;
     color: #333;
@@ -144,17 +144,20 @@ nav.dl-menuwrapper {
     visibility: hidden;
 }
 .dl-menuwrapper .dl-menu {
-background: rgba(255,255,255,.9);
+    /*
+    background: rgba(255,255,255,.9);
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,.4);  shadow */
 
+    background: #FFF;
 	margin: 47px 0 0 0;
-    padding: 0;
+    padding: 3px 0;
     padding-left: 3px;
 	position: absolute;
-	max-width: 379px; /* <== */
+	max-width: 365px; /* <== */
 	opacity: 0;
 	pointer-events: none;
     border-radius: 5px;
-    box-shadow: 0px 2px 8px 0px rgba(0,0,0,.4); /* shadow */
+    
     transform: translateY(10px);
 	-webkit-transform: translateY(10px);
 	-moz-transform: translateY(10px);
@@ -177,16 +180,16 @@ background: rgba(255,255,255,.9);
 }
 
 .dl-menuwrapper .dl-menu li {
-    width: 373px; /* <== */
-    margin: 3px 0;
+    width: 360px; /* <== */
     border: none;
+    margin-bottom: 1px;
 }
 
 /* all uls */
 .dl-menuwrapper ul {
     background: none;
     border: none;
-	max-width: 373px; /* <== */
+	max-width: 360px; /* <== */
     list-style: none;
     overflow: hidden;
     transform-style: preserve-3d;
@@ -206,7 +209,7 @@ background: rgba(255,255,255,.9);
 	position: relative;
 	outline: none;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
 }
 .dl-menuwrapper li > a:after {
 	right: 10px;
@@ -216,7 +219,7 @@ background: rgba(255,255,255,.9);
     padding: 2px 15px;
     font-size: 15px;
     color: #cc9900;
-    border: 1px solid #ddd;
+    border: 1px solid #eee;
 }
 
 /* back li */

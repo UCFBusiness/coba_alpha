@@ -23,7 +23,7 @@ require(['dmenu', 'easing', 'resize'], function () {
     $(document).ready(function () {
 
         //-- navigation menu -----------------------
-        $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-1', classout: 'dl-animate-out-1'} });
+        $('.dl-menuwrapper').dlmenu({ animationClasses: { classin: 'dl-animate-in-2', classout: 'dl-animate-out-2'} });
         //$('nav#main_menu').mmenu();
 
         //-- easing -----------------------
