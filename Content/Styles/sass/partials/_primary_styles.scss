@@ -1,27 +1,18 @@
 
-$white: #FFFFFF;
-$blue-gray: #C7D1D6;
-$light-gray: #E2E2E2;
-$light-blue: #A6DBED;
+.no-js {}
+
+/*-- remove if not used. - locks desktop screen and removes scrollbars -
+.js {
+    overflow: hidden;
+}
+-*/
 
 html, body {
     height: 100%;
 }
 
-/*.no-js {}
-
-remove if not used. - locks desktop screen and removes scrollbars
-.js {
-    overflow: hidden;
-}*/
-
 body {
-    /*--font-size: 1em;
-    line-height:1.4em;--*/
-
     background: #333 url(../../images/footer-bg.jpg) left bottom;
-
-
 
     /* Create a page-wide stacking context 
     (so that negative margins work as you expect) */
@@ -29,45 +20,9 @@ body {
     z-index: 0;
 }
 
-#container {
+div#main-container {
     position: relative;
     z-index: 1;
-}
-
-/*
-h1, h2, h3, h4, h5, h6 {
-    letter-spacing: 1px;
-	font-weight: 400;
-}
-
-h1, h2 {line-height: 1.1em;}
-
-h1 {font-size: 2em;}
-h2 {font-size: 1.75em;}
-h3 {font-size: 1.2em;}
-h4 {font-size: 1.1em;}
-h5, h6 {font-size: 1em;}
-*/
-
-p {margin: 0 0 10px 0;}
-
-blockquote { 
-    /*background: url("http://images.bus.ucf.edu/ui/quote.gif") no-repeat;
-    background-position: 0px 5px;*/
-    border-left: 4px solid #DDD;
-    padding: 10px 15px 10px;
-    font: italic 1.2em "Georgia", "Times New Roman", "Times", serif;
-}
-
-blockquote:before {
-    content: '"';
-    padding-right:10px;
-    font-size: 2em;
-    float:left;
-}
-
-blockquote small {
-    font:italic .9em "Georgia", "Times New Roman", "Times", serif;
 }
 
 /*---------------------*/

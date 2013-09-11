@@ -46,19 +46,7 @@
 }
 
 
-/* features */
-#feature .container {
-    /*
-    background: rgba(0,0,0,0.3);
-    border: 1px solid #ccc;
-    border-right: none;*/
 
-    padding: 10px;
-    
-    float: right;
-    display: block;
-    width: 30%;
-}
 
 
 /* =============================================================================
@@ -83,6 +71,10 @@
     font-size: 1.4em;
 }*/
 
+.featured ul {
+    margin: 0;
+    padding: 0;
+}
 
 .featured nav a {
 	position: relative;
@@ -96,7 +88,6 @@
 	letter-spacing: 1px;
 	font-weight: 400;
 	text-shadow: 0 0 1px rgba(255,255,255,0.3);
-	font-size: 1.3em;
     line-height: 1em;
 
 }
@@ -106,6 +97,7 @@
    ========================================================================== */
 
 .cl-effect-10  {
+    list-style: none;
 	position: relative;
 	z-index: 1;
 }

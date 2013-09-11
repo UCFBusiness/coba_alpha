@@ -6,27 +6,27 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
         <title>@Page.Title - UCF College of Business Administration</title>
+        
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+        
         <link href="~/images/app-icon-57.png" rel="apple-touch-icon-precomposed" />
 
         <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
 
-        <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
-
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
-
         <style>
             :target {
                 background: #F6FD86;
             }
         </style>
+        <link href="~/content/styles/site.css" type="text/css" rel="stylesheet" />
 
         @RenderSection("styles", required: false)
-
 
         <script src="~/scripts/modernizr-2.6.2.js"></script>
         <!-- Google Analytics Code -->
@@ -36,7 +36,7 @@
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div id="container" class="clearfix">
+        <div id="main-container" class="clearfix">
 
             <!-- BEGIN:Header -->
             <header id="UCFHBHeader">
@@ -175,6 +175,8 @@
                         <input type="submit" value="submit" class="dl-searchbutton" />
                     </div>
                 </form>
+
+                <div class="site-title">College of Business</div>
             </nav><!-- /dl-menuwrapper -->
             <!-- FINIS:Nav -->
 
@@ -239,9 +241,6 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
         <script>window.jQuery || document.write('<script src="~/scripts/jquery-2.0.3.min.js"><\/script>')</script>
 
-        @*data-main attribute tells require.js to load scripts/main.js after require.js loads.*@
-        <script data-main="scripts/main" src="~/scripts/require.js"></script>
-
         <!-- Latest compiled and minified bootstrap -->
         <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 
@@ -252,12 +251,15 @@
         <script>
             $(function () { //load on document.ready
 
-                //----- Easing Navigation ------------------------------
-                //-- 1 -- build header when page is first loaded
+                //-- section headers ------------------------------
+                //-- build header when page is first loaded
                 content_buildHeaders();
-                //-- 2 -- update header position when window is scrolled
+
+                //-- update header position when window is scrolled
                 $(window).scroll(content_updateHeaders).trigger("scroll");
-                
+                //------------------------------------------------------
+
+                //-- lazy load images ----------------------------------
                 $("body img").fadeTo(0, 0);
                 $(window).scroll(function (d, h) {
                     $('body img').each(function (i) {
@@ -266,7 +268,6 @@
                         if (a < b) $(this).fadeTo(500, 1);
                     })
                 })
-
                 //------------------------------------------------------
 
                 //----- Back to top link--------------------------------
@@ -279,26 +280,48 @@
                         $('.back-to-top').fadeOut(duration);
                     }
                 });
-
                 $('.back-to-top').click(function (event) {
                     event.preventDefault();
                     $('html, body').animate({ scrollTop: 0 }, duration);
                     return false;
                 })
-
                 //------------------------------------------------------
 
                 //----- Font Sizes--------------------------------------
                 $('body').fitText(1.2, { minFontSize: '12px', maxFontSize: '14px' });
                 $('.main-content > .section .section-title').fitText();
+                //------------------------------------------------------
 
+                //----- fade out menu-----------------------------------
+                var nav = $('#UCFHBHeader');
+                $(window).scroll(function () {
+                    var scrollTop = $(window).scrollTop();
+                    if (scrollTop != 0)
+                        $(nav).stop().animate({ 'opacity': '0.2' }, 400);
+                    else
+                        $(nav).stop().animate({ 'opacity': '1' }, 400);
+                });
+                $(nav).hover(
+                    function (e) {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop != 0) {
+                            $(this).stop().animate({ 'opacity': '1' }, 400);
+                        }
+                    },
+                    function (e) {
+                        var scrollTop = $(window).scrollTop();
+                        if (scrollTop != 0) {
+                            $(this).stop().animate({ 'opacity': '0.2' }, 400);
+                        }
+                    }
+                );
                 //------------------------------------------------------
                 
             });
         </script>
 
         <script>
-            //----- Easing Functions ------------------------------------
+            //----- Static Header Functions ------------------------------------
             function content_buildHeaders() {
                 $(".persist-area").each(function () {
                     var clonedHeaderRow;
@@ -336,6 +359,9 @@
         </script>
 
         <!----------------------------------->
+
+        @*data-main attribute tells require.js to load scripts/main.js after require.js loads.*@
+        <script data-main="scripts/main" src="~/scripts/require.js"></script>
 
         @RenderSection("Scripts", required: false)
         

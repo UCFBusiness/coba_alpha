@@ -3,39 +3,42 @@
    ========================================================================== */
 
 .page footer {
-    height: 400px; /* <----- */
+
+    height: 50%; /* <----- */
+
     color:#ccc;
     font-size:12px;
-    position:relative;
+
     z-index:-2;
 
-    background-color:#31353a;
-
-    background-image:-webkit-linear-gradient(top, #31353a, #2f3337);
-    background-image:-moz-linear-gradient(top, #31353a, #2f3337);
-    background-image:linear-gradient(top, #31353a, #2f3337);
-
-    border:1px dashed red; /*for development only - borderline*/
+    border:1px dashed red; /*-- development only - borderline --*/
 }
 
 
 /*-------------------------------*/
 /* The columns */
 
-footer .wrapper > ul {
+footer .wrapper {
+
     padding-bottom: 150px; /* <----- */
-    width:800px;
+    width:100%;
     position:fixed;
-    left:50%;
     bottom:0;
-    margin-left:-270px;
+
     z-index:-1;
+
+    border:1px dashed red; /*-- development only - borderline --*/
+}
+
+footer .wrapper > ul {
+    width: 80%; margin: 0 auto;
 }
 
 
 /* The four columns of links */
 
-footer .wrapper > ul > li {
+footer .wrapper ul > li {
+
     width:25%;
     float:left;
 }
@@ -47,7 +50,6 @@ footer .wrapper ul {
 /* The links */
 
 footer .wrapper > ul > li ul li {
-    
     text-transform: uppercase;
     font-weight:bold;
     line-height:1.8;
@@ -60,25 +62,21 @@ footer .wrapper > ul > li ul li {
 /* The headers */
 
 footer .wrapper p {
-
-    width: 90%;
-    margin-right: 10%;
-    padding: 9px 0;
-    line-height: 18px;
     background-color: #058cc7;
+    padding: 9px;
+    width: 90%;    
+
+    line-height: 18px;
     font-weight: bold;
     font-size: 14px;
     color:#fff;
+
     text-transform: uppercase;
     text-shadow: 0 1px rgba(0,0,0,0.1);
     box-shadow: 0 0 3px rgba(0,0,0,0.3);
     margin-bottom: 20px;
     opacity:0.9;
     cursor:default;
-
-    -webkit-transition: opacity 0.4s;
-    -moz-transition: opacity 0.4s;
-    transition: opacity 0.4s;
 }
 
 footer .wrapper > ul > li:hover p {
@@ -89,17 +87,24 @@ footer .wrapper > ul > li:hover p {
 /*-------------------------------*/
 /* The links */
 
-footer .wrapper > ul > li ul li a {
-    border: none;
+footer .wrapper > ul ul a {
+
     text-decoration: none !important;
     color:#7d8691 !important;
+    font-size: 1em;
+    text-indent: 0;
+    margin-left:-30px;
 }
 
-footer .wrapper > ul > li ul li a:hover {
+footer .wrapper > ul ul a:hover {
     color:#ddd !important;
 }
 
-
+footer .copy {
+    position: fixed;
+    left: 20px;
+    bottom: 10px;
+}
 
 /*------------color themes (optional)-------------------
 footer p.home{
