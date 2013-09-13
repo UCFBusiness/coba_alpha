@@ -147,16 +147,16 @@ nav.dl-menuwrapper {
     /*
     background: rgba(255,255,255,.9);
     box-shadow: 0px 2px 8px 0px rgba(0,0,0,.4);  shadow */
-
     background: #FFF;
-	margin: 47px 0 0 0;
-    padding: 3px 0;
-    padding-left: 3px;
+    padding:0;
+	margin: 50px 0 0 0;
+
 	position: absolute;
-	max-width: 365px; /* <== */
+	width: 365px; /* <== */
 	opacity: 0;
 	pointer-events: none;
     border-radius: 5px;
+    box-shadow: 0px 10px 310px 5px rgba(0,0,0,0.3);
     
     transform: translateY(10px);
 	-webkit-transform: translateY(10px);
@@ -180,18 +180,21 @@ nav.dl-menuwrapper {
 }
 
 .dl-menuwrapper .dl-menu li {
-    width: 360px; /* <== */
+    width: 365px; /* <== */
     border: none;
     margin-bottom: 1px;
 }
 
 /* all uls */
 .dl-menuwrapper ul {
-    background: none;
+    background: #FFF;
+    padding:0;
     border: none;
-	max-width: 360px; /* <== */
+	max-width: 365px; /* <== */
     list-style: none;
     overflow: hidden;
+
+
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     -moz-transform-style: preserve-3d;
@@ -201,15 +204,14 @@ nav.dl-menuwrapper {
 .dl-menuwrapper li {
 	position: relative;
     border: none;
-    text-shadow: 0 0 1px rgba(0,0,0,.3);
+    text-shadow: 0 0 1px rgba(0,0,0,.3);text-transform: uppercase;
 }
 .dl-menuwrapper li a {
     padding: 10px 10px 10px 15px;
     display: block;
 	position: relative;
 	outline: none;
-    border-radius: 5px;
-    border: 1px solid #eee;
+
 }
 .dl-menuwrapper li > a:after {
 	right: 10px;
@@ -217,18 +219,17 @@ nav.dl-menuwrapper {
 
 .dl-menuwrapper li.breadcrumb {
     padding: 2px 15px;
-    font-size: 15px;
+    font-size: 12px;
     color: #cc9900;
-    border: 1px solid #eee;
+    text-transform: uppercase;
 }
 
 /* back li */
 .dl-menuwrapper li.dl-back > a {
-    padding-left: 30px;
     font-size: 11px;
     text-transform: uppercase;
     background: rgba(0,0,0,.4); color: rgba(255,255,255,1);
-    
+    padding: 10px 10px 10px 30px;
 }
 .dl-menuwrapper li.dl-back:after {
 	left: 10px;
@@ -258,4 +259,11 @@ nav.dl-menuwrapper {
 
 .no-touch .dl-menuwrapper li a:hover {
 	background: #FFE599; color: #333; /* a:hover color*/
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #fff;
+    padding: 9px 10px 9px 15px;
+}
+
+.dl-menuwrapper li.dl-back > a:hover {
+    padding: 9px 10px 9px 30px;
 }

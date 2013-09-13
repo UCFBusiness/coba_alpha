@@ -83,7 +83,11 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
 }
 
 .main-content {
-    max-width:1400px;
+    float:left;
+    width: 70%;
+    
+    /*margin-left:300px;
+    max-width:1400px;*/
     position: relative !important;
     overflow: hidden !important;
     z-index: 10;
@@ -99,9 +103,11 @@ filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/sam
     float: left;
 
 /*--border:1px dashed red;  development only - borderline --*/
-
 }
 
+.title {
+    color: #DDD;
+}
 
 /* =============================================================================
    Sections

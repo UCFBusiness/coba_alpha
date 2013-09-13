@@ -3,7 +3,9 @@
    ========================================================================== */
 
 .featured {
-    
+    float:left;
+    width: 30%;
+
     font-size:1.1em;
     font-weight: 400;
     line-height:1em;
@@ -11,8 +13,8 @@
     text-shadow: 0px 1px 2px #333;
 
     min-height: 400px;
-    width: 380px;
-    /*width: 480px;*/
+    /*width: 380px;
+    width: 480px;*/
     display: block;
     float: left;
     overflow: hidden;

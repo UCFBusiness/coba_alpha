@@ -5,10 +5,8 @@
 .page footer {
 
     height: 50%; /* <----- */
-
     color:#ccc;
     font-size:12px;
-
     z-index:-2;
 
     border:1px dashed red; /*-- development only - borderline --*/
@@ -24,7 +22,6 @@ footer .wrapper {
     width:100%;
     position:fixed;
     bottom:0;
-
     z-index:-1;
 
     border:1px dashed red; /*-- development only - borderline --*/
