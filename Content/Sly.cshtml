@@ -1,0 +1,170 @@
+﻿@{
+    
+}
+
+
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie10 lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<title>Sly</title>
+	<meta name="description" content="JavaScript library for one-directional scrolling with item based navigation support.">
+	<meta name="viewport" content="width=device-width">
+
+	@*<link rel="stylesheet" href="css/normalize.css">*@<!--no use-->
+	@*<link rel="stylesheet" href="css/ospb.css">*@<!--no use-->
+
+	<link rel="stylesheet" href="sly/css/font-awesome.min.css">
+	<link rel="stylesheet" href="sly/css/site.css">
+
+	@*<script src="js/vendor/modernizr.js"></script>*@<!--no use-->
+</head>
+<body>
+
+
+	<header class="projecttitle">
+
+@*<section>
+		<div id="example" class="example pagespan">
+
+			<div class="scrollbar">
+				<div class="handle">
+					<div class="mousearea"></div>
+				</div>
+			</div><!--/scrollbar-->
+
+			<button class="backward"><i class="icon-angle-left"></i></button><!--/back button-->
+			<button class="forward"><i class="icon-angle-right"></i></button><!--/forward button-->
+
+			<div class="frame">
+				<ul>
+					<li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+					<li>19</li><li>20</li>
+				</ul>
+			</div><!--/frames-->
+
+            <ul class="pages"></ul><!--/position marker-->
+
+			<div class="controls">
+				<button data-action="toStart"><i class="icon-double-angle-left"></i> Start</button>
+				<span class="divider"></span>
+				<button class="prev"><i class="icon-angle-left"></i> Prev</button>
+				<span class="divider"></span>
+				<button data-action="add"><i class="icon-plus-sign"></i></button>
+				<button data-action="remove"><i class="icon-minus-sign"></i></button>
+				<span class="divider"></span>
+				<button class="next">Next <i class="icon-angle-right"></i></button>
+				<span class="divider"></span>
+				<button data-action="toEnd">End <i class="icon-double-angle-right"></i></button>
+			</div><!--/controls-->
+
+		</div>
+</section>*@
+
+<section style="background: #808080; border: 1px dashed blue; margin: 0;">
+        <div id="example1" class="pagespan">
+
+            <div class="scrollbar">
+				<div class="handle">
+					<div class="mousearea"></div>
+				</div>
+			</div><!--/scrollbar-->
+
+            <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
+            <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
+
+			<div class="frame">
+				<ul>
+					<li>Use Perimeter.js to trigger an action when your visitor breaches an invisible perimeter around a target element. It's fully documented, lightweight, and has no dependencies. </li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+					<li>19</li><li>20</li>
+				</ul>
+			</div><!--/frames-->
+
+            <ul class="pages"></ul><!--/position marker-->
+
+        </div>
+</section>
+
+<section style="background: #808080; border: 1px dashed blue; margin: 0;">
+        <div id="example2" class="pagespan">
+
+            <div class="scrollbar">
+				<div class="handle">
+					<div class="mousearea"></div>
+				</div>
+			</div><!--/scrollbar-->
+
+            <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
+            <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
+
+			<div class="frame">
+				<ul>
+					<li>Use Perimeter.js to trigger an action when your visitor breaches an invisible perimeter around a target element. It's fully documented, lightweight, and has no dependencies. </li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+					<li>19</li><li>20</li>
+				</ul>
+			</div><!--/frames-->
+
+            <ul class="pages"></ul><!--/position marker-->
+
+        </div>
+</section>
+
+<section style="background: #808080; border: 1px dashed blue; margin: 0;">
+        <div id="example3" class="pagespan">
+
+            <div class="scrollbar">
+				<div class="handle">
+					<div class="mousearea"></div>
+				</div>
+			</div><!--/scrollbar-->
+
+            <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
+            <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
+
+			<div class="frame">
+				<ul>
+					<li>Use Perimeter.js to trigger an action when your visitor breaches an invisible perimeter around a target element. It's fully documented, lightweight, and has no dependencies. </li>
+                    <li>1</li>
+                    <li>2</li>
+                    <li>3</li>
+                    <li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
+					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
+					<li>19</li><li>20</li>
+				</ul>
+			</div><!--/frames-->
+
+            <ul class="pages"></ul><!--/position marker-->
+
+        </div>
+</section>
+
+	</header>
+
+
+
+	<!-- Scripts -->
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	@*<script src="sly/js/plugins.js"></script>*@
+	@*<script src="js/ospb.js"></script>*@
+	<script src="sly/js/sly.min.js"></script>
+	<script src="sly/js/main.js"></script>
+
+	<!-- Google Analytics -->
+</body>
+</html>
