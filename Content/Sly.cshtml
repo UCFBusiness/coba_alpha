@@ -12,159 +12,177 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Sly</title>
-	<meta name="description" content="JavaScript library for one-directional scrolling with item based navigation support.">
-	<meta name="viewport" content="width=device-width">
+	<title>Demo</title>
+	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 	@*<link rel="stylesheet" href="css/normalize.css">*@<!--no use-->
 	@*<link rel="stylesheet" href="css/ospb.css">*@<!--no use-->
 
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="sly/css/font-awesome.min.css">
 	<link rel="stylesheet" href="sly/css/site.css">
+    <link rel="stylesheet" href="sly/css/ogrid.css">
 
-	@*<script src="js/vendor/modernizr.js"></script>*@<!--no use-->
+    <style>
+        .frame {
+            overflow: hidden;
+            height: 400px;
+        }
+        .frame li {
+            float: left;
+        }
+    </style>
+
+	<script src="sly/js/modernizr.js"></script>
+
 </head>
 <body>
+    <div class="container">
+	    <div class="projecttitle">
 
+            <section>
+                    <div id="example1" class="pagespan clearfix">
 
-	<header class="projecttitle">
+                        <div class="scrollbar">
+				            <div class="handle">
+					            <div class="mousearea"></div>
+				            </div>
+			            </div><!--/scrollbar-->
 
-@*<section>
-		<div id="example" class="example pagespan">
+                        <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button><!--/back button-->
+                        <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button><!--/forward button-->
 
-			<div class="scrollbar">
-				<div class="handle">
-					<div class="mousearea"></div>
-				</div>
-			</div><!--/scrollbar-->
+			            <div class="frame">
+				            <ul id="og-grid" class="og-grid">
 
-			<button class="backward"><i class="icon-angle-left"></i></button><!--/back button-->
-			<button class="forward"><i class="icon-angle-right"></i></button><!--/forward button-->
+                                <li>
+                                    <a href="#" data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							            <img src="~/images/thumbs/1.jpg" alt="img01"/>
+						            </a>
+                                </li><!--/line item-->
 
-			<div class="frame">
-				<ul>
-					<li>0</li><li>1</li><li>2</li><li>3</li><li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
-					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
-					<li>19</li><li>20</li>
-				</ul>
-			</div><!--/frames-->
+                                <li>
+                                    <a href="#" data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							            <img src="~/images/thumbs/2.jpg" alt="img02"/>
+						            </a>
+                                </li>
 
-            <ul class="pages"></ul><!--/position marker-->
+                                <li>
+                                    <a href="#" data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							            <img src="~/images/thumbs/3.jpg" alt="img03"/>
+						            </a>
+					            </li>
 
-			<div class="controls">
-				<button data-action="toStart"><i class="icon-double-angle-left"></i> Start</button>
-				<span class="divider"></span>
-				<button class="prev"><i class="icon-angle-left"></i> Prev</button>
-				<span class="divider"></span>
-				<button data-action="add"><i class="icon-plus-sign"></i></button>
-				<button data-action="remove"><i class="icon-minus-sign"></i></button>
-				<span class="divider"></span>
-				<button class="next">Next <i class="icon-angle-right"></i></button>
-				<span class="divider"></span>
-				<button data-action="toEnd">End <i class="icon-double-angle-right"></i></button>
-			</div><!--/controls-->
+				            </ul>
+			            </div><!--/frames-->
 
-		</div>
-</section>*@
+                        <ul class="pages"></ul><!--/position marker-->
 
-<section>
-        <div id="example1" class="pagespan">
+                    </div>
+            </section>
 
-            <div class="scrollbar">
-				<div class="handle">
-					<div class="mousearea"></div>
-				</div>
-			</div><!--/scrollbar-->
+            <section>
+                    <div id="example2" class="pagespan">
 
-            <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
-            <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
+                        <div class="scrollbar">
+				            <div class="handle">
+					            <div class="mousearea"></div>
+				            </div>
+			            </div><!--/scrollbar-->
 
-			<div class="frame">
-				<ul>
-					<li><p>Use Perimeter.js to trigger an action when your visitor breaches an invisible perimeter 
-                        around a target element. It's fully documented, lightweight, and has no dependencies.</p></li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
-					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
-					<li>19</li><li>20</li>
-				</ul>
-			</div><!--/frames-->
+                        <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
+                        <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
 
-            <ul class="pages"></ul><!--/position marker-->
+			            <div class="frame">
+				            <ul id="og-grid" class="og-grid">
 
-        </div>
-</section>
+                                <li>
+                                    <a href="#" data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							            <img src="~/images/thumbs/1.jpg" alt="img01"/>
+						            </a>
+                                </li><!--/line item-->
 
-<section>
-        <div id="example2" class="pagespan">
+                                <li>
+                                    <a href="#" data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							            <img src="~/images/thumbs/2.jpg" alt="img02"/>
+						            </a>
+                                </li>
 
-            <div class="scrollbar">
-				<div class="handle">
-					<div class="mousearea"></div>
-				</div>
-			</div><!--/scrollbar-->
+                                <li>
+						            <a href="#" data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							            <img src="~/images/thumbs/3.jpg" alt="img03"/>
+						            </a>
+					            </li>
 
-            <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
-            <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
+				            </ul>
+			            </div><!--/frames-->
 
-			<div class="frame">
-				<ul>
-					<li>Use Perimeter.js to trigger an action when your visitor breaches an invisible perimeter around a target element. It's fully documented, lightweight, and has no dependencies. </li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
-					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
-					<li>19</li><li>20</li>
-				</ul>
-			</div><!--/frames-->
+                        <ul class="pages"></ul><!--/position marker-->
 
-            <ul class="pages"></ul><!--/position marker-->
+                    </div>
+            </section>
 
-        </div>
-</section>
+            <section>
+                    <div id="example3" class="pagespan">
 
-<section>
-        <div id="example3" class="pagespan">
+                        <div class="scrollbar">
+				            <div class="handle">
+					            <div class="mousearea"></div>
+				            </div>
+			            </div><!--/scrollbar-->
 
-            <div class="scrollbar">
-				<div class="handle">
-					<div class="mousearea"></div>
-				</div>
-			</div><!--/scrollbar-->
+                        <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
+                        <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
 
-            <button class="prev" style="float: left; width: 100px; height: 200px; font-size: 60px;"><i class="icon-angle-left" style="font-size: 1em;"></i></button>
-            <button class="next" style="float: left; width: 100px; height: 200px; font-size: 60px; float: right;"><i class="icon-angle-right" style="font-size: 1em;"></i></button>
+			            <div class="frame">
+				            <ul id="og-grid" class="og-grid">
 
-			<div class="frame">
-				<ul>
-					<li>Use Perimeter.js to trigger an action when your visitor breaches an invisible perimeter around a target element. It's fully documented, lightweight, and has no dependencies. </li>
-                    <li>1</li>
-                    <li>2</li>
-                    <li>3</li>
-                    <li>4</li><li>5</li><li>6</li><li>7</li><li>8</li><li>9</li>
-					<li>10</li><li>11</li><li>12</li><li>13</li><li>14</li><li>15</li><li>16</li><li>17</li><li>18</li>
-					<li>19</li><li>20</li>
-				</ul>
-			</div><!--/frames-->
+                                <li>
+                                    <a href="#" data-largesrc="images/1.jpg" data-title="Azuki bean" data-description="Swiss chard pumpkin bunya nuts maize plantain aubergine napa cabbage soko coriander sweet pepper water spinach winter purslane shallot tigernut lentil beetroot.">
+							            <img src="~/images/thumbs/1.jpg" alt="img01"/>
+						            </a>
+                                </li><!--/line item-->
 
-            <ul class="pages"></ul><!--/position marker-->
+                                <li>
+                                    <a href="#" data-largesrc="images/2.jpg" data-title="Veggies sunt bona vobis" data-description="Komatsuna prairie turnip wattle seed artichoke mustard horseradish taro rutabaga ricebean carrot black-eyed pea turnip greens beetroot yarrow watercress kombu.">
+							            <img src="~/images/thumbs/2.jpg" alt="img02"/>
+						            </a>
+                                </li>
 
-        </div>
-</section>
+                                <li>
+						            <a href="#" data-largesrc="images/3.jpg" data-title="Dandelion horseradish" data-description="Cabbage bamboo shoot broccoli rabe chickpea chard sea lettuce lettuce ricebean artichoke earthnut pea aubergine okra brussels sprout avocado tomato.">
+							            <img src="~/images/thumbs/3.jpg" alt="img03"/>
+						            </a>
+					            </li>
 
-	</header>
+				            </ul>
+			            </div><!--/frames-->
 
+                        <ul class="pages"></ul><!--/position marker-->
 
+                    </div>
+            </section>
+
+	    </div>
+    </div>
 
 	<!-- Scripts -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
-	@*<script src="sly/js/plugins.js"></script>*@
-	@*<script src="js/ospb.js"></script>*@
+
+    <script src="sly/js/plugins.js"></script>
+
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
 	<script src="sly/js/sly.min.js"></script>
 	<script src="sly/js/main.js"></script>
+
+    <script src="sly/js/grid.js"></script>
+
+	<script>
+		$(function() {
+			Grid.init();
+		});
+	</script>
 
 	<!-- Google Analytics -->
 </body>
