@@ -1,0 +1,83 @@
+/* =============================================================================
+   Persistent Content Headers
+   ========================================================================== */
+
+.persist-header { /*-settings for both-*/
+    min-height:5px;
+}
+
+.persist-header h2 {
+    margin-left: 5px;
+    font-size: 1.2em;
+    line-height: 1em;
+}
+
+.persist-header ul.nav {
+    list-style: none;
+    display: block;
+    text-align: right;
+}
+
+.persist-header ul.nav li {
+    display: inline-block;
+    text-indent:-9999px;
+}
+
+.persist-header ul.nav li a {
+    padding: 10px;
+}
+
+.persist-header ul.nav li:last-child {
+    padding-left: 20px;
+}
+
+/*----------------------------------*/
+
+.floatingHeader {
+    background: rgba(0,0,0,0.6); /*-using different settings-*/
+    visibility: hidden;
+    color: #ffcc00;    
+    position: fixed;
+    top:0;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.3); /* shadow */
+}
+            
+.floatingHeader ul.nav {
+    color: #ffcc00;
+
+}
+
+.floatingHeader ul.nav li {
+    text-indent: 0;
+}
+
+.floatingHeader ul.nav li a {
+    color: #ffcc00;
+    text-indent: 0;
+}
+
+
+/* =============================================================================
+   Main
+   ========================================================================== */
+
+.page div#main-container, .page .content-wrapper { 
+    background: #333;
+}
+
+.back-to-top {
+    position: fixed;
+    bottom: 2em;
+    right: 0px;
+    text-decoration: none;
+    color: #000000;
+    background-color: rgba(235, 235, 235, 0.80);
+    font-size: 12px;
+    padding: 1em;
+    display: none;
+            z-index: 1000;
+}
+
+.back-to-top:hover {    
+    background-color: rgba(135, 135, 135, 0.50);
+}

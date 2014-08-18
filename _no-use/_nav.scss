@@ -1,0 +1,218 @@
+/* =============================================================================
+   Navigation Menu - Discovery
+   ========================================================================== */
+
+/* nav */
+nav.dl-menuwrapper {
+    background: none;
+    margin-top: 20px;
+
+    font-family: 'Lato', Calibri, Arial, sans-serif;
+    font-size: 16px;
+	font-weight: 300;
+    line-height: 20px;
+    letter-spacing: 1px; 
+    color: #ccc;
+
+    width: 100%;
+    perspective: 1000px;
+    -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
+    perspective-origin: 50% 200%;
+    -webkit-perspective-origin: 50% 200%;
+    -moz-perspective-origin: 50% 200%;
+    box-shadow: none; /* no shadow */
+    z-index: 999;
+}
+.dl-menuwrapper:first-child {
+	margin-right: 100px;
+}
+
+/* home button */
+#dl-home {
+
+    border-right: none;
+    padding: 7px 9px 11px 6px;
+    width: 40px;
+    height: 16px;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: 0;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    float: left;
+}
+
+#dl-home:hover {
+    background: rgba(242,242,242,1);
+}
+
+/* discover button */
+.dl-menuwrapper button {
+    border-right: none;
+    padding-left: 30px;
+    width: 150px;
+    height: 45px;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    font-size: 13px;
+    font-weight: 300;
+    text-indent: 0em;
+    cursor: pointer;
+	outline: none;
+    background: rgba(255,255,255,.5); color: #555;
+    box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.1); /* shadow */
+    float: left;
+}
+/* discover icon = */
+.dl-menuwrapper button:after {
+    content: '';
+	width: 20%;
+	height: 4px;
+    position: absolute;
+	top: 10px;
+	left: 6%;
+	right: 15px;
+    line-height: 50px;
+    background: #555;
+	box-shadow: 
+		0 10px 0 #555, 
+		0 20px 0 #555;
+}
+
+.dl-home {
+    background: url(../../images/icon-home-m.png) no-repeat;
+    background-position: 5px 0px;
+}
+
+.dl-home, 
+.dl-trigger {
+    width:50px;
+    border-right: none;
+}
+
+/* search */
+#dl-search {
+    border: 1px solid #eee;
+    padding: 1px 15px;
+    height: 32px;
+    font-size: 11px;
+    font-weight: 300;
+    background: rgba(255,255,255,1); color: rgba(170,170,170,1);/**/
+    float: left;
+}
+
+/* hide search button - not used on mobile or tablet */
+.dl-searchbutton {
+    visibility: hidden;
+    display: none;
+}
+
+.dl-searchfield {
+    background: rgba(255,255,255,1); 
+    border: 1px solid #eee;
+    border-right: none;
+    position: static;
+    margin: 0;
+    padding: 0 10px;
+    min-width: 170px;
+    max-width: 170px;
+    font-size: .8em;
+    height: 43px;
+    color: #999;
+    float: left;
+}
+
+/* submenus */
+
+/* menu ul only */
+.dl-menuwrapper .dl-menu { /* ie fix */
+    visibility: hidden;
+}
+.dl-menuwrapper .dl-menu {
+	margin: 43px 0 0 0px;
+	position: absolute;
+	max-width: 371px;
+	opacity: 0;
+	pointer-events: none;
+    transform: translateY(10px);
+	-webkit-transform: translateY(10px);
+	-moz-transform: translateY(10px);
+	backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+}
+.dl-menuwrapper .dl-menu.dl-menu-toggle {
+    transition: all 0.3s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+}
+.dl-menuwrapper .dl-menu.dl-menuopen {
+	opacity: 1;
+	pointer-events: auto;
+    transform: translateY(0px);
+	-webkit-transform: translateY(0px);
+	-moz-transform: translateY(0px);
+}
+
+/* all uls */
+.dl-menuwrapper ul {
+	max-width: 371px;
+    list-style: none;
+    overflow: hidden;
+    transform-style: preserve-3d;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+}
+
+/* menu li */
+.dl-menuwrapper li {
+	position: relative;
+}
+.dl-menuwrapper li a {
+    padding: 10px 10px 10px 15px;
+    display: block;
+	position: relative;
+	outline: none;
+}
+.dl-menuwrapper li > a:after {
+	right: 10px;
+}
+/* back li */
+.dl-menuwrapper li.dl-back > a {
+    padding-left: 30px;
+    font-size: 11px;
+    text-transform: uppercase;
+    background: rgba(0,0,0,0.1); color: rgba(255,255,255,1);
+}
+.dl-menuwrapper li.dl-back:after {
+	left: 10px;
+    transform: rotate(180deg);
+	-webkit-transform: rotate(180deg);
+	-moz-transform: rotate(180deg);
+}
+/* li arrows */
+.dl-menuwrapper li.dl-back:after,
+.dl-menuwrapper li > a:not(:only-child):after {
+	position: absolute;
+	top: 10px;
+    line-height: 20px;
+	font-family: 'icomoon';
+	speak: none;
+	-webkit-font-smoothing: antialiased;
+	content: "\e000";
+    color: rgba(170,170,170,0.3);
+}
+
+/* desktop - menu theme */
+.dl-menuwrapper button:hover,
+.dl-menuwrapper button.dl-active,
+.dl-menuwrapper ul, .dl-menuwrapper li a {
+
+    background: #ffcc00; color: #555; /* li:hover color*/
+}
+
+.no-touch .dl-menuwrapper li a:hover {
+
+	background: #FFE599; color: #333; /* a:hover color*/
+}

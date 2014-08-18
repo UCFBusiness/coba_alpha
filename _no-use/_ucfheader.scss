@@ -1,0 +1,78 @@
+/* =============================================================================
+   Header style
+   ========================================================================== */
+
+#UCFHBHeader {
+	background: #000 url("../../images/ucfbar/header_border.png") repeat-x;
+	background-position: bottom left;
+    padding: 4px 0 2px 0; /* to treat the bg as a border +2px to bottom padding*/
+	height: 32px;
+}
+
+#UCFHBHeader label {
+	text-indent: -900px;
+    color: #FFF;
+	float:left;
+}
+
+#UCFHBHeader #UCFtitle {
+	float:left;
+}
+
+#UCFHBHeader #UCFtitle a {
+	background: url("../../images/ucfbar/ucflogo.png") no-repeat;
+	background-position: top left;
+    width: 318px;
+    height: 29px;
+	display: block;
+}
+
+#UCFHBHeader #UCFtitle a span.UCFHBText {
+	display: none;
+}
+
+#UCFHBHeader #UCFHBUni_links {
+	margin-left: 75px;
+	float: left;
+}
+
+/*-----------------------------------------------------------------------
+
+#UCFHBHeader #UCFHBUni_links select {
+	border: 1px solid #c0c0c0;
+	background-color: #FFF;
+    width: 130px;
+}
+
+#UCFHBHeader #UCFHBMy_ucf {
+	display: block;
+	background-image: url("../../images/ucfbar/images/myucf.png");
+	background-repeat: no-repeat;
+	background-position: top left;
+	margin-left: 25px;
+	margin-top: 3px;
+	height: 15px;
+	width: 58px;
+	float: left;
+}
+
+#UCFHBHeader #UCFHBMy_ucf span.text {
+	display: none;
+}
+
+#UCFHBsubmit {
+	width:16px;
+	height:17px;
+	overflow:hidden;
+	background-image: url("../../images/ucfbar/images/arrow.png");
+	border:0; margin:0; padding:0;
+	text-indent:-500px;
+	color:black;
+	baseline:top;
+}
+
+#UCFHBHeader div.UCFHBWrapper {
+	margin: 0 auto;
+}
+
+*/

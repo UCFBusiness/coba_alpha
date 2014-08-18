@@ -1,0 +1,72 @@
+// * In this file you should write your main styles. (or centralize your imports)
+
+// Modules and Variables {}
+@import "partials/base";
+@import "modules/typography";
+@import "partials/primary_styles";
+
+/* =============================================================================
+   Simple fluid media
+   ========================================================================== */
+
+// * Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+// * http://www.alistapart.com/articles/fluid-images/ 
+
+img, object, embed, video {
+	max-width: 100%;
+}
+
+// * IE 6 does not support max-width so default to width 100%
+
+.ie6 img {
+	width:100%;
+}
+
+// * Fluid Grid Properties
+// * ----------------------------------
+// * dw-num-cols-mobile:	 5;
+// * dw-num-cols-tablet:	 8;
+// * dw-num-cols-desktop:	 10;
+// * dw-gutter-percentage:   25;
+	
+// * Inspiration from "Responsive Web Design" by Ethan Marcotte 
+// * http://www.alistapart.com/articles/responsive-web-design
+	
+// * and Golden Grid System by Joni Korpi
+// * http://goldengridsystem.com/
+
+
+
+// Partials {}
+/* Mobile Layout: 480px and below. */
+body{color: blue;}
+
+@import "partials/mobile/header";
+@import "partials/mobile/nav";
+@import "partials/mobile/content";
+//@import "partials/mobile/footer";
+
+
+/* Tablet Layout: 481px past 768px(portrait mode) to 1024px(landscape mode). Inherits styles from: Mobile Layout. */
+@media only screen and (min-width: 481px) {
+    body{color: red;}
+
+    @import "partials/tablet/header";
+    //@import "partials/tablet/nav";
+    //@import "partials/tablet/content";
+    @import "partials/tablet/footer";
+
+}
+
+
+/* Desktop Layout: 1025px to max of 1920px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+@media only screen and (min-width: 1025px) {
+    body{color: #333;}
+
+    @import "partials/desktop/header";
+    @import "partials/desktop/nav";
+    @import "partials/desktop/featured";
+    @import "partials/desktop/content";
+    @import "partials/desktop/footer";
+   
+}

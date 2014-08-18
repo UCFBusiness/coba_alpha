@@ -1,0 +1,73 @@
+/* =============================================================================
+   Footer/Section Layout
+   ========================================================================== */
+
+.page footer {
+    /*-for development only - borderline-*/ border:1px dashed red; /*-for development only - borderline-*/
+    padding: 0 5px;
+}
+
+.page .copy {
+    padding: 0 5px;
+    font-size:.55em;
+}
+
+/*-------------------------------*/
+/* The columns */
+
+footer .wrapper {
+
+}
+
+footer .wrapper ul {
+    list-style: none;
+    text-indent: 15px;
+}
+
+footer .wrapper > ul {
+    padding-top: 100px;
+}
+
+footer .wrapper > ul > li ul li {
+    text-transform: uppercase;
+    line-height:1.8;
+    margin-left: -80px;
+}
+
+
+/*-------------------------------*/
+/* The headers */
+
+footer .wrapper p {
+    background-color: #058cc7;
+    margin-bottom: 20px;
+    margin-left: -40px;
+    padding: 9px 0;
+    display: block;
+
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+    color:#fff;
+    
+    text-shadow: 0 1px rgba(0,0,0,0.1);
+    box-shadow: 0 0 3px rgba(0,0,0,0.3);
+    
+    opacity:0.9;
+
+    -webkit-transition: opacity 0.4s;
+    -moz-transition: opacity 0.4s;
+    transition: opacity 0.4s;
+}
+
+/*-------------------------------*/
+/* The links */
+
+footer .wrapper > ul > li ul li a {
+    text-decoration: none !important;
+    color:#7d8691 !important;
+    border: 1px solid #ddd;
+    margin: 3px 0;
+    padding: 3px 0;
+    display: block;
+}

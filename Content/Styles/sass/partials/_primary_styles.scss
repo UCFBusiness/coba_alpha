@@ -1,0 +1,65 @@
+
+.no-js {}
+
+/*-- remove if not used. - locks desktop screen and removes scrollbars -
+.js {
+    overflow: hidden;
+}
+-*/
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #333 url(../../images/footer-bg.jpg) left bottom;
+
+    /* Create a page-wide stacking context 
+    (so that negative margins work as you expect) */
+    position: relative;
+    z-index: 0;
+}
+
+div#main-container {
+    position: relative;
+    z-index: 1;
+}
+
+/*---------------------*/
+/*-- Special Classes --*/
+/*---------------------*/
+
+.noshow { 
+    display:none;
+}
+
+.shadow {
+    box-shadow:2px 4px 7px 1px rgba(135, 139, 144, 0.3); /*-CSS3 Box Shadow-*/
+    -moz-box-shadow:2px 4px 7px 1px rgba(135, 139, 144, 0.3); /*-CSS3 Box Shadow-*/
+}
+
+.highlight {
+    background-color: #fff34d;
+    -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* FF3.5+ */
+    -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Saf3.0+, Chrome */
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.7); /* Opera 10.5+, IE 9.0 */
+}
+
+.highlight {
+    padding:1px 4px;
+    margin:0 -4px;
+}
+
+.left {
+    float:left;
+}
+
+.right {
+    float:right;
+}
+
+.note {
+    border:1px solid orange;
+    padding:1em;
+    background:#ffffe0;
+}

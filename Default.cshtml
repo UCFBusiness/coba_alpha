@@ -1,46 +1,211 @@
 ﻿@{
     Layout = "~/_SiteLayout.cshtml";
-    Page.Title = "Home Page";
+    Page.Title = "Home";
 }
 
+
+@section styles {
+<style> /*-- Page-specific styles --*/
+@@media only screen and (min-width: 1025px) {
+    
+    /* -- Big Background Image --*/
+    .page div#main-container, .page .content-wrapper { 
+        background: url(../../images/background0.jpg) no-repeat top center fixed;
+        background-size: cover;
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/background0.jpg', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='../../images/background0.jpg', sizingMethod='scale')";
+    }
+    
+    .index .wrapper > div {
+        /*
+        background: #FFF url(../../images/stock-illustration-16588803-finance-backround.jpg) no-repeat top center fixed;
+        background-size: cover;
+        min-height: 300px;
+    */
+    
+        background: #FFF;
+        border: 1px solid #aaa;
+        min-height: 30%;
+        max-width: 50%;
+        margin: 5px;
+        padding: 25px;
+        float: left;
+    
+    }
+    
+}
+</style>
+}
+
+
 @section featured {
-<section class="featured">
-    <div class="content-wrapper">
+<section id="feature" class="featured" data-sticky_column>
+    <div class="wrapper clearfix nav-pills nav-stacked pull-left" data-scrollspy="scrollspy" data-target="nav">
+
         <hgroup class="title">
-            <h1>@Page.Title.</h1>
-            <h2>Modify this template to jump-start your ASP.NET Web Pages application.</h2>
+            <h2>Bachelors of Science in Business Administration</h2>
+            <h1>Finance</h1>
         </hgroup>
-        <p>
-            To learn more about ASP.NET Web Pages, visit
-            <a href="http://asp.net/webpages" title="ASP.NET Web Pages Website">http://asp.net/webpages</a>.
-            The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET Web Pages.
-            If you have any questions about ASP.NET Web Pages, visit
-            <a href="http://forums.iis.net/1166.aspx" title="ASP.NET Web Pages Forum">our forums</a>.
-        </p>
+
+        <nav id="menu" data-scrollspy="scrollspy">
+            <div>
+                <ul class="cl-effect-10">
+                    <li style="line-height:0;"><a href="#top"></a></li>
+                    <li><a href="#curricular-learning-goals" data-hover="Curricular Learning Goals"><span>Curricular Learning Goals</span></a></li>
+                    <li><a href="#core-business-courses" data-hover="Core Business Courses"><span>Core Business Courses</span></a></li>
+                    <li><a href="#major-required-courses" data-hover="Major Required Courses"><span>Major Required Courses</span></a></li>
+                    <li><a href="#plan-of-study" data-hover="Plan of Study"><span>Plan of Study</span></a></li>
+                    <li><a href="#internships" data-hover="Internships"><span>Internships</span></a></li>
+                    <li><a href="#careers" data-hover="Careers"><span>Careers</span></a></li>
+                    <li><a href="#certificates" data-hover="Certificates"><span>Certificates</span></a></li>
+                </ul>
+            </div>
+        </nav>
+
     </div>
 </section>
 }
 
-<h3>We suggest the following:</h3>
+<section class="index clearfix">
+    <div class="wrapper">
 
-<ol class="round">
-    <li class="one">
-        <h5>Getting Started</h5>
-        ASP.NET Web Pages and the new Razor syntax provide a fast, approachable, and lightweight way to combine server code with HTML
-        to create dynamic web content. Connect to databases, add video, link to social networking sites, and include many more features
-        that let you create beautiful sites using the latest web standards.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245139">Learn more…</a>
-    </li>
+        <div class="title">
+            <h1>@Page.Title</h1>
+            <h2>Page description</h2>
+        </div>
 
-    <li class="two">
-        <h5>Add NuGet packages and jump start your coding</h5>
-        NuGet makes it easy to install and update free libraries and tools.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245140">Learn more…</a>
-    </li>
+        <p><!-- for development only --><label id="message" style="display: block;"></label><!-- for development only --></p>
+        
+        <div>
+            <h3>The Finance Major</h3>
+            <p>The finance major is designed to provide the student with a broad knowledge in business finance, 
+                investments, financial institutions, international finance, risk management and insurance, 
+                and real estate. The program provides the student with the theoretical background and tools 
+                of analysis required for making effective financial decisions.</p>
+        </div>
+        <div>video</div>
+        <div>image</div>
+        <div>
+            <h3>The Finance Student</h3>
+            <p>Envision an education where hands-on guidance from award-winning faculty is a given. 
+                Where classes aren’t just classes, but components of an innovative curriculum that teaches 
+                the science, ethics, and art of good business.</p>
+            <p>The study of finance prepares the student for careers in business financial management. 
+                Students that major in finance are sought by both financial and non-financial firms.</p>
+        </div>
 
-    <li class="three">
-        <h5>Find Web Hosting</h5>
-        You can easily find a web hosting company that offers the right mix of features and price for your applications.
-        <a href="http://go.microsoft.com/fwlink/?LinkId=245143">Learn more…</a>
-    </li>
-</ol>
+    </div>
+</section>
+
+<section id="curricular-learning-goals" class="section persist-area clearfix">
+    <div class="wrapper">
+        <header class="persist-header">
+            <div><span>Curricular Learning Goals</span></div>
+            <ul class="nav">
+                <li><a href="#">share</a></li>
+            </ul>
+        </header>
+
+        <div class="section-top">
+            <img src="../../images/section1.jpg" width="100%" alt="students">
+            <div class="section-title"><span>Curricular Learning Goals</span></div>
+        </div>
+
+        <div class="section-bottom">            <h3>&lt;h3&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
+            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
+            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
+            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
+            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                <small>&mdash; Dr. Julius Hibbert</small>
+            </blockquote><br />        </div>    </div>
+</section>
+
+<section id="core-business-courses" class="section persist-area clearfix">
+    <div class="wrapper">
+        <header class="persist-header">
+            <div><span>Core Business Courses</span></div>
+            <ul class="nav">
+                <li><a href="#">share</a></li>
+            </ul>
+        </header>
+
+        <div class="section-top">
+            <img src="../../images/section2.jpg" width="100%" alt="students">
+            <div class="section-title"><span>Core Business Courses</span></div>
+        </div>
+        
+
+        <div class="section-bottom">            <h3>&lt;h3&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
+            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
+            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
+            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
+            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                <small>&mdash; Dr. Julius Hibbert</small>
+            </blockquote><br />        </div>    </div>
+</section>
+
+<section id="major-required-courses" class="section persist-area clearfix">
+    <div class="wrapper">
+        <header class="persist-header">
+            <div><span>Major Business Courses</span></div>
+            <ul class="nav">
+                @*<img src="../../images/stock-illustration-20952646-planning.jpg" width="100%" alt="students">*@
+                <li><a href="#">share</a></li>
+            </ul>
+        </header>
+
+        <div class="section-top">
+            <img src="../../images/section3.jpg" width="100%" alt="students">
+            <div class="section-title"><span>Major Business Courses</span></div>
+        </div>
+
+        <div class="section-bottom">            <h3>&lt;h3&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h3>
+            <p>Nam turpis nulla, scelerisque vitae imperdiet non, 
+            aliquet et metus. Pellentesque enim justo, placerat in consequat nec, iaculis quis mauris. 
+            Quisque placerat massa non magna luctus molestie. Sed dapibus odio sagittis libero consequat euismod sit amet non elit. 
+            Vivamus rutrum, elit in accumsan tincidunt, nisl elit commodo tortor, ut rutrum felis eros sagittis augue. Mauris egestas, 
+            leo nec pharetra accumsan, nisi dolor accumsan dui, sit amet aliquet nulla mauris sed elit.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+            <p>&lt;p&gt; paragraph. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nec massa sapien, sed laoreet elit. 
+            Donec aliquet massa ut odio tempus in faucibus neque facilisis. Pellentesque habitant morbi tristique senectus et 
+            netus et malesuada fames ac turpis egestas. Suspendisse dui dolor, aliquam eu gravida eu, fringilla in purus. 
+            Nulla vel consectetur dolor. Donec interdum ultricies sapien a ullamcorper. Aliquam nec augue eget lectus rhoncus 
+            ultrices sed non arcu. Pellentesque tempus rutrum mi sed sollicitudin.</p>
+            <h4>&lt;h4&gt; title. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</h4>
+            <blockquote>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.</p>
+                <small>&mdash; Dr. Julius Hibbert</small>
+            </blockquote><br />        </div>    </div>
+</section>
